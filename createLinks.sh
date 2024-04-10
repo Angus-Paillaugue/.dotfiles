@@ -3,6 +3,9 @@
 rm -rf links
 mkdir -p links
 backup_paths="./backup.txt"
+RED="\e[31m"
+GREEN="\e[32m"
+ENDCOLOR="\e[0m"
 
 while IFS= read -r file_path
 do
@@ -15,9 +18,9 @@ do
     mkdir -p "./links/$(dirname "$clean_path")"
     # Create the symbolic link
     ln -s "$full_path" "./links/$clean_path"
-    echo "Linked: $clean_path"
+    echo -e "${GREEN}󰌷 ${ENDCOLOR}$clean_path"
   else
-    echo "Skipping: $full_path (File/directory not found)"
+    echo "󰒬 Skipping: $full_path (File/directory not found)"
   fi
 done < <(cat "$backup_paths")
 
@@ -29,6 +32,7 @@ if [[ $execute == "y" ]]; then
   git add .
   git commit -m "$commit_message"
   git push
+  echo -e "${RED} ${ENDCOLOR}Your changes have been pushed."
 else
   echo "Execution skipped."
 fi
