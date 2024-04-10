@@ -22,7 +22,13 @@ do
 done < <(cat "$backup_paths")
 
 echo ""
-
-git add .
-git commit -m date +%D" "%T
-git push
+read -p "Do you want to push the changes? (y/n): " execute
+if [[ $execute == "y" ]]; then
+  date_time=$(date +%D" "%T)
+  commit_message="Updated: $date_time"
+  git add .
+  git commit -m "$commit_message"
+  git push
+else
+  echo "Execution skipped."
+fi
