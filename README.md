@@ -1,11 +1,8 @@
 
-# RCM : dotfiles tracker
-## [Tuto](https://www.padok.fr/en/blog/backup-dotfiles-git-rcm)
-## Usage
- - `mkrc` : bless a file into a dotfile managed by RCM
- - `lsrc` : list the dotfiles managed by RCM
- - `rcup` : update and install dotfiles managed by RCM
- - `rcdn` : remove dotfiles as managed by RCM
+# Dotfiles tracker
+To use this repo, you need to understand how it works first The `files_to_backup.txt` contains a dotfile to backup on every line. The `create_links.sh` script is used to create a copy of each of the files you specified and the ./links directory. This directory reproduces the the file tree base on $HOME relative to ./links. In this script, you can also directly sync this repo on github. 
+
+To use these files you can use the `install.sh` script.
 
 # Installed programs (in order)
  - [bat](https://github.com/sharkdp/bat) : A cat(1) clone with wings.
