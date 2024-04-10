@@ -6,7 +6,6 @@
  - `lsrc` : list the dotfiles managed by RCM
  - `rcup` : update and install dotfiles managed by RCM
  - `rcdn` : remove dotfiles as managed by RCM
-  
 
 # Installed programs (in order)
  - [bat](https://github.com/sharkdp/bat) : A cat(1) clone with wings.
