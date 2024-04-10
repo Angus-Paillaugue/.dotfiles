@@ -1,1 +1,4 @@
-test
+ - `mkrc` : bless a file into a dotfile managed by RCM
+ - `lsrc` : list the dotfiles managed by RCM
+ - `rcup` : update and install dotfiles managed by RCM
+ - `rcdn` : remove dotfiles as managed by RCM
