@@ -102,6 +102,7 @@ symbol = ' '
 [status]
 symbol = '[ ](bold nord-11)'
 not_found_symbol = ''
+sigint_symbol="[󰟾 ](bold nord-11)"
 success_symbol = ''
 format = '$symbol$signal_name$maybe_int'
 map_symbol = true
