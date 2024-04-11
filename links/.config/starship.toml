@@ -104,7 +104,7 @@ symbol = '[ ](bold nord-11)'
 not_found_symbol = ''
 sigint_symbol="[󰟾 ](bold nord-11)"
 success_symbol = ''
-format = '$symbol$maybe_int'
+format = '[](nord-7)[$symbol $signal_name$maybe_int](bg:nord-7 fg:nord-0)[ ](fg:nord-7)'
 map_symbol = true
 disabled = false
 
