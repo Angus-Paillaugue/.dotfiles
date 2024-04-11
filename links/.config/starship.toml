@@ -101,10 +101,10 @@ symbol = ' '
 
 [status]
 symbol = ' '
-not_found_symbol = ''
+not_found_symbol = ' '
 sigint_symbol="󰟾 "
 success_symbol = ''
-format = '[](nord-7)[$symbol $signal_name$maybe_int](bg:nord-7 fg:nord-0)[ ](nord-7)'
+format = '[](nord-7)[$symbol$signal_name$maybe_int](bg:nord-7 fg:nord-0)[ ](nord-7)'
 map_symbol = true
 disabled = false
 
