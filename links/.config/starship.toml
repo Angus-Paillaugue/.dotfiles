@@ -1,10 +1,10 @@
 # Configuring : https://starship.rs/config/
-# Symbols see : https://www.nerdfonts.com/cheat-sheet
-# Colors (see https://nordui.netlify.app/docs/core/colors) :
+# Symbols : https://www.nerdfonts.com/cheat-sheet
+# Colors : https://nordui.netlify.app/docs/core/colors :
 
-
+# ╭─ ╰─
 format = """
-[](nord-7)\
+╭─[](nord-7)\
 $os\
 [ ](fg:nord-7 bg:nord-1)\
 $directory\
@@ -15,7 +15,7 @@ $python\
 $fill\
 $status\
 $cmd_duration
-$character\
+╰─$character\
 """
 
 add_newline = false
@@ -117,5 +117,5 @@ disabled = false
 format = "[](nord-7)[$duration](bg:nord-7 fg:nord-0)[ ](nord-7)"
 
 [character]
-success_symbol = "[λ](bold nord-4)"
-error_symbol = "[λ](bold red)"
+success_symbol = "[](bold nord-4)"
+error_symbol = "[](bold red)"
