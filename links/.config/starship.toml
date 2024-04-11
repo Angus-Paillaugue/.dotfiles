@@ -76,6 +76,8 @@ Windows = " "
 
 [directory]
 home_symbol = "  "
+read_only =" 󰌾 "
+read_only_style = "bg:nord-1"
 style = "bg:nord-1"
 format = "[$path]($style)[$read_only]($read_only_style)"
 
@@ -87,7 +89,7 @@ truncation_symbol = ''
 format = " [$symbol$branch]($style)"
 
 [nodejs]
-symbol = "[ ](nord-13)"
+symbol = "[ ](nord-14)"
 style = "nord-10"
 format =" [${symbol}($version )]($style)"
 
@@ -100,7 +102,7 @@ format = ' [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 symbol = ' '
 
 [status]
-symbol = ' '
+symbol = ''
 not_found_symbol = ' '
 sigint_symbol="󰟾 "
 success_symbol = ''
