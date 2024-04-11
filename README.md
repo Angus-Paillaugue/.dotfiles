@@ -1,6 +1,6 @@
 
 # Dotfiles tracker
-To use this repo, you need to understand how it works first The `files_to_backup.txt` contains a dotfile to backup on every line. The `create_links.sh` script is used to create a copy of each of the files you specified and the ./links directory. This directory reproduces the the file tree base on $HOME relative to ./links. In this script, you can also directly sync this repo on github. 
+To use this repo, you need to understand how it works first The `files_to_backup.txt` contains a dotfile to backup on every line. The `backup.sh` script is used to create a copy of each of the files you specified and the ./links directory. This directory reproduces the the file tree base on $HOME relative to ./links. In this script, you can also directly sync this repo on github. 
 
 To use these files you can use the `install.sh` script that copies all the dotfiles in the links directory into their actual places (be aware that  fi les that need to be copied into a non-existant directory will not be copied).
 

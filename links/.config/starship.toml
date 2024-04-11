@@ -1,26 +1,14 @@
+# Configuring : https://starship.rs/config/
+# Symbols see : https://www.nerdfonts.com/cheat-sheet
 # Colors (see https://nordui.netlify.app/docs/core/colors) :
-# Base colos :
-#2E3440
-#3B4252
-#434C5E
-#4C566A
-
-# Lighter colors
-#8FBCBB
-#88C0D0
-#81A1C1
-#5E81AC
-
-# Red : #BF616A
-# Green : #A3BE8C
 
 
 format = """
-[](#8FBCBB)\
+[](nord-7)\
 $os\
-[ ](fg:#8FBCBB bg:#3B4252)\
+[ ](fg:nord-7 bg:nord-1)\
 $directory\
-[](fg:#3B4252)\
+[](fg:nord-1)\
 $git_branch\
 $nodejs\
 $python\
@@ -31,9 +19,28 @@ $character\
 """
 
 add_newline = false
+palette = 'nord'
+
+[palettes.nord]
+nord-0 = "#2E3440"
+nord-1 = "#3B4252"
+nord-2 = "#434C5E"
+nord-3 = "#4C566A"
+nord-4 = "#D8DEE9"
+nord-5 = "#E5E9F0"
+nord-6 = "#ECEFF4"
+nord-7 = "#8FBCBB"
+nord-8 = "#88C0D0"
+nord-9 = "#81A1C1"
+nord-10 = "#5E81AC"
+nord-11 = "#BF616A"
+nord-13 = "#EBCB8B"
+nord-14 = "#A3BE8C"
+nord-15 = "#B48EAD"
+
 
 [os]
-format = "[ $symbol ](bg:#8FBCBB fg:#000000)"
+format = "[ $symbol ](bg:nord-7 fg:nord-0)"
 disabled = false
 
 [os.symbols]
@@ -68,32 +75,32 @@ Void = " "
 Windows = " "
 
 [directory]
-style = "bg:#3B4252"
 home_symbol = "  "
+style = "bg:nord-1"
 format = "[$path]($style)[$read_only]($read_only_style)"
 
 [git_branch]
-style = "#5E81AC"
 symbol = ' '
+style = "nord-10"
 truncation_length = 6
 truncation_symbol = ''
 format = " [$symbol$branch]($style)"
 
 [nodejs]
-# symbol = " "
-style = "green"
-format =" [$symbol($version )]($style)"
+symbol = "[ ](nord-13)"
+style = "nord-10"
+format =" [${symbol}($version )]($style)"
 
 [python]
-symbol = " "
-style = '#5E81AC'
+symbol = "[ ](nord-13)"
+style = 'nord-10'
 format = ' [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
 [fill]
 symbol = ' '
 
 [status]
-symbol = '[ ](bold #BF616A)'
+symbol = '[ ](bold nord-11)'
 not_found_symbol = ''
 success_symbol = ''
 format = '$symbol$signal_name$maybe_int'
@@ -104,8 +111,8 @@ disabled = false
 min_time = 100
 show_milliseconds = false
 disabled = false
-format = "[](#8FBCBB)[$duration](bg:#8FBCBB fg:#000000)[ ](fg:#8FBCBB)"
+format = "[](nord-7)[$duration](bg:nord-7 fg:nord-0)[ ](fg:nord-7)"
 
 [character]
-success_symbol = "[λ](bold fg:#3B4252)"
+success_symbol = "[λ](bold nord-4)"
 error_symbol = "[λ](bold red)"
