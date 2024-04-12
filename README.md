@@ -10,6 +10,7 @@ To use these files you can use the `install.sh` script that copies all the dotfi
  - [Colloid](https://github.com/vinceliuice/Colloid-gtk-theme) As the main theme (no params used during installation)
  - [Wallpapers library](https://github.com/linuxdotexe/nordic-wallpapers) Selection of nordit themed wallpapers (I use `ign_astronaut.png`)
  - [Starship](https://starship.rs/guide/) : custom shell prompt
+ - [White sur icons](https://github.com/vinceliuice/WhiteSur-icon-theme) : Installed without any flags. Used `alacarte` (`sudo apt install alacarte` then just run `alacarte` in the terminal then change the vivaldi browser icon to `/home/angus/.local/share/icons/WhiteSur-dark/apps/scalable/81F5_winebrowser.0.svg`)
  - ZSH as shell (see the zshrc config file)
    - git (installed by default)
    - sudo (installed by default)

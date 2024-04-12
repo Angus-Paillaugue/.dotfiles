@@ -1,3 +1,4 @@
 ~/.zshrc
 ~/.config/starship.toml
 ~/.config/neofetch/config.conf
+~/.config/fastfetch/config.jsonc

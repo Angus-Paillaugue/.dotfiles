@@ -126,5 +126,6 @@ source ~/.nvm/nvm.sh
 # Custom liases
 alias lsa="ls -a"
 alias h="cd ~"
+alias c="clear && neofetch"
 
 PATH=~/.console-ninja/.bin:$PATH
