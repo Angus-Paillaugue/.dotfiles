@@ -19,6 +19,10 @@ To use these files you can use the `install.sh` script that copies all the dotfi
    - zsh-syntax-highlighting [install guide](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
    - you-should-use [repo](https://github.com/MichaelAquilina/zsh-you-should-use?tab=readme-ov-file)
    - zsh-bat [repo](https://github.com/fdellwing/zsh-bat)
+ - [YouTube music](https://github.com/th-ch/youtube-music?tab=readme-ov-file#download) : Installed an configured only with the .dotfiles
+
+# Configurations
+To configure the aforementioned programs, you can just run the `./install.sh` script in the directory and it will overwrite the default configs with saved ones.
 
 ## Extension manager
 
