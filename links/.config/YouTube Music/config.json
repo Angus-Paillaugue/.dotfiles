@@ -1,14 +1,14 @@
 {
 	"window-size": {
-		"width": 480,
-		"height": 750
+		"width": 1531,
+		"height": 753
 	},
-	"window-maximized": false,
+	"window-maximized": true,
 	"window-position": {
-		"x": 1499,
-		"y": 141
+		"x": 262,
+		"y": 240
 	},
-	"url": "https://music.youtube.com/watch?v=MXrByJhJAdM&list=RDAMVMkUP5i0f82bw&index=0&sq=1",
+	"url": "https://music.youtube.com/watch?v=XTWMs_WizFM&list=RDAMVMXTWMs_WizFM&index=0&sq=1",
 	"options": {
 		"tray": false,
 		"appVisible": true,
