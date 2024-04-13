@@ -1,0 +1,74 @@
+{
+	"window-size": {
+		"width": 1669,
+		"height": 736
+	},
+	"window-maximized": false,
+	"window-position": {
+		"x": 307,
+		"y": 243
+	},
+	"url": "https://music.youtube.com/watch?v=xZVERk8EoDg&list=PLR44HyGlHjRmVyYwi0MFUuAg2vcu4f2aL&index=0&sq=1",
+	"options": {
+		"tray": false,
+		"appVisible": true,
+		"autoUpdates": true,
+		"alwaysOnTop": false,
+		"hideMenu": true,
+		"hideMenuWarned": true,
+		"startAtLogin": false,
+		"disableHardwareAcceleration": false,
+		"removeUpgradeButton": false,
+		"restartOnConfigChanges": false,
+		"trayClickPlayPause": false,
+		"autoResetAppCache": false,
+		"resumeOnStart": true,
+		"likeButtons": "",
+		"proxy": "",
+		"startingPage": "",
+		"overrideUserAgent": false,
+		"usePodcastParticipantAsArtist": false,
+		"themes": [
+			"/home/angus/.config/YouTube Music/yt-music-nord.css"
+		]
+	},
+	"plugins": {
+		"notifications": {},
+		"video-toggle": {
+			"mode": "custom"
+		},
+		"precise-volume": {
+			"globalShortcuts": {}
+		},
+		"discord": {
+			"listenAlong": true
+		},
+		"ambient-mode": {
+			"enabled": true
+		},
+		"blur-nav-bar": {
+			"enabled": false
+		},
+		"bypass-age-restrictions": {
+			"enabled": true
+		},
+		"crossfade": {
+			"enabled": false
+		},
+		"downloader": {
+			"enabled": true
+		},
+		"in-app-menu": {
+			"enabled": false,
+			"hideDOMWindowControls": false
+		},
+		"compact-sidebar": {
+			"enabled": false
+		}
+	},
+	"__internal__": {
+		"migrations": {
+			"version": "3.3.5"
+		}
+	}
+}
