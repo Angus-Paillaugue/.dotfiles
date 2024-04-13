@@ -40,7 +40,7 @@ nord-15 = "#B48EAD"
 
 
 [os]
-format = "[ $symbol ](bg:nord-7 fg:nord-0)"
+format = "[ $symbol ](bg:nord-8 fg:nord-0)"
 disabled = false
 
 [os.symbols]

@@ -400,7 +400,10 @@
  /* Song progress bar (color and smooth animation) */
  #primaryProgress {
    background: rgb(var(--nord8)) !important;
-   transition: transform 1s linear !important;
+   transition: transform .3s linear !important;
+ }
+ #sliderKnob {
+  transition: all .3s linear !important;
  }
 
  /* Side bar toggle animation */
