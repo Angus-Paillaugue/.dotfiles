@@ -4,9 +4,9 @@
 
 # ╭─ ╰─
 format = """
-╭─[](nord-7)\
+╭─[](nord-8)\
 $os\
-[ ](fg:nord-7 bg:nord-1)\
+[ ](fg:nord-8 bg:nord-1)\
 $directory\
 [](fg:nord-1)\
 $git_branch\
@@ -106,7 +106,7 @@ symbol = ''
 not_found_symbol = ' '
 sigint_symbol = '󰟾 '
 success_symbol = ''
-format = '[](nord-7)[$symbol$signal_name$maybe_int](bg:nord-7 fg:nord-0)[ ](nord-7)'
+format = '[](nord-8)[$symbol$signal_name$maybe_int](bg:nord-8 fg:nord-0)[ ](nord-8)'
 map_symbol = true
 disabled = false
 
@@ -114,7 +114,7 @@ disabled = false
 min_time = 100
 show_milliseconds = false
 disabled = false
-format = "[](nord-7)[$duration](bg:nord-7 fg:nord-0)[ ](nord-7)"
+format = "[](nord-8)[$duration](bg:nord-8 fg:nord-0)[ ](nord-8)"
 
 [character]
 success_symbol = "[](bold nord-4)"

@@ -21,6 +21,7 @@ To use these files you can use the `install.sh` script that copies all the dotfi
    - zsh-bat [repo](https://github.com/fdellwing/zsh-bat)
 
 ## Extension manager
+
 <!-- Blur my shell -->
 <details>
   <summary>Blur my shell</summary>
@@ -234,6 +235,7 @@ To use these files you can use the `install.sh` script that copies all the dotfi
   </ul>
 </details>
 
+<!-- Vitals -->
 <details>
   <summary>Vitals</summary>
   <ul>
