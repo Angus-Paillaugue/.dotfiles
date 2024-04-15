@@ -5,8 +5,8 @@
 	},
 	"window-maximized": true,
 	"window-position": {
-		"x": 262,
-		"y": 240
+		"x": 261,
+		"y": 272
 	},
 	"url": "https://music.youtube.com/watch?v=XTWMs_WizFM&list=RDAMVMXTWMs_WizFM&index=0&sq=1",
 	"options": {
@@ -68,7 +68,7 @@
 	},
 	"__internal__": {
 		"migrations": {
-			"version": "3.3.5"
+			"version": "3.3.6"
 		}
 	}
 }
