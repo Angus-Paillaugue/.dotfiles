@@ -270,3 +270,49 @@ To configure the aforementioned programs, you can just run the `./install.sh` sc
     </li>
   </ul>
 </details>
+
+# Misc
+
+## Terminal
+
+### Looks
+To have a cleaner look, I removed the the default top bar. To do So I follow this answer : 
+>Install dconf-editor
+>`sudo apt install dconf-editor`
+>
+>Open dconf-editor (run `dconf-editor`)
+>
+>Go to `/org/gnome/terminal/legacy/headerbar`
+>
+>Disable "Default value" and change "Custom value" to "False".
+>
+>Close all your gnome-terminal windows and then reopen your terminal. Voilà!
+>
+>To remove menu bar, in terminal go to "View" and uncheck "Show menu bar" (or something else).
+
+
+### Settings
+
+
+#### General
+Unchecked the "Show menubar by default in new terminals" in the terminal settings under general.
+
+#### Shortcuts 
+File -> New Tab : <kbd>Ctrl+T</kbd> 
+File -> Close Tab : <kbd>Ctrl+W</kbd> 
+Edit -> Pase : <kbd>Ctrl+V</kbd> 
+View -> Hide and Show menubar : <kbd>Ctrl+M</kbd> 
+Tabs -> Switch to Previous Tab : <kbd>Alt+Left</kbd> 
+Tabs -> Switch to Next Tab : <kbd>Alt+Right</kbd> 
+
+#### Profiles
+Install the Nord theme by following the tutorial : [https://github.com/nordtheme/gnome-terminal](https://github.com/nordtheme/gnome-terminal)
+Then set it as default by clicking on the dropdown icon in the terminal settings under profiles. Then click on "Set as default".
+
+##### Text
+Change the size to 100 columns and 27 rows
+Change the font to JetBrainsMono Nerd Font whit a size of 14
+Change the cursor shape to the |-Beam
+
+##### Colors
+Check "Use transparent background" and adjust the slider.
