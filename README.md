@@ -295,6 +295,7 @@ To have a cleaner look, I removed the the default top bar. To do So I follow thi
 
 
 #### General
+#play-pause-button tp-yt-iron-iconInstall the Nord theme by following the tutorial : [https://github.com/nordtheme/gnome-terminal](https://github.com/nordtheme/gnome-terminal)
 Unchecked the "Show menubar by default in new terminals" in the terminal settings under general.
 
 #### Shortcuts 
@@ -316,3 +317,6 @@ Change the cursor shape to the |-Beam
 
 ##### Colors
 Check "Use transparent background" and adjust the slider.
+
+## Mouse
+Changed the mouse speed to 3. (see : [https://askubuntu.com/questions/255890/how-can-i-adjust-the-mouse-scroll-speed#answer-1361121](https://askubuntu.com/questions/255890/how-can-i-adjust-the-mouse-scroll-speed#answer-1361121))
