@@ -110,8 +110,9 @@ source $ZSH/oh-my-zsh.sh
 # Star Ship
 eval "$(starship init zsh)"
 
-# Neofetch
-neofetch
+# Fastfetch
+fastfetch
+echo
 
 # PNPM
 export PNPM_HOME="/home/angus/.local/share/pnpm"
