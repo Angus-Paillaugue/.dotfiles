@@ -31,7 +31,11 @@
     {
       "type": "disk",
       "key": "├─",
-      "format": "{1} / {2} {3}"
+      "format": "{1} / {2} ({3})",
+      "percent": {
+        "green": 70,
+        "yellow": 85
+      }
     },
     {
       "type": "packages",

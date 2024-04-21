@@ -128,5 +128,10 @@ source ~/.nvm/nvm.sh
 alias lsa="ls -a"
 alias h="cd ~"
 alias c="clear"
+alias count="echo \"There are $(find . -maxdepth 1 -type f | wc -l) files and $(($(find . -maxdepth 1 -type d | wc -l) - 1)) directories here.\""
+alias r="source ~/.zshrc"
+alias pi="pnpm i"
+alias pa="pnpm add "
+alias pr="pnpm run "
 
 PATH=~/.console-ninja/.bin:$PATH

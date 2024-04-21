@@ -1,6 +1,6 @@
 
 # Dotfiles tracker
-To use this repo, you need to understand how it works first The `files_to_backup.txt` contains a dotfile to backup on every line. The `backup.sh` script is used to create a copy of each of the files you specified and the ./links directory. This directory reproduces the the file tree base on $HOME relative to ./links. In this script, you can also directly sync this repo on github. 
+To use this repo, you need to understand how it works first The `files_to_backup.txt` contains a dotfile to backup on every line. The `backup.sh` script is used to create a copy of each of the files you specified and the ./links directory. This directory reproduces the the file tree base on $HOME relative to ./links. In this script, you can also directly sync this repo on github.
 
 To use these files you can use the `install.sh` script that copies all the dotfiles in the links directory into their actual places (be aware that  fi les that need to be copied into a non-existant directory will not be copied).
 
@@ -10,7 +10,7 @@ To use these files you can use the `install.sh` script that copies all the dotfi
  - [Colloid](https://github.com/vinceliuice/Colloid-gtk-theme) As the main theme (no params used during installation)
  - [Wallpapers library](https://github.com/linuxdotexe/nordic-wallpapers) Selection of nordit themed wallpapers (I use `ign_astronaut.png`)
  - [Starship](https://starship.rs/guide/) : custom shell prompt
- - [White sur icons](https://github.com/vinceliuice/WhiteSur-icon-theme) : Installed without any flags. 
+ - [White sur icons](https://github.com/vinceliuice/WhiteSur-icon-theme) : Installed without any flags.
  - [alacarte](https://doc.ubuntu-fr.org/alacarte) : Used `alacarte` (`sudo apt install alacarte` then just run `alacarte` in the terminal then change the vivaldi browser icon to `/home/angus/.local/share/icons/WhiteSur-dark/apps/scalable/81F5_winebrowser.0.svg`)
  - ZSH as shell (see the zshrc config file)
    - git (installed by default)
@@ -59,7 +59,7 @@ To configure the aforementioned programs, you can just run the `./install.sh` sc
           </ul>
         </li>
         <li>
-          Compatibility 
+          Compatibility
           <ul>
             <li>Hidetopbar extension : OFF</li>
             <li>Blur original panel with Dash to Panel : ON</li>
@@ -199,7 +199,7 @@ To configure the aforementioned programs, you can just run the `./install.sh` sc
       General
       <ul>
         <li>
-          Global settings 
+          Global settings
           <ul>
             <li>Border radius : 15</li>
             <li>Keep rounded corners when maximized : ON</li>
@@ -276,7 +276,7 @@ To configure the aforementioned programs, you can just run the `./install.sh` sc
 ## Terminal
 
 ### Looks
-To have a cleaner look, I removed the the default top bar. To do So I follow this answer : 
+To have a cleaner look, I removed the the default top bar. To do So I follow this answer :
 >Install dconf-editor
 >`sudo apt install dconf-editor`
 >
@@ -298,13 +298,13 @@ To have a cleaner look, I removed the the default top bar. To do So I follow thi
 Install the Nord theme by following the tutorial : [https://github.com/nordtheme/gnome-terminal](https://github.com/nordtheme/gnome-terminal)
 Unchecked the "Show menubar by default in new terminals" in the terminal settings under general.
 
-#### Shortcuts 
-File -> New Tab : <kbd>Ctrl+T</kbd> 
-File -> Close Tab : <kbd>Ctrl+W</kbd> 
-Edit -> Pase : <kbd>Ctrl+V</kbd> 
-View -> Hide and Show menubar : <kbd>Ctrl+M</kbd> 
-Tabs -> Switch to Previous Tab : <kbd>Alt+Left</kbd> 
-Tabs -> Switch to Next Tab : <kbd>Alt+Right</kbd> 
+#### Shortcuts
+File -> New Tab : <kbd>Ctrl+T</kbd>
+File -> Close Tab : <kbd>Ctrl+W</kbd>
+Edit -> Pase : <kbd>Ctrl+V</kbd>
+View -> Hide and Show menubar : <kbd>Ctrl+M</kbd>
+Tabs -> Switch to Previous Tab : <kbd>Alt+Left</kbd>
+Tabs -> Switch to Next Tab : <kbd>Alt+Right</kbd>
 
 #### Profiles
 Install the Nord theme by following the tutorial : [https://github.com/nordtheme/gnome-terminal](https://github.com/nordtheme/gnome-terminal)
@@ -319,8 +319,18 @@ Change the cursor shape to the |-Beam
 Check "Use transparent background" and adjust the slider.
 
 ## Mouse
+!only if using actual mouse and not a keypad!
 Changed the mouse speed to 3. (see : [https://askubuntu.com/questions/255890/how-can-i-adjust-the-mouse-scroll-speed#answer-1361121](https://askubuntu.com/questions/255890/how-can-i-adjust-the-mouse-scroll-speed#answer-1361121))
 
 ## App menu
 
 Install menulibre (`sudo apt install menulibre`) and run it in the terminal to hide apps from the dock.
+
+
+
+# Bash cheat-sheet
+
+`mkdir $dir && cd $dir` : `take $dir`
+`rmdir $dir` : `rd $dir`
+`mkdir -p $dir` : `md $dir`
+`cd ../` : `..`
