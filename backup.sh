@@ -24,6 +24,7 @@ do
   fi
 done < <(cat "$backup_paths")
 
+sleep 1
 # Ask user if they want to push the changes
 echo ""
 read -p "Do you want to push the changes? (y/n): " execute
