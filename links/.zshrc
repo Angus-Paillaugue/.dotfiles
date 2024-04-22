@@ -133,5 +133,6 @@ alias r="source ~/.zshrc"
 alias pi="pnpm i"
 alias pa="pnpm add "
 alias pr="pnpm run "
+alias s="du -hs "
 
 PATH=~/.console-ninja/.bin:$PATH

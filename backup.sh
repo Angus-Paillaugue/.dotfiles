@@ -14,13 +14,13 @@ do
   full_path="$HOME/$clean_path"  # Remove tilde and prepend home_dir
 
   if [[ -f "$full_path" || -d "$full_path" ]]; then  # Check if file/directory exists
-    # Create directory of where the file is located relative to the `link` directory
+    # Create directory of where the file (or dir) is located relative to the `link` directory
     mkdir -p "./links/$(dirname "$clean_path")"
-    # Create the copy of the actual file
-    cp "$full_path" "./links/$clean_path"
+    # Create the copy of the actual file or dir
+    cp -r "$full_path" "./links/$clean_path"
     echo -e "${GREEN}󰌷 ${ENDCOLOR}$clean_path"
   else
-    echo "${RED}󰒬 ${ENDCOLOR}Skipping: $full_path (File/directory not found)"
+    echo -e "${RED}󰒬 ${ENDCOLOR}Skipping: $full_path (File/directory not found)"
   fi
 done < <(cat "$backup_paths")
 
@@ -36,6 +36,6 @@ if [[ $execute == "y" ]]; then
   git push
   echo -e "\n${RED} ${ENDCOLOR}Your changes have been pushed."
 else
-  # Skip push 
+  # Skip push
   echo "Links have beed created but not synchronized with git."
 fi
