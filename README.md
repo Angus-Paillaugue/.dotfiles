@@ -336,3 +336,5 @@ Install menulibre (`sudo apt install menulibre`) and run it in the terminal to h
 `cd ../` : `..`
 Get file/dir size
 `du -hs $dir` : `s $dir`
+List number of files recursively
+`find . -type f | wc -l` : `nfr`
