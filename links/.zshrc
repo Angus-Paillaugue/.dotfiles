@@ -125,7 +125,7 @@ esac
 source ~/.nvm/nvm.sh
 
 # Custom liases
-alias lsa="ls -aA"
+alias lsa="ls -a"
 alias h="cd ~"
 alias c="clear"
 alias count="echo \"There are $(find . -maxdepth 1 -type f | wc -l) files and $(($(find . -maxdepth 1 -type d | wc -l) - 1)) directories here.\""
@@ -135,5 +135,7 @@ alias pa="pnpm add "
 alias pr="pnpm run "
 alias s="du -hs "
 alias nfr="echo \"There are $(find . -type f | wc -l) files (recursively) in this directory.\""
+alias ascii="man ascii | grep -m 1 -A 66 --color=never Oct | batcat --style grid,numbers -l vimrc --theme Nord"
 
 PATH=~/.console-ninja/.bin:$PATH
+export SHELL=/usr/bin/zsh

@@ -1,18 +1,18 @@
 {
 	"window-size": {
-		"width": 361,
-		"height": 665
+		"width": 364,
+		"height": 667
 	},
-	"window-maximized": false,
+	"window-maximized": true,
 	"window-position": {
-		"x": 1176,
-		"y": 187
+		"x": 1072,
+		"y": 285
 	},
-	"url": "https://music.youtube.com/watch?v=4wOLVrGHiIU&sq=1",
+	"url": "https://music.youtube.com/watch?v=ULxSBaeOMcA&list=RDAMVMtI1lKWpVwg0&index=0&sq=1",
 	"options": {
 		"tray": false,
 		"appVisible": true,
-		"autoUpdates": true,
+		"autoUpdates": false,
 		"alwaysOnTop": false,
 		"hideMenu": true,
 		"hideMenuWarned": true,

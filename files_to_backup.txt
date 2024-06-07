@@ -5,3 +5,4 @@
 ~/.config/YouTube Music/config.json
 ~/.config/fastfetch/config.jsonc
 ~/.icons/macOS Cursor Set/
+~/.config/Code/User/settings.json
