@@ -121,6 +121,10 @@ export FZF_ALT_C_OPTS='--preview "tree -C {} | head -200" --preview-window=right
 # export FZF_CTRL_T_COMMAND='find . -type f -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/.*/*"'
 # export FZF_CTRL_T_OPTS='--preview "batcat --style=numbers --theme=Nord --color=always --line-range :500 {}" --print0'
 
+# Others
+PATH=~/.console-ninja/.bin:$PATH
+export SHELL=/usr/bin/zsh
+
 # ENV Variables End
 
 # Star Ship
@@ -141,24 +145,20 @@ esac
 source ~/.nvm/nvm.sh
 
 # Custom liases
-alias settings="nano ~/.zshrc"
+alias settings="code ~/.zshrc"
 alias ls="ls -A --color"
 alias h="cd ~"
 alias c="clear"
 alias count="echo \"There are $(find . -maxdepth 1 -type f | wc -l) files and $(($(find . -maxdepth 1 -type d | wc -l) - 1)) directories here.\""
 alias r="source ~/.zshrc"
 alias pi="pnpm i"
-alias pa="pnpm add "
-alias pr="pnpm run "
-alias size="du -hs "
+alias pa="pnpm add"
+alias pr="pnpm run"
+alias size="du -hs"
 alias nfr="echo \"There are $(find . -type f | wc -l) files (recursively) in this directory.\""
 alias ascii="man ascii | grep -m 1 -A 66 --color=never Oct | batcat --style grid,numbers -l vimrc --theme Nord"
-alias s='selected=$(find . -type f -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/.*/*" | fzf --preview "batcat --style=numbers --theme=Nord --color=always --line-range :500 {}" --print0 | tr -d "\n"); [ -n "$selected" ] && echo "$selected" | xargs -0 -o code'
-alias op='selected=$(eval "$FZF_ALT_C_COMMAND" | fzf --preview "tree -C {} | head -200" --preview-window=right:60%:wrap); [ -n "$selected" ] && code "$selected"'
-
-
-PATH=~/.console-ninja/.bin:$PATH
-export SHELL=/usr/bin/zsh
+alias of='selected=$(find . -type f -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/.*/*" | fzf --preview "batcat --style=numbers --theme=Nord --color=always --line-range :500 {}" --print0 | tr -d "\n"); [ -n "$selected" ] && echo "$selected" | xargs -0 -o code'
+alias od='selected=$(eval "$FZF_ALT_C_COMMAND" | fzf --preview "tree -C {} | head -200" --preview-window=right:60%:wrap); [ -n "$selected" ] && code "$selected"'
 
 # pnpm
 export PNPM_HOME="/home/angus/.local/share/pnpm"
