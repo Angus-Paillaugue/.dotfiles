@@ -107,6 +107,11 @@ source $ZSH/oh-my-zsh.sh
 
 #!#!#!#!# MY CONMFIG #!#!#!#!#
 
+# ENV Variables
+export FZF_DEFAULT_OPTS="--height 50% --layout reverse --border --print0"
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window up:3:hidden:wrap --bind 'ctrl-/:toggle-preview' --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort' --color header:italic --header 'Press CTRL-Y to copy command into clipboard'"
+# export FZF_ALT_C_OPTS="--walker-skip .git,node_modules,target --preview 'tree -C {}'"
+
 # Star Ship
 eval "$(starship init zsh)"
 
@@ -125,7 +130,8 @@ esac
 source ~/.nvm/nvm.sh
 
 # Custom liases
-alias lsa="ls -a"
+alias settings="nano ~/.zshrc"
+alias ls="ls -a --color"
 alias h="cd ~"
 alias c="clear"
 alias count="echo \"There are $(find . -maxdepth 1 -type f | wc -l) files and $(($(find . -maxdepth 1 -type d | wc -l) - 1)) directories here.\""
@@ -133,9 +139,21 @@ alias r="source ~/.zshrc"
 alias pi="pnpm i"
 alias pa="pnpm add "
 alias pr="pnpm run "
-alias s="du -hs "
+alias size="du -hs "
 alias nfr="echo \"There are $(find . -type f | wc -l) files (recursively) in this directory.\""
 alias ascii="man ascii | grep -m 1 -A 66 --color=never Oct | batcat --style grid,numbers -l vimrc --theme Nord"
+alias s='selected=$(find . -type f -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/.*/*" | fzf --preview "batcat --style=numbers --theme=Nord --color=always --line-range :500 {}" --print0); [ -n "$selected" ] && echo "$selected" | xargs -0 nano'
 
 PATH=~/.console-ninja/.bin:$PATH
 export SHELL=/usr/bin/zsh
+
+# pnpm
+export PNPM_HOME="/home/angus/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
+[ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
