@@ -108,9 +108,20 @@ source $ZSH/oh-my-zsh.sh
 #!#!#!#!# MY CONMFIG #!#!#!#!#
 
 # ENV Variables
+
+# fzf
 export FZF_DEFAULT_OPTS="--height 50% --layout reverse --border --print0"
+export FZF_DEFAULT_COMMAND='find . -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/.*/*"'
+# History
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window up:3:hidden:wrap --bind 'ctrl-/:toggle-preview' --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort' --color header:italic --header 'Press CTRL-Y to copy command into clipboard'"
-# export FZF_ALT_C_OPTS="--walker-skip .git,node_modules,target --preview 'tree -C {}'"
+# Fancy cd
+export FZF_ALT_C_COMMAND='find . -type d -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/.*/*"'
+export FZF_ALT_C_OPTS='--preview "tree -C {} | head -200" --preview-window=right:60%:wrap'
+# Remaped to Ctrl-F
+# export FZF_CTRL_T_COMMAND='find . -type f -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/.*/*"'
+# export FZF_CTRL_T_OPTS='--preview "batcat --style=numbers --theme=Nord --color=always --line-range :500 {}" --print0'
+
+# ENV Variables End
 
 # Star Ship
 eval "$(starship init zsh)"
@@ -131,7 +142,7 @@ source ~/.nvm/nvm.sh
 
 # Custom liases
 alias settings="nano ~/.zshrc"
-alias ls="ls -a --color"
+alias ls="ls -A --color"
 alias h="cd ~"
 alias c="clear"
 alias count="echo \"There are $(find . -maxdepth 1 -type f | wc -l) files and $(($(find . -maxdepth 1 -type d | wc -l) - 1)) directories here.\""
@@ -142,7 +153,9 @@ alias pr="pnpm run "
 alias size="du -hs "
 alias nfr="echo \"There are $(find . -type f | wc -l) files (recursively) in this directory.\""
 alias ascii="man ascii | grep -m 1 -A 66 --color=never Oct | batcat --style grid,numbers -l vimrc --theme Nord"
-alias s='selected=$(find . -type f -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/.*/*" | fzf --preview "batcat --style=numbers --theme=Nord --color=always --line-range :500 {}" --print0); [ -n "$selected" ] && echo "$selected" | xargs -0 nano'
+alias s='selected=$(find . -type f -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/.*/*" | fzf --preview "batcat --style=numbers --theme=Nord --color=always --line-range :500 {}" --print0 | tr -d "\n"); [ -n "$selected" ] && echo "$selected" | xargs -0 -o code'
+alias op='selected=$(eval "$FZF_ALT_C_COMMAND" | fzf --preview "tree -C {} | head -200" --preview-window=right:60%:wrap); [ -n "$selected" ] && code "$selected"'
+
 
 PATH=~/.console-ninja/.bin:$PATH
 export SHELL=/usr/bin/zsh
@@ -155,5 +168,7 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# fzf
+# bindkey '^F' fzf-file-widget
 [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
 [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
