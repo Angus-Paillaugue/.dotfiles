@@ -76,7 +76,6 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 	you-should-use
-	zsh-bat
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -146,6 +145,7 @@ source ~/.nvm/nvm.sh
 
 # Custom liases
 alias settings="code ~/.zshrc"
+alias cat="batcat --theme Nord --color always"
 alias ls="ls -A --color"
 alias h="cd ~"
 alias c="clear"
@@ -159,6 +159,7 @@ alias nfr="echo \"There are $(find . -type f | wc -l) files (recursively) in thi
 alias ascii="man ascii | grep -m 1 -A 66 --color=never Oct | batcat --style grid,numbers -l vimrc --theme Nord"
 alias of='selected=$(find . -type f -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/__pycache__/*" | fzf --preview "batcat --style=numbers --theme=Nord --color=always --line-range :500 {}" --print0 | tr -d "\n"); [ -n "$selected" ] && echo "$selected" | xargs -0 -o code'
 alias od='selected=$(eval "$FZF_ALT_C_COMMAND" | fzf --preview "tree -L 4 -C --dirsfirst -I \"node_modules|.git|__pycache__\" {} | head -200" --preview-window=right:60%:wrap); [ -n "$selected" ] && code "$selected"'
+alias ssh-nas="ssh root@truenas.local"
 
 # pnpm
 export PNPM_HOME="/home/angus/.local/share/pnpm"

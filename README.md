@@ -6,11 +6,11 @@ To use these files you can use the `install.sh` script that copies all the dotfi
 
 # Installed programs (in order)
  - [bat](https://github.com/sharkdp/bat) : A cat(1) clone with wings.
- - [neofetch](https://doc.ubuntu-fr.org/neofetch) : used as a welcome message in zsh
- - [Colloid](https://github.com/vinceliuice/Colloid-gtk-theme) As the main theme (no params used during installation)
+ - [fastfetch](https://github.com/fastfetch-cli/fastfetch) : used as a welcome message in zsh
+ - [Colloid](https://github.com/vinceliuice/Colloid-gtk-theme) As the main theme (use the following command for the correct params : `./install.sh --tweaks float nord rimless`)
  - [Wallpapers library](https://github.com/linuxdotexe/nordic-wallpapers) Selection of nordit themed wallpapers (I use `ign_astronaut.png`)
  - [Starship](https://starship.rs/guide/) : custom shell prompt
- - [White sur icons](https://github.com/vinceliuice/WhiteSur-icon-theme) : Installed without any flags.
+ - [White sur icons](https://github.com/vinceliuice/WhiteSur-icon-theme) : Installed with the bold blag on : `./install.sh -b`.
  - [alacarte](https://doc.ubuntu-fr.org/alacarte) : Used `alacarte` (`sudo apt install alacarte` then just run `alacarte` in the terminal then change the vivaldi browser icon to `/home/angus/.local/share/icons/WhiteSur-dark/apps/scalable/81F5_winebrowser.0.svg`)
  - ZSH as shell (see the zshrc config file)
    - git (installed by default)
@@ -18,7 +18,6 @@ To use these files you can use the `install.sh` script that copies all the dotfi
    - zsh-autosuggestions [install guide](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
    - zsh-syntax-highlighting [install guide](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
    - you-should-use [repo](https://github.com/MichaelAquilina/zsh-you-should-use?tab=readme-ov-file)
-   - zsh-bat [repo](https://github.com/fdellwing/zsh-bat)
  - [YouTube music](https://github.com/th-ch/youtube-music?tab=readme-ov-file#download) : Installed and configured only with the .dotfiles
 
 # Configurations
@@ -235,7 +234,7 @@ To configure the aforementioned programs, you can just run the `./install.sh` sc
 <details>
   <summary>User themes</summary>
   <ul>
-    <li>Colloid Dark</li>
+    <li>Colloid Nord Dark</li>
   </ul>
 </details>
 
@@ -315,26 +314,10 @@ Change the size to 100 columns and 27 rows
 Change the font to JetBrainsMono Nerd Font whit a size of 14
 Change the cursor shape to the |-Beam
 
-##### Colors
-Check "Use transparent background" and adjust the slider.
-
 ## Mouse
-!only if using actual mouse and not a keypad!
+!only if using actual mouse and not a trackpad!
 Changed the mouse speed to 3. (see : [https://askubuntu.com/questions/255890/how-can-i-adjust-the-mouse-scroll-speed#answer-1361121](https://askubuntu.com/questions/255890/how-can-i-adjust-the-mouse-scroll-speed#answer-1361121))
 
 ## App menu
 
 Install menulibre (`sudo apt install menulibre`) and run it in the terminal to hide apps from the dock.
-
-
-
-# Bash cheat-sheet
-
-`mkdir $dir && cd $dir` : `take $dir`
-`rmdir $dir` : `rd $dir`
-`mkdir -p $dir` : `md $dir`
-`cd ../` : `..`
-Get file/dir size
-`du -hs $dir` : `s $dir`
-List number of files recursively
-`find . -type f | wc -l` : `nfr`
