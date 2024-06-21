@@ -8,6 +8,11 @@ sudo apt upgrade -y
 sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-browser-connector gnome-shell-extensions dconf-editor google-chrome-beta openjdk-17-jdk software-properties-common apt-transport-https -y
 
 
+# Git config
+git config --global user.name "Angus-Paillaugue"
+git config --global user.email "angus.paillaugue40@gmail.com"
+
+
 # Install of theme and icons
 echo "Installing theme and icons"
 cd ~/Downloads
