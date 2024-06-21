@@ -5,7 +5,7 @@
 echo "Installing base programs"
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-browser-connector gnome-shell-extensions dconf-editor google-chrome-beta openjdk-17-jdk software-properties-common apt-transport-https -y
+sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-browser-connector gnome-shell-extensions dconf-editor google-chrome-beta openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip -y
 
 
 # Git config
@@ -124,6 +124,14 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle_vbox_2016.gpg] http:/
 sudo apt update -y
 sudo apt install virtualbox-7.0 -y
 sudo apt install --reinstall virtualbox-dkms -y && sudo apt install libelf-dev -y
+
+
+# Gnome extensions
+cd ~/Downloads
+pip3 install --upgrade gnome-extensions-cli
+# Use the extension UUID in the url
+# EX : for this url, https://extensions.gnome.org/extension/19/user-themes/, the  UUID is 19
+gnome-extensions-cli install 3193 779 4158 3843 5237 1446 19 1460
 
 
 # Cleanup
