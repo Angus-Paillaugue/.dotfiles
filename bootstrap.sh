@@ -19,6 +19,8 @@ cd ~/Downloads
 git clone https://github.com/vinceliuice/Colloid-gtk-theme
 cd Colloid-gtk-theme/
 ./install.sh --tweaks float nord rimless
+# Copying themes for GDM settings to be able to use them
+sudo cp -r ~/.themes/* /usr/share/themes
 cd ~/Downloads
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme
 cd WhiteSur-icon-theme
@@ -130,8 +132,12 @@ sudo apt install --reinstall virtualbox-dkms -y && sudo apt install libelf-dev -
 cd ~/Downloads
 pip3 install --upgrade gnome-extensions-cli
 # Use the extension UUID in the url
-# EX : for this url, https://extensions.gnome.org/extension/19/user-themes/, the  UUID is 19
+# Ex : for this url, https://extensions.gnome.org/extension/19/user-themes/, the  UUID is 19
 gnome-extensions-cli install 3193 779 4158 3843 5237 1446 19 1460
+
+
+# GDM Settings
+flatpak install io.github.realmazharhussain.GdmSettings -y
 
 
 # Cleanup
