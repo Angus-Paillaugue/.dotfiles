@@ -19,6 +19,7 @@ print_in_color() {
   esac
 }
 
+
 # Welcome message and prompt
 echo "Welcome to the bootstrap script!"
 read -p "Do you want to continue? (y/n) " answer
@@ -27,11 +28,20 @@ if [ "$answer" != "y" ]; then
   exit 0
 fi
 
+
+# Create a temporary file for stderr
+temp_file=$(mktemp /tmp/bootsrap-errors.XXXXXX)
+
+# Redirect stderr to the temporary file
+exec 2>>"$temp_file"
+
+ls /testfoirfj
+
 # Base programs install
 print_in_color "" " ↺ Installing base programs"
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-shell-extensions dconf-editor google-chrome-beta openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip -y
+sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-shell-extensions dconf-editor openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip -y
 print_in_color "green" " ✓ Installed base programs"
 
 
@@ -54,7 +64,8 @@ print_in_color "green" " ✓ Installed JetBrains Mono"
 print_in_color "" " ↺ Installing Google Chrome Beta"
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo apt-get update -y
+sudo apt update -y
+sudo apt install google-chrome-beta -y
 print_in_color "green" " ✓ Installed Google Chrome Beta"
 
 
@@ -122,7 +133,7 @@ print_in_color "green" " ✓ Installed NVM and Node"
 
 # Fastfetch install
 print_in_color "" " ↺ Installing Fastfetch"
-sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
 sudo apt update && sudo apt install fastfetch -y
 fastfetch --gen-config
 print_in_color "green" " ✓ Installed Fastfetch"
@@ -212,10 +223,21 @@ rm -rf ~/Downloads/
 print_in_color "green" " ✓ Cleaned up"
 
 
-# Reboot prompt
-print_in_color "green" " ↺ All done!"
-echo "Reboot now? (y/n)"
-read reboot
-if [ $reboot == "y" ]; then
-  sudo reboot
+# At the end of the script, check if there were any errors
+if [ -s "$temp_file" ]; then
+  print_in_color "red" "Errors occurred during execution:"
+  while IFS= read -r line; do
+    print_in_color "red" "$line"
+  done < "$temp_file"
+  # Append errors to a log file
+  cat "$temp_file" >> ./bootstrap-errors.log
+else
+  print_in_color "green" "No errors occurred during execution."
+  # Reboot prompt
+  print_in_color "green" " ↺ All done!"
+  echo "Reboot now? (y/n)"
+  read reboot
+  if [ $reboot == "y" ]; then
+    sudo reboot
+  fi
 fi
