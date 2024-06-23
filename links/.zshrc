@@ -160,6 +160,7 @@ alias ascii="man ascii | grep -m 1 -A 66 --color=never Oct | batcat --style grid
 alias of='selected=$(find . -type f -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/__pycache__/*" | fzf --preview "batcat --style=numbers --theme=Nord --color=always --line-range :500 {}" --print0 | tr -d "\n"); [ -n "$selected" ] && echo "$selected" | xargs -0 -o code'
 alias od='selected=$(eval "$FZF_ALT_C_COMMAND" | fzf --preview "tree -L 4 -C --dirsfirst -I \"node_modules|.git|__pycache__\" {} | head -200" --preview-window=right:60%:wrap); [ -n "$selected" ] && code "$selected"'
 alias ssh-nas="ssh root@truenas.local"
+alias install="sudo apt install"
 
 # pnpm
 export PNPM_HOME="/home/angus/.local/share/pnpm"
@@ -173,3 +174,7 @@ esac
 bindkey '^F' fzf-file-widget
 [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
 [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

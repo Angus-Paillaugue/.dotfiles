@@ -1,21 +1,21 @@
 {
 	"window-size": {
-		"width": 364,
-		"height": 670
+		"width": 1100,
+		"height": 550
 	},
-	"window-maximized": true,
+	"window-maximized": false,
 	"window-position": {
-		"x": 1072,
-		"y": 369
+		"x": 0,
+		"y": 72
 	},
-	"url": "https://music.youtube.com/watch?v=sv0AvFyYAmE&list=RDAMPLPLR44HyGlHjRnBPT0nsoUUPyiQ-DytNaWV&index=0&sq=1",
+	"url": "https://music.youtube.com",
 	"options": {
 		"tray": false,
 		"appVisible": true,
-		"autoUpdates": false,
+		"autoUpdates": true,
 		"alwaysOnTop": false,
-		"hideMenu": true,
-		"hideMenuWarned": true,
+		"hideMenu": false,
+		"hideMenuWarned": false,
 		"startAtLogin": false,
 		"disableHardwareAcceleration": false,
 		"removeUpgradeButton": false,
@@ -29,7 +29,7 @@
 		"overrideUserAgent": false,
 		"usePodcastParticipantAsArtist": false,
 		"themes": [
-			"/home/angus/.config/YouTube Music/yt-music-nord.css"
+			"/home/angus/Downloads/yt-music-nord.css"
 		]
 	},
 	"plugins": {
@@ -42,33 +42,11 @@
 		},
 		"discord": {
 			"listenAlong": true
-		},
-		"ambient-mode": {
-			"enabled": true
-		},
-		"blur-nav-bar": {
-			"enabled": false
-		},
-		"bypass-age-restrictions": {
-			"enabled": true
-		},
-		"crossfade": {
-			"enabled": false
-		},
-		"downloader": {
-			"enabled": true
-		},
-		"in-app-menu": {
-			"enabled": false,
-			"hideDOMWindowControls": false
-		},
-		"compact-sidebar": {
-			"enabled": false
 		}
 	},
 	"__internal__": {
 		"migrations": {
-			"version": "3.3.6"
+			"version": "3.3.12"
 		}
 	}
 }
