@@ -281,10 +281,11 @@ installCursors() {
   printInColor "" " ↺ Installing cursors"
   cd ~/Downloads
   curl -s https://api.github.com/repos/ful1e5/apple_cursor/releases/latest | grep "macOS.tar.xz" | cut -d : -f 2,3 | tr -d \" | wget -qi -
-  tar -xf macOS.tar.xz
-  ls
-  mv macOS* ~/.icons/
-  rm -rf macOS*
+  mkdir macOS
+  tar -xf macOS.tar.xz -C ./macOS
+  mv ./macOS/macOS* ~/.icons/
+  rm -rf ./macOS
+  rm macOS.tar.xz
   printInColor "green" " ✓ Installed cursors"
 }
 
