@@ -265,6 +265,7 @@ installGdmSettings() {
 }
 
 
+# Youtube Music install
 installYoutubeMusic() {
   printInColor "" " ↺ Installing Youtube Music"
   cd ~/Downloads
@@ -272,6 +273,19 @@ installYoutubeMusic() {
   sudo apt install ./youtube-music*.deb
   rm youtube-music*.deb
   printInColor "green" " ✓ Installed Youtube Music"
+}
+
+
+# Cursors install
+installCursors() {
+  printInColor "" " ↺ Installing cursors"
+  cd ~/Downloads
+  curl -s https://api.github.com/repos/ful1e5/apple_cursor/releases/latest | grep "macOS.tar.xz" | cut -d : -f 2,3 | tr -d \" | wget -qi -
+  tar -xf macOS.tar.xz
+  ls
+  mv macOS* ~/.icons/
+  rm -rf macOS*
+  printInColor "green" " ✓ Installed cursors"
 }
 
 
@@ -317,6 +331,7 @@ if [ "$installAll" == "y" ]; then
   installTheme
   installIcons
   installFonts
+  installCursors
   installDotfiles
   cleanup
 # Install specific programs
@@ -346,8 +361,9 @@ else
   echo "21. Theme"
   echo "22. Icons"
   echo "23. Fonts"
-  echo "24. Youtube Music"
-  echo "25. Dotfiles"
+  echo "24. Cursors"
+  echo "25. Youtube Music"
+  echo "26. Dotfiles"
   read -p "Enter the numbers of the programs you want to install (separated by spaces): " programNumbers
 
   # Install selected programs
@@ -423,9 +439,12 @@ else
         installFonts
         ;;
       24)
-        installYoutubeMusic
+        installCursors
         ;;
       25)
+        installYoutubeMusic
+        ;;
+      26)
         installDotfiles
         ;;
       *)
