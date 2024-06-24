@@ -258,10 +258,11 @@ setExtensionsPreferences() {
   dconf write /org/gnome/shell/extensions/blur-my-shell/window-list/blur true
   dconf write /org/gnome/shell/extensions/blur-my-shell/window-list/customize false
   # Clipboard indicator
-  dconf write /org/gnome/shell/extensions/clipboard-indicator/toggle-menu ['<Shift><Super>v']
+  dconf write /org/gnome/shell/extensions/clipboard-indicator/toggle-menu \[\'\<\S\h\i\f\t\>\<\S\u\p\e\r\>\v\'\]
   # Just Perfection
   dconf write /org/gnome/shell/extensions/just-perfection/activities-button false
   dconf write /org/gnome/shell/extensions/just-perfection/accessibility-menu false
+  dconf write /org/gnome/shell/extensions/just-perfection/app-menu-icon false
   # Transparent window moving
   dconf write /org/gnome/shell/extensions/transparent-window-moving/window-opacity 170
   # Vitals
@@ -269,9 +270,9 @@ setExtensionsPreferences() {
   dconf write /org/gnome/shell/extensions/vitals/show-fan false
   dconf write /org/gnome/shell/extensions/vitals/show-battery false
   # Workspace indicator
-  dconf write /org/gnome/shell/extensions/horizontal-workspace-indicator/widget-position 'left'
-  dconf write /org/gnome/shell/extensions/horizontal-workspace-indicator/widget-orientation 'horizontal'
-  dconf write /org/gnome/shell/extensions/horizontal-workspace-indicator/icons-style 'circles'
+  # dconf write /org/gnome/shell/extensions/horizontal-workspace-indicator/widget-position 'left'
+  # dconf write /org/gnome/shell/extensions/horizontal-workspace-indicator/widget-orientation 'horizontal'
+  # dconf write /org/gnome/shell/extensions/horizontal-workspace-indicator/icons-style 'circles'
 }
 # Set the theme from the gnome-tweaks app
 setTheme() {
@@ -308,7 +309,7 @@ setCustomTitlebarTerminal() {
 # Center new windows
 centerNewWindows() {
   printInColor "" " ↺ Centering new windows"
-  gsettings set org.gnome.mutter center-new-windows
+  gsettings set org.gnome.mutter center-new-windows true
   printInColor "green" " ✓ Centered new windows"
 }
 
@@ -322,12 +323,12 @@ applyCutomSettings() {
   installDotfiles
   # Dock
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
-  dcronf write /org/gnome/shell/extensions/dash-to-dock/show-trash false
-  dcronf write /org/gnome/shell/extensions/dash-to-dock/show-mounts false
-  dcronf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed false
-  dcronf write /org/gnome/shell/extensions/dash-to-dock/extend-height false
+  dconf write /org/gnome/shell/extensions/dash-to-dock/show-trash false
+  dconf write /org/gnome/shell/extensions/dash-to-dock/show-mounts false
+  dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed false
+  dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height false
   # Power button press
-  dconf write /org/gnome/settings-daemon/plugins/power/power-button-action 'nothing'
+  # dconf write /org/gnome/settings-daemon/plugins/power/power-button-action 'nothing'
 }
 
 
@@ -371,25 +372,25 @@ else
   echo "2. Git config"
   echo "3. Chrome Beta"
   echo "4. Log in to GitHub"
-  echo "6. Eclipse"
-  echo "7. Flatpak"
-  echo "8. DejaDup"
-  echo "9. ZSH extensions"
-  echo "10. Starship"
-  echo "11. NVM and Node"
-  echo "12. Fastfetch"
-  echo "13. PNPM"
-  echo "14. Vercel CLI"
-  echo "15. Visual Studio Code"
-  echo "18. Virtualbox"
-  echo "19. Gnome extensions"
-  echo "20. GDM Settings"
-  echo "21. Theme"
-  echo "22. Icons"
-  echo "23. Fonts"
-  echo "24. Cursors"
-  echo "25. Youtube Music"
-  echo "27. Set custom settings"
+  echo "5. Eclipse"
+  echo "6. Flatpak"
+  echo "7. DejaDup"
+  echo "8. ZSH extensions"
+  echo "9. Starship"
+  echo "10. NVM and Node"
+  echo "11. Fastfetch"
+  echo "12. PNPM"
+  echo "13. Vercel CLI"
+  echo "14. Visual Studio Code"
+  echo "15. Virtualbox"
+  echo "16. Gnome extensions"
+  echo "17. GDM Settings"
+  echo "18. Theme"
+  echo "19. Icons"
+  echo "20. Fonts"
+  echo "21. Cursors"
+  echo "22. Youtube Music"
+  echo "23. Set custom settings"
   read -p "Enter the numbers of the programs you want to install (separated by spaces): " programNumbers
 
   # Install selected programs
@@ -407,68 +408,61 @@ else
       4)
         logInToGithub
         ;;
-        ;;
-      6)
+      5)
         installEclipse
         ;;
-      7)
+      6)
         installFlatpak
         ;;
-      8)
+      7)
         installDejaDup
         ;;
-      9)
+      8)
         installZshExtensions
         ;;
-      10)
+      9)
         installStarship
         ;;
-      11)
+      10)
         installNvmAndNode
         ;;
-      12)
+      11)
         installFastfetch
         ;;
-      13)
+      12)
         installPnpm
         ;;
-      14)
+      13)
         installVercelCli
         ;;
-      15)
+      14)
         installVscode
         ;;
-      16)
-        installGnomeTerminalTheme
-        ;;
-      17)
-        centerNewWindows
-        ;;
-      18)
+      15)
         installVirtualbox
         ;;
-      19)
+      16)
         installGnomeExtensions
         ;;
-      20)
+      17)
         installGdmSettings
         ;;
-      21)
+      18)
         installTheme
         ;;
-      22)
+      19)
         installIcons
         ;;
-      23)
+      20)
         installFonts
         ;;
-      24)
+      21)
         installCursors
         ;;
-      25)
+      22)
         installYoutubeMusic
         ;;
-      26)
+      23)
         applyCutomSettings
         ;;
       *)
