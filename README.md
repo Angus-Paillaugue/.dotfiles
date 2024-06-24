@@ -11,7 +11,6 @@ To use these files you can use the `install.sh` script that copies all the dotfi
  - [Wallpapers library](https://github.com/linuxdotexe/nordic-wallpapers) Selection of nordit themed wallpapers (I use `ign_astronaut.png`)
  - [Starship](https://starship.rs/guide/) : custom shell prompt
  - [White sur icons](https://github.com/vinceliuice/WhiteSur-icon-theme) : Installed with the bold blag on : `./install.sh -b`.
- - [alacarte](https://doc.ubuntu-fr.org/alacarte) : Used `alacarte` (`sudo apt install alacarte` then just run `alacarte` in the terminal then change the vivaldi browser icon to `/home/angus/.local/share/icons/WhiteSur-dark/apps/scalable/81F5_winebrowser.0.svg`)
  - ZSH as shell (see the zshrc config file)
    - git (installed by default)
    - sudo (installed by default)
@@ -203,15 +202,6 @@ To configure the aforementioned programs, you can just run the `./install.sh` sc
   </ul>
 </details>
 
-<!-- Sound Input & Output device chooser -->
-<details>
-  <summary>Sound Input & Output device chooser</summary>
-  <ul>
-    <li>
-      All settings as default
-    </li>
-  </ul>
-</details>
 
 <!-- Transparent Window Moving -->
 <details>
