@@ -7,7 +7,7 @@ To use these files you can use the `install.sh` script that copies all the dotfi
 # Installed programs (in order)
  - [bat](https://github.com/sharkdp/bat) : A cat(1) clone with wings.
  - [fastfetch](https://github.com/fastfetch-cli/fastfetch) : used as a welcome message in zsh
- - [Colloid](https://github.com/vinceliuice/Colloid-gtk-theme) As the main theme (use the following command for the correct params : `./install.sh --tweaks float nord rimless`)
+ - [Colloid](https://github.com/vinceliuice/Colloid-gtk-theme) As the main theme (use the following command for the correct params : `./install.sh --tweaks float nord rimless`). Also, comment out the background-color property on the `#panel` in the `~/.themes/Colloid-Dark-Nord/gnome-shell/gnome-shell.css` file and add `background-color: #2e3440;` instead.
  - [Wallpapers library](https://github.com/linuxdotexe/nordic-wallpapers) Selection of nordit themed wallpapers (I use `ign_astronaut.png`)
  - [Starship](https://starship.rs/guide/) : custom shell prompt
  - [White sur icons](https://github.com/vinceliuice/WhiteSur-icon-theme) : Installed with the bold blag on : `./install.sh -b`.
@@ -49,13 +49,7 @@ To configure the aforementioned programs, you can just run the `./install.sh` sc
         </li>
         <li>Panel </li>
         <li>
-          Panel blur
-          <ul>
-            <li>Customize properties : OFF</li>
-            <li>Static blur : ON</li>
-            <li>Disable overview : ON</li>
-            <li>Override background : ON</li>
-          </ul>
+          Panel blur : OFF
         </li>
         <li>
           Compatibility
