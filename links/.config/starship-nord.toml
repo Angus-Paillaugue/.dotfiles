@@ -1,13 +1,14 @@
 # Configuring : https://starship.rs/config/
 # Symbols : https://www.nerdfonts.com/cheat-sheet
+# Colors : https://nordui.netlify.app/docs/core/colors :
 
 # ╭─ ╰─
 format = """
-╭─[](gruvbox-8)\
+╭─[](nord-8)\
 $os\
-[ ](fg:gruvbox-8 bg:gruvbox-1)\
+[ ](fg:nord-8 bg:nord-1)\
 $directory\
-[](fg:gruvbox-1)\
+[](fg:nord-1)\
 $git_branch\
 $nodejs\
 $python\
@@ -18,29 +19,28 @@ $cmd_duration
 """
 
 add_newline = false
-palette = 'gruvbox'
+palette = 'nord'
 
+[palettes.nord]
+nord-0 = "#2E3440"
+nord-1 = "#3B4252"
+nord-2 = "#434C5E"
+nord-3 = "#4C566A"
+nord-4 = "#D8DEE9"
+nord-5 = "#E5E9F0"
+nord-6 = "#ECEFF4"
+nord-7 = "#8FBCBB"
+nord-8 = "#88C0D0"
+nord-9 = "#81A1C1"
+nord-10 = "#5E81AC"
+nord-11 = "#BF616A"
+nord-13 = "#EBCB8B"
+nord-14 = "#A3BE8C"
+nord-15 = "#B48EAD"
 
-[palettes.gruvbox]
-gruvbox-0 = "#282828"
-gruvbox-1 = "#3c3836"
-gruvbox-2 = "#504945"
-gruvbox-3 = "#665c54"
-gruvbox-4 = "#bdae93"
-gruvbox-5 = "#d5c4a1"
-gruvbox-6 = "#ebdbb2"
-gruvbox-7 = "#fbf1c7"
-gruvbox-8 = "#b8bb26"
-gruvbox-9 = "#fabd2f"
-gruvbox-10 = "#fe8019"
-gruvbox-11 = "#d65d0e"
-gruvbox-12 = "#8f3f71"
-gruvbox-13 = "#b16286"
-gruvbox-14 = "#689d6a"
-gruvbox-15 = "#a89984"
 
 [os]
-format = "[ $symbol ](bg:gruvbox-8 fg:gruvbox-0)"
+format = "[ $symbol ](bg:nord-8 fg:nord-0)"
 disabled = false
 
 [os.symbols]
@@ -77,25 +77,25 @@ Windows = " "
 [directory]
 home_symbol = "  "
 read_only =" 󰌾 "
-read_only_style = "bg:gruvbox-1"
-style = "bg:gruvbox-1"
+read_only_style = "bg:nord-1"
+style = "bg:nord-1"
 format = "[$path]($style)[$read_only]($read_only_style)"
 
 [git_branch]
 symbol = ' '
-style = "gruvbox-10"
+style = "nord-10"
 truncation_length = 6
 truncation_symbol = ''
 format = " [$symbol$branch]($style)"
 
 [nodejs]
-symbol = "[ ](gruvbox-14)"
-style = "gruvbox-10"
+symbol = "[ ](nord-14)"
+style = "nord-10"
 format =" [${symbol}($version )]($style)"
 
 [python]
-symbol = "[ ](gruvbox-13)"
-style = 'gruvbox-10'
+symbol = "[ ](nord-13)"
+style = 'nord-10'
 format = ' [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
 [fill]
@@ -106,7 +106,7 @@ symbol = ''
 not_found_symbol = ' '
 sigint_symbol = '󰟾 '
 success_symbol = ''
-format = '[](gruvbox-8)[$symbol$signal_name$maybe_int](bg:gruvbox-8 fg:gruvbox-0)[ ](gruvbox-8)'
+format = '[](nord-8)[$symbol$signal_name$maybe_int](bg:nord-8 fg:nord-0)[ ](nord-8)'
 map_symbol = true
 disabled = false
 
@@ -114,8 +114,8 @@ disabled = false
 min_time = 100
 show_milliseconds = false
 disabled = false
-format = "[](gruvbox-8)[$duration](bg:gruvbox-8 fg:gruvbox-0)[ ](gruvbox-8)"
+format = "[](nord-8)[$duration](bg:nord-8 fg:nord-0)[ ](nord-8)"
 
 [character]
-success_symbol = "[](bold gruvbox-4)"
-error_symbol = "[](bold gruvbox-4)"
+success_symbol = "[](bold nord-4)"
+error_symbol = "[](bold nord-4)"

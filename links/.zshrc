@@ -161,6 +161,7 @@ alias of='selected=$(find . -type f -not -path "*/.git/*" -not -path "*/node_mod
 alias od='selected=$(eval "$FZF_ALT_C_COMMAND" | fzf --preview "tree -L 4 -C --dirsfirst -I \"node_modules|.git|__pycache__\" {} | head -200" --preview-window=right:60%:wrap); [ -n "$selected" ] && code "$selected"'
 alias ssh-nas="ssh root@truenas.local"
 alias install="sudo apt install"
+alias nano="code"
 
 # pnpm
 export PNPM_HOME="/home/angus/.local/share/pnpm"
