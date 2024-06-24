@@ -21,11 +21,11 @@ printInColor() {
 
 
 # Base programs install
-installBasePrograps() {
+installBasePrograms() {
   printInColor "" " ↺ Installing base programs"
   sudo apt update -y
   sudo apt upgrade -y
-  sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-shell-extensions dconf-editor openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip -y
+  sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-shell-extensions dconf-editor openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip dconf-cli uuid-runtime -y
   printInColor "green" " ✓ Installed base programs"
 }
 
@@ -79,10 +79,16 @@ installTheme() {
   git clone https://github.com/vinceliuice/Colloid-gtk-theme
   cd Colloid-gtk-theme/
   ./install.sh --tweaks float nord rimless
-  # Copying themes for GDM settings to be able to use them
-  sudo cp -r ~/.themes/* /usr/share/themes
   cd ~/Downloads
   rm -rf Colloid-gtk-theme
+
+  git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme
+  cd Gruvbox-GTK-Theme
+  ./install.sh --theme grey --tweaks float outline macos
+  cd ~/Downloads
+  rm -rf Gruvbox-GTK-Theme
+  # Copying themes for GDM settings to be able to use them
+  sudo cp -r ~/.themes/* /usr/share/themes
   printInColor "green" " ✓ Installed themes"
 }
 
@@ -92,10 +98,10 @@ installIcons() {
   printInColor "" " ✓ Installing icons"
   cd ~/Downloads
   git clone https://github.com/vinceliuice/WhiteSur-icon-theme
-  cd WhiteSur-icon-theme
-  ./install.sh -b
-  cd ~/Downloads
+  ./WhiteSur-icon-theme/install.sh -b
+  ./WhiteSur-icon-theme/install.sh -b -t grey
   rm -rf WhiteSur-icon-theme
+  sudo cp -r ~/.local/share/icons/* /usr/share/icons
   printInColor "green" " ✓ Installed icons"
 }
 
@@ -186,9 +192,13 @@ installVscode() {
 installGnomeTerminalTheme() {
   printInColor "" " ↺ Installing Nord theme for Gnome Terminal"
   cd ~/Downloads
-  git clone https://github.com/nordtheme/gnome-terminal.git ~/Downloads
-  cd gnome-terminal/src
+  git clone https://github.com/Gogh-Co/Gogh.git gogh
+  cd gogh/installs
+  export TERMINAL=gnome-terminal
   ./nord.sh
+  ./gruvbox-material.sh
+  cd ~/Downloads
+  rm -rf gogh
   printInColor "green" " ✓ Installed Nord theme for Gnome Terminal"
 }
 
@@ -283,7 +293,7 @@ installCursors() {
   curl -s https://api.github.com/repos/ful1e5/apple_cursor/releases/latest | grep "macOS.tar.xz" | cut -d : -f 2,3 | tr -d \" | wget -qi -
   mkdir macOS
   tar -xf macOS.tar.xz -C ./macOS
-  mv ./macOS/macOS* ~/.icons/
+  cp ./macOS/macOS* ~/.icons/
   rm -rf ./macOS
   rm macOS.tar.xz
   printInColor "green" " ✓ Installed cursors"
@@ -306,7 +316,7 @@ read -p "Do you want to install all programs? (y/n) " installAll
 # Install all programs
 if [ "$installAll" == "y" ]; then
   # Run all functions
-  installBasePrograps
+  installBasePrograms
   configureGit
   # Require user interaction
   installChromeBeta
@@ -371,7 +381,7 @@ else
   for number in $programNumbers; do
     case $number in
       1)
-        installBasePrograps
+        installBasePrograms
         ;;
       2)
         configureGit
