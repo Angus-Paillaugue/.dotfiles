@@ -26,7 +26,7 @@ installBasePrograms() {
   printInColor "" " ↺ Installing base programs"
   sudo apt update -y
   sudo apt upgrade -y
-  sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-shell-extensions dconf-editor openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip dconf-cli uuid-runtime tree sassc -y
+  sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-shell-extensions dconf-editor openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip dconf-cli uuid-runtime tree sassc lowdown -y
   printInColor "green" " ✓ Installed base programs"
 }
 # Git config
@@ -200,7 +200,7 @@ installGnomeExtensions() {
   exec "$SHELL"
   # Use the extension UUID in the url
   # Ex : for this url, https://extensions.gnome.org/extension/19/user-themes/, the  UUID is 19
-  gnome-extensions-cli install 3193 779 4158 3843 5237 1446 19 1460 3952
+  gnome-extensions-cli install 3193 779 4158 3843 1446 19 1460 3952
   printInColor "green" " ✓ Installed Gnome extensions"
 }
 # GDM Settings
@@ -230,6 +230,57 @@ installCursors() {
   rm macOS.tar.xz
   printInColor "green" " ✓ Installed cursors"
 }
+# Docker install
+installDocker() {
+  printInColor "" " ↺ Installing Docker"
+  # Add Docker's official GPG key:
+  sudo apt-get install ca-certificates curl -y
+  sudo install -m 0755 -d /etc/apt/keyrings
+  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+  sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+  # Add the repository to Apt sources:
+  echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  sudo apt-get update -y
+  # Install Docker
+  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
+  # Install docker desktop
+  cd ~/Downloads
+  wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.12.0-amd64.deb
+  sudo apt install ./docker-desktop-4.12.0-amd64.deb -y
+  rm docker-desktop-4.12.0-amd64.deb
+  printInColor "green" " ✓ Installed Docker"
+}
+# Btop install
+installBtop() {
+  printInColor "" " ↺ Installing Btop"
+  cd ~/Downloads
+  git clone https://github.com/aristocratos/btop
+  cd btop
+  echo "" > btop.desktop
+  # Changes the desktop decalration file
+cat <<EOT >> btop.desktop
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=btop
+GenericName=System Monitor
+Comment=Resource monitor that shows usage and stats for processor, memory, disks, network and processes
+Icon=btop
+Exec=btop
+Terminal=true
+Categories=System;Monitor;ConsoleOnly;
+Keywords=system;process;task
+EOT
+  make
+  sudo make install
+  printInColor "green" " ✓ Installed Btop"
+}
+
 
 
 # Settings custom themes
@@ -363,6 +414,8 @@ if [ "$installAll" == "y" ]; then
   installIcons
   installFonts
   installCursors
+  installDocker
+  installBtop
   applyCutomSettings
 # Install specific programs
 else
@@ -390,7 +443,9 @@ else
   echo "20. Fonts"
   echo "21. Cursors"
   echo "22. Youtube Music"
-  echo "23. Set custom settings"
+  echo "23. Docker"
+  echo "24. Btop"
+  echo "25. Set custom settings"
   read -p "Enter the numbers of the programs you want to install (separated by spaces): " programNumbers
 
   # Install selected programs
@@ -463,6 +518,12 @@ else
         installYoutubeMusic
         ;;
       23)
+        installDocker
+        ;;
+      24)
+        installBtop
+        ;;
+      25)
         applyCutomSettings
         ;;
       *)
