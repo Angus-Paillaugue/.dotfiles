@@ -26,7 +26,7 @@ installBasePrograms() {
   printInColor "" " ↺ Installing base programs"
   sudo apt update -y
   sudo apt upgrade -y
-  sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-shell-extensions dconf-editor openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip dconf-cli uuid-runtime tree sassc lowdown -y
+  sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-shell-extensions dconf-editor openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip dconf-cli uuid-runtime tree sassc lowdown cava -y
   printInColor "green" " ✓ Installed base programs"
 }
 # Git config
@@ -255,11 +255,29 @@ installDocker() {
   rm docker-desktop-4.12.0-amd64.deb
   printInColor "green" " ✓ Installed Docker"
 }
+# Mongodb install
+installMongodb() {
+  printInColor "" " ↺ Installing Mongodb"
+  cd ~/Downloads
+  # Mongodb install
+  sudo apt-get install gnupg curl
+  curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc |  sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg --dearmor
+  echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+  sudo apt-get update
+  sudo apt-get install -y mongodb-org
+  sudo systemctl start mongod
+  sudo systemctl enable mongod
+
+  # Compass install
+  wget https://downloads.mongodb.com/compass/mongodb-compass_1.40.4_amd64.deb
+  sudo dpkg -i mongodb-compass_1.40.4_amd64.deb
+  "green" " ✓ Installed Mongodb"
+}
 # Btop install
 installBtop() {
   printInColor "" " ↺ Installing Btop"
   cd ~/Downloads
-  git clone https://github.com/aristocratos/btop
+  # git clone https://github.com/aristocratos/btop
   cd btop
   echo "" > btop.desktop
   # Changes the desktop decalration file
@@ -267,7 +285,7 @@ cat <<EOT >> btop.desktop
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=btop
+Name=Btop
 GenericName=System Monitor
 Comment=Resource monitor that shows usage and stats for processor, memory, disks, network and processes
 Icon=btop
@@ -339,7 +357,7 @@ setTheme() {
 setGnomeTerminalThemeAndPropreties() {
   printInColor "" " ↺ Setting Gnome Terminal theme and properties"
   # Disable headerbar
-  dconf write /org/gnome/terminal/legacy/headerbar false
+  gsettings set org.gnome.Terminal.Legacy.Settings headerbar "@mb false"
   printInColor "green" " ✓ Set Gnome Terminal theme and properties"
 
 }
@@ -416,6 +434,7 @@ if [ "$installAll" == "y" ]; then
   installCursors
   installDocker
   installBtop
+  installMongodb
   applyCutomSettings
 # Install specific programs
 else
@@ -445,7 +464,8 @@ else
   echo "22. Youtube Music"
   echo "23. Docker"
   echo "24. Btop"
-  echo "25. Set custom settings"
+  echo "25. Mongodb"
+  echo "26. Set custom settings"
   read -p "Enter the numbers of the programs you want to install (separated by spaces): " programNumbers
 
   # Install selected programs
@@ -524,6 +544,9 @@ else
         installBtop
         ;;
       25)
+        installMongodb
+        ;;
+      26)
         applyCutomSettings
         ;;
       *)
