@@ -267,7 +267,6 @@
       "tree.indentGuidesStroke": "#665c54"
     }
   },
-  "workbench.colorTheme": "Gruvbox Minor Dark Medium",
   "workbench.editor.closeEmptyGroups": false,
   "workbench.editor.labelFormat": "short",
   "workbench.editor.untitled.labelFormat": "name",
@@ -278,5 +277,6 @@
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": true,
   "workbench.tree.indent": 12,
-  "workbench.tree.renderIndentGuides": "always"
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.colorTheme": "Gruvbox Minor Dark Medium"
 }

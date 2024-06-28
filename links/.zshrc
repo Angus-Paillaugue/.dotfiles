@@ -118,7 +118,7 @@ export FZF_ALT_C_COMMAND='find . -type d -not -path "*/.git/*" -not -path "*/nod
 export FZF_ALT_C_OPTS='--preview "tree -L 4 -C --dirsfirst -I \"node_modules|.git|__pycache__\" {} | head -200" --preview-window=right:60%:wrap'
 # Remaped to Ctrl-F
 export FZF_CTRL_T_COMMAND='find . -type f -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/.*/*"'
-export FZF_CTRL_T_OPTS='--preview "batcat --style=numbers --theme=Nord --color=always --line-range :500 {}" --print0'
+export FZF_CTRL_T_OPTS='--preview "batcat --style=numbers --theme=gruvbox-dark --color=always --line-range :500 {}" --print0'
 
 # Others
 PATH=~/.console-ninja/.bin:$PATH
@@ -145,7 +145,7 @@ source ~/.nvm/nvm.sh
 
 # Custom liases
 alias settings="code ~/.zshrc"
-alias cat="batcat --theme Nord --color always"
+alias cat="batcat --theme gruvbox-dark --color always"
 alias ls="ls -A --color"
 alias h="cd ~"
 alias c="clear"
@@ -156,8 +156,8 @@ alias pa="pnpm add"
 alias pr="pnpm run"
 alias size="du -hs"
 alias nfr="echo \"There are $(find . -type f | wc -l) files (recursively) in this directory.\""
-alias ascii="man ascii | grep -m 1 -A 66 --color=never Oct | batcat --style grid,numbers -l vimrc --theme Nord"
-alias of='selected=$(find . -type f -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/__pycache__/*" | fzf --preview "batcat --style=numbers --theme=Nord --color=always --line-range :500 {}" --print0 | tr -d "\n"); [ -n "$selected" ] && echo "$selected" | xargs -0 -o code'
+alias ascii="man ascii | grep -m 1 -A 66 --color=never Oct | batcat --style grid,numbers -l vimrc --theme gruvbox-dark"
+alias of='selected=$(find . -type f -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/__pycache__/*" | fzf --preview "batcat --style=numbers --theme=gruvbox-dark --color=always --line-range :500 {}" --print0 | tr -d "\n"); [ -n "$selected" ] && echo "$selected" | xargs -0 -o code'
 alias od='selected=$(eval "$FZF_ALT_C_COMMAND" | fzf --preview "tree -L 4 -C --dirsfirst -I \"node_modules|.git|__pycache__\" {} | head -200" --preview-window=right:60%:wrap); [ -n "$selected" ] && code "$selected"'
 alias ssh-nas="ssh root@truenas.local"
 alias install="sudo apt install"

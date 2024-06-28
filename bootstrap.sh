@@ -200,7 +200,7 @@ installGnomeExtensions() {
   exec "$SHELL"
   # Use the extension UUID in the url
   # Ex : for this url, https://extensions.gnome.org/extension/19/user-themes/, the  UUID is 19
-  gnome-extensions-cli install 3193 779 4158 3843 1446 19 1460 3952
+  gnome-extensions-cli install 3193 779 4158 3843 1446 19 1460 3952 7065
   printInColor "green" " ✓ Installed Gnome extensions"
 }
 # GDM Settings
@@ -338,6 +338,12 @@ setExtensionsPreferences() {
   dconf write /org/gnome/shell/extensions/vitals/show-voltage false
   dconf write /org/gnome/shell/extensions/vitals/show-fan false
   dconf write /org/gnome/shell/extensions/vitals/show-battery false
+  dconf write /org/gnome/shell/extensions/vitals/fixed-widths false
+  # Tiling shell
+  dconf write /org/gnome/shell/extensions/tilingshell/outer-gaps 8
+  dconf write /org/gnome/shell/extensions/tilingshell/inner-gaps 8
+  dconf write /org/gnome/shell/extensions/tilingshell/enable-blur-selected-tilepreview true
+  dconf write /org/gnome/shell/extensions/tilingshell/enable-blur-snap-assistant true
   # Workspace indicator
   # dconf write /org/gnome/shell/extensions/horizontal-workspace-indicator/widget-position 'left'
   # dconf write /org/gnome/shell/extensions/horizontal-workspace-indicator/widget-orientation 'horizontal'
