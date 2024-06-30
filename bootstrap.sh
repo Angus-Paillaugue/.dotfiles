@@ -26,7 +26,9 @@ installBasePrograms() {
   printInColor "" " ↺ Installing base programs"
   sudo apt update -y
   sudo apt upgrade -y
-  sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-shell-extensions dconf-editor openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip dconf-cli uuid-runtime tree sassc lowdown cava -y
+  sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-shell-extensions dconf-editor openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip dconf-cli uuid-runtime tree sassc lowdown cava pipx -y
+  pipx ensurepath
+  chsh -s $(which zsh)
   printInColor "green" " ✓ Installed base programs"
 }
 # Git config
@@ -166,7 +168,6 @@ installGnomeTerminalTheme() {
   export TERMINAL=gnome-terminal
   ./nord.sh
   ./gruvbox-material.sh
-  cd ~/Downloads
   rm -rf gogh
 
   # Disable headerbar
@@ -196,7 +197,7 @@ installVirtualbox() {
 installGnomeExtensions() {
   printInColor "" " ↺ Installing Gnome extensions"
   cd ~/Downloads
-  pip3 install --upgrade gnome-extensions-cli
+  pipx install gnome-extensions-cli
   exec "$SHELL"
   # Use the extension UUID in the url
   # Ex : for this url, https://extensions.gnome.org/extension/19/user-themes/, the  UUID is 19
@@ -225,7 +226,7 @@ installCursors() {
   curl -s https://api.github.com/repos/ful1e5/apple_cursor/releases/latest | grep "macOS.tar.xz" | cut -d : -f 2,3 | tr -d \" | wget -qi -
   mkdir macOS
   tar -xf macOS.tar.xz -C ./macOS
-  cp ./macOS/macOS* ~/.icons/
+  cp -r ./macOS/macOS* ~/.icons/
   rm -rf ./macOS
   rm macOS.tar.xz
   printInColor "green" " ✓ Installed cursors"
@@ -277,7 +278,7 @@ installMongodb() {
 installBtop() {
   printInColor "" " ↺ Installing Btop"
   cd ~/Downloads
-  # git clone https://github.com/aristocratos/btop
+  git clone https://github.com/aristocratos/btop
   cd btop
   echo "" > btop.desktop
   # Changes the desktop decalration file
@@ -370,16 +371,10 @@ setGnomeTerminalThemeAndPropreties() {
 # Dotfiles install
 installDotfiles() {
   printInColor "" " ↺ Installing dotfiles"
-  git clone https://github.com/Angus-Paillaugue/.dotfiles ~/
+  git clone https://github.com/Angus-Paillaugue/.dotfiles ~/.dotfiles
   cd ~/.dotfiles
   ./install.sh
   printInColor "green" " ✓ Installed dotfiles"
-}
-# Cutom titlebar terminal
-setCustomTitlebarTerminal() {
-  printInColor "" " ↺ Custom titlebar terminal"
-  dconf write /org/gnome/terminal/legacy/headerbar false
-  printInColor "green" " ✓ Custom titlebar terminal"
 }
 # Center new windows
 centerNewWindows() {
@@ -394,7 +389,6 @@ applyCutomSettings() {
   setTheme
   setGnomeTerminalThemeAndPropreties
   centerNewWindows
-  setCustomTitlebarTerminal
   installDotfiles
   # Dock
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
