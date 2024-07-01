@@ -95,12 +95,12 @@
   "highlight-matching-tag.styles": {
     "closing": {
       "name": {
-        "highlight": "rgba(76, 86, 106, .7)"
+        "highlight": "#45858864"
       }
     },
     "opening": {
       "name": {
-        "highlight": "rgba(76, 86, 106, .7)"
+        "highlight": "#45858864"
       }
     }
   },
@@ -278,5 +278,6 @@
   "workbench.tree.enableStickyScroll": true,
   "workbench.tree.indent": 12,
   "workbench.tree.renderIndentGuides": "always",
-  "workbench.colorTheme": "Gruvbox Minor Dark Medium"
+  "workbench.colorTheme": "Gruvbox Minor Dark Medium",
+  "i18n-ally.ignoredLocales": []
 }

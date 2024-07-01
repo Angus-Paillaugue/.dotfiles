@@ -26,7 +26,7 @@ installBasePrograms() {
   printInColor "" " ↺ Installing base programs"
   sudo apt update -y
   sudo apt upgrade -y
-  sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-shell-extensions dconf-editor openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip dconf-cli uuid-runtime tree sassc lowdown cava pipx -y
+  sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-shell-extensions dconf-editor openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip dconf-cli uuid-runtime tree sassc lowdown cava pipx cmatrix ffmpeg vlc -y
   pipx ensurepath
   chsh -s $(which zsh)
   printInColor "green" " ✓ Installed base programs"
@@ -274,6 +274,23 @@ installMongodb() {
   sudo dpkg -i mongodb-compass_1.40.4_amd64.deb
   "green" " ✓ Installed Mongodb"
 }
+installPostman() {
+  printInColor "" " ↺ Installing Postman"
+  cd ~/Downloads
+  wget https://dl.pstmn.io/download/latest/linux_64 -O postman.tar.gz
+  sudo tar -xzf postman.tar.gz -C /opt
+  rm postman.tar.gz
+  sudo ln -s /opt/Postman/Postman /usr/bin/postman
+  echo "[Desktop Entry]
+Encoding=UTF-8
+Name=Postman
+Exec=/opt/Postman/app/Postman %U
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Terminal=false
+Type=Application
+Categories=Development;" > ~/.local/share/applications/postman.desktop
+  printInColor "green" " ✓ Installed Postman"
+}
 # Btop install
 installBtop() {
   printInColor "" " ↺ Installing Btop"
@@ -435,6 +452,7 @@ if [ "$installAll" == "y" ]; then
   installDocker
   installBtop
   installMongodb
+  installPostman
   applyCutomSettings
 # Install specific programs
 else
@@ -465,7 +483,8 @@ else
   echo "23. Docker"
   echo "24. Btop"
   echo "25. Mongodb"
-  echo "26. Set custom settings"
+  echo "26. Postman"
+  echo "27. Set custom settings"
   read -p "Enter the numbers of the programs you want to install (separated by spaces): " programNumbers
 
   # Install selected programs
@@ -547,6 +566,9 @@ else
         installMongodb
         ;;
       26)
+        installPostman
+        ;;
+      27)
         applyCutomSettings
         ;;
       *)

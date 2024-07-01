@@ -6,3 +6,4 @@
 ~/.config/YouTube Music/config.json
 ~/.config/fastfetch/config.jsonc
 ~/.config/Code/User/settings.json
+~/.config/btop/btop.conf
