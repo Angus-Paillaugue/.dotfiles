@@ -181,4 +181,4 @@ bindkey '^F' fzf-file-widget
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 # Removes the python venv from the start of the prompt
-export VIRTUAL_ENV_DISABLE_PROMPT=
+export VIRTUAL_ENV_DISABLE_PROMPT=""

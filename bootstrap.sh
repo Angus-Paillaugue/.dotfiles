@@ -26,7 +26,7 @@ installBasePrograms() {
   printInColor "" " ↺ Installing base programs"
   sudo apt update -y
   sudo apt upgrade -y
-  sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-shell-extensions dconf-editor openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip dconf-cli uuid-runtime tree sassc lowdown cava pipx cmatrix ffmpeg vlc -y
+  sudo apt install git gh curl wget zsh bat fzf gnome-tweaks chrome-gnome-shell gnome-shell-extensions dconf-editor openjdk-17-jdk software-properties-common apt-transport-https jq python3 python3-pip dconf-cli uuid-runtime tree sassc lowdown cava pipx cmatrix ffmpeg vlc ffmpegthumbnailer -y
   pipx ensurepath
   chsh -s $(which zsh)
   printInColor "green" " ✓ Installed base programs"
@@ -51,7 +51,7 @@ installChromeBeta() {
 installFonts() {
   printInColor "" " ✓ Installing fonts"
   cd ~/Downloads
-  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+  wget -O JetBrainsMono.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
   unzip JetBrainsMono.zip -d ~/.local/share/fonts/
   fc-cache -f -v
   rm JetBrainsMono.zip
@@ -72,11 +72,8 @@ installTheme() {
   cd ~/Downloads
   git clone https://github.com/vinceliuice/Colloid-gtk-theme
   ./Colloid-gtk-theme/install.sh --color dark --tweaks float nord rimless
+  ./Colloid-gtk-theme/install.sh --color dark --theme grey --tweaks float gruvbox rimless
   rm -rf Colloid-gtk-theme
-
-  git clone https://github.com/Angus-Paillaugue/Gruvbox-GTK-Theme
-  ./Gruvbox-GTK-Theme/themes/install.sh --theme grey --color dark --tweaks float outline macos
-  rm -rf Gruvbox-GTK-Theme
   # Copying themes for GDM settings to be able to use them
   sudo cp -r ~/.themes/* /usr/share/themes
   printInColor "green" " ✓ Installed themes"
@@ -178,7 +175,7 @@ installGnomeTerminalTheme() {
 installEclipse() {
   printInColor "" " ↺ Installing Eclipse"
   cd ~/Downloads
-  wget https://ftp.fau.de/eclipse/oomph/products/eclipse-inst-linux64.tar.gz
+  wget -O eclipse-inst-linux64.tar.gz https://ftp.fau.de/eclipse/oomph/products/eclipse-inst-linux64.tar.gz
   tar xvfz eclipse-inst-linux64.tar.gz
   ./eclipse-installer/eclipse-inst &
   rm eclipse-inst-linux64.tar.gz
@@ -251,8 +248,8 @@ installDocker() {
 
   # Install docker desktop
   cd ~/Downloads
-  wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.12.0-amd64.deb
-  sudo apt install ./docker-desktop-4.12.0-amd64.deb -y
+  wget -O docker-desktop.deb https://desktop.docker.com/linux/main/amd64/docker-desktop-4.12.0-amd64.deb
+  sudo apt install ./docker-desktop.deb -y
   rm docker-desktop-4.12.0-amd64.deb
   printInColor "green" " ✓ Installed Docker"
 }
@@ -270,14 +267,24 @@ installMongodb() {
   sudo systemctl enable mongod
 
   # Compass install
-  wget https://downloads.mongodb.com/compass/mongodb-compass_1.40.4_amd64.deb
-  sudo dpkg -i mongodb-compass_1.40.4_amd64.deb
+  wget -O mongodb-compass.deb https://downloads.mongodb.com/compass/mongodb-compass_1.40.4_amd64.deb
+  sudo dpkg -i mongodb-compass.deb
   "green" " ✓ Installed Mongodb"
 }
+# Discord install
+installDiscord() {
+  printInColor "" " ↺ Installing Discord"
+  cd ~/Downloads
+  wget -O discord.deb "https://discord.com/api/download?platform=linux&format=deb"
+  sudo apt install ./discord.deb -y
+  rm discord.deb
+  printInColor "green" " ✓ Installed Discord"
+}
+# Postman install
 installPostman() {
   printInColor "" " ↺ Installing Postman"
   cd ~/Downloads
-  wget https://dl.pstmn.io/download/latest/linux_64 -O postman.tar.gz
+  wget -O postman.tar.gz https://dl.pstmn.io/download/latest/linux_64
   sudo tar -xzf postman.tar.gz -C /opt
   rm postman.tar.gz
   sudo ln -s /opt/Postman/Postman /usr/bin/postman
@@ -370,11 +377,11 @@ setExtensionsPreferences() {
 # Set the theme from the gnome-tweaks app
 setTheme() {
   printInColor "" " ↺ Setting theme"
-  gsettings set org.gnome.desktop.interface gtk-theme 'Gruvbox-Grey-Dark'
+  gsettings set org.gnome.desktop.interface gtk-theme 'Colloid-Grey-Dark-Gruvbox'
   gsettings set org.gnome.desktop.interface color-scheme prefer-dark
   gsettings set org.gnome.desktop.interface icon-theme 'WhiteSur-grey-dark'
   gsettings set org.gnome.desktop.interface cursor-theme 'macOS'
-  gsettings set org.gnome.shell.extensions.user-theme name 'Gruvbox-Grey-Dark'
+  gsettings set org.gnome.shell.extensions.user-theme name 'Colloid-Grey-Dark-Gruvbox'
   printInColor "green" " ✓ Set theme"
 }
 # Set Gnome Terminal theme and properties
@@ -391,6 +398,8 @@ installDotfiles() {
   git clone https://github.com/Angus-Paillaugue/.dotfiles ~/.dotfiles
   cd ~/.dotfiles
   ./install.sh
+  cd utils
+  ./install.sh
   printInColor "green" " ✓ Installed dotfiles"
 }
 # Center new windows
@@ -398,6 +407,13 @@ centerNewWindows() {
   printInColor "" " ↺ Centering new windows"
   gsettings set org.gnome.mutter center-new-windows true
   printInColor "green" " ✓ Centered new windows"
+}
+# Remove the video thumbnails movie strip
+removeVideoThumbnailsMovieStrip() {
+  printInColor "" " ↺ Removing video thumbnails movie strip"
+  sudo sed -i '3s/.*/Exec=ffmpegthumbnailer -i %i -o %o -s %s/' /usr/share/thumbnailers/ffmpegthumbnailer.thumbnailer
+  rm -r ~/.cache/thumbnails
+  printInColor "green" " ✓ Removed video thumbnails movie strip"
 }
 
 # Apply all of my custom settings and preferences
@@ -407,6 +423,7 @@ applyCutomSettings() {
   setGnomeTerminalThemeAndPropreties
   centerNewWindows
   installDotfiles
+  removeVideoThumbnailsMovieStrip
   # Dock
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
   dconf write /org/gnome/shell/extensions/dash-to-dock/show-trash false
@@ -453,6 +470,7 @@ if [ "$installAll" == "y" ]; then
   installBtop
   installMongodb
   installPostman
+  installDiscord
   applyCutomSettings
 # Install specific programs
 else
@@ -484,7 +502,8 @@ else
   echo "24. Btop"
   echo "25. Mongodb"
   echo "26. Postman"
-  echo "27. Set custom settings"
+  echo "27. Discord"
+  echo "28. Set custom settings"
   read -p "Enter the numbers of the programs you want to install (separated by spaces): " programNumbers
 
   # Install selected programs
@@ -569,6 +588,9 @@ else
         installPostman
         ;;
       27)
+        installDiscord
+        ;;
+      28)
         applyCutomSettings
         ;;
       *)
