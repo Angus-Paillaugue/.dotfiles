@@ -39,5 +39,8 @@ trap 'errorHandling $LINENO $BASH_COMMAND' ERR SIGTERM
 # Install the video-compressor script
 sudo cp ./update-discord.sh /usr/local/bin/update-discord
 sudo chmod +x /usr/local/bin/update-discord
+# Install the sk-template script
+sudo cp sk-template.sh /usr/local/bin/sk-template
+sudo chmod +x /usr/local/bin/sk-template
 
 echo -e " ${GREEN}✓${NC} The util scripts have been installed successfully."
