@@ -133,17 +133,8 @@ eval "$(starship init zsh)"
 fastfetch
 echo
 
-# PNPM
-export PNPM_HOME="/home/angus/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-
-# NVM (Node Version Manager)
-source ~/.nvm/nvm.sh
-
 # Custom liases
+alias code="codium"
 alias settings="code ~/.zshrc"
 alias cat="batcat --theme gruvbox-dark --color always"
 alias ls="ls -A --color"
@@ -159,9 +150,11 @@ alias nfr="echo \"There are $(find . -type f | wc -l) files (recursively) in thi
 alias ascii="man ascii | grep -m 1 -A 66 --color=never Oct | batcat --style grid,numbers -l vimrc --theme gruvbox-dark"
 alias of='selected=$(find . -type f -not -path "*/.git/*" -not -path "*/node_modules/*" -not -path "*/__pycache__/*" | fzf --preview "batcat --style=numbers --theme=gruvbox-dark --color=always --line-range :500 {}" --print0 | tr -d "\n"); [ -n "$selected" ] && echo "$selected" | xargs -0 -o code'
 alias od='selected=$(eval "$FZF_ALT_C_COMMAND" | fzf --preview "tree -L 4 -C --dirsfirst -I \"node_modules|.git|__pycache__\" {} | head -200" --preview-window=right:60%:wrap); [ -n "$selected" ] && code "$selected"'
-alias ssh-nas="ssh root@truenas.local"
-alias install="sudo apt install"
-alias nano="code"
+alias install="sudo nala install"
+alias nano="codium"
+alias nvm="fnm"
+alias ventoy="$HOME/ventoy*/VentoyGUI.x86_64"
+alias apt="sudo nala"
 
 # pnpm
 export PNPM_HOME="/home/angus/.local/share/pnpm"
@@ -170,6 +163,16 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# fnm
+FNM_PATH="/home/angus/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/angus/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+eval "$(fnm env --use-on-cd --shell zsh)"
+
 
 # fzf
 bindkey '^F' fzf-file-widget
@@ -182,3 +185,28 @@ bindkey '^F' fzf-file-widget
 
 # Removes the python venv from the start of the prompt
 export VIRTUAL_ENV_DISABLE_PROMPT=""
+
+# Go path
+export PATH=$PATH:/usr/local/go/bin
+
+# bun completions
+[ -s "/home/angus/.bun/_bun" ] && source "/home/angus/.bun/_bun"
+
+# fnm
+FNM_PATH="/home/angus/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/angus/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+
+# SQL Developer
+export PATH=$PATH:/opt/sqldeveloper/sqldeveloper/bin
+export PATH="/home/angus/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/angus/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+
+# Symfony
+export PATH="$HOME/.symfony5/bin:$PATH"
+
+# Maven
+export PATH="/opt/apache-maven-3.9.9/bin:$PATH"

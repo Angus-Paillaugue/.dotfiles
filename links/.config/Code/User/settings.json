@@ -1,6 +1,6 @@
 {
   "[c]": {
-    "editor.defaultFormatter": "ms-vscode.cpptools"
+    "editor.defaultFormatter": "xaver.clang-format"
   },
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
@@ -15,7 +15,12 @@
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[python]": {
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports.ruff": "explicit"
+    },
   },
   "[scss]": {
     "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
@@ -23,14 +28,7 @@
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
-  "arduino.useArduinoCli": true,
   "chat.editor.fontFamily": "JetBrainsMono Nerd Font",
-  "command-runner.commands": {
-    "run c++ file": "gcc -o ${workspaceFolder}\\out\\${fileBasenameNoExtension} ${file};${workspaceFolder}\\out\\${fileBasenameNoExtension}"
-  },
-  "command-runner.terminal.autoClear": true,
-  "command-runner.terminal.autoFocus": true,
-  "command-runner.terminal.name": "runCommand",
   "console-ninja.featureSet": "Community",
   "cSpell.language": "en,fr,en-GB,en-US,fr-FR",
   "cSpell.userWords": [
@@ -61,7 +59,7 @@
   "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 1,
   "editor.minimap.renderCharacters": false,
-  "editor.mouseWheelZoom": true,
+  "editor.mouseWheelZoom": false,
   "editor.occurrencesHighlight": "off",
   "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": true,
@@ -194,20 +192,17 @@
       "editorCursor.foreground": "#ff3c00b9",
       "extensionButton.background": "#ff3c00",
       "extensionButton.hoverBackground": "#ff3c00b9",
-      // Svelte colors
       "focusBorder": "#ff3c00b9",
       "progressBar.background": "#ff3c00",
       "statusBarItem.remoteBackground": "#ff3c00b9",
       "statusBarItem.remoteHoverBackground": "#ff3c00"
     },
-    // Nord Theme Colors
     "[Nord Aurora Darker]": {
       "activityBarBadge.background": "#88C0D0",
       "badge.background": "#88C0D0b9",
       "button.background": "#88C0D0b9",
       "button.hoverBackground": "#88C0D0",
       "dropdown.border": "#88C0D0",
-      // Bracket Pair Colors
       "editorBracketHighlight.foreground1": "#5E81AC",
       "editorBracketHighlight.foreground2": "#EBCB8B",
       "editorBracketHighlight.foreground3": "#D08770",
@@ -223,12 +218,10 @@
       "editorCursor.foreground": "#88C0D0b9",
       "extensionButton.background": "#88C0D0",
       "extensionButton.hoverBackground": "#88C0D0b9",
-      // Nord colors for custom UI
       "focusBorder": "#88C0D0b9",
       "progressBar.background": "#88C0D0",
       "statusBarItem.remoteBackground": "#88C0D0b9",
       "statusBarItem.remoteHoverBackground": "#88C0D0",
-      // Terminal colors
       "terminal.ansiBlack": "#3B4252",
       "terminal.ansiBlue": "#81A1C1",
       "terminal.ansiBrightBlack": "#4C566A",
@@ -247,11 +240,9 @@
       "terminal.ansiYellow": "#EBCB8B",
       "terminal.background": "#2E3440",
       "terminal.foreground": "#D8DEE9",
-      // Tree Indent Guides
       "tree.indentGuidesStroke": "#4C566A"
     },
     "[Gruvbox Minor Dark Medium]": {
-      // Bracket Pair Colors
       "editorBracketHighlight.foreground1": "#fb4934",
       "editorBracketHighlight.foreground2": "#b8bb26",
       "editorBracketHighlight.foreground3": "#fabd2f",
@@ -271,13 +262,111 @@
   "workbench.editor.labelFormat": "short",
   "workbench.editor.untitled.labelFormat": "name",
   "workbench.editor.wrapTabs": true,
-  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
   "workbench.list.smoothScrolling": true,
   "workbench.panel.defaultLocation": "right",
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": true,
   "workbench.tree.indent": 12,
   "workbench.tree.renderIndentGuides": "always",
-  "workbench.colorTheme": "Gruvbox Minor Dark Medium",
-  "i18n-ally.ignoredLocales": []
+  "i18n-ally.ignoredLocales": [],
+  "html.hover.references": false,
+  "css.hover.references": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  },
+  "gitlens.currentLine.enabled": false,
+  "continue.showInlineTip": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "workbench.externalBrowser": "chrome",
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "playwright.reuseBrowser": false,
+  "playwright.showTrace": false,
+  "xml.server.vmargs": "-Xmx128M",
+  "sherlock.userId": "5a57ae87-af19-4a54-894f-795eb336ea14",
+  "sherlock.previewLanguageTag": "en",
+  "git.openRepositoryInParentFolders": "never",
+  "maven.executable.path": "/opt/apache-maven-3.9.9/bin/mvn",
+  "gitlens.ai.experimental.model": "vscode",
+  "gitlens.ai.experimental.vscode.model": "copilot:o1",
+  "dbcode.connections": [
+    {
+      "connectionId": "_Tu_Xv7ShUH-6c4hZdSmC",
+      "name": "S3A01",
+      "driver": "sqlite",
+      "color": "#009670",
+      "socket": "/home/angus/Documents/work/S3/sae3a01/app/database.db",
+      "connectionType": "socket"
+    },
+    {
+      "connectionId": "llOKaFCprzWDbZGVC3gRM",
+      "name": "localhost",
+      "driver": "mysql",
+      "color": "#FF8A62",
+      "connectionType": "host",
+      "host": "localhost",
+      "port": 3306,
+      "ssl": false,
+      "username": "root",
+      "password": "",
+      "savePassword": "secretStorage",
+      "database": "skillforge",
+      "connectionTimeout": 30,
+      "driverOptions": {
+        "retrievePublickey": true
+      }
+    }
+  ],
+  "dbcode.history.enabled": true,
+  "dbcode.ai.modelId": "gpt-3.5-turbo",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "cmake.showOptionsMovedNotification": false,
+  "files.exclude": {
+    "**/.DS_Store": false
+  },
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
+  "workbench.colorTheme": "GitHub Dark",
+  "githubIssues.queries": [
+    {
+      "label": "My Issues",
+      "query": "is:open assignee:${user} repo:${owner}/${repository}",
+      "groupBy": [
+        "milestone"
+      ]
+    },
+    {
+      "label": "Created Issues",
+      "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+    },
+    {
+      "label": "Recent Issues",
+      "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+    }
+  ],
+  "makefile.configureOnOpen": true,
+  "workbench.statusBar.visible": true
 }
