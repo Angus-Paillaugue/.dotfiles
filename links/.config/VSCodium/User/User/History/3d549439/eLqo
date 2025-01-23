@@ -1,0 +1,27 @@
+Separated the old and new methods into different directories
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   .gitignore
+#	new file:   README.md
+#	deleted:    __pycache__/cleanup.cpython-310.pyc
+#	deleted:    __pycache__/downloadImages.cpython-310.pyc
+#	deleted:    __pycache__/downloadVideos.cpython-310.pyc
+#	deleted:    __pycache__/getMousePos.cpython-310.pyc
+#	renamed:    cleanup.py -> newMethod/cleanup.py
+#	renamed:    coordinates.py -> newMethod/coordinates.py
+#	renamed:    download.py -> newMethod/download.py
+#	renamed:    downloadImages.py -> newMethod/downloadImages.py
+#	renamed:    downloadVideos.py -> newMethod/downloadVideos.py
+#	renamed:    getMousePos.py -> newMethod/getMousePos.py
+#	renamed:    main.py -> newMethod/main.py
+#	renamed:    pyvenv.cfg -> newMethod/pyvenv.cfg
+#	new file:   oldMethod/download.js
+#	new file:   oldMethod/main.py
+#	new file:   oldMethod/package.json
+#	new file:   oldMethod/pnpm-lock.yaml
+#

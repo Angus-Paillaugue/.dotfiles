@@ -1,0 +1,17 @@
+[project]
+name = "OwnLogs_logger"
+version = "0.0.1"
+authors = [
+  { name="Angus PAILLAUGUE", email="88200698+Angus-Paillaugue@users.noreply.github.com" },
+]
+description = "The OwnLogspython logging package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/OwnLogs/python"
+Issues = "https://github.com/OwnLogs/python/issues"

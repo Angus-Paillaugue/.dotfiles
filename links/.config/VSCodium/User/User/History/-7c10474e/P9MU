@@ -1,0 +1,14 @@
+Edited a placeholder and added doc to a function
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   README.md
+#	modified:   src/lib/locales/en.json
+#	modified:   src/lib/locales/fr.json
+#	modified:   src/routes/(app)/note/+page.svelte
+#	modified:   svelte.config.js
+#

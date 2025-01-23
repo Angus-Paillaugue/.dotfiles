@@ -1,0 +1,2 @@
+exo1:
+	gcc -o EXO1 EXO1.c

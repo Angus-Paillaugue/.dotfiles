@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>app_5b402798</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.settings</name>
+			<type>2</type>
+			<location>/home/angus/Documents/work/S3/sae3a01/app/.settings/</location>
+		</link>
+		<link>
+			<name>_</name>
+			<type>2</type>
+			<location>/home/angus/Documents/work/S3/sae3a01/app/</location>
+		</link>
+	</linkedResources>
+</projectDescription>

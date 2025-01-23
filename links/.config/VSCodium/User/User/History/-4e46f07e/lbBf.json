@@ -1,0 +1,13 @@
+{
+  "i18n-ally.localesPaths": [
+    "Skill-Forge/messages",
+    "Code-Chronicles/src/routes/languages",
+    "Nothing-Notes/src/lib/i18n",
+    "Nothing-Notes/src/lib/locales",
+    "Portfolio/src/lib/i18n",
+    "my-fashion-vault/src/lib/i18n",
+    "my-fashion-vault/src/lib/locales",
+    "Portfolio/src/lib/i18n/locales",
+    "Skill-Forge/src/lib/paraglide/messages"
+  ]
+}

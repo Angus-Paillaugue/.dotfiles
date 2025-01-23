@@ -1,0 +1,55 @@
+{
+  message: "Use the JDK from 'PATH' as the initial default project JDK.",
+  level: 'info',
+  timestamp: '2025-01-08 09:01:35.272'
+}
+{
+  message: 'Starting Java server with: /home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/jre/17.0.13-linux-x86_64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/lombok/lombok-1.18.34.jar -jar /home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar -configuration /home/angus/.config/Code/User/globalStorage/redhat.java/1.38.0/config_ss_linux -data /home/angus/.config/Code/User/workspaceStorage/d7c35fb0b36c1249ba7bad42488f84e0/redhat.java/ss_ws',
+  level: 'info',
+  timestamp: '2025-01-08 09:01:35.307'
+}
+{
+  message: 'Starting Java server with: /home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/jre/17.0.13-linux-x86_64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/lombok/lombok-1.18.34.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/angus/.config/Code/User/workspaceStorage/d7c35fb0b36c1249ba7bad42488f84e0/redhat.java -Daether.dependencyCollector.impl=bf -jar /home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar -configuration /home/angus/.config/Code/User/globalStorage/redhat.java/1.38.0/config_linux -data /home/angus/.config/Code/User/workspaceStorage/d7c35fb0b36c1249ba7bad42488f84e0/redhat.java/jdt_ws',
+  level: 'info',
+  timestamp: '2025-01-08 09:01:36.091'
+}
+{
+  message: 'Jan 08, 2025 9:01:37 AM org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.servlet.LogbackServletContainerInitializer of service jakarta.servlet.ServletContainerInitializer in bundle ch.qos.logback.classic\n',
+  level: 'info',
+  timestamp: '2025-01-08 09:01:37.426'
+}
+{
+  message: 'Jan 08, 2025 9:01:37 AM org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.spi.LogbackServiceProvider of service org.slf4j.spi.SLF4JServiceProvider in bundle ch.qos.logback.classic\n',
+  level: 'info',
+  timestamp: '2025-01-08 09:01:37.433'
+}
+{
+  message: '[Warn  - 9:01:39 AM] Jan 8, 2025, 9:01:38 AM The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.\n' +
+    'null',
+  level: 'info',
+  timestamp: '2025-01-08 09:01:39.732'
+}
+{
+  message: 'Jan 08, 2025 9:01:47 AM com.microsoft.java.debug.plugin.internal.JavaDebuggerServerPlugin start\n' +
+    'INFO: Starting com.microsoft.java.debug.plugin\n',
+  level: 'info',
+  timestamp: '2025-01-08 09:01:48.099'
+}
+{
+  message: 'Jan 08, 2025 9:01:49 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 18\n' +
+    'Jan 08, 2025 9:01:49 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 21\n' +
+    'Jan 08, 2025 9:01:49 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 14\n',
+  level: 'info',
+  timestamp: '2025-01-08 09:01:49.334'
+}
+{
+  message: 'Jan 08, 2025 9:01:49 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25\n',
+  level: 'info',
+  timestamp: '2025-01-08 09:01:49.388'
+}

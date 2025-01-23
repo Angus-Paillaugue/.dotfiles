@@ -1,0 +1,3 @@
+DB_USERNAME=skillforge
+DB_PASSWORD=skillforge
+DEV=true

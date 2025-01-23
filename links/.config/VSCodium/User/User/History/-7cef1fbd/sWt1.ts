@@ -1,0 +1,68 @@
+import type { PageServerLoad, Actions } from './$types';
+import db from '$lib/server/db';
+import { fail } from '@sveltejs/kit';
+
+export const load = (async () => {
+  return {};
+}) satisfies PageServerLoad;
+
+function sanitizeSQLQuery(query: string): string {
+  // Trim whitespace and convert to uppercase for consistent matching
+  const trimmedQuery = query.trim().toUpperCase();
+
+  // Check if the query starts with 'SELECT'
+  if (!trimmedQuery.startsWith('SELECT')) {
+    throw new Error('Only SELECT queries are allowed');
+  }
+
+  // Define a list of potentially harmful SQL keywords
+  const dangerousKeywords = ['DROP', 'DELETE', 'INSERT', 'UPDATE', 'ALTER', 'EXEC', 'MERGE'];
+
+  // Replace dangerous keywords with an empty string
+  let sanitizedQuery = query;
+  dangerousKeywords.forEach((keyword) => {
+    const regex = new RegExp(`\\b${keyword}\\b`, 'gi');
+    sanitizedQuery = sanitizedQuery.replace(regex, '');
+  });
+
+  return sanitizedQuery;
+}
+
+function canReturnLargeNumberOfRows(query: string) {
+  const trimmedQuery = query.trim().toUpperCase();
+  return trimmedQuery.startsWith('SELECT') && !trimmedQuery.includes('LIMIT');
+}
+
+function addLimitToQuery(query: string, limit: number) {
+  return `${query} LIMIT ${limit}`;
+}
+
+export const actions: Actions = {
+  runQuery: async ({ request }) => {
+    const formData = Object.fromEntries(await request.formData());
+    const { query } = formData as { query: string };
+
+    try {
+      const sanitizedQuery = sanitizeSQLQuery(query);
+      if (canReturnLargeNumberOfRows(query)) {
+        const limitedQuery = addLimitToQuery(sanitizedQuery, 100);
+        const [rows] = await db.execute(limitedQuery);
+        const [numberOfResults] = await db.execute(`SELECT COUNT(*) AS count FROM (${sanitizedQuery}) AS subquery`);
+      }else {
+        const [rows] = await db.execute(sanitizedQuery);
+
+        return {
+          success: true,
+          message: 'Query ran successfully',
+          rows
+        };
+      }
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        return fail(500, { error: true, message: error.message });
+      } else {
+        return fail(500, { error: true, message: 'An unexpected error occurred!' });
+      }
+    }
+  }
+};

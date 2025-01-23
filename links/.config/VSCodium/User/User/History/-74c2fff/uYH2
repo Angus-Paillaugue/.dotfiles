@@ -1,0 +1,30 @@
+Update
+Added releases page and new release script
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	new file:   docs/Configuration/Releases.md
+#	modified:   package.json
+#	modified:   pnpm-lock.yaml
+#	modified:   project.config.js
+#	new file:   scripts/new-release.js
+#	modified:   src/app.css
+#	modified:   src/lib/components/Tooltip.svelte
+#	modified:   src/lib/utils.js
+#	new file:   src/routes/(home)/+layout.js
+#	renamed:    src/routes/+page.svelte -> src/routes/(home)/+layout.svelte
+#	new file:   src/routes/(home)/+page.svelte
+#	renamed:    src/routes/Bento.svelte -> src/routes/(home)/Bento.svelte
+#	renamed:    src/routes/Counter.svelte -> src/routes/(home)/Counter.svelte
+#	new file:   src/routes/(home)/Footer.svelte
+#	renamed:    src/routes/Hero.svelte -> src/routes/(home)/Hero.svelte
+#	new file:   src/routes/(home)/releases/+page.svelte
+#	new file:   src/routes/(home)/releases/releases.json
+#	deleted:    src/routes/Footer.svelte
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#

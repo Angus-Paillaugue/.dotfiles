@@ -1,0 +1,24 @@
+services:
+  music-player:
+    image: music-player:latest
+    container_name: music-player
+    environment:
+      NODE_ENV: production
+      PORT: 8089
+    volumes:
+      - ./songs:/app/songs
+    ports:
+      - '8089:8089'
+
+  db:
+    image: mysql:latest
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: music_player
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./db:/var/lib/mysql

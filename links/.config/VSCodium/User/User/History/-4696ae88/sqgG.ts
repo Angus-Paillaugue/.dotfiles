@@ -1,0 +1,12 @@
+import type { Actions } from "@sveltejs/kit";
+
+export const actions: Actions = {
+	logIn: async ({ request }) => {
+		const formData = Object.fromEntries(await request.formData());
+		const { username, password } = formData;
+
+    console.log(username, password)
+
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+	}
+};

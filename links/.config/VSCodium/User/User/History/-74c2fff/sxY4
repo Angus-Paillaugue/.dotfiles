@@ -1,0 +1,29 @@
+Update
+Wrote the quick start page and updated some other things
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	modified:   README.md
+#	modified:   docs/Components/Collapsible.md
+#	modified:   docs/Configuration/Colors.md
+#	deleted:    docs/Home.md
+#	modified:   docs/Pages/Code blocks.md
+#	new file:   docs/Quickstart.md
+#	modified:   project.config.js
+#	modified:   scripts/choose-tailwind-gray-shade.js
+#	modified:   src/app.css
+#	modified:   src/code.css
+#	modified:   src/lib/codeHighlighter.js
+#	modified:   src/lib/components/Collapsible/Collapsible.svelte
+#	modified:   src/lib/components/Commands.svelte
+#	modified:   src/lib/components/Definition/Note.svelte
+#	modified:   src/lib/components/core/Search.svelte
+#	modified:   src/lib/utils.js
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#	modified:   src/routes/docs/[...slug]/image-zoom-plugin.js
+#

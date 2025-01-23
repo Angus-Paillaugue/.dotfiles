@@ -1,0 +1,7 @@
+target/
+.env
+database.db
+.vscode/
+.settings/
+.metadata/
+database.db*

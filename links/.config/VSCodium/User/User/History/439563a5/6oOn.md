@@ -1,0 +1,13 @@
+---
+name: Definition
+---
+
+<script>
+  import { Definition } from "$lib/components";
+</script>
+
+<Definition>
+  <Definition.Name>createCollapsible</Definition.Name>
+  <Definition.Description>The builder function used to create the collapsible component.</Definition.Description>
+
+</Definition>

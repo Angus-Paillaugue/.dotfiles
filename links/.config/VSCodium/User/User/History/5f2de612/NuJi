@@ -1,0 +1,38 @@
+Update v0.1
+A base version of the documentation site.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   README.md
+#	modified:   docs/Components/Commands.md
+#	modified:   docs/Components/Tree.md
+#	modified:   docs/Home.md
+#	modified:   docs/Pages/Code blocks.md
+#	modified:   package.json
+#	modified:   pnpm-lock.yaml
+#	deleted:    scripts/apply-colors.js
+#	modified:   src/app.css
+#	modified:   src/code.css
+#	modified:   src/lib/codeHighlighter.js
+#	modified:   src/lib/components/Commands.svelte
+#	modified:   src/lib/components/ComponentDefinition.svelte
+#	modified:   src/lib/components/Tree.svelte
+#	modified:   src/lib/components/core/Navbar.svelte
+#	modified:   src/lib/components/core/PageList.svelte
+#	modified:   src/lib/components/core/Search.svelte
+#	modified:   src/lib/components/core/Sidebar.svelte
+#	modified:   src/lib/components/core/Toasts.svelte
+#	modified:   src/lib/pages.js
+#	modified:   src/lib/search.js
+#	modified:   src/lib/stores.js
+#	modified:   src/routes/+error.svelte
+#	modified:   src/routes/docs/[...slug]/+layout.svelte
+#	modified:   src/routes/docs/[...slug]/+page.js
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	renamed:    src/routes/docs/[...slug]/Nav.svelte -> src/routes/docs/[...slug]/Pagination.svelte
+#	modified:   user-config.js
+#

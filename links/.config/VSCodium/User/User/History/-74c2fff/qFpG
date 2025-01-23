@@ -1,0 +1,29 @@
+Update
+Upgraded the accessibility and moved tailwind plugins to a separate file.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	new file:   plugins.tailwind.js
+#	modified:   src/app.css
+#	modified:   src/code.css
+#	modified:   src/lib/components/Button.svelte
+#	modified:   src/lib/components/Collapsible/Collapsible.svelte
+#	modified:   src/lib/components/Commands.svelte
+#	modified:   src/lib/components/Dropdown/Dropdown.svelte
+#	modified:   src/lib/components/Dropdown/Item.svelte
+#	modified:   src/lib/components/core/Navbar.svelte
+#	modified:   src/lib/components/core/Search.svelte
+#	modified:   src/lib/components/core/Sidebar/PageList.svelte
+#	modified:   src/lib/components/core/Sidebar/Sidebar.svelte
+#	modified:   src/lib/pages.js
+#	modified:   src/routes/Footer.svelte
+#	modified:   src/routes/Hero.svelte
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Pagination.svelte
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#	modified:   tailwind.config.js
+#

@@ -1,0 +1,22 @@
+Fixed sideBar
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   docs/Components/Collapsible.md
+#	modified:   docs/Home.md
+#	modified:   mdsvex.config.js
+#	modified:   src/code.css
+#	modified:   src/lib/components/Collapsible.svelte
+#	modified:   src/lib/components/core/PageList.svelte
+#	modified:   src/lib/transformer.js
+#	modified:   src/lib/utils.js
+#	modified:   src/routes/+error.svelte
+#	modified:   src/routes/+page.svelte
+#	modified:   src/routes/Footer.svelte
+#	modified:   src/routes/Hero.svelte
+#	modified:   src/routes/docs/[...slug]/Pagination.svelte
+#

@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--tw-neutral-900: theme(colors.neutral.800/50);
+}
+
+::selection,
+::-moz-selection {
+	@apply bg-neutral-100 text-neutral-900;
+}
+
+@layer utilities {
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		/* IE and Edge */
+		scrollbar-width: none;
+		/* Firefox */
+	}
+}
+
+* {
+	overscroll-behavior: contain;
+}
+
+body {
+	@apply bg-neutral-900 font-sans text-neutral-100 antialiased;
+}
+
+hr {
+	@apply mx-2 my-4 h-[2px] rounded-full border-none bg-neutral-800/50;
+}
+
+/* Others */
+kbd {
+	@apply rounded border border-neutral-700 bg-neutral-800 px-2 py-1 font-mono text-sm font-normal text-neutral-200;
+}
+
+input {
+	@apply outline-none ring-0 ring-neutral-700 transition-all focus:outline-none focus:ring-2;
+}

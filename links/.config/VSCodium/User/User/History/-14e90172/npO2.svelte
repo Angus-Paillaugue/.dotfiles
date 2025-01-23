@@ -1,0 +1,28 @@
+<script>
+  import Bento from './Bento/Bento.svelte';
+  import Hero from './Hero/Hero.svelte';
+  import { pageMetadata } from '$lib/stores';
+  import { Button } from '$lib/components/ui/button';
+  import Footer from './Footer.svelte';
+
+  pageMetadata.set({
+    title: 'Home',
+    description:
+      'Logify is a platform that allows you to log your data and get insights in minutes.',
+    breadcrumbs: []
+  });
+
+  const { data } = $props();
+  const { hasARegisteredUser } = data;
+</script>
+
+<div class="mx-auto w-full max-w-screen-xl p-1">
+  <!-- Hero -->
+  <main class="w-full space-y-24">
+    <Hero {hasARegisteredUser} />
+
+    <Bento />
+
+    <Footer {hasARegisteredUser} />
+  </main>
+</div>

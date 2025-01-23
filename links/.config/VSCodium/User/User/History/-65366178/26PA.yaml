@@ -1,0 +1,7 @@
+services:
+  frontend:
+    container_name: ownlogs/backend:staging
+    environment:
+      NODE_ENV: production
+    ports:
+      - '4173:3000'

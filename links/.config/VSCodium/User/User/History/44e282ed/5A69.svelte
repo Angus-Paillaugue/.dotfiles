@@ -1,0 +1,77 @@
+<script lang="ts">
+	import type { Song } from "$lib/types";
+	import { cn } from "$lib/utils";
+	import { onMount } from "svelte";
+	import Track from "./Track.svelte";
+
+  interface Props {
+    songs: Song[];
+    class?: string;
+    rows?: number;
+    cols?: number;
+  }
+
+  let { songs, class: className, rows = 2, cols = 3 }: Props = $props();
+  const GRID_SIZE = rows * cols;
+  let currentPage = $state(0);
+  let carouselElement: HTMLElement;
+  let dragStartPos = $state(0);
+  let numberOfPages = $derived(Math.ceil(songs.length / GRID_SIZE));
+
+  function setCurrentPage(e: UIEvent) {
+    currentPage = Math.round(carouselElement.scrollLeft / carouselElement.clientWidth);
+  }
+
+  function scrollToPage(number: number) {
+    carouselElement.scrollTo({ left: carouselElement.clientWidth * number, behavior: 'smooth' });
+  }
+
+  function onDragStart(e: DragEvent) {
+    console.log('drag start');
+    dragStartPos = carouselElement.scrollLeft;
+  }
+
+  function onDragMove(e: DragEvent) {
+    console.log('drag move');
+    carouselElement.scrollTo({ left: dragStartPos - e.clientX, behavior: 'auto' });
+  }
+
+  function onDragEnd(e: DragEvent) {
+    console.log('drag end');
+    const page = Math.round(carouselElement.scrollLeft / carouselElement.clientWidth);
+    scrollToPage(page);
+  }
+
+  onMount(() => {
+    carouselElement.scrollTo({ left: 0, behavior: 'smooth' });
+
+    carouselElement.addEventListener('dragstart', onDragStart);
+    carouselElement.addEventListener('drag', onDragMove);
+    carouselElement.addEventListener('dragend', onDragEnd);
+
+
+    return () => {
+      carouselElement.removeEventListener('dragstart', onDragStart);
+      carouselElement.removeEventListener('drag', onDragMove);
+      carouselElement.removeEventListener('dragend', onDragEnd);
+    };
+  });
+</script>
+
+<div class={cn("w-full overflow-hidden relative", className)}>
+  <div class='w-full flex flex-row overflow-x-auto snap-x no-scrollbar' onscroll={setCurrentPage} bind:this={carouselElement}>
+    {#each new Array(numberOfPages) as _, pageNumber}
+      <div class="grid grid-cols-3 grid-rows-2 w-full shrink-0 snap-start">
+        {#each songs.slice(pageNumber * GRID_SIZE, (pageNumber + 1) * GRID_SIZE) as song}
+          <Track format="card" {song} />
+        {/each}
+      </div>
+    {/each}
+
+  </div>
+  <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 flex-row">
+    {#each new Array(numberOfPages) as _, pageNumber}
+      <button class={cn("size-4 rounded-full transition-colors", pageNumber === currentPage ? 'bg-muted' : 'bg-secondary')} aria-label="Go to page {pageNumber}" disabled={pageNumber === currentPage} onclick={() => scrollToPage(pageNumber)}> </button>
+    {/each}
+  </div>
+</div>

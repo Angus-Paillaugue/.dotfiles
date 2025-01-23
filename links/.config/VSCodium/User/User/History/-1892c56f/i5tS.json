@@ -1,0 +1,9 @@
+{
+  "name": "Redirector",
+  "description": "Redirects you from google websites to open-source alternatives",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "index.html"
+  }
+}

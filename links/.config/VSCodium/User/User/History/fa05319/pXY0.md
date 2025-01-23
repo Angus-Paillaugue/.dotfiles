@@ -1,0 +1,13 @@
+# TODO
+
+- [x] Add custom font size
+- [x] Fix multiple tests running when going multiple times to an exercise page
+- [x] Add toasts instead of ugly alerts
+- [x] Make the website ~~somewhat~~ responsive
+- [x] (WIP) Add a user dashboard
+- [ ] Add timer functionality
+- [ ] Change tost styles to be more like on IOS but a bit smaller
+- [ ] Fix random exercise page not reloading current exercise if already on the exercise page
+- [ ] Add an admin dashboard
+- [ ] Make a homepage
+- [ ] Make a logo

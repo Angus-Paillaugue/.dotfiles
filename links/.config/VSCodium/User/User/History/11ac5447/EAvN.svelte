@@ -1,0 +1,27 @@
+<script lang="ts">
+	import type { PageData } from './$types';
+  import TextNoteComponent from './text-note.svelte';
+  import ListNoteComponent from './list-note.svelte';
+	import type { TextNote, ListNote } from '$lib/types';
+	import { Input, Card } from '$lib/components';
+	import { isDeepEqual } from '$lib/utils';
+
+	let { data }: { data: PageData } = $props();
+	let { note } = data;
+  let editedNote = $state(note);
+
+  let isSaved = $derived(isDeepEqual(note, editedNote));
+</script>
+
+<div class="max-w-screen-md mx-auto w-full grow flex flex-col gap-2 p-1">
+  <Input bind:value={editedNote.title} id="noteTitle" debounce={500} placeholder="Title" class="text-2xl font-bold shrink-0" />
+  {#if note.type === 'text'}
+    <TextNoteComponent note={editedNote as TextNote} />
+  {:else if note.type === 'list'}
+    <ListNoteComponent note={editedNote as ListNote} />
+  {/if}
+
+  <Card class="w-full shrink-0">
+
+  </Card>
+</div>

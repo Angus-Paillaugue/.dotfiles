@@ -1,0 +1,12 @@
+__pycache__
+download/*
+node_modules
+
+include
+bin
+lib
+lib64
+__pycache__
+package-lock.yaml
+
+log.txt

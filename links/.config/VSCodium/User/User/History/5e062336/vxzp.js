@@ -1,0 +1,41 @@
+import { createConnection } from '$lib/server/db';
+import { redirect } from '@sveltejs/kit';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import { AUTH_TOKEN_SECRET } from '$env/static/private';
+
+export const actions = {
+	default: async ({ cookies, request }) => {
+		const formData = Object.fromEntries(await request.formData());
+		const { username, password, email } = formData;
+		if(!/[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm.test(email)) {
+			return { success: false, message: 'Invalid email!' };
+		}
+		let userExists = [];
+		try {
+			const db = await createConnection();
+
+			[userExists] = await db.query('SELECT * FROM `Users` WHERE `username` = ? LIMIT 1;', [
+				username
+			]);
+		} catch (err) {
+			console.log(err);
+			return { success: false, message: err?.code ?? err.toString() };
+		}
+
+		if (userExists.length === 0)
+			return { success: false, message: 'No account with this username!' };
+
+		const user = userExists[0];
+		const compare = await bcrypt.compare(password, user.password);
+		if (compare) {
+			cookies.set('token', generateAccessToken(username), { path: '/', sameSite: 'strict' });
+			throw redirect(307, '/');
+		}
+		return { success: false, message: 'Incorrect password!' };
+	}
+};
+
+function generateAccessToken(username) {
+	return jwt.sign(username, AUTH_TOKEN_SECRET);
+}

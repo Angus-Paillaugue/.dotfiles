@@ -1,0 +1,22 @@
+<script>
+  import Toast from './Toast.svelte';
+	import { toasts, toast } from './index.js';
+	import { flip } from 'svelte/animate';
+
+	let toastList = $derived($toasts.slice(0, 4));
+
+	toast.error({ message: 'Error toast', timeout:false });
+	toast.warning({ message: 'Warning toast', timeout:false });
+	toast.success({ message: 'Success toast', timeout:false });
+	toast.info({ message: 'Info toast' });
+</script>
+
+<div
+	class="fixed left-1/2 max-lg:bottom-2 lg:top-2 z-[51] flex w-full max-w-[300px] -translate-x-1/2 flex-col-reverse gap-2"
+>
+	{#each toastList as t (t.id)}
+		<div animate:flip={{ duration: 500 }}>
+			<Toast toast={t} />
+		</div>
+	{/each}
+</div>

@@ -1,0 +1,123 @@
+package vues;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+
+import composants.Button;
+import composants.MoneyTextField;
+import modele.BienLouable;
+import modele.Location;
+import modele.Personne;
+import modele.SituationFamiliale;
+import modele.TypeDeContratDeTravail;
+
+public class AjouterLocataire extends JFrame {
+  private static final long serialVersionUID = 1L;
+
+  public AjouterLocataire() {
+    setTitle("Ajouter un locataire");
+    setSize(800, 600);
+    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    setLocationRelativeTo(null);
+
+    // Main container panel
+    JPanel panel = new JPanel();
+    panel.setLayout(new GridLayout(0, 3, 10, 10));
+    panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
+    // Form fields
+    String nom = "nom";
+    String prenom = "prenom";
+    String dateNaissance = "dateNaissance";
+    String lieuNaissance = "lieuNaissance";
+    String situationFamille = "situationFamille";
+    String profession = "profession";
+    String employeur = "employeur";
+    String contratDeTravail = "contratDeTravail";
+    String salaireMensuelNet = "salaireMensuelNet";
+    String autreRevenu = "autreRevenu";
+    String numero = "numero";
+    String rue = "rue";
+    String complement = "complement";
+    String cp = "cp";
+    String ville = "ville";
+    String mail = "mail";
+    String telephone = "telephone";
+    String choixBien = "choixBien";
+
+    addField(panel, nom, "Nom:", new JTextField("Lassalle"));
+    addField(panel, prenom, "Prénom:", new JTextField("Jean"));
+    addField(panel, dateNaissance, "Date de naissance:", new JTextField("3/05/1955"));
+    addField(panel, lieuNaissance, "Lieu de naissance:", new JTextField("Lourdios-Ichère"));
+
+    JComboBox<String> situationFamiliale = new JComboBox<>(SituationFamiliale.getValues());
+    situationFamiliale.setSelectedItem("Marié");
+    addField(panel, situationFamille, "Situation familiale:", situationFamiliale);
+
+    addField(panel, profession, "Profession:", new JTextField("Parlementaire"));
+    addField(panel, employeur, "Employeur:", new JTextField("Assemblée Nationale"));
+
+    JComboBox<String> contratTravail = new JComboBox<>(TypeDeContratDeTravail.getNames());
+    contratTravail.setSelectedItem("CDD");
+    addField(panel, contratDeTravail, "Contrat de travail:", contratTravail);
+
+    addField(
+        panel,
+        "Rémunération mensuelle NET:",
+        new MoneyTextField(null, 1200.0, "remunerationMensuelleNet").build());
+    addField(panel, "Autre rémunération:", new TextField("631.00").build());
+    addField(panel, "Adresse:", new JTextField("126 rue de l'Université, 75355 Paris"));
+    addField(panel, "E-mail:", new JTextField("jean.lasalle@assemblee.gouv"));
+    addField(panel, "Téléphone:", new JTextField("0606060606"));
+
+    JComboBox<String> choixBienLouable =
+        new JComboBox<>(Constants.proprietaire.adressebiensLouables().toArray(new String[0]));
+    addField(panel, choixBien, "Choix du logement :", choixBienLouable);
+
+    // Button panel
+    JPanel buttonPanel = new JPanel();
+    JButton saveButton = new Button("Enregistrer").build();
+    saveButton.addActionListener(
+        new ActionListener() {
+
+          @Override
+          public void actionPerformed(ActionEvent e) {
+            BienLouable b = (BienLouable) choixBienLouable.getSelectedItem();
+            b.addLocation(null);
+            JOptionPane.showMessageDialog(panel, "Locataire enregistré avec succès!");
+          }
+        });
+    buttonPanel.add(saveButton);
+
+    // Add components to frame
+    add(panel, BorderLayout.CENTER);
+    add(buttonPanel, BorderLayout.SOUTH);
+  }
+
+  private void addField(JPanel panel, String nom, String labelText, JComponent field) {
+    panel.add(new JLabel(labelText));
+    field.setName(nom);
+    panel.add(field);
+    panel.add(Box.createHorizontalStrut(15)); // Empty space for alignment
+  }
+
+  private void addField(JPanel panel, String labelText, JPanel field) {
+    panel.add(new JLabel(labelText));
+    panel.add(field);
+    panel.add(Box.createHorizontalStrut(15)); // Empty space for alignment
+  }
+
+  public static void main(String[] args) {
+    AppTheme.setup();
+    SwingUtilities.invokeLater(
+        new Runnable() {
+
+          @Override
+          public void run() {
+            new AjouterLocataire().setVisible(true);
+          }
+        });
+  }
+}

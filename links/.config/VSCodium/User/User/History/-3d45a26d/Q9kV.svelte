@@ -1,0 +1,57 @@
+<script>
+  import { fade } from 'svelte/transition';
+	import { flip } from 'svelte/animate';
+	import { OctagonX } from 'lucide-svelte'
+
+  const toastColors = {
+		success: 'text-green-500',
+		error: 'text-red-500',
+		warning: 'text-yellow-500',
+		info: 'text-white'
+	};
+</script>
+
+{#each toasts.slice(0, 1) as toast, i (toast.id)}
+  <!-- svelte-ignore a11y_no_static_element_interactions -->
+  <!-- svelte-ignore a11y_click_events_have_key_events -->
+  <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+  <div
+    class="group/toast w-[250px] md:w-[300px] flex cursor-pointer flex-row items-center justify-between gap-4 rounded-[1.75rem] bg-black p-3 text-white transition-all hover:h-52 hover:w-[500px] h-14 relative shake"
+    data-id={toast.id}
+    transition:scale={{ duration: 500, easing: quintOut, start:0, opacity: 0 }}
+    animate:flip={{ duration: 100 }}
+    onclick={() => (toast.hover = true)}
+    onmouseenter={() => (toast.hover = true)}
+    onmouseleave={() => (toast.hover = false)}
+    onfocus={() => (toast.hover = true)}
+    onblur={() => (toast.hover = false)}
+    tabindex="0"
+  >
+    <span class="{toastColors[toast.type]}">
+      {#if toast.type === 'error'}
+        <OctagonX />
+      {:else}
+      {toast.type}
+      {/if}
+    </span>
+
+    {#if toast.hover}
+      <div
+        in:fade={{ delay: 150, easing: quintOut }}
+        class="flex h-full flex-col justify-between"
+      >
+        <p class="overflow-y-auto">{toast.message}</p>
+        <button
+          class="w-full rounded-full bg-neutral-600 p-2"
+          onclick={() => {
+            removeToast(toast.id);
+          }}>Close</button
+        >
+      </div>
+    {:else}
+      <h3 class="text-xl font-bold {toastColors[toast.type]}" in:fade={{ delay: 150, easing: quintOut }}>
+        {toast.title}
+      </h3>
+    {/if}
+  </div>
+{/each}

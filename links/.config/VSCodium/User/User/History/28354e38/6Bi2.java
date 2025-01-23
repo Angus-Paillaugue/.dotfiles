@@ -1,0 +1,22 @@
+package DAO;
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+import dao.AssuranceDAO;
+import modele.Assurance;
+
+public class AssuranceDAOTests {
+  @Test
+  public void testUpdate() {
+    Assurance assurance =
+        new Assurance("Jurisprudence", "Assureur1", 123, 100);
+
+
+    AssuranceDAO assuranceDAO = new AssuranceDAO();
+    assuranceDAO.create(assurance);
+    assurance.set
+
+    Assurance assuranceUpdated = assuranceDAO.find(123);
+    assertNotNull(assuranceUpdated);
+  }
+}

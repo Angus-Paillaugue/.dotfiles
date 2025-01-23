@@ -1,0 +1,61 @@
+Update
+S
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	deleted:    docs/Components/Api-reference.md
+#	deleted:    docs/Components/Collapsible.md
+#	deleted:    docs/Components/Commands.md
+#	deleted:    docs/Components/Component preview.md
+#	deleted:    docs/Components/Definition.md
+#	deleted:    docs/Components/Dropdown.md
+#	deleted:    docs/Components/Images.md
+#	deleted:    docs/Components/Math.md
+#	deleted:    docs/Components/Note.md
+#	deleted:    docs/Components/Steps.md
+#	deleted:    docs/Components/Tables.md
+#	deleted:    docs/Components/Tooltip.md
+#	deleted:    docs/Components/Tree.md
+#	deleted:    docs/Configuration/Colors.md
+#	deleted:    docs/Configuration/Homepage.md
+#	deleted:    docs/Configuration/Pages.md
+#	deleted:    docs/Configuration/Project.md
+#	deleted:    docs/Configuration/Releases.md
+#	deleted:    docs/Configuration/Sidebar.md
+#	deleted:    docs/Pages/Code blocks.md
+#	deleted:    docs/Pages/Create a page.md
+#	modified:   docs/Quickstart.md
+#	modified:   package.json
+#	modified:   project.config.js
+#	deleted:    scripts/new-release.js
+#	modified:   src/lib/components/Button.svelte
+#	modified:   src/lib/components/core/Sidebar/Sidebar.svelte
+#	modified:   src/lib/utils.js
+#	deleted:    src/routes/(home)/+layout.svelte
+#	renamed:    src/routes/(home)/+layout.js -> src/routes/(home)/+page.js
+#	modified:   src/routes/(home)/+page.svelte
+#	deleted:    src/routes/(home)/Bento.svelte
+#	deleted:    src/routes/(home)/Counter.svelte
+#	deleted:    src/routes/(home)/Footer.svelte
+#	deleted:    src/routes/(home)/Hero.svelte
+#	deleted:    src/routes/(home)/releases/+page.svelte
+#	deleted:    src/routes/(home)/releases/releases.json
+#	modified:   src/routes/+error.svelte
+#	deleted:    static/homepage/editConfiguration_480.webp
+#	deleted:    static/homepage/editConfiguration_720.webp
+#	deleted:    static/homepage/mockup/dark/homepagePreview_1920.webp
+#	deleted:    static/homepage/mockup/dark/homepagePreview_960.webp
+#	deleted:    static/homepage/mockup/light/homepagePreview_1920.webp
+#	deleted:    static/homepage/mockup/light/homepagePreview_960.webp
+#	renamed:    static/logos/SvelteShine-dark-square.png -> static/logos/dark-square.png
+#	renamed:    static/logos/SvelteShine-dark.png -> static/logos/dark.png
+#	renamed:    static/logos/SvelteShine-dark.svg -> static/logos/dark.svg
+#	renamed:    static/logos/SvelteShine-light-square.png -> static/logos/light-square.png
+#	renamed:    static/logos/SvelteShine-light.png -> static/logos/light.png
+#	renamed:    static/logos/SvelteShine-light.svg -> static/logos/light.svg
+#	deleted:    static/sitemap.xml
+#

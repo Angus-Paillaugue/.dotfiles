@@ -1,0 +1,3 @@
+DB_PASSWORD='APAILL40'
+DB_USER='root'
+DB_HOST='localhost'

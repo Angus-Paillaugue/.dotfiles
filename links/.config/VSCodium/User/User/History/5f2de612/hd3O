@@ -1,0 +1,50 @@
+Fixed the aproch to loading the pages
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   .gitignore
+#	modified:   .prettierrc
+#	modified:   README.md
+#	new file:   docs/Components/Commands.md
+#	new file:   docs/Components/Tooltip.md
+#	new file:   docs/Counter.svelte
+#	modified:   docs/Directories/Sort Directories.md
+#	modified:   docs/Home.md
+#	modified:   docs/Pages/Code blocks.md
+#	modified:   eslint.config.js
+#	modified:   mdsvex.config.js
+#	modified:   package.json
+#	modified:   pnpm-lock.yaml
+#	modified:   postcss.config.js
+#	modified:   scripts/apply-colors.js
+#	new file:   scripts/choose-tailwind-gray-shade.js
+#	new file:   scripts/setup.js
+#	modified:   src/app.css
+#	modified:   src/app.html
+#	modified:   src/code.css
+#	modified:   src/lib/codeHighlighter.js
+#	new file:   src/lib/components/Commands.svelte
+#	new file:   src/lib/components/ComponentDefinition.svelte
+#	new file:   src/lib/components/core/Navbar.svelte
+#	modified:   src/lib/components/core/PageList.svelte
+#	modified:   src/lib/components/core/Sidebar.svelte
+#	modified:   src/lib/components/core/Toasts.svelte
+#	new file:   src/lib/components/index.js
+#	modified:   src/lib/pages.js
+#	modified:   src/lib/stores.js
+#	modified:   src/lib/utils.js
+#	new file:   src/routes/+error.svelte
+#	modified:   src/routes/+layout.svelte
+#	modified:   src/routes/+page.svelte
+#	new file:   src/routes/docs/[...slug]/+layout.svelte
+#	new file:   src/routes/docs/[...slug]/+page.js
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   svelte.config.js
+#	modified:   tailwind.config.js
+#	modified:   user-config.js
+#	modified:   vite.config.js
+#

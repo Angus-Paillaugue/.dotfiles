@@ -1,0 +1,44 @@
+import { createConnection } from '$lib/server/db';
+import { redirect } from '@sveltejs/kit';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import { AUTH_TOKEN_SECRET } from '$env/static/private';
+
+export async function load() {
+	const salt = await bcrypt.genSalt(10);
+	const hash = await bcrypt.hash('APAILL40', salt);
+	console.log(hash);
+
+}
+
+export const actions = {
+	default: async ({ cookies, request, url }) => {
+		try {
+			const formData = Object.fromEntries(await request.formData());
+			const { username, password } = formData;
+			const db = await createConnection();
+
+			const [userExists] = await db.query('SELECT * FROM users WHERE username = ?', [username]);
+			if (userExists.length === 0)
+				return { success: false, message: 'No account with this username!' };
+
+			const compare = await bcrypt.compare(password, userExists.password);
+			if (compare) {
+				cookies.set('token', generateAccessToken(username), { path: '/', sameSite: 'strict' });
+				if (url.searchParams.get('redirect')) {
+					throw redirect(303, url.searchParams.get('redirect'));
+				} else {
+					throw redirect(303, '/dashboard');
+				}
+			}
+			return { success: false, message: 'Incorrect password!' };
+		} catch (err) {
+			console.log(err);
+			return { success: false, message: err?.code ?? err.toString() };
+		}
+	}
+};
+
+function generateAccessToken(username) {
+	return jwt.sign(username, AUTH_TOKEN_SECRET);
+}

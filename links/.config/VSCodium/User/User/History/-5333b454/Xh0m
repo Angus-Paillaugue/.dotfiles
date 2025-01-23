@@ -1,0 +1,5 @@
+# Example content for creating a custom model
+name: custom_model
+base_model: llama3.1
+data_path: /path/to/your/dataset
+epochs: 10

@@ -1,0 +1,66 @@
+services:
+  backend:
+    container_name: logify_backend
+    build:
+      context: ./
+      dockerfile: ./backend/Dockerfile
+    environment:
+      NODE_ENV: production
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      JWT_SECRET: ${JWT_SECRET}
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  frontend:
+    container_name: logify_frontend
+    build:
+      context: ./
+      dockerfile: ./frontend/Dockerfile
+    environment:
+      PORT: 4173
+      ORIGIN: http://localhost:4173
+      HOST: 0.0.0.0
+      PUBLIC_BACKEND_HOST: localhost
+      PUBLIC_BACKEND_PORT: 3000
+      JWT_SECRET: ${JWT_SECRET}
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      NODE_ENV: production
+    ports:
+      - "4173:4173"
+    depends_on:
+      - backend
+      - db
+
+  db:
+    image: mysql
+    restart: always
+    container_name: logify_db
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+    volumes:
+      - ./db_data:/var/lib/mysql
+      - ./backend/database.sql:/docker-entrypoint-initdb.d/database.sql
+
+  postfix:
+    image: boky/postfix
+    container_name: logify_postfix
+    environment:
+      ALLOW_EMPTY_SENDER_DOMAINS: true
+      INBOUND_DEBUGGING: 1
+    ports:
+      - "1587:587"
+
+volumes:
+  db_data:

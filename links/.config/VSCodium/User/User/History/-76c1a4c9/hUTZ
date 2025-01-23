@@ -1,0 +1,8 @@
+__pycache__
+download
+node_modules
+
+include
+bin
+lib
+lib64

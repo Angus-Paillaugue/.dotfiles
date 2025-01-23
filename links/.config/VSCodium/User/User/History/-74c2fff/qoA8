@@ -1,0 +1,38 @@
+UPDATE
+Added tailwind theme colors. Fixed prettier. Made some layout optimizations.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   .prettierignore
+#	modified:   src/app.css
+#	modified:   src/code.css
+#	modified:   src/lib/components/Button.svelte
+#	modified:   src/lib/components/Collapsible/Collapsible.svelte
+#	modified:   src/lib/components/Collapsible/Group.svelte
+#	modified:   src/lib/components/Commands.svelte
+#	modified:   src/lib/components/ComponentPreview.svelte
+#	modified:   src/lib/components/Definition/Definition.svelte
+#	modified:   src/lib/components/Definition/Note.svelte
+#	modified:   src/lib/components/Definition/Prop.svelte
+#	modified:   src/lib/components/Note.svelte
+#	modified:   src/lib/components/RequestBuilder/RequestBuilder.svelte
+#	modified:   src/lib/components/Tooltip.svelte
+#	modified:   src/lib/components/Tree.svelte
+#	modified:   src/lib/components/core/Navbar.svelte
+#	modified:   src/lib/components/core/Search.svelte
+#	modified:   src/lib/components/core/Sidebar/PageList.svelte
+#	modified:   src/lib/components/core/Sidebar/PageListCollapsible.svelte
+#	modified:   src/lib/components/core/Sidebar/Sidebar.svelte
+#	modified:   src/lib/components/core/Toasts.svelte
+#	modified:   src/routes/+page.svelte
+#	modified:   src/routes/Footer.svelte
+#	modified:   src/routes/Hero.svelte
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Pagination.svelte
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#	modified:   tailwind.config.js
+#

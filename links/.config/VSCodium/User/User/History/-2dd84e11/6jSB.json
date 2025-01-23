@@ -1,0 +1,14 @@
+{
+  "sidebar":{
+    "occupation": "Web Developer",
+    "back": "Go back",
+    "menu": "Menu"
+  },
+  "homePage": {
+		"title": "Home",
+		"hero": "Home",
+		"about": "About",
+		"projects": "Projects",
+		"contact": "Contact"
+	}
+}

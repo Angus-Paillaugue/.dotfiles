@@ -1,0 +1,22 @@
+INDEX VERSION 1.134+/home/angus/.config/Code/User/workspaceStorage/a33c1fb1e298d79c058bbe82fa91b0a4/redhat.java/jdt_ws/.metadata/.plugins/org.eclipse.jdt.core
+502732891.index
+925982370.index
+3530540584.index
+1628687906.index
+3633375641.index
+1089239932.index
+2744878784.index
+903562898.index
+3066711521.index
+813341167.index
+1865797976.index
+821608291.index
+3539432263.index
+3883508318.index
+1159935248.index
+3485262699.index
+246264339.index
+4109409412.index
+2253745042.index
+3512161136.index
+2359322674.index

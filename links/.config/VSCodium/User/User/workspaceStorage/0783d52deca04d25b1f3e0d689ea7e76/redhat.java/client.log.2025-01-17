@@ -1,0 +1,483 @@
+{
+  message: "Use the JDK from 'PATH' as the initial default project JDK.",
+  level: 'info',
+  timestamp: '2025-01-17 08:13:50.667'
+}
+{
+  message: 'Starting Java server with: /home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/jre/17.0.13-linux-x86_64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/lombok/lombok-1.18.34.jar -jar /home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar -configuration /home/angus/.config/Code/User/globalStorage/redhat.java/1.38.0/config_ss_linux -data /home/angus/.config/Code/User/workspaceStorage/0783d52deca04d25b1f3e0d689ea7e76/redhat.java/ss_ws',
+  level: 'info',
+  timestamp: '2025-01-17 08:13:51.409'
+}
+{
+  message: 'Starting Java server with: /home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/jre/17.0.13-linux-x86_64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/lombok/lombok-1.18.34.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/angus/.config/Code/User/workspaceStorage/0783d52deca04d25b1f3e0d689ea7e76/redhat.java -Daether.dependencyCollector.impl=bf -jar /home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar -configuration /home/angus/.config/Code/User/globalStorage/redhat.java/1.38.0/config_linux -data /home/angus/.config/Code/User/workspaceStorage/0783d52deca04d25b1f3e0d689ea7e76/redhat.java/jdt_ws',
+  level: 'info',
+  timestamp: '2025-01-17 08:13:51.687'
+}
+{
+  message: 'Jan 17, 2025 8:13:53 AM org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.servlet.LogbackServletContainerInitializer of service jakarta.servlet.ServletContainerInitializer in bundle ch.qos.logback.classic\n' +
+    'Jan 17, 2025 8:13:53 AM org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.spi.LogbackServiceProvider of service org.slf4j.spi.SLF4JServiceProvider in bundle ch.qos.logback.classic\n',
+  level: 'info',
+  timestamp: '2025-01-17 08:13:53.319'
+}
+{
+  message: '[Error - 8:14:03 AM] Jan 17, 2025, 8:13:55 AM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:207)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getJUnit4LibraryEntry(BuildPathSupport.java:410)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:122)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3209)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3097)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3155)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2131)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2025-01-17 08:14:03.513'
+}
+{
+  message: '[Error - 8:14:03 AM] Jan 17, 2025, 8:13:55 AM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:220)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getJUnit4LibraryEntry(BuildPathSupport.java:410)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:122)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3209)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3097)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3155)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2131)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2025-01-17 08:14:03.696'
+}
+{
+  message: '[Error - 8:14:04 AM] Jan 17, 2025, 8:13:55 AM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:207)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getHamcrestLibraryEntry(BuildPathSupport.java:425)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:123)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3209)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3097)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3155)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2131)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2025-01-17 08:14:04.011'
+}
+{
+  message: '[Error - 8:14:04 AM] Jan 17, 2025, 8:13:55 AM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:220)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getHamcrestLibraryEntry(BuildPathSupport.java:425)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:123)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3209)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3097)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3155)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2131)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2025-01-17 08:14:04.152'
+}
+{
+  message: 'Jan 17, 2025 9:00:04 AM com.microsoft.java.debug.plugin.internal.JavaDebuggerServerPlugin start\n' +
+    'INFO: Starting com.microsoft.java.debug.plugin\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:00:04.826'
+}
+{
+  message: 'Jan 17, 2025 9:02:12 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 64\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:02:12.428'
+}
+{
+  message: '[Error - 9:05:43 AM] Jan 17, 2025, 9:05:43 AM JavaBuilder handling ImageBuilderInternalException while building: app\n' +
+    "Resource already exists on disk: '/app/target/classes/vues/AppTheme.properties'.\n" +
+    "org.eclipse.core.internal.resources.ResourceException(/app/target/classes/vues/AppTheme.properties)[272]: java.lang.Exception: Resource already exists on disk: '/app/target/classes/vues/AppTheme.properties'.\n" +
+    '\tat org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)\n' +
+    '\tat org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)\n' +
+    '\tat org.eclipse.core.internal.localstore.FileSystemResourceManager.copy(FileSystemResourceManager.java:378)\n' +
+    '\tat org.eclipse.core.internal.resources.Resource.copy(Resource.java:572)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.copyResource(AbstractImageBuilder.java:456)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.findSourceFiles(IncrementalImageBuilder.java:746)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.findSourceFiles(IncrementalImageBuilder.java:602)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.findSourceFiles(IncrementalImageBuilder.java:553)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.build(IncrementalImageBuilder.java:136)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.JavaBuilder.buildDeltas(JavaBuilder.java:332)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:249)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)\n' +
+    '\tat org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)\n' +
+    '\tat org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)\n' +
+    '\tat org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)\n' +
+    '\tat org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:05:43.676'
+}
+{
+  message: 'Jan 17, 2025 9:08:17 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 142\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:08:17.593'
+}
+{
+  message: '[Error - 9:10:30 AM] Jan 17, 2025, 9:10:30 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2025-01-17 09:10:30.272'
+}
+{
+  message: 'Jan 17, 2025 9:10:37 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 208\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:10:37.187'
+}
+{
+  message: 'Jan 17, 2025 9:46:23 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify\n' +
+    'WARNING: Failed to send notification message.\n' +
+    'org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: Broken pipe\n' +
+    '\tat org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.ParentProcessWatcher.lambda$1(ParentProcessWatcher.java:144)\n' +
+    '\tat org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:135)\n' +
+    '\tat org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:88)\n' +
+    '\tat jdk.proxy3/jdk.proxy3.$Proxy10.notifyProgress(Unknown Source)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.ProgressReporterManager$ProgressReporter.sendStatus(ProgressReporterManager.java:269)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.ProgressReporterManager$ProgressReporter.sendProgress(ProgressReporterManager.java:239)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.ProgressReporterManager$ProgressReporter.beginTask(ProgressReporterManager.java:200)\n' +
+    '\tat org.eclipse.core.runtime.SubMonitor.convert(SubMonitor.java:557)\n' +
+    '\tat org.eclipse.core.runtime.SubMonitor.convert(SubMonitor.java:512)\n' +
+    '\tat org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:290)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n' +
+    'Caused by: java.io.IOException: Broken pipe\n' +
+    '\tat java.base/sun.nio.ch.FileDispatcherImpl.write0(Native Method)\n' +
+    '\tat java.base/sun.nio.ch.SocketDispatcher.write(Unknown Source)\n' +
+    '\tat java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)\n' +
+    '\tat java.base/sun.nio.ch.IOUtil.write(Unknown Source)\n' +
+    '\tat java.base/sun.nio.ch.IOUtil.write(Unknown Source)\n' +
+    '\tat java.base/sun.nio.ch.SocketChannelImpl.write(Unknown Source)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.ConnectionStreamFactory$NamedPipeOutputStream.write(ConnectionStreamFactory.java:238)\n' +
+    '\tat org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)\n' +
+    '\t... 11 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:46:23.041'
+}
+{
+  message: 'Jan 17, 2025 9:46:23 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify\n' +
+    'WARNING: Failed to send notification message.\n' +
+    'org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: Broken pipe\n' +
+    '\tat org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.ParentProcessWatcher.lambda$1(ParentProcessWatcher.java:144)\n' +
+    '\tat org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:135)\n' +
+    '\tat org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:88)\n' +
+    '\tat jdk.proxy3/jdk.proxy3.$Proxy10.notifyProgress(Unknown Source)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.ProgressReporterManager$ProgressReporter.sendStatus(ProgressReporterManager.java:290)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.ProgressReporterManager$ProgressReporter.sendProgress(ProgressReporterManager.java:239)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.ProgressReporterManager$ProgressReporter.beginTask(ProgressReporterManager.java:200)\n' +
+    '\tat org.eclipse.core.runtime.SubMonitor.convert(SubMonitor.java:557)\n' +
+    '\tat org.eclipse.core.runtime.SubMonitor.convert(SubMonitor.java:512)\n' +
+    '\tat org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:290)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n' +
+    'Caused by: java.io.IOException: Broken pipe\n' +
+    '\tat java.base/sun.nio.ch.FileDispatcherImpl.write0(Native Method)\n' +
+    '\tat java.base/sun.nio.ch.SocketDispatcher.write(Unknown Source)\n' +
+    '\tat java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)\n' +
+    '\tat java.base/sun.nio.ch.IOUtil.write(Unknown Source)\n' +
+    '\tat java.base/sun.nio.ch.IOUtil.write(Unknown Source)\n' +
+    '\tat java.base/sun.nio.ch.SocketChannelImpl.write(Unknown Source)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.ConnectionStreamFactory$NamedPipeOutputStream.write(ConnectionStreamFactory.java:238)\n' +
+    '\tat org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)\n' +
+    '\t... 11 more\n' +
+    '\n' +
+    'Jan 17, 2025 9:46:23 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify\n' +
+    'WARNING: Failed to send notification message.\n' +
+    'org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: Broken pipe\n' +
+    '\tat org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.ParentProcessWatcher.lambda$1(ParentProcessWatcher.java:144)\n' +
+    '\tat org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:135)\n' +
+    '\tat org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:88)\n' +
+    '\tat jdk.proxy3/jdk.proxy3.$Proxy10.notifyProgress(Unknown Source)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.ProgressReporterManager$ProgressReporter.sendStatus(ProgressReporterManager.java:290)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.ProgressReporterManager$ProgressReporter.sendProgress(ProgressReporterManager.java:239)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.ProgressReporterManager$ProgressReporter.done(ProgressReporterManager.java:222)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:74)\n' +
+    'Caused by: java.io.IOException: Broken pipe\n' +
+    '\tat java.base/sun.nio.ch.FileDispatcherImpl.write0(Native Method)\n' +
+    '\tat java.base/sun.nio.ch.SocketDispatcher.write(Unknown Source)\n' +
+    '\tat java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(Unknown Source)\n' +
+    '\tat java.base/sun.nio.ch.IOUtil.write(Unknown Source)\n' +
+    '\tat java.base/sun.nio.ch.IOUtil.write(Unknown Source)\n' +
+    '\tat java.base/sun.nio.ch.SocketChannelImpl.write(Unknown Source)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.ConnectionStreamFactory$NamedPipeOutputStream.write(ConnectionStreamFactory.java:238)\n' +
+    '\tat org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)\n' +
+    '\t... 8 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:46:23.042'
+}
+{
+  message: "Use the JDK from 'PATH' as the initial default project JDK.",
+  level: 'info',
+  timestamp: '2025-01-17 09:46:49.817'
+}
+{
+  message: 'Starting Java server with: /home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/jre/17.0.13-linux-x86_64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/lombok/lombok-1.18.34.jar -jar /home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar -configuration /home/angus/.config/Code/User/globalStorage/redhat.java/1.38.0/config_ss_linux -data /home/angus/.config/Code/User/workspaceStorage/0783d52deca04d25b1f3e0d689ea7e76/redhat.java/ss_ws',
+  level: 'info',
+  timestamp: '2025-01-17 09:46:52.310'
+}
+{
+  message: 'Starting Java server with: /home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/jre/17.0.13-linux-x86_64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/lombok/lombok-1.18.34.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/angus/.config/Code/User/workspaceStorage/0783d52deca04d25b1f3e0d689ea7e76/redhat.java -Daether.dependencyCollector.impl=bf -jar /home/angus/.vscode/extensions/redhat.java-1.38.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar -configuration /home/angus/.config/Code/User/globalStorage/redhat.java/1.38.0/config_linux -data /home/angus/.config/Code/User/workspaceStorage/0783d52deca04d25b1f3e0d689ea7e76/redhat.java/jdt_ws',
+  level: 'info',
+  timestamp: '2025-01-17 09:46:52.635'
+}
+{
+  message: 'Jan 17, 2025 9:46:54 AM org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.servlet.LogbackServletContainerInitializer of service jakarta.servlet.ServletContainerInitializer in bundle ch.qos.logback.classic\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:46:54.137'
+}
+{
+  message: 'Jan 17, 2025 9:46:54 AM org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.spi.LogbackServiceProvider of service org.slf4j.spi.SLF4JServiceProvider in bundle ch.qos.logback.classic\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:46:54.141'
+}
+{
+  message: '[Error - 9:46:56 AM] Jan 17, 2025, 9:46:56 AM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:207)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getJUnit4LibraryEntry(BuildPathSupport.java:410)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:122)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3209)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3097)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3155)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2131)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:46:56.642'
+}
+{
+  message: '[Error - 9:46:56 AM] Jan 17, 2025, 9:46:56 AM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:220)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getJUnit4LibraryEntry(BuildPathSupport.java:410)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:122)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3209)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3097)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3155)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2131)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:46:56.647'
+}
+{
+  message: '[Error - 9:46:56 AM] Jan 17, 2025, 9:46:56 AM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:207)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getHamcrestLibraryEntry(BuildPathSupport.java:425)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:123)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3209)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3097)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3155)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2131)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:46:56.648'
+}
+{
+  message: '[Error - 9:46:56 AM] Jan 17, 2025, 9:46:56 AM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:220)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getHamcrestLibraryEntry(BuildPathSupport.java:425)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:123)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3209)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3097)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3155)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2131)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:46:56.649'
+}
+{
+  message: 'Jan 17, 2025 9:47:13 AM com.microsoft.java.debug.plugin.internal.JavaDebuggerServerPlugin start\n' +
+    'INFO: Starting com.microsoft.java.debug.plugin\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:47:13.208'
+}
+{
+  message: 'Jan 17, 2025 9:47:13 AM com.microsoft.java.debug.core.UsageDataSession recordInfo\n' +
+    'INFO: launch debug info\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:47:13.590'
+}
+{
+  message: 'Jan 17, 2025 9:47:16 AM com.microsoft.java.debug.core.UsageDataSession submitUsageData\n' +
+    'INFO: session usage data summary\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:47:16.480'
+}
+{
+  message: 'Jan 17, 2025 9:47:30 AM com.microsoft.java.debug.core.UsageDataSession recordInfo\n' +
+    'INFO: launch debug info\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:47:30.599'
+}
+{
+  message: 'Jan 17, 2025 9:47:32 AM com.microsoft.java.debug.core.UsageDataSession submitUsageData\n' +
+    'INFO: session usage data summary\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:47:32.751'
+}
+{
+  message: 'Jan 17, 2025 9:48:20 AM com.microsoft.java.debug.core.UsageDataSession recordInfo\n' +
+    'INFO: launch debug info\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:48:20.399'
+}
+{
+  message: 'Jan 17, 2025 9:48:21 AM com.microsoft.java.debug.core.UsageDataSession submitUsageData\n' +
+    'INFO: session usage data summary\n',
+  level: 'info',
+  timestamp: '2025-01-17 09:48:21.837'
+}

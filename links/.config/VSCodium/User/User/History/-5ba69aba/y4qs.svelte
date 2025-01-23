@@ -1,0 +1,30 @@
+<script>
+  const { data } = $props();
+  const { problems } = data
+
+  $inspect(problems);
+</script>
+
+<div class="max-w-screen-md w-full p-2 rounded border mx-auto mt-10">
+  <h1 class="text-3xl font-bold">Problems</h1>
+  <table class="w-full">
+    <thead>
+      <tr>
+        <td>Status</td>
+        <td>Title</td>
+        <td>Acceptance</td>
+        <td>Difficulty</td>
+      </tr>
+    </thead>
+    <tbody>
+      {#each problems as problem}
+        <tr>
+          <td>{problem.status}</td>
+          <td>{problem.title}</td>
+          <td>{problem.acceptance}</td>
+          <td>{problem.difficulty}</td>
+        </tr>
+      {/each}
+    </tbody>
+  </table>
+</div>

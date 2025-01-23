@@ -1,0 +1,82 @@
+<?php
+class Contact {
+  private $id;
+  private $nom;
+  private $prenom;
+  private $adresse;
+  private $telephone;
+  private $codePostal;
+  private $ville;
+
+  public function __construct($nom, $prenom, $adresse, $telephone, $codePostal, $ville) {
+    $this->nom = $nom;
+    $this->prenom = $prenom;
+    $this->adresse = $adresse;
+    $this->telephone = $telephone;
+    $this->codePostal = $codePostal;
+    $this->ville = $ville;
+  }
+
+  public function getId() {
+    return $this->id;
+  }
+
+  public function getNom() {
+    return $this->nom;
+  }
+
+  public function getPrenom() {
+    return $this->prenom;
+  }
+
+  public function getAdresse() {
+    return $this->adresse;
+  }
+
+  public function getTelephone() {
+    return $this->telephone;
+  }
+
+  public function getCodePostal() {
+    return $this->codePostal;
+  }
+
+  public function getVille() {
+    return $this->ville;
+  }
+
+  public function setId($id) {
+    $this->id = $id;
+  }
+
+  public function setNom($nom) {
+    $this->nom = $nom;
+  }
+
+  public function setPrenom($prenom) {
+    $this->prenom = $prenom;
+  }
+
+  public function setAdresse($adresse) {
+    $this->adresse = $adresse;
+  }
+
+  public function setTelephone($telephone) {
+    $this->telephone = $telephone;
+  }
+
+  public function setCodePostal($codePostal) {
+    $this->codePostal = $codePostal;
+  }
+
+  public function setVille($ville) {
+    $this->ville = $ville;
+  }
+
+  public function __toString() {
+    return $this->prenom . ' ' . $this->nom . ' ' . $this->adresse . ' ' . $this->codePostal . ' ' . $this->ville . ' ' . $this->telephone;
+  }
+
+
+}
+?>

@@ -1,0 +1,104 @@
+import { mkdirSync, readFileSync, writeFileSync, readdirSync } from 'fs';
+import { randomUUID } from 'crypto';
+import * as readline from 'node:readline/promises';
+import { stdin as input, stdout as output } from 'node:process';
+import { exec } from 'child_process';
+
+
+const rl = readline.createInterface({ input, output });
+
+
+
+/**
+ * Converts a string to a slug by removing non-alphanumeric characters,
+ * normalizing diacritics, and replacing spaces with hyphens.
+ *
+ * @param {string} value - The string to be converted to a slug.
+ * @returns {string} The slugified string.
+ */
+const slugify = (value) => {
+  // Normalize the value
+  value = value.normalize('NFKD').replace(/[\u0300-\u036F]/g, '');
+
+  // Replace non-alphanumeric characters with spaces
+  value = value.replace(/[^\w\s-]/g, '').toLowerCase();
+
+  // Replace whitespace and hyphens with a single hyphen
+  value = value.replace(/[-\s]+/g, '-');
+
+  // Trim leading and trailing hyphens and underscores
+  return value.replace(/^[-_]+|[-_]+$/g, '');
+};
+
+
+function cleanup(filename, username) {
+  // Create the directory
+  mkdirSync(username, { recursive: true });
+  // Read the har file
+  const har = JSON.parse(readFileSync(filename, 'utf8'));
+  const images = [];
+  const videos = [];
+  // Loop through the entries
+  for (const entry of har.log.entries) {
+    const request = entry.request;
+    const response = entry.response;
+
+    // The request is a photo request
+    if(request.url.includes("medias?limit=")) {
+      const content = JSON.parse(response.content.text);
+      // Loop through the photos
+      for (const media of content.list) {
+        // Get the text
+        const text = slugify(media.rawText.slice(0, 50)) || randomUUID();
+        for (const [i, content] of media.media.entries()) {
+          const url = content?.source?.source;
+          if(!url) continue;
+          const title = `${text}(${i})`;
+          const postedAt = content.createdAt;
+          console.log(Object.keys(media));
+          if(media.type === "photo") {
+            images.push({ url, title, postedAt });
+          }else {
+            videos.push({ url, title, postedAt });
+          }
+        }
+      }
+    }
+  }
+  // Write the output to the photos.json file
+  writeFileSync(`${username}/photos.json`, JSON.stringify(images, null, 2));
+  // Write the output to the videos.json file
+  writeFileSync(`${username}/videos.json`, JSON.stringify(videos, null, 2));
+}
+
+/**
+ * Downloads files for a given username.
+ * @param {string} username - The username to download files for.
+ */
+function download(username) {
+  exec(`node download.js --username=${username}`)
+}
+
+
+// Main function
+(async() => {
+  // const username = await rl.question('What is the username of the onlyfans? ');
+  const username = "lucazsz"
+  const filename = username+"/"+readdirSync(username).filter(fn => fn.endsWith('.har'))[0];
+
+  const cleanupAnswer = await rl.question('Do you want to cleanup? (y/n) ');
+  if(cleanupAnswer === 'y') {
+    cleanup(filename, username);
+  }
+
+  // const cleanupVideosAnswer = await rl.question('Do you want to cleanup videos? (y/n) ');
+  // if(cleanupVideosAnswer === 'y') {
+  //   cleanUpVideos(filename, username);
+  // }
+
+  // const downloadAnswer = await rl.question('Do you want to download the images and videos? (y/n) ');
+  // if(downloadAnswer === 'y') {
+  //   download(username);
+  // }
+  rl.close();
+})();

@@ -1,0 +1,22 @@
+Added a basic but fully accessible dropdown
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	new file:   docs/Components/Dropdown.md
+#	modified:   project.config.js
+#	modified:   src/lib/components/Button.svelte
+#	new file:   src/lib/components/Dropdown/Divider.svelte
+#	new file:   src/lib/components/Dropdown/Dropdown.svelte
+#	new file:   src/lib/components/Dropdown/Item.svelte
+#	new file:   src/lib/components/Dropdown/Trigger.svelte
+#	new file:   src/lib/components/Dropdown/index.js
+#	modified:   src/lib/components/core/Navbar.svelte
+#	modified:   src/lib/components/core/Sidebar/Sidebar.svelte
+#	modified:   src/lib/components/index.js
+#	modified:   src/routes/+page.svelte
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#

@@ -1,0 +1,5 @@
+MYSQL_PASSWORD=musicPlayer
+MYSQL_USER=musicPlayer
+MYSQL_DATABASE=musicPlayer
+MYSQL_HOST=localhost
+API_KEY=test

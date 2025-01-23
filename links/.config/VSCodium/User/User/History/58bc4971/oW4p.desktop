@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Sql Developer
+GenericName=Oracle sql database management client
+
+Type=Application
+Exec=sqldeveloper
+TryExec=sqldeveloper
+Icon=/opt/sqldeveloper/icon.png
+
+[Desktop Action Manager]
+Exec=sqldeveloper
+Name=Run Sql Developer

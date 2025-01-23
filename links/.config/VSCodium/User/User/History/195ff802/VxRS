@@ -1,0 +1,1 @@
+DATABASE_URL=mysql://analytics:analytics@localhost:3306/analytics

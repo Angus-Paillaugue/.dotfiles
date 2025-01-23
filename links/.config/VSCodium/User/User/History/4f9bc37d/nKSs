@@ -1,0 +1,4 @@
+AUTH_TOKEN_SECRET=wFxC4Nc/c3EomvpuJ84Dcgo7pPAJmveLJGZbg80+T+purcDPSzygaoqAmTDlypGtx0=
+TEST_USER_USERNAME=Angus
+TEST_USER_PASSWORD=APAILL40
+DATABASE_URL=mysql://skillforge:skillforge@localhost:3306/skillforge

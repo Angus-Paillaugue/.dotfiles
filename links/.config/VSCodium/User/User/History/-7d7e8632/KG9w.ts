@@ -1,0 +1,16 @@
+import type { And, DoesExtend } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/utils";
+import type { AnyType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/any";
+import type { _Array, ArrayType, ArrayValues } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/array";
+import type { ConstType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/const";
+import type { EnumType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/enum";
+import type { Never, NeverType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/never";
+import type { ObjectType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/object";
+import type { PrimitiveType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/primitive";
+import type { IsTupleOpen, TupleOpenProps, TupleType, TupleValues } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/tuple";
+import type { Type } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/type";
+import type { UnionType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/union";
+import type { _Exclude } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/exclusion";
+import type { ExcludeUnion } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/exclusion/union";
+export declare type ExcludeFromArray<META_ARRAY extends ArrayType, META_TYPE> = META_TYPE extends Type ? META_TYPE extends NeverType ? META_ARRAY : META_TYPE extends AnyType ? Never : META_TYPE extends ConstType ? META_ARRAY : META_TYPE extends EnumType ? META_ARRAY : META_TYPE extends PrimitiveType ? META_ARRAY : META_TYPE extends ArrayType ? ExcludeArrays<META_ARRAY, META_TYPE> : META_TYPE extends TupleType ? And<DoesExtend<TupleValues<META_TYPE>, []>, IsTupleOpen<META_TYPE>> extends true ? ExcludeArrays<META_ARRAY, _Array<TupleOpenProps<META_TYPE>>> : META_ARRAY : META_TYPE extends ObjectType ? META_ARRAY : META_TYPE extends UnionType ? ExcludeUnion<META_ARRAY, META_TYPE> : Never : Never;
+declare type ExcludeArrays<META_ARRAY_A extends ArrayType, META_ARRAY_B extends ArrayType> = _Exclude<ArrayValues<META_ARRAY_A>, ArrayValues<META_ARRAY_B>> extends NeverType ? NeverType : META_ARRAY_A;
+export {};

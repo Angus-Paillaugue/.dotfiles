@@ -1,0 +1,40 @@
+Update
+Made it responsive. Added next and previous buttons. Added a search functionality.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   README.md
+#	modified:   docs/Components/Commands.md
+#	new file:   docs/Components/Definition.md
+#	modified:   docs/Components/Tooltip.md
+#	new file:   docs/Components/Tree.md
+#	modified:   docs/Configuration/Colors.md
+#	modified:   docs/Counter.svelte
+#	modified:   docs/Pages/Code blocks.md
+#	modified:   package.json
+#	modified:   pnpm-lock.yaml
+#	modified:   scripts/apply-colors.js
+#	modified:   src/app.css
+#	modified:   src/code.css
+#	modified:   src/lib/codeHighlighter.js
+#	modified:   src/lib/components/ComponentDefinition.svelte
+#	new file:   src/lib/components/Tree.svelte
+#	modified:   src/lib/components/core/Navbar.svelte
+#	modified:   src/lib/components/core/PageList.svelte
+#	new file:   src/lib/components/core/Search.svelte
+#	modified:   src/lib/components/core/Sidebar.svelte
+#	modified:   src/lib/components/core/Toasts.svelte
+#	modified:   src/lib/components/index.js
+#	modified:   src/lib/pages.js
+#	new file:   src/lib/search.js
+#	modified:   src/routes/+layout.svelte
+#	modified:   src/routes/docs/[...slug]/+layout.svelte
+#	modified:   src/routes/docs/[...slug]/+page.js
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	new file:   src/routes/docs/[...slug]/Nav.svelte
+#	modified:   user-config.js
+#

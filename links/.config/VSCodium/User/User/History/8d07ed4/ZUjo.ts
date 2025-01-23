@@ -1,0 +1,14 @@
+import type { Any, AnyType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/any";
+import type { _$Array, _Array, ArrayType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/array";
+import type { Const, ConstType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/const";
+import type { Enum, EnumType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/enum";
+import type { _$Exclude, _Exclude } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/exclusion";
+import type { $Intersect, Intersect } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/intersection";
+import type { Never, NeverType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/never";
+import type { _$Object, _Object, ObjectType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/object";
+import type { $Primitive, Primitive, PrimitiveType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/primitive";
+import type { $Resolve, Resolve } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/resolve";
+import type { $Tuple, Tuple, TupleType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/tuple";
+import type { Type } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/type";
+import type { $Union, Union, UnionType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/union";
+export type { Never, Any, Const, Enum, Primitive, $Primitive, _Array as Array, _$Array as $Array, Tuple, $Tuple, _Object as Object, _$Object as $Object, Union, $Union, NeverType, AnyType, ConstType, EnumType, PrimitiveType, ArrayType, TupleType, ObjectType, UnionType, Type, $Resolve, Resolve, $Intersect, Intersect, _$Exclude as $Exclude, _Exclude as Exclude, };

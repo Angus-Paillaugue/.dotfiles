@@ -1,0 +1,23 @@
+Fixed sidebar animation and added a tooltip component
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   docs/Components/Tooltip.md
+#	modified:   docs/Directories/Sort Directories.md
+#	modified:   src/lib/components/Collapsible.svelte
+#	new file:   src/lib/components/Tooltip.svelte
+#	modified:   src/lib/components/core/Search.svelte
+#	renamed:    src/lib/components/core/PageList.svelte -> src/lib/components/core/Sidebar/PageList.svelte
+#	new file:   src/lib/components/core/Sidebar/PageListCollapsible.svelte
+#	renamed:    src/lib/components/core/Sidebar.svelte -> src/lib/components/core/Sidebar/Sidebar.svelte
+#	new file:   src/lib/components/core/Sidebar/index.js
+#	modified:   src/lib/components/index.js
+#	modified:   src/routes/+error.svelte
+#	deleted:    src/routes/+page.js
+#	modified:   src/routes/+page.svelte
+#	modified:   src/routes/docs/[...slug]/+layout.svelte
+#

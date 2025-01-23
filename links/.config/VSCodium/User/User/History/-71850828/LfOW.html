@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Albums Photo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home_page">
+    <header>
+        <h1>Les Albums</h1>
+    </header>
+
+    <div class="album-grid">
+        <div class="album-item" data-album="voitures">
+            <img src="assets/covers/voitures.jpg" alt="Voitures">
+            <div class="overlay">
+                <h2>Voitures</h2>
+                <a href="voitures.html" class="view-button">Voir l'album</a>
+            </div>
+        </div>
+        <div class="album-item" data-album="couchers_soleil">
+            <img src="assets/covers/couchers_soleil.jpg" alt="Couchers de Soleil">
+            <div class="overlay">
+                <h2>Couchers de Soleil</h2>
+                <a href="couchers_soleil.html" class="view-button">Voir l'album</a>
+            </div>
+        </div>
+        <div class="album-item" data-album="bmw">
+            <img src="assets/covers/bmw.jpg" alt="BMW">
+            <div class="overlay">
+                <h2>BMW</h2>
+                <a href="bmw.html" class="view-button">Voir l'album</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="album-loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+<pre
+  class="force-dark mb-4 mt-6 max-h-[650px] overflow-x-auto !rounded-xl border !border-neutral-700/50 !bg-neutral-800 py-4 dark:!bg-neutral-800/50 svelte-17i1c06"
+  tabindex="0"
+  data-language="bash"
+  data-theme="github-dark">    <code
+    data-language="bash"
+    data-theme="github-dark"
+    style="display: grid;"
+    ><span data-line=""
+      ><span style="color:#B392F0">pnpm</span><span
+        style="color:#9ECBFF"> add -D @internationalized/date</span
+      ></span
+    ></code
+  >
+</pre>

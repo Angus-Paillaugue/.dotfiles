@@ -1,0 +1,66 @@
+<script lang="ts">
+  import type { PageData } from './$types';
+  import * as Card from '$lib/components/ui/card';
+  import Button from '$lib/components/ui/button/button.svelte';
+  import { pageMetadata } from '$lib/stores';
+  import { Plus } from 'lucide-svelte';
+  import * as Dialog from "$lib/components/ui/dialog/index.js";
+  import * as Form from "$lib/components/ui/form/index.js";
+  import { Input } from "$lib/components/ui/input/index.js";
+  import { formSchema, type FormSchema } from "./schema";
+  import {
+    type SuperValidated,
+    type Infer,
+    superForm,
+  } from "sveltekit-superforms";
+  import { zodClient } from "sveltekit-superforms/adapters";
+
+  pageMetadata.set({
+    title: 'Servers',
+    description: 'Manage your servers',
+    breadcrumbs: [{ name: 'Servers' }],
+  });
+
+  let { data }: { data: PageData } = $props();
+
+  let addServerModalOpen: boolean = $state(false);
+
+
+  export let data: SuperValidated<Infer<FormSchema>>;
+
+  const form = superForm(data, {
+    validators: zodClient(formSchema),
+  });
+
+  const { form: formData, enhance } = form;
+</script>
+
+<!-- Add a server modal -->
+<Dialog.Root bind:open={addServerModalOpen}>
+  <Dialog.Content>
+    <Dialog.Header>
+      <Dialog.Title>Add a new server</Dialog.Title>
+    </Dialog.Header>
+
+
+  </Dialog.Content>
+</Dialog.Root>
+
+<div class="flex w-full flex-col">
+  <div class="gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
+    <Card.Root>
+      <Card.Header>
+        <Card.Title>Your servers</Card.Title>
+        <Card.Description>Here you can gat an at-a-glance overview of your servers.</Card.Description>
+      </Card.Header>
+      <Card.Content>
+
+        <Button onclick={() => (addServerModalOpen = true)}>
+          <Plus class="size-6" />
+          Add a server
+        </Button>
+
+      </Card.Content>
+    </Card.Root>
+  </div>
+</div>

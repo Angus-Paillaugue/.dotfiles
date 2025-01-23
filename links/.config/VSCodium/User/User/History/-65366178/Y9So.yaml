@@ -1,0 +1,8 @@
+services:
+  frontend:
+    image: ownlogs/docs:staging
+    environment:
+      - ORIGIN=http://localhost:4173
+      - HOST:0.0.0.0
+    ports:
+      - '4173:3000'

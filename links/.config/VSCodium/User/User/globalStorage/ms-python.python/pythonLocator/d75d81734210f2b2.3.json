@@ -1,0 +1,14 @@
+{
+  "environment": {
+    "executable": "/home/angus/Downloads/xiaomi_ble_token_extractor/venv/bin/python",
+    "prefix": "/home/angus/Downloads/xiaomi_ble_token_extractor/venv",
+    "version": "3.12.3.final.0",
+    "is64Bit": true,
+    "symlinks": [
+      "/home/angus/Downloads/xiaomi_ble_token_extractor/venv/bin/python",
+      "/home/angus/Downloads/xiaomi_ble_token_extractor/venv/bin/python3",
+      "/home/angus/Downloads/xiaomi_ble_token_extractor/venv/bin/python3.12"
+    ]
+  },
+  "symlinks": []
+}

@@ -1,0 +1,27 @@
+import { getUserByUsername } from "$lib/server/db/user";
+import { fail, type Actions } from "@sveltejs/kit";
+import bcrypt from 'bcryptjs';
+
+export const actions: Actions = {
+	logIn: async ({ request, cookies }) => {
+		const formData = Object.fromEntries(await request.formData());
+		const { username, password } = formData as { username: string; password: string };
+
+		const fetchedUser = await getUserByUsername(username);
+
+		if (!fetchedUser) {
+			return fail(404, { message: 'User not found' });
+		}
+
+		const compare = bcrypt.compareSync(password, users[0].passwordHash);
+
+		// If password is incorrect, return error
+		if (!compare) return fail(400, { error: 'Incorrect password!' });
+
+		cookies.set('token', generateAccessToken(username), {
+			path: '/',
+			maxAge: 60 * 60 * 24,
+			secure: false
+		});
+	}
+};

@@ -1,0 +1,9 @@
+AUTH_TOKEN_SECRET="wFxC4Nc/c3EomvpuJ84Dcgo7pPAJmveLJGZbg80+T+purcDPSzygaoqAmTDlypGtx0="
+DB_USER=skillforge
+DB_PASSWORD=skillforge
+ADMIN_USER_USERNAME="root"
+ADMIN_USER_PASSWORD="APAILL40"
+TEST_USER_USERNAME="Angus"
+TEST_USER_PASSWORD="APAILL40"
+
+DATABASE_URL="mysql://skillforge:skillforge@localhost:3306/skillforge"

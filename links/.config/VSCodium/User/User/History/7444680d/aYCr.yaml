@@ -1,0 +1,9 @@
+services:
+  music-player:
+    image: ownlogs/backend:latest
+    container_name: music-player
+    environment:
+      NODE_ENV: production
+      PORT: 8089
+    ports:
+      - "8089:8089"

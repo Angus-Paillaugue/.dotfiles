@@ -1,0 +1,53 @@
+Update
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	modified:   README.md
+#	modified:   docs/Components/Collapsible.md
+#	new file:   docs/Components/Math.md
+#	deleted:    docs/Counter.svelte
+#	modified:   docs/Quickstart.md
+#	modified:   package.json
+#	modified:   pnpm-lock.yaml
+#	modified:   project.config.js
+#	new file:   scripts/generate-sitemap.js
+#	modified:   src/app.css
+#	modified:   src/app.html
+#	modified:   src/lib/codeHighlighter.js
+#	modified:   src/lib/components/Button.svelte
+#	modified:   src/lib/components/Collapsible/Collapsible.svelte
+#	modified:   src/lib/components/Commands.svelte
+#	modified:   src/lib/components/Dropdown/Item.svelte
+#	modified:   src/lib/components/Dropdown/Trigger.svelte
+#	modified:   src/lib/components/Tooltip.svelte
+#	modified:   src/lib/components/Tree.svelte
+#	modified:   src/lib/components/core/Navbar.svelte
+#	modified:   src/lib/components/core/Search.svelte
+#	modified:   src/lib/components/core/Sidebar/PageListCollapsible.svelte
+#	modified:   src/lib/components/core/Sidebar/Sidebar.svelte
+#	modified:   src/lib/components/core/Toasts.svelte
+#	modified:   src/routes/+error.svelte
+#	modified:   src/routes/+page.svelte
+#	deleted:    src/routes/CodeBlock.md
+#	modified:   src/routes/Counter.svelte
+#	modified:   src/routes/Hero.svelte
+#	deleted:    src/routes/SvelteComponents.md
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Pagination.svelte
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#	modified:   static/homepage/mockup/dark/homepagePreview_1920.webp
+#	deleted:    static/homepage/mockup/dark/homepagePreview_480.webp
+#	modified:   static/homepage/mockup/dark/homepagePreview_960.webp
+#	modified:   static/homepage/mockup/light/homepagePreview_1920.webp
+#	deleted:    static/homepage/mockup/light/homepagePreview_480.webp
+#	modified:   static/homepage/mockup/light/homepagePreview_960.webp
+#	new file:   static/robots.txt
+#	new file:   static/sitemap.xml
+#	modified:   svelte.config.js
+#	modified:   vite.config.js
+#

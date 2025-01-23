@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/usr/src/app
+    networks:
+      - app-network
+    depends_on:
+      - mysql
+
+  website:
+    build:
+      context: ./website
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./website:/usr/src/app
+    networks:
+      - app-network
+    depends_on:
+      - backend
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: APAILL40
+      MYSQL_DATABASE: zalando
+      MYSQL_USER: zalando
+      MYSQL_PASSWORD: Zalando123$
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mysql-data:

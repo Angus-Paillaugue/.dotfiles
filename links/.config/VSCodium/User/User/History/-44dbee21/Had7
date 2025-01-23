@@ -1,0 +1,9 @@
+DEV_DB_PASSWORD='APAILL40'
+DEV_DB_USER='root'
+DEV_DB_HOST='localhost'
+DEV_DB_NAME='logify'
+
+PROD_DB_PASSWORD='root'
+PROD_DB_USER='root'
+PROD_DB_HOST='db'
+PROD_DB_NAME='logify'

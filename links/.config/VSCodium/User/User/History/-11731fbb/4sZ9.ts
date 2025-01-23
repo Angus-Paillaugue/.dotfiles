@@ -1,0 +1,220 @@
+import { getExerciseTests } from '$lib/server/db/exercises.js';
+import ivm from 'isolated-vm';
+import { exec } from 'child_process';
+import fs from 'fs/promises';
+import { randomBytes } from 'crypto';
+import * as m from '$msgs';
+import { type SelectExerciseTests } from '$lib/types';
+
+function isEquals(result: any, expected: any): boolean {
+	if (typeof result === 'object' && typeof expected === 'object') {
+		return JSON.stringify(result) === JSON.stringify(expected);
+	}
+	return result === expected;
+}
+
+async function runJavaScriptTests(tests: SelectExerciseTests[], user_input: string) {
+	const isolate = new ivm.Isolate({ memoryLimit: 20 }); // 20MB memory limit
+	const context = await isolate.createContext();
+	const jail = context.global;
+	await jail.setSync('global', jail.derefInto());
+	let consoleOutput: string[] = [];
+	context.evalClosureSync(
+		`
+			globalThis.console = {
+				log: $0
+			}
+		`,
+		[
+			(...args: any[]) => {
+				if (args.length > 1) {
+					consoleOutput.push(JSON.stringify(args));
+				} else {
+					if (typeof args[0] === 'object') {
+						consoleOutput.push(JSON.stringify(args[0]));
+					} else {
+						consoleOutput.push(args[0].toString());
+					}
+				}
+			}
+		]
+	);
+
+	try {
+		// Define the user function in the isolated environment
+		await context.eval(user_input);
+
+		const results = [];
+
+		for (const test of tests) {
+			let { input, expected_output } = test;
+
+			// Add support for all types
+			if (expected_output == 'true' || expected_output == 'false') {
+				expected_output = expected_output == 'true';
+			} else if (expected_output == 'null') {
+				expected_output = null;
+			} else if (expected_output == 'undefined') {
+				expected_output = undefined;
+			} else if (!isNaN(expected_output)) {
+				expected_output = Number(expected_output);
+			} else if (expected_output.startsWith('"') && expected_output.endsWith('"')) {
+				expected_output = expected_output.slice(1, -1);
+			} else if (expected_output.startsWith('[') && expected_output.endsWith(']')) {
+				expected_output = JSON.parse(expected_output);
+			} else if (expected_output.startsWith('{') && expected_output.endsWith('}')) {
+				expected_output = JSON.parse(expected_output);
+			}
+			try {
+				// Measure memory usage before the test
+				const memStart = process.memoryUsage().heapUsed;
+
+				// Run the test in the isolate
+				const result = await context.eval(input, { timeout: 1000 });
+
+				// Measure memory usage after the test
+				const memEnd = process.memoryUsage().heapUsed;
+				const memUsage = memEnd - memStart; // Memory usage in B
+
+				results.push({
+					input,
+					expected_output,
+					actual_output: JSON.stringify(result),
+					passed: isEquals(result, expected_output),
+					memUsage // Memory usage for this test
+				});
+			} catch (error: any) {
+				results.push({
+					input,
+					expected_output,
+					actual_output: null,
+					error: error.message,
+					passed: false,
+					memUsage: null
+				});
+			}
+		}
+		const averageRamUsage =
+			results.map((r) => r.memUsage ?? 0).reduce((a, b) => (a ?? 0) + (b ?? 0), 0) / results.length;
+
+		return {
+			results,
+			averageRamUsage,
+			ok: true,
+			consoleOutput
+		};
+	} catch (error) {
+		return { message: error, ok: false };
+	} finally {
+		// Clean up
+		isolate.dispose();
+	}
+}
+
+export async function runPythonTests(tests: SelectExerciseTests[], userInput: string) {
+	const scriptId = randomBytes(16).toString('hex');
+	const scriptPath = `/tmp/test_script_${scriptId}.py`;
+
+	// Generate the Python code dynamically based on the user's code and tests
+	const pythonScript = `
+${userInput}
+
+# Define a list to store test results
+test_results = []
+
+# Test function
+def run_test(input_val, expected_output):
+	try:
+		result = input_val  # Adapt this line to match the function name in userInput
+		test_results.append({
+			"input": input_val,
+			"expected_output": expected_output,
+			"actual_output": result,
+			"passed": result == expected_output
+		})
+	except Exception as e:
+		test_results.append({
+			"input": input_val,
+			"expected_output": expected_output,
+			"actual_output": str(e),
+			"passed": False,
+		})
+
+# Execute each test
+${tests.map((test) => `run_test(${test.input}, ${test.expected_output})`).join('\n')}
+
+print(test_results)
+`;
+
+	// Write the script to a temp file
+	await fs.writeFile(scriptPath, pythonScript);
+
+	// Run the Docker container with CPU and memory limits
+	try {
+		const output = await new Promise<string>((resolve, reject) => {
+			exec(
+				`sudo docker run --rm --memory=50m --cpus="0.5" -v ${scriptPath}:/app/test_script.py python-runner`,
+				(error, stdout, stderr) => {
+					if (error) {
+						reject({ error: stderr || stdout });
+					} else {
+						resolve(stdout);
+					}
+				}
+			);
+		});
+
+		const consoleOutput = output
+			.split('\n')
+			.filter((e) => e)
+			.slice(0, -1);
+		const parsedOutput = JSON.parse(
+			output
+				.split('\n')
+				.filter((e) => e)
+				.at(-1)!
+				.trim()
+				.replace(/'/g, '"')
+				.replace(/True/g, 'true')
+				.replace(/False/g, 'false')
+		);
+		return {
+			results: parsedOutput,
+			consoleOutput,
+			averageRamUsage: null,
+			ok: true
+		};
+	} catch (parseError: any) {
+		return {
+			message:
+				parseError?.error
+					?.split('\n')
+					?.filter((e: string) => e)
+					?.at(-1) ?? m.run_tests_filed_to_run_tests(),
+			consoleOutput: null,
+			ok: false
+		};
+	} finally {
+		await fs.unlink(scriptPath);
+	}
+}
+
+/**
+ * Runs tests for a given exercise by evaluating user input in an isolated environment.
+ *
+ * @param {number} exercise_id - The ID of the exercise to run tests for.
+ * @param {string} user_input - The user-provided code to be tested.
+ * @returns {Promise<Object>} - An object containing the results of the tests, average RAM usage, and console output.
+ */
+export async function runTests(exercise_id: number, user_input: string) {
+	const tests = await getExerciseTests(exercise_id);
+
+	switch (tests[0].language) {
+		case 'JavaScript':
+			return runJavaScriptTests(tests, user_input);
+		case 'Python':
+			return await runPythonTests(tests, user_input);
+		default:
+			return { message: m.run_tests_unsupported_language(), ok: false };
+	}
+}

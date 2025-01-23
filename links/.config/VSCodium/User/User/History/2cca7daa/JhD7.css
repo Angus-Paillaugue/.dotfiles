@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --background: 15, 23, 42;
+  --bg-card: 51, 65, 85;
+  --border: 30, 41, 59;
+  --foreground: 241, 245, 249;
+}
+
+body {
+  @apply bg-background text-foreground;
+}

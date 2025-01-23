@@ -1,0 +1,4 @@
+MYSQL_PASSWORD='APAILL40'
+MYSQL_USER='root'
+DEV_DB_HOST='localhost'
+PROD_DB_HOST='db'

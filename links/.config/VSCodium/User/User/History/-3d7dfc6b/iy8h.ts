@@ -1,0 +1,41 @@
+import type { BaseParseContext, BaseRoot } from "@ark/schema";
+import { type requireKeys } from "@ark/util";
+import type { LimitLiteral } from ".pnpm/arktype@2.0.0-rc.26/node_modules/arktype/internal/attributes.ts";
+import type { ArkTypeScanner } from ".pnpm/arktype@2.0.0-rc.26/node_modules/arktype/internal/parser/shift/scanner.ts";
+import { type Comparator, type MinComparator, type OpenLeftBound, type StringifiablePrefixOperator } from ".pnpm/arktype@2.0.0-rc.26/node_modules/arktype/internal/parser/reduce/shared.ts";
+type BranchState = {
+    prefixes: StringifiablePrefixOperator[];
+    leftBound: OpenLeftBound | null;
+    intersection: BaseRoot | null;
+    union: BaseRoot | null;
+};
+export type DynamicStateWithRoot = requireKeys<DynamicState, "root">;
+export declare class DynamicState {
+    root: BaseRoot<any> | undefined;
+    branches: BranchState;
+    finalizer: ArkTypeScanner.FinalizingLookahead | undefined;
+    groups: BranchState[];
+    scanner: ArkTypeScanner;
+    ctx: BaseParseContext;
+    constructor(scanner: ArkTypeScanner, ctx: BaseParseContext);
+    error(message: string): never;
+    hasRoot(): this is DynamicStateWithRoot;
+    setRoot(root: BaseRoot): void;
+    unsetRoot(): this["root"];
+    constrainRoot(...args: Parameters<BaseRoot<any>["constrain"]>): void;
+    finalize(finalizer: ArkTypeScanner.FinalizingLookahead): void;
+    reduceLeftBound(limit: LimitLiteral, comparator: Comparator): void;
+    finalizeBranches(): void;
+    finalizeGroup(): void;
+    addPrefix(prefix: StringifiablePrefixOperator): void;
+    applyPrefixes(): void;
+    pushRootToBranch(token: "|" | "&"): void;
+    parseUntilFinalizer(): DynamicStateWithRoot;
+    parseOperator(this: DynamicStateWithRoot): void;
+    parseOperand(): void;
+    private assertRangeUnset;
+    reduceGroupOpen(): void;
+    previousOperator(): MinComparator | StringifiablePrefixOperator | ArkTypeScanner.InfixToken | undefined;
+    shiftedByOne(): this;
+}
+export {};

@@ -1,0 +1,64 @@
+import { json } from '@sveltejs/kit';
+import { createConnection } from '$lib/server/db';
+import ivm from 'isolated-vm';
+
+export async function POST({ request }) {
+	const { exercise_id, user_input } = await request.json();
+
+	const db = await createConnection();
+	const [tests] = await db.query(
+		`SELECT input, expected_output FROM exercise_tests WHERE exercise_id = ?`,
+		[exercise_id]
+	);
+	db.end();
+	console.log(tests);
+	
+
+	// Create an isolated VM
+	const isolate = new ivm.Isolate({ memoryLimit: 128 });
+	const context = await isolate.createContext();
+	const jail = context.global;
+	await jail.set('global', jail.derefInto());
+
+	// Inject user code into the VM
+	try {
+		const script = await isolate.compileScript(`
+      global.userFunction = ${user_input};
+    `);
+		await script.run(context);
+	} catch (error) {
+		return json({ error: 'Error in user code: ' + error.message });
+	}
+
+	// Run tests in the VM
+	const results = [];
+	for (const test of tests) {
+		const { input, expected_output } = test;
+		try {
+			const resultScript = await isolate.compileScript(`
+        global.userFunction${input};
+      `);
+			const result = await resultScript.run(context);
+			console.log(result);
+
+			results.push({
+				input,
+				expected_output,
+				result,
+				passed: result === expected_output
+			});
+		} catch (error) {
+			results.push({
+				input,
+				expected_output,
+				error: error.message,
+				passed: false
+			});
+		}
+	}
+
+	await context.release();
+	await isolate.dispose();
+
+	return json(results);
+}

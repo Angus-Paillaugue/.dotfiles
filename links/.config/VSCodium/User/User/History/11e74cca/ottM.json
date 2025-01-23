@@ -1,0 +1,16 @@
+{
+  "name": "@repo/utils",
+  "version": "0.0.0",
+  "type": "module",
+  "module": "index.js",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "svelte": "./index.js"
+    }
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "svelte": "^4.2.12"
+  }
+}

@@ -1,0 +1,161 @@
+/* USER CONFIG : Code blocks colors */
+:root {
+  /* Use the R, G, B format for the colors */
+  --line-removed-bg: 224, 108, 117;
+  --line-removed-opacity: 0.3;
+  --line-added-bg: 152, 195, 121;
+  --line-added-opacity: 0.3;
+  --line-highlighted-bg: 255, 255, 255;
+  --line-highlighted-opacity: 0.1;
+  /* The background color of the curent theme's code block */
+  --inline-code-bg: #282c34;
+}
+
+code {
+  counter-reset: codeStep;
+  counter-increment: codeStep 0;
+  direction: ltr;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  @apply hyphens-none whitespace-pre-wrap text-shadow-code ligatures-normal;
+}
+
+.shiki {
+  @apply relative overflow-auto whitespace-pre rounded py-4 focus:-outline-offset-1;
+}
+.remark-code-container {
+  @apply my-4;
+}
+
+/* File name */
+.remark-code-title {
+  @apply flex flex-row items-center gap-4 rounded-t-md bg-neutral-200 px-3 py-1 text-base font-medium text-neutral-700 dark:bg-neutral-800 dark:text-neutral-200;
+}
+.remark-code-title ~ .shiki {
+  @apply rounded-t-none;
+}
+
+pre.line-numbers > code .line::before {
+  content: counter(codeStep);
+  counter-increment: codeStep;
+  font-variant-numeric: tabular-nums;
+  @apply -ml-2 mr-2 inline-block w-6 text-right text-text-body dark:text-text-body-dark;
+}
+pre > code .line {
+  @apply inline-block w-full px-4;
+}
+pre > code {
+  @apply block w-full;
+}
+code .line {
+  @apply inline-block w-full;
+}
+/* For highlighted lines */
+.diff.remove {
+  background-color: rgba(var(--line-removed-bg), var(--line-removed-opacity));
+}
+.diff.add {
+  background-color: rgba(var(--line-added-bg), var(--line-added-opacity));
+}
+code .line.diff::before {
+  counter-increment: codeStep;
+  font-variant-numeric: tabular-nums;
+  @apply mr-2 inline-block w-3 text-right;
+}
+code .line.diff.add::before {
+  content: '+';
+  color: rgb(var(--line-added-bg));
+}
+code .line.diff.remove::before {
+  content: '-';
+  color: rgb(var(--line-removed-bg));
+}
+.highlighted {
+  background-color: rgba(var(--line-highlighted-bg), var(--line-highlighted-opacity));
+}
+/* Inline code */
+code:not(pre code, .command) {
+  @apply rounded bg-primary-300 px-0.5 text-primary-900 text-shadow-none dark:bg-primary-950 dark:text-primary-300;
+}
+.commands > pre {
+  @apply m-0 rounded-none;
+}
+
+/* Styling page components */
+
+#pageContainer h1 {
+  @apply border-b border-main leading-[3rem] dark:border-main-dark;
+}
+
+/* Table */
+
+#pageContainer table thead {
+  @apply bg-neutral-200/40 dark:bg-neutral-800/50;
+}
+
+#pageContainer table th {
+  @apply border-b p-4 pb-3 pl-8 text-left font-medium text-neutral-800 dark:border-neutral-700/50 dark:text-neutral-200;
+}
+
+#pageContainer table td {
+  @apply border-b border-main p-4 pl-8 text-neutral-600 dark:border-main-dark dark:text-neutral-400;
+}
+
+/* Lists */
+#pageContainer ul:not(.tree ul, .commands ul, .collapsible-details ul, .collapsible-details ol, .demo ul),
+#pageContainer ol:not(.steps) {
+  @apply my-5 list-outside list-none pl-0 ps-6;
+}
+
+#pageContainer ul:not(.tree, .commands, .demo) li {
+  @apply relative list-none ps-1;
+}
+
+#pageContainer ul:not(.tree, .commands ul, .demo ul)>li::before {
+  @apply absolute -left-[1.25rem] top-[12px] h-0.5 w-3 rounded-full bg-neutral-300 content-[''] dark:bg-neutral-700;
+}
+
+#pageContainer ol:not(.steps) > li {
+  @apply list-decimal;
+}
+
+/* TaskList */
+#pageContainer .task-list-item {
+  @apply flex items-center gap-2;
+}
+#pageContainer .task-list-item input[type='checkbox'] {
+  @apply relative size-[1.15rem] appearance-none rounded border border-neutral-300 after:absolute after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:text-sm after:font-bold after:text-primary-800 checked:bg-primary-300 checked:after:content-["✓"] dark:border-neutral-700 dark:checked:bg-primary-400;
+}
+
+/* API references */
+.http-keyword {
+  @apply mr-1 rounded border px-2 py-0.5;
+}
+.http-keyword[data-keyword='GET'] {
+  @apply border-blue-700 bg-blue-600/20 text-blue-900 dark:text-blue-100;
+}
+.http-keyword[data-keyword='POST'] {
+  @apply border-green-700 bg-green-600/20 text-green-900 dark:text-green-100;
+}
+.http-keyword[data-keyword='PUT'] {
+  @apply border-yellow-700 bg-yellow-600/20 text-yellow-900 dark:text-yellow-100;
+}
+.http-keyword[data-keyword='DELETE'] {
+  @apply border-red-700 bg-red-600/20 text-red-900 dark:text-red-100;
+}
+.http-keyword[data-keyword='PATCH'] {
+  @apply border-orange-700 bg-orange-600/20 text-orange-900 dark:text-orange-100;
+}
+.http-keyword[data-keyword='OPTIONS'] {
+  @apply border-gray-700 bg-gray-600/20 text-gray-900 dark:text-gray-100;
+}
+.http-keyword[data-keyword='HEAD'] {
+  @apply border-indigo-700 bg-indigo-600/20 text-indigo-900 dark:text-indigo-100;
+}
+.http-keyword[data-keyword='CONNECT'] {
+  @apply border-purple-700 bg-purple-600/20 text-purple-900 dark:text-purple-100;
+}
+.http-keyword[data-keyword='TRACE'] {
+  @apply border-teal-700 bg-teal-600/20 text-teal-900 dark:text-teal-100;
+}

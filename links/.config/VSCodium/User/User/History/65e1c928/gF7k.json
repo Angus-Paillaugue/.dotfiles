@@ -1,0 +1,8 @@
+{
+  "i18n-ally.localesPaths": [
+    "packages/python/venv/lib/python3.12/site-packages/docutils/languages",
+    "packages/python/venv/lib64/python3.12/site-packages/docutils/languages",
+    "packages/python/venv/lib/python3.12/site-packages/docutils/parsers/rst/languages",
+    "packages/python/venv/lib64/python3.12/site-packages/docutils/parsers/rst/languages"
+  ]
+}

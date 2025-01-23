@@ -1,0 +1,1983 @@
+{
+  message: "Use the JDK from 'PATH' as the initial default project JDK.",
+  level: 'info',
+  timestamp: '2024-11-18 07:50:39.689'
+}
+{
+  message: 'Starting Java server with: /home/angus/.vscode/extensions/redhat.java-1.36.0-linux-x64/jre/17.0.13-linux-x86_64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/angus/.vscode/extensions/redhat.java-1.36.0-linux-x64/lombok/lombok-1.18.35.jar -jar /home/angus/.vscode/extensions/redhat.java-1.36.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar -configuration /home/angus/.config/Code/User/globalStorage/redhat.java/1.36.0/config_ss_linux -data /home/angus/.config/Code/User/workspaceStorage/a885e4740cad881e654b457026e68279/redhat.java/ss_ws',
+  level: 'info',
+  timestamp: '2024-11-18 07:50:39.699'
+}
+{
+  message: '[Error - 7:50:41 AM] Nov 18, 2024, 7:50:41 AM Failed to init packages for /usr/lib/jvm/java-21-openjdk-amd64/lib/jrt-fs.jar\n' +
+    'File /usr/lib/jvm/java-21-openjdk-amd64/lib/ct.sym does not exist\n' +
+    'java.io.FileNotFoundException: File /usr/lib/jvm/java-21-openjdk-amd64/lib/ct.sym does not exist\n' +
+    '\tat org.eclipse.jdt.internal.compiler.util.CtSym.init(CtSym.java:130)\n' +
+    '\tat org.eclipse.jdt.internal.compiler.util.CtSym.<init>(CtSym.java:123)\n' +
+    '\tat org.eclipse.jdt.internal.compiler.util.JRTUtil.lambda$2(JRTUtil.java:187)\n' +
+    '\tat java.base/java.util.concurrent.ConcurrentHashMap.compute(Unknown Source)\n' +
+    '\tat org.eclipse.jdt.internal.compiler.util.JRTUtil.getCtSym(JRTUtil.java:184)\n' +
+    '\tat org.eclipse.jdt.internal.compiler.util.JrtFileSystemWithOlderRelease.<init>(JRTUtil.java:361)\n' +
+    '\tat org.eclipse.jdt.internal.compiler.util.JrtFileSystem.getNewJrtFileSystem(JrtFileSystem.java:51)\n' +
+    '\tat org.eclipse.jdt.internal.compiler.util.JRTUtil.lambda$0(JRTUtil.java:115)\n' +
+    '\tat java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(Unknown Source)\n' +
+    '\tat org.eclipse.jdt.internal.compiler.util.JRTUtil.getJrtSystem(JRTUtil.java:113)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.ClasspathJrtWithReleaseOption.<init>(ClasspathJrtWithReleaseOption.java:76)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.ClasspathLocation.forJrtSystem(ClasspathLocation.java:175)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.NameEnvironment.computeClasspathLocations(NameEnvironment.java:360)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.NameEnvironment.<init>(NameEnvironment.java:90)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:692)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:213)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)\n' +
+    '\tat org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)\n' +
+    '\tat org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)\n' +
+    '\tat org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)\n' +
+    '\tat org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:50:41.770'
+}
+{
+  message: 'Starting Java server with: /home/angus/.vscode/extensions/redhat.java-1.36.0-linux-x64/jre/17.0.13-linux-x86_64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/angus/.vscode/extensions/redhat.java-1.36.0-linux-x64/lombok/lombok-1.18.35.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/angus/.config/Code/User/workspaceStorage/a885e4740cad881e654b457026e68279/redhat.java -Daether.dependencyCollector.impl=bf -jar /home/angus/.vscode/extensions/redhat.java-1.36.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar -configuration /home/angus/.config/Code/User/globalStorage/redhat.java/1.36.0/config_linux -data /home/angus/.config/Code/User/workspaceStorage/a885e4740cad881e654b457026e68279/redhat.java/jdt_ws',
+  level: 'info',
+  timestamp: '2024-11-18 07:50:41.777'
+}
+{
+  message: '[Error - 7:50:41 AM] Nov 18, 2024, 7:50:41 AM JavaBuilder handling CoreException while building: app_5b402798\n' +
+    'Failed to init ct.sym for /usr/lib/jvm/java-21-openjdk-amd64/lib/jrt-fs.jar\n' +
+    'org.eclipse.core.runtime.CoreException: Failed to init ct.sym for /usr/lib/jvm/java-21-openjdk-amd64/lib/jrt-fs.jar\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.ClasspathJrtWithReleaseOption.<init>(ClasspathJrtWithReleaseOption.java:84)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.ClasspathLocation.forJrtSystem(ClasspathLocation.java:175)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.NameEnvironment.computeClasspathLocations(NameEnvironment.java:360)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.NameEnvironment.<init>(NameEnvironment.java:90)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:692)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:213)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)\n' +
+    '\tat org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)\n' +
+    '\tat org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)\n' +
+    '\tat org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)\n' +
+    '\tat org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)\n' +
+    '\tat org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n' +
+    'Caused by: java.io.FileNotFoundException: File /usr/lib/jvm/java-21-openjdk-amd64/lib/ct.sym does not exist\n' +
+    '\tat org.eclipse.jdt.internal.compiler.util.CtSym.init(CtSym.java:130)\n' +
+    '\tat org.eclipse.jdt.internal.compiler.util.CtSym.<init>(CtSym.java:123)\n' +
+    '\tat org.eclipse.jdt.internal.compiler.util.JRTUtil.lambda$2(JRTUtil.java:187)\n' +
+    '\tat java.base/java.util.concurrent.ConcurrentHashMap.compute(Unknown Source)\n' +
+    '\tat org.eclipse.jdt.internal.compiler.util.JRTUtil.getCtSym(JRTUtil.java:184)\n' +
+    '\tat org.eclipse.jdt.internal.core.builder.ClasspathJrtWithReleaseOption.<init>(ClasspathJrtWithReleaseOption.java:82)\n' +
+    '\t... 18 more\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:50:41.802'
+}
+{
+  message: 'Nov 18, 2024 7:50:42 AM org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.servlet.LogbackServletContainerInitializer of service jakarta.servlet.ServletContainerInitializer in bundle ch.qos.logback.classic\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:50:42.456'
+}
+{
+  message: 'Nov 18, 2024 7:50:42 AM org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.spi.LogbackServiceProvider of service org.slf4j.spi.SLF4JServiceProvider in bundle ch.qos.logback.classic\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:50:42.458'
+}
+{
+  message: '[Error - 7:50:43 AM] Nov 18, 2024, 7:50:43 AM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:207)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getJUnit4LibraryEntry(BuildPathSupport.java:410)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:122)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3207)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3095)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3153)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2129)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:50:43.647'
+}
+{
+  message: '[Error - 7:50:43 AM] Nov 18, 2024, 7:50:43 AM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:220)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getJUnit4LibraryEntry(BuildPathSupport.java:410)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:122)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3207)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3095)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3153)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2129)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:50:43.649'
+}
+{
+  message: '[Error - 7:50:43 AM] Nov 18, 2024, 7:50:43 AM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:207)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getHamcrestLibraryEntry(BuildPathSupport.java:425)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:123)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3207)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3095)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3153)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2129)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:50:43.650'
+}
+{
+  message: '[Error - 7:50:43 AM] Nov 18, 2024, 7:50:43 AM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:220)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getHamcrestLibraryEntry(BuildPathSupport.java:425)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:123)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3207)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3095)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3153)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2129)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:50:43.650'
+}
+{
+  message: 'Nov 18, 2024 7:50:48 AM com.microsoft.java.debug.plugin.internal.JavaDebuggerServerPlugin start\n' +
+    'INFO: Starting com.microsoft.java.debug.plugin\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:50:48.670'
+}
+{
+  message: 'Nov 18, 2024 7:50:48 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 21\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:50:48.786'
+}
+{
+  message: 'Nov 18, 2024 7:50:48 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 19\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:50:48.828'
+}
+{
+  message: 'Nov 18, 2024 7:50:49 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 26\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:50:49.171'
+}
+{
+  message: 'Nov 18, 2024 7:52:25 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 56\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:52:25.531'
+}
+{
+  message: 'Nov 18, 2024 7:52:25 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 57\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:52:25.973'
+}
+{
+  message: 'Nov 18, 2024 7:52:25 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 61\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:52:25.974'
+}
+{
+  message: 'Nov 18, 2024 7:52:25 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 62\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:52:25.975'
+}
+{
+  message: 'Nov 18, 2024 7:52:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 64\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:52:26.034'
+}
+{
+  message: 'Nov 18, 2024 7:52:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 67\n' +
+    'Nov 18, 2024 7:52:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 65\n',
+  level: 'info',
+  timestamp: '2024-11-18 07:52:26.035'
+}
+{
+  message: '[Error - 8:21:50 AM] Nov 18, 2024, 8:21:50 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 08:21:50.233'
+}
+{
+  message: '[Error - 8:21:50 AM] Nov 18, 2024, 8:21:50 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 08:21:50.236'
+}
+{
+  message: 'Nov 18, 2024 8:22:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 473\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:22:02.528'
+}
+{
+  message: 'Nov 18, 2024 8:22:11 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 559\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:22:11.010'
+}
+{
+  message: 'Nov 18, 2024 8:22:14 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 595\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:22:14.484'
+}
+{
+  message: 'Nov 18, 2024 8:22:34 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 682\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:22:34.076'
+}
+{
+  message: 'Nov 18, 2024 8:22:34 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 683\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:22:34.153'
+}
+{
+  message: 'Nov 18, 2024 8:22:34 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 684\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:22:34.158'
+}
+{
+  message: 'Nov 18, 2024 8:22:34 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 685\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:22:34.163'
+}
+{
+  message: '[Error - 8:23:07 AM] Nov 18, 2024, 8:23:07 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 08:23:07.754'
+}
+{
+  message: 'Nov 18, 2024 8:24:42 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    'java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:246)\n' +
+    '\tat org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2934)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:275)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:24:42.176'
+}
+{
+  message: '[Error - 8:24:42 AM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-18 08:24:42.178'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:246)\n' +
+    '\tat org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2934)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:275)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:24:42.179'
+}
+{
+  message: 'Nov 18, 2024 8:24:42 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    'java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:246)\n' +
+    '\tat org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2934)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:275)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:24:42.669'
+}
+{
+  message: '[Error - 8:24:42 AM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-18 08:24:42.672'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:246)\n' +
+    '\tat org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2934)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:275)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:24:42.672'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 1421, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 08:25:22.160'
+}
+{
+  message: 'Nov 18, 2024 8:25:23 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 1426\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:25:23.250'
+}
+{
+  message: 'Nov 18, 2024 8:26:01 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 1599\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:26:01.843'
+}
+{
+  message: 'Nov 18, 2024 8:26:22 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 1687\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:26:22.628'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 1752, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 08:26:27.636'
+}
+{
+  message: 'Nov 18, 2024 8:26:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    'java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:246)\n' +
+    '\tat org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2934)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:275)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:26:27.931'
+}
+{
+  message: '[Error - 8:26:27 AM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-18 08:26:27.932'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:246)\n' +
+    '\tat org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2934)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:275)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:26:27.932'
+}
+{
+  message: 'Nov 18, 2024 8:26:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    'java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:246)\n' +
+    '\tat org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2934)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:275)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:26:28.269'
+}
+{
+  message: '[Error - 8:26:28 AM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-18 08:26:28.272'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:246)\n' +
+    '\tat org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2934)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:275)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:26:28.272'
+}
+{
+  message: 'Nov 18, 2024 8:26:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    'java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:246)\n' +
+    '\tat org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2934)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:275)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:26:28.887'
+}
+{
+  message: '[Error - 8:26:28 AM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-18 08:26:28.888'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:246)\n' +
+    '\tat org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2934)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:275)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:26:28.889'
+}
+{
+  message: 'Nov 18, 2024 8:27:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    'java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:246)\n' +
+    '\tat org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2934)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:275)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:27:00.182'
+}
+{
+  message: '[Error - 8:27:00 AM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-18 08:27:00.186'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:246)\n' +
+    '\tat org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2934)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:275)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:27:00.187'
+}
+{
+  message: 'Nov 18, 2024 8:27:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    'java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:246)\n' +
+    '\tat org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2934)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:275)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:27:00.704'
+}
+{
+  message: '[Error - 8:27:00 AM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-18 08:27:00.706'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IllegalArgumentException: Invalid identifier : >map<string,object>1<\n' +
+    '\tat org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:246)\n' +
+    '\tat org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2934)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:275)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:27:00.706'
+}
+{
+  message: 'Nov 18, 2024 8:27:04 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 1815\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:27:04.494'
+}
+{
+  message: 'Nov 18, 2024 8:27:19 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 1900\n' +
+    'Nov 18, 2024 8:27:19 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 1902\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:27:19.384'
+}
+{
+  message: 'Nov 18, 2024 8:27:19 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 1905\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:27:19.384'
+}
+{
+  message: 'Nov 18, 2024 8:27:19 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 1904\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:27:19.388'
+}
+{
+  message: 'Nov 18, 2024 8:27:19 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 1911\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:27:19.389'
+}
+{
+  message: 'Nov 18, 2024 8:35:25 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 2453\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:35:25.516'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 2590, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 08:36:37.702'
+}
+{
+  message: '[Error - 8:38:07 AM] Nov 18, 2024, 8:38:07 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 08:38:07.981'
+}
+{
+  message: '[Error - 8:38:08 AM] Nov 18, 2024, 8:38:08 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 08:38:08.695'
+}
+{
+  message: '[Error - 8:38:08 AM] Nov 18, 2024, 8:38:08 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 08:38:08.955'
+}
+{
+  message: '[Error - 8:38:09 AM] Nov 18, 2024, 8:38:09 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 08:38:09.094'
+}
+{
+  message: 'Nov 18, 2024 8:38:22 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 2695\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:38:22.420'
+}
+{
+  message: 'Nov 18, 2024 8:44:32 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 3177\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:44:32.405'
+}
+{
+  message: 'Nov 18, 2024 8:44:33 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 3190\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:44:33.742'
+}
+{
+  message: 'Nov 18, 2024 8:45:15 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 3471\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:45:15.326'
+}
+{
+  message: '[Error - 8:45:21 AM] Nov 18, 2024, 8:45:20 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 08:45:21.012'
+}
+{
+  message: 'Nov 18, 2024 8:45:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 3531\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:45:21.057'
+}
+{
+  message: '[Error - 8:45:21 AM] Nov 18, 2024, 8:45:21 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 08:45:21.158'
+}
+{
+  message: '[Error - 8:45:21 AM] Nov 18, 2024, 8:45:21 AM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-18 08:45:21.831'
+}
+{
+  message: 'Nov 18, 2024 8:48:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 3806\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:48:28.039'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 3943, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 08:48:59.302'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 4069, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 08:51:07.899'
+}
+{
+  message: '[Error - 8:51:45 AM] Nov 18, 2024, 8:51:45 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 08:51:45.071'
+}
+{
+  message: 'Nov 18, 2024 8:52:31 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4153\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:52:31.761'
+}
+{
+  message: 'Nov 18, 2024 8:52:32 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4167\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:52:32.181'
+}
+{
+  message: 'Nov 18, 2024 8:52:32 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4172\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:52:32.556'
+}
+{
+  message: 'Nov 18, 2024 8:53:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4214\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:53:26.496'
+}
+{
+  message: 'Nov 18, 2024 8:53:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4232\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:53:27.186'
+}
+{
+  message: '[Error - 8:54:03 AM] Nov 18, 2024, 8:54:03 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 08:54:03.889'
+}
+{
+  message: '[Error - 8:54:11 AM] Nov 18, 2024, 8:54:11 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 08:54:11.603'
+}
+{
+  message: '[Error - 8:54:11 AM] Nov 18, 2024, 8:54:11 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 08:54:11.995'
+}
+{
+  message: 'Nov 18, 2024 8:54:14 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4295\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:54:14.489'
+}
+{
+  message: 'Nov 18, 2024 8:56:34 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4480\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:56:34.655'
+}
+{
+  message: 'Nov 18, 2024 8:58:46 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4551\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:58:46.871'
+}
+{
+  message: 'Nov 18, 2024 8:58:53 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4571\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:58:53.827'
+}
+{
+  message: 'Nov 18, 2024 8:58:53 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4572\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:58:53.871'
+}
+{
+  message: 'Nov 18, 2024 8:58:54 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4580\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:58:54.038'
+}
+{
+  message: 'Nov 18, 2024 8:58:54 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4583\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:58:54.182'
+}
+{
+  message: 'Nov 18, 2024 8:58:55 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4596\n',
+  level: 'info',
+  timestamp: '2024-11-18 08:58:55.202'
+}
+{
+  message: 'Nov 18, 2024 9:00:13 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4705\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:00:13.490'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 4773, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 09:00:35.383'
+}
+{
+  message: 'Nov 18, 2024 9:01:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4845\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:01:21.517'
+}
+{
+  message: 'Nov 18, 2024 9:06:53 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5244\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:06:53.643'
+}
+{
+  message: '[Error - 9:07:24 AM] Nov 18, 2024, 9:07:24 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:07:24.367'
+}
+{
+  message: 'Nov 18, 2024 9:07:43 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5457\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:07:43.088'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 5627, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 09:09:53.011'
+}
+{
+  message: '[Error - 9:10:48 AM] Nov 18, 2024, 9:10:48 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:10:48.198'
+}
+{
+  message: 'Nov 18, 2024 9:10:59 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5733\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:10:59.757'
+}
+{
+  message: 'Nov 18, 2024 9:10:59 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5735\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:10:59.839'
+}
+{
+  message: 'Nov 18, 2024 9:10:59 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5736\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:10:59.840'
+}
+{
+  message: 'Nov 18, 2024 9:10:59 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5738\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:10:59.843'
+}
+{
+  message: 'Nov 18, 2024 9:11:06 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5798\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:11:06.642'
+}
+{
+  message: 'Nov 18, 2024 9:11:14 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5865\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:11:14.970'
+}
+{
+  message: 'Nov 18, 2024 9:16:47 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6127\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:16:47.070'
+}
+{
+  message: '[Error - 9:17:34 AM] Nov 18, 2024, 9:17:34 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:17:34.369'
+}
+{
+  message: 'Nov 18, 2024 9:17:46 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6267\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:17:46.404'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 6285, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 09:17:47.846'
+}
+{
+  message: '[Error - 9:19:11 AM] Nov 18, 2024, 9:19:11 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:19:11.347'
+}
+{
+  message: '[Error - 9:19:24 AM] Nov 18, 2024, 9:19:24 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:19:24.594'
+}
+{
+  message: 'Nov 18, 2024 9:19:31 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6335\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:19:31.881'
+}
+{
+  message: 'Nov 18, 2024 9:19:45 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6496\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:19:45.473'
+}
+{
+  message: '[Error - 9:19:46 AM] Nov 18, 2024, 9:19:46 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:19:46.289'
+}
+{
+  message: '[Error - 9:19:53 AM] Nov 18, 2024, 9:19:53 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:19:53.733'
+}
+{
+  message: '[Error - 9:19:56 AM] Nov 18, 2024, 9:19:56 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:19:56.237'
+}
+{
+  message: '[Error - 9:19:56 AM] Nov 18, 2024, 9:19:56 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:19:56.268'
+}
+{
+  message: '[Error - 9:20:08 AM] Nov 18, 2024, 9:20:08 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:20:08.127'
+}
+{
+  message: '[Error - 9:20:08 AM] Nov 18, 2024, 9:20:08 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:20:08.897'
+}
+{
+  message: 'Nov 18, 2024 9:20:34 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6833\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:20:34.996'
+}
+{
+  message: '[Error - 9:20:50 AM] Nov 18, 2024, 9:20:50 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:20:50.958'
+}
+{
+  message: '[Error - 9:20:51 AM] Nov 18, 2024, 9:20:51 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:20:51.003'
+}
+{
+  message: 'Nov 18, 2024 9:20:58 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6878\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:20:58.961'
+}
+{
+  message: 'Nov 18, 2024 9:20:59 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6881\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:20:59.029'
+}
+{
+  message: 'Nov 18, 2024 9:21:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7150\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:21:26.943'
+}
+{
+  message: 'Nov 18, 2024 9:21:31 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7210\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:21:31.987'
+}
+{
+  message: 'Nov 18, 2024 9:21:37 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7264\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:21:37.499'
+}
+{
+  message: 'Nov 18, 2024 9:21:53 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7394\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:21:53.242'
+}
+{
+  message: 'Nov 18, 2024 9:21:53 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7395\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:21:53.277'
+}
+{
+  message: 'Nov 18, 2024 9:21:53 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7400\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:21:53.396'
+}
+{
+  message: 'Nov 18, 2024 9:21:56 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7445\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:21:56.124'
+}
+{
+  message: '[Error - 9:22:11 AM] Nov 18, 2024, 9:22:11 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:22:11.349'
+}
+{
+  message: 'Nov 18, 2024 9:22:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7601\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:22:26.133'
+}
+{
+  message: 'Nov 18, 2024 9:22:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7602\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:22:26.134'
+}
+{
+  message: 'Nov 18, 2024 9:22:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7603\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:22:26.134'
+}
+{
+  message: 'Nov 18, 2024 9:22:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7604\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:22:26.135'
+}
+{
+  message: 'Nov 18, 2024 9:22:39 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7746\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:22:39.853'
+}
+{
+  message: 'Nov 18, 2024 9:22:50 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7893\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:22:50.598'
+}
+{
+  message: 'Nov 18, 2024 9:23:17 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8073\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:23:17.111'
+}
+{
+  message: 'Nov 18, 2024 9:24:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8137\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:24:21.848'
+}
+{
+  message: 'Nov 18, 2024 9:24:29 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8205\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:24:29.864'
+}
+{
+  message: 'Nov 18, 2024 9:24:35 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8259\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:24:35.412'
+}
+{
+  message: 'Nov 18, 2024 9:24:35 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8260\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:24:35.417'
+}
+{
+  message: 'Nov 18, 2024 9:24:35 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8263\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:24:35.418'
+}
+{
+  message: 'Nov 18, 2024 9:29:42 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8467\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:29:42.221'
+}
+{
+  message: 'Nov 18, 2024 9:29:42 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8471\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:29:42.362'
+}
+{
+  message: 'Nov 18, 2024 9:29:42 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8475\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:29:42.480'
+}
+{
+  message: 'Nov 18, 2024 9:29:42 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8481\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:29:42.748'
+}
+{
+  message: 'Nov 18, 2024 9:29:43 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8514\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:29:43.823'
+}
+{
+  message: 'Nov 18, 2024 9:34:55 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8852\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:34:55.957'
+}
+{
+  message: 'Nov 18, 2024 9:35:01 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8902\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:35:01.285'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 9008, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 09:36:44.296'
+}
+{
+  message: 'Nov 18, 2024 9:40:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.Expression.equals(Object)" because the return value of "org.eclipse.jdt.core.dom.VariableDeclarationFragment.getInitializer()" is null\n' +
+    'java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.Expression.equals(Object)" because the return value of "org.eclipse.jdt.core.dom.VariableDeclarationFragment.getInitializer()" is null\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.Expression.equals(Object)" because the return value of "org.eclipse.jdt.core.dom.VariableDeclarationFragment.getInitializer()" is null\n' +
+    '\tat org.eclipse.jdt.internal.core.manipulation.dom.ASTResolving.getPossibleReferenceBinding(ASTResolving.java:229)\n' +
+    '\tat org.eclipse.jdt.internal.core.manipulation.dom.ASTResolving.guessBindingForReference(ASTResolving.java:183)\n' +
+    '\tat org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsBaseSubProcessor.addSimilarVariableProposals(UnresolvedElementsBaseSubProcessor.java:538)\n' +
+    '\tat org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsBaseSubProcessor.collectVariableProposals(UnresolvedElementsBaseSubProcessor.java:353)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.corrections.proposals.UnresolvedElementsSubProcessor.getVariableProposals(UnresolvedElementsSubProcessor.java:62)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.corrections.QuickFixProcessor.process(QuickFixProcessor.java:162)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.corrections.QuickFixProcessor.getCorrections(QuickFixProcessor.java:92)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:190)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:40:02.191'
+}
+{
+  message: '[Error - 9:40:02 AM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-18 09:40:02.194'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.Expression.equals(Object)" because the return value of "org.eclipse.jdt.core.dom.VariableDeclarationFragment.getInitializer()" is null\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.Expression.equals(Object)" because the return value of "org.eclipse.jdt.core.dom.VariableDeclarationFragment.getInitializer()" is null\n' +
+    '\tat org.eclipse.jdt.internal.core.manipulation.dom.ASTResolving.getPossibleReferenceBinding(ASTResolving.java:229)\n' +
+    '\tat org.eclipse.jdt.internal.core.manipulation.dom.ASTResolving.guessBindingForReference(ASTResolving.java:183)\n' +
+    '\tat org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsBaseSubProcessor.addSimilarVariableProposals(UnresolvedElementsBaseSubProcessor.java:538)\n' +
+    '\tat org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsBaseSubProcessor.collectVariableProposals(UnresolvedElementsBaseSubProcessor.java:353)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.corrections.proposals.UnresolvedElementsSubProcessor.getVariableProposals(UnresolvedElementsSubProcessor.java:62)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.corrections.QuickFixProcessor.process(QuickFixProcessor.java:162)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.corrections.QuickFixProcessor.getCorrections(QuickFixProcessor.java:92)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:190)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:40:02.194'
+}
+{
+  message: '[Error - 9:40:44 AM] Nov 18, 2024, 9:40:44 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:40:44.373'
+}
+{
+  message: '[Error - 9:40:44 AM] Nov 18, 2024, 9:40:44 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:40:44.442'
+}
+{
+  message: '[Error - 9:40:44 AM] Nov 18, 2024, 9:40:44 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:40:44.472'
+}
+{
+  message: 'Nov 18, 2024 9:40:53 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 9456\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:40:53.607'
+}
+{
+  message: 'Nov 18, 2024 9:41:17 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 9619\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:41:17.950'
+}
+{
+  message: 'Nov 18, 2024 9:42:17 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 9749\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:42:17.957'
+}
+{
+  message: 'Nov 18, 2024 9:42:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 9794\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:42:27.924'
+}
+{
+  message: 'Nov 18, 2024 9:43:34 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 9924\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:43:34.873'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 10021, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 09:44:14.839'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 10208, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 09:49:39.259'
+}
+{
+  message: 'Nov 18, 2024 9:51:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 10454\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:51:21.974'
+}
+{
+  message: 'Nov 18, 2024 9:51:22 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 10462\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:51:22.332'
+}
+{
+  message: 'Nov 18, 2024 9:53:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 10552\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:53:27.751'
+}
+{
+  message: 'Nov 18, 2024 9:53:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 10568\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:53:28.239'
+}
+{
+  message: 'Nov 18, 2024 9:53:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 10569\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:53:28.241'
+}
+{
+  message: 'Nov 18, 2024 9:53:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 10576\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:53:28.435'
+}
+{
+  message: 'Nov 18, 2024 9:54:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 10648\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:54:21.157'
+}
+{
+  message: 'Nov 18, 2024 9:54:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 10649\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:54:21.160'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 10798, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 09:54:39.867'
+}
+{
+  message: '[Error - 9:54:45 AM] Nov 18, 2024, 9:54:45 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:54:45.059'
+}
+{
+  message: 'Nov 18, 2024 9:56:03 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 10826\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:56:03.014'
+}
+{
+  message: 'Nov 18, 2024 9:56:03 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 10830\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:56:03.077'
+}
+{
+  message: '[Error - 9:56:38 AM] Nov 18, 2024, 9:56:38 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:56:38.449'
+}
+{
+  message: '[Error - 9:56:38 AM] Nov 18, 2024, 9:56:38 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 09:56:38.464'
+}
+{
+  message: 'Nov 18, 2024 9:56:47 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11141\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:56:47.062'
+}
+{
+  message: 'Nov 18, 2024 9:56:47 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11142\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:56:47.130'
+}
+{
+  message: 'Nov 18, 2024 9:57:16 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11270\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:57:16.706'
+}
+{
+  message: 'Nov 18, 2024 9:57:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11287\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:57:18.324'
+}
+{
+  message: 'Nov 18, 2024 9:57:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11288\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:57:18.413'
+}
+{
+  message: 'Nov 18, 2024 9:57:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11289\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:57:18.414'
+}
+{
+  message: 'Nov 18, 2024 9:57:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11290\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:57:18.462'
+}
+{
+  message: 'Nov 18, 2024 9:57:19 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11305\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:57:19.541'
+}
+{
+  message: 'Nov 18, 2024 9:57:41 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11381\n',
+  level: 'info',
+  timestamp: '2024-11-18 09:57:41.379'
+}
+{
+  message: 'Nov 18, 2024 10:00:09 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11648\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:00:09.237'
+}
+{
+  message: 'Nov 18, 2024 10:00:09 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11650\n' +
+    'Nov 18, 2024 10:00:09 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11649\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:00:09.339'
+}
+{
+  message: 'Nov 18, 2024 10:00:09 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11651\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:00:09.340'
+}
+{
+  message: 'Nov 18, 2024 10:04:09 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11822\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:04:09.960'
+}
+{
+  message: '[Error - 10:04:09 AM] Nov 18, 2024, 10:04:09 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 10:04:09.979'
+}
+{
+  message: 'Nov 18, 2024 10:07:38 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11924\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:07:38.727'
+}
+{
+  message: 'Nov 18, 2024 10:07:38 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11926\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:07:38.730'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 12176, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 10:10:17.624'
+}
+{
+  message: 'Nov 18, 2024 10:10:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12217\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:10:27.085'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 12259, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 10:10:37.158'
+}
+{
+  message: 'Nov 18, 2024 10:10:38 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12266\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:10:38.424'
+}
+{
+  message: 'Nov 18, 2024 10:11:11 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12349\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:11:11.419'
+}
+{
+  message: 'Nov 18, 2024 10:11:11 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12350\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:11:11.460'
+}
+{
+  message: 'Nov 18, 2024 10:11:11 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12351\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:11:11.461'
+}
+{
+  message: 'Nov 18, 2024 10:11:11 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12352\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:11:11.522'
+}
+{
+  message: 'Nov 18, 2024 10:11:13 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12370\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:11:13.073'
+}
+{
+  message: 'Nov 18, 2024 10:11:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12424\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:11:27.349'
+}
+{
+  message: '[Error - 10:13:34 AM] Nov 18, 2024, 10:13:34 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 10:13:34.697'
+}
+{
+  message: '[Error - 10:17:51 AM] Nov 18, 2024, 10:17:51 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 10:17:51.450'
+}
+{
+  message: 'Nov 18, 2024 10:17:51 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12673\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:17:51.608'
+}
+{
+  message: '[Error - 10:18:48 AM] Nov 18, 2024, 10:18:48 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 10:18:48.149'
+}
+{
+  message: 'Nov 18, 2024 10:18:49 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12860\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:18:49.369'
+}
+{
+  message: '[Error - 10:19:01 AM] Nov 18, 2024, 10:19:01 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 10:19:01.606'
+}
+{
+  message: 'Nov 18, 2024 10:19:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12941\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:19:02.683'
+}
+{
+  message: '[Error - 10:19:03 AM] Nov 18, 2024, 10:19:03 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 10:19:03.110'
+}
+{
+  message: 'Nov 18, 2024 10:19:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 13030\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:19:28.595'
+}
+{
+  message: '[Error - 10:20:03 AM] Nov 18, 2024, 10:20:03 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:03.068'
+}
+{
+  message: 'Nov 18, 2024 10:20:10 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 13368\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:10.921'
+}
+{
+  message: 'Nov 18, 2024 10:20:13 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 13391\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:13.384'
+}
+{
+  message: 'Nov 18, 2024 10:20:31 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 13445\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:31.531'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 13535, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 10:20:44.636'
+}
+{
+  message: '[Error - 10:20:44 AM] Nov 18, 2024, 10:20:44 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:44.785'
+}
+{
+  message: '[Error - 10:20:44 AM] Nov 18, 2024, 10:20:44 AM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:44.838'
+}
+{
+  message: '[Error - 10:20:44 AM] Nov 18, 2024, 10:20:44 AM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:44.839'
+}
+{
+  message: '[Error - 10:20:44 AM] Nov 18, 2024, 10:20:44 AM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:44.840'
+}
+{
+  message: '[Error - 10:20:44 AM] Nov 18, 2024, 10:20:44 AM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:44.841'
+}
+{
+  message: '[Error - 10:20:44 AM] Nov 18, 2024, 10:20:44 AM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:44.841'
+}
+{
+  message: '[Error - 10:20:44 AM] Nov 18, 2024, 10:20:44 AM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:44.904'
+}
+{
+  message: '[Error - 10:20:44 AM] Nov 18, 2024, 10:20:44 AM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:44.905'
+}
+{
+  message: '[Error - 10:20:44 AM] Nov 18, 2024, 10:20:44 AM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:44.906'
+}
+{
+  message: '[Error - 10:20:44 AM] Nov 18, 2024, 10:20:44 AM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:44.906'
+}
+{
+  message: '[Error - 10:20:44 AM] Nov 18, 2024, 10:20:44 AM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-18 10:20:44.907'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 13618, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 10:20:57.139'
+}
+{
+  message: 'Nov 18, 2024 10:21:02 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 13679\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:21:02.120'
+}
+{
+  message: '[Error - 10:23:08 AM] Nov 18, 2024, 10:23:08 AM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-18 10:23:08.567'
+}
+{
+  message: 'Nov 18, 2024 10:23:14 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 13944\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:23:14.074'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 13991, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-18 10:23:18.386'
+}
+{
+  message: 'Nov 18, 2024 10:27:17 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 14472\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:27:17.039'
+}
+{
+  message: 'Nov 18, 2024 10:32:52 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 14619\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:32:52.397'
+}
+{
+  message: 'Nov 18, 2024 10:35:11 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 14780\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:35:11.370'
+}
+{
+  message: 'Nov 18, 2024 10:35:24 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 14911\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:35:25.000'
+}
+{
+  message: 'Nov 18, 2024 10:35:30 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 14945\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:35:30.392'
+}
+{
+  message: 'Nov 18, 2024 10:35:30 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 14948\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:35:30.656'
+}
+{
+  message: 'Nov 18, 2024 10:35:30 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 14949\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:35:30.695'
+}
+{
+  message: 'Nov 18, 2024 10:35:30 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 14953\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:35:30.942'
+}
+{
+  message: 'Nov 18, 2024 10:35:30 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 14954\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:35:30.946'
+}
+{
+  message: 'Nov 18, 2024 10:35:31 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 14970\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:35:31.785'
+}
+{
+  message: 'Nov 18, 2024 10:37:05 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 15221\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:37:05.740'
+}
+{
+  message: 'Nov 18, 2024 10:40:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 15443\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:40:28.528'
+}
+{
+  message: 'Nov 18, 2024 10:40:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 15446\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:40:28.530'
+}
+{
+  message: 'Nov 18, 2024 10:40:33 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 15500\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:40:33.730'
+}
+{
+  message: 'Nov 18, 2024 10:40:39 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 15544\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:40:39.086'
+}
+{
+  message: 'Nov 18, 2024 10:40:46 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 15611\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:40:46.373'
+}
+{
+  message: 'Nov 18, 2024 10:44:35 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 16094\n',
+  level: 'info',
+  timestamp: '2024-11-18 10:44:35.394'
+}
+{
+  message: 'Nov 18, 2024 11:08:57 AM com.microsoft.java.debug.core.UsageDataSession recordInfo\n' +
+    'INFO: launch debug info\n',
+  level: 'info',
+  timestamp: '2024-11-18 11:08:57.242'
+}
+{
+  message: 'Nov 18, 2024 11:09:02 AM com.microsoft.java.debug.core.UsageDataSession submitUsageData\n' +
+    'INFO: session usage data summary\n',
+  level: 'info',
+  timestamp: '2024-11-18 11:09:02.775'
+}

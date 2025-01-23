@@ -1,0 +1,18 @@
+<script>
+  import { cn } from "$lib/utils";
+
+  const { children, class:className, href, ...restProps } = $props();
+
+  const classes = cn("flex flex-row items-center gap-2 bg-inherit hover:bg-neutral-200 dark:bg-neutral-800", className);
+</script>
+
+
+{#if href}
+  <a {href} class={classes} {...restProps}>
+    {@render children()}
+  </a>
+{:else}
+  <div class={classes} {...restProps}>
+    {@render children()}
+  </div>
+{/if}

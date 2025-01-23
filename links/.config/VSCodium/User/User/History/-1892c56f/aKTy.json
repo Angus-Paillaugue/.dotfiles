@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest",
+  "manifest_version": 2,
+  "name": "Redirector",
+  "version": "1.0",
+  "description": "Redirects you from google websites to open-source alternatives",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.mozilla.org/*"
+      ],
+      "js": [
+        "borderify.js"
+      ]
+    }
+  ]
+}

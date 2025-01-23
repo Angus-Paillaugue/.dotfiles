@@ -1,0 +1,60 @@
+public class Arbre extends ObjetGraphique {
+
+  private int hauteur;
+  private String couleurTronc;
+  private String couleurFeuilles;
+
+  public Arbre(int x, int y, int hauteur, String couleurTronc, String couleurFeuilles) {
+    super(x, y);
+    this.hauteur = hauteur;
+    this.couleurTronc = couleurTronc;
+    this.couleurFeuilles = couleurFeuilles;
+  }
+
+  public void setHauteur(int hauteur) {
+    this.hauteur = hauteur;
+  }
+
+  public void setCouleurFeuilles(String couleurFeuilles) {
+    this.couleurFeuilles = couleurFeuilles;
+  }
+
+  public void setCouleurTronc(String couleurTronc) {
+    this.couleurTronc = couleurTronc;
+  }
+
+  @Override
+  public String toString() {
+    return "Arbre [hauteur=" + hauteur + ", couleurTronc=" + couleurTronc + ", couleurFeuilles=" + couleurFeuilles
+        + super.toString() + "]";
+  }
+
+
+  @Override
+  protected Object clone() throws CloneNotSupportedException {
+    Arbre emp = (Arbre) super.clone();
+
+    emp.hauteur = hauteur;
+    emp.couleurTronc = couleurTronc;
+    emp.couleurFeuilles = couleurFeuilles;
+
+    return emp;
+  }
+
+  @Override
+  public boolean equals(Object arg0) {
+    if (arg0 == null) {
+      return false;
+    }
+    if (arg0 == this) {
+      return true;
+    }
+    if (arg0.getClass() != this.getClass()) {
+      return false;
+    }
+    Arbre obj = (Arbre) arg0;
+    return super.equals(arg0) && this.hauteur == obj.hauteur && this.couleurTronc.equals(obj.couleurTronc)
+        && this.couleurFeuilles.equals(obj.couleurFeuilles);
+  }
+
+}

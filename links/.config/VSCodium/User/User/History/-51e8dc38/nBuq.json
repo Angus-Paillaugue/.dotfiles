@@ -1,0 +1,12 @@
+{
+  "style": "default",
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "src/app/app.css"
+  },
+  "typescript": false,
+  "aliases": {
+    "utils": "$lib/utils.js",
+    "components": "$lib/components"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@repo/components",
+  "version": "0.0.0",
+  "type": "module",
+  "module": "tailwind.config.js",
+  "main": "tailwind.config.js",
+  "exports": {
+    ".": {
+      "svelte": "./tailwind.config.js"
+    }
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6"
+  }
+}

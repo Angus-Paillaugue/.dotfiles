@@ -1,0 +1,178 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SvelteShine Configuration",
+  "type": "object",
+  "properties": {
+    "colors": {
+      "type": "object",
+      "description": "Colors config",
+      "properties": {
+        "tailwindColors": {
+          "type": "object",
+          "description": "The primary color used. You can use https://javisperez.github.io/tailwindcolorshades/ to generate custom colors",
+          "patternProperties": {
+            "^[0-9]+$": {
+              "type": "string",
+              "description": "Tailwind color shade in RGB format"
+            }
+          }
+        },
+        "codeBlockTheme": {
+          "type": "string",
+          "description": "For a list of available themes, visit https://shiki.matsu.io/themes. You may also have to change the variable in the src/code.css 8:14"
+        }
+      }
+    },
+    "sideBar": {
+      "type": "object",
+      "description": "Sidebar config",
+      "properties": {
+        "style": {
+          "type": "string",
+          "enum": ["static", "details"],
+          "description": "\"static\"|\"details\" (default: \"details\")"
+        },
+        "develop": {
+          "type": "boolean",
+          "description": "true|false (default: true), Only works with sidebarStyle \"details\""
+        },
+        "socials": {
+          "type": "object",
+          "properties": {
+            "target": {
+              "type": "string",
+              "enum": ["_blank", "_self", "_parent", "_top"],
+              "description": "_blank|_self|_parent|_top|framename"
+            },
+            "list": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the social media platform"
+                  },
+                  "icon": {
+                    "type": "string",
+                    "description": "Icon identifier"
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL to the social media profile"
+                  }
+                },
+                "required": ["name", "icon", "url"]
+              }
+            }
+          },
+          "required": ["target", "list"]
+        }
+      },
+      "required": ["style", "develop", "socials"]
+    },
+    "project": {
+      "type": "object",
+      "description": "Project meta config",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the project"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the project"
+        },
+        "author": {
+          "type": "string",
+          "description": "Author of the project"
+        },
+        "keywords": {
+          "type": "string",
+          "description": "Keywords related to the project"
+        }
+      },
+      "required": ["name", "description", "author", "keywords"]
+    },
+    "homepage": {
+      "type": "object",
+      "description": "Homepage config",
+      "properties": {
+        "version": {
+          "type": "object",
+          "properties": {
+            "showHomepageMessage": {
+              "type": "boolean",
+              "description": "Whether to show the homepage message"
+            },
+            "latestVersion": {
+              "type": "string",
+              "description": "Latest version of the project"
+            },
+            "latestVersionURL": {
+              "type": "string",
+              "description": "URL to the latest version documentation"
+            }
+          },
+          "required": ["showHomepageMessage", "latestVersion", "latestVersionURL"]
+        },
+        "catchphrase": {
+          "type": "string",
+          "description": "Catchphrase for the homepage"
+        }
+      },
+      "required": ["version", "catchphrase"]
+    },
+    "pages": {
+      "type": "array",
+      "description": "All of your docs pages. You can add, sort, and nest pages here. The name is the text that will appear in the sidebar. If you add a markdown page but don't add it here, it won't appear in the sidebar",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the page"
+          },
+          "icon": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Icon identifier"
+              },
+              "class": {
+                "type": "string",
+                "description": "CSS class for the icon"
+              }
+            },
+            "required": ["name"]
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Name of the child page"
+                },
+                "icon": {
+                  "type": "string",
+                  "description": "Icon identifier"
+                }
+              },
+              "required": ["name"]
+            }
+          }
+        },
+        "required": ["name"]
+      }
+    },
+    "docsUrlStart": {
+      "type": "string",
+      "description": "The root path of the markdown files. Do not change unless you know what you are doing"
+    }
+  },
+  "required": ["colors", "sideBar", "project", "homepage", "pages", "docsUrlStart"]
+}

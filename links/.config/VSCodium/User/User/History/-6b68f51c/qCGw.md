@@ -1,0 +1,11 @@
+---
+name: Portfolio
+date: 2024
+description: This website is a replica of Nude Project (clothing brand) made with SvelteKit.
+bgColor: bg-primary
+link: https://angus.paillaugue.fr
+image: https://angus.paillaugue.fr/Nothing-Notes.webp
+tags:
+ - SvelteKit
+ - TailwindCSS
+---

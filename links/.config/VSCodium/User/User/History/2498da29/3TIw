@@ -1,0 +1,17 @@
+CC=gcc
+DIST_DIR=dist
+
+proxy: $(DIST_DIR)/proxy.o
+	${CC} $^ -o $(DIST_DIR)/$@
+
+$(DIST_DIR)/proxy.o: proxy.c | $(DIST_DIR)
+	${CC} -c $< -o $@
+
+$(DIST_DIR):
+	mkdir -p $(DIST_DIR)
+
+run: proxy
+	$(DIST_DIR)/proxy
+
+clean:
+	rm -r $(DIST_DIR)

@@ -1,0 +1,9 @@
+import { getUserItems } from '$lib/db/item';
+
+/** @type {import('./$types').PageServerLoad} */
+export async function load({ locals: { user }, url}) {
+  const currentPage = Number(url.searchParams.get('page')) || 1;
+
+  const items = await getUserItems({ user });
+  return { items };
+};

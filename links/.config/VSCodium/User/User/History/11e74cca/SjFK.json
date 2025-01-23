@@ -1,0 +1,14 @@
+{
+  "name": "@repo/utils",
+  "version": "0.0.0",
+  "type": "module",
+  "module": "utils.js",
+  "main": "utils.js",
+  "exports": {
+    ".": "./utils.js"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.0"
+  }
+}

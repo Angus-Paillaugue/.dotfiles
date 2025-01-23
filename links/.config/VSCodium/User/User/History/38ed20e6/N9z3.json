@@ -1,0 +1,265 @@
+{
+	"pageTitles": {
+		"error": "Erreur",
+		"outfits": "Mes tenues",
+		"outfits.item.null": "Aucune tenue avec cet identifiant!",
+		"items": "Dressing",
+		"items.item.null": "Aucun article avec cet identifiant!",
+		"signIn": "Créer un compte",
+		"logIn": "Se connecter",
+		"forgotPassword": "Mot de passe oublié",
+		"resetPassword": "Réinitialiser le mot de passe",
+		"create": "Ajouter",
+		"account": "Mon compte",
+		"settings": "Réglages",
+		"planner": "Planificateur",
+		"resetEmail": "Réinitialiser l'email",
+		"home": "Accueil",
+		"publicProfile": "Profil de",
+		"privacyPolicy": "Politique de confidentialité",
+		"termsOfUse": "Conditions d'utilisation",
+		"feed": "Fil d'actualité",
+		"following": "Abonnements"
+	},
+	"pageDescriptions": {
+		"error": "Oups! Une erreur est survenue. Ne vous inquiétez pas, nous nous en occupons.",
+		"outfits": "Organisez votre garde-robe sans effort et créez des tenues stylées.",
+		"items": "Découvrez une large gamme d'articles pour élever votre garde-robe.",
+		"signIn": "Connectez-vous pour accéder à votre garde-robe, à vos tenues et à votre expérience de mode personnalisée.",
+		"logIn": "Connectez-vous à votre compte et explorez votre dressing personnalisé.",
+		"forgotPassword": "Vous avez oublié votre mot de passe ? Pas de soucis ! Réinitialisez-le rapidement et revenez au style.",
+		"resetPassword": "Réinitialisez votre mot de passe en toute sécurité et regagnez l'accès à votre compte.",
+		"create": "Ajoutez facilement de nouveaux articles ou tenues à votre garde-robe pour des options de style infinies.",
+		"account": "Accédez au tableau de bord de votre compte pour une expérience de mode personnalisée.",
+		"settings": "Personnalisez vos paramètres pour une expérience de dressing optimisée.",
+		"planner": "Personnalisez les paramètres de votre planificateur de tenues pour une expérience de mode sur mesure.",
+		"resetEmail": "Réinitialisez facilement vos préférences de messagerie. Restez informé des dernières tendances de la mode.",
+		"home": "Découvrez votre sanctuaire de style sur My Fashion Vault. Rationalisez votre garde-robe, planifiez vos tenues sans effort et profitez de possibilités de mode infinies. Authentifiez-vous, organisez et élevez votre style avec nous. Inscrivez-vous dès maintenant pour une expérience de mode fluide !",
+		"privacyPolicy": "Découvrez comment nous protégeons votre vie privée sur My Fashion Vault. Notre politique de confidentialité décrit la manière dont nous recueillons, utilisons et protégeons vos informations personnelles. Votre vie privée est importante pour nous. En savoir plus.",
+		"termsOfUse": "Lisez les conditions d'utilisation de My Fashion Vault. En accédant à notre site Web ou en l'utilisant, vous acceptez ces conditions qui régissent votre utilisation de nos services. En savoir plus.",
+		"feed": "Explorez un monde de style et d'inspiration sur le fil d'actualité de My Fashion Vault. Découvrez les dernières tendances, tenues et inspirations de mode de notre communauté dynamique. Rejoignez-nous aujourd'hui et participez à la conversation sur la mode.",
+		"following": "Restez connecté avec votre cercle de mode ! Explorez les derniers styles et tendances des utilisateurs que vous suivez sur My Fashion Vault. Découvrez de nouvelles inspirations et partagez votre parcours mode avec des personnes partageant les mêmes idées."
+	},
+	"home": {
+		"hero": {
+			"catchPhrase": "Le dressing du",
+			"future": "futur",
+			"description": "Créez votre garde-robe virtuelle et planifiez vos tenues pour chaque jour de la semaine !",
+			"getStarted": "Commencer",
+			"learnMore": "En savoir plus",
+			"outfitBy": "Outfit by"
+		},
+		"pricing": {
+			"title": "Tarifs",
+			"addClothes": "Possibilité d'ajouter tous vos vêtements",
+			"createOutfits": "Création de tenues",
+			"planOutfits": "Planification de vos tenues",
+			"payOnce": "Payez une fois, possédez-le pour toujours",
+			"getAccess": "Obtenir l'accès",
+			"whatsIncluded": "Ce qui est inclus",
+			"lifetimeMembership": "Adhésion à vie"
+		},
+		"typewriterSentence": "Bienvenue sur My Fashion Vault ! Votre compagnon ultime pour votre garde-robe. Organisez, planifiez et créez sans effort grâce à notre plateforme intuitive. Ajoutez vos vêtements et organisez des possibilités de tenues infinies. Simplifiez votre routine de style quotidienne et élevez votre niveau de mode avec nous. Inscrivez-vous dès maintenant !",
+		"bentoGrid": {
+			"title": "À propos",
+			"item1": {
+				"title": "Ajouter des vêtements",
+				"description": "Ajoutez vos vêtements avec leur nom, leur couleur, leur catégorie et plus encore. Vous pouvez les visualiser, les filtrer et bien plus encore !"
+			},
+			"item2": {
+				"title": "Créer des tenues",
+				"description": "Avec les vêtements que vous avez ajoutés, vous pouvez les regrouper en tenues."
+			},
+			"item3": {
+				"title": "Partagez vos créations",
+				"description": "Une fois que vous avez créé une tenue dont vous êtes fier, vous pouvez partager le lien vers celle-ci afin que les gens puissent s'inspirer de votre esprit créatif."
+			},
+			"item4": {
+				"title": "Planifiez vos tenues",
+				"description": "Vous pouvez attribuer des tenues à chaque jour de la semaine pour planifier votre rotation de vêtements.",
+				"today": "Aujourd'hui",
+				"tomorrow": "Demain"
+			}
+		}
+	},
+	"error": {
+		"back": "Retour accueil"
+	},
+	"navBar": {
+		"myAccount": "Mon compte",
+		"settings": "Réglages",
+		"home": "Accueil",
+		"pricing": "Tarifs",
+		"logIn": "Se connecter",
+		"signIn": "Inscrire",
+		"about": "À propos"
+	},
+	"account": {
+		"welcome": "Bienvenue",
+		"settings": "Réglages",
+		"logOut": "Se déconnecter",
+		"LogOutConfirm": "Êtes-vous sûr de vouloir vous déconnecter ?"
+	},
+	"create": {
+		"whatDoYouWantToAdd": "Que voulez-vous ajouter ?",
+		"create": "Créer",
+		"continue": "Continuer",
+		"item": {
+			"name": "Article",
+			"noName": "L'article doit avoir un nom",
+			"noColor": "L'article doit avoir au moins une couleur",
+			"noType": "L'article doit avoir un type",
+			"noBrand": "L'article doit avoir une marque",
+			"noImage": "L'article doit avoir une image",
+			"descriptionTooLong": "La description est trop longue",
+			"nameTooLong": "Le nom est trop long",
+			"removeBackground": {
+				"yes": "Oui",
+				"no": "Non",
+				"title": "Supprimer l'arrière-plan",
+				"description": "Voulez-vous supprimer l'arrière-plan de l'image de l'article ?"
+			}
+		},
+		"outfit": {
+			"name": "Tenue",
+			"selectItems": "Sélectionnez les articles que vous souhaitez ajouter à la tenue",
+			"noItems": "Vous n'avez pas encore d'articles dans votre garde-robe. Ajoutez-en pour créer une tenue !",
+			"nameTooLong": "Le nom de la tenue est trop long",
+			"outfitName": "Nom de la tenue",
+			"outfitNameDesc": "Ajoutez un nom à votre tenue"
+		}
+	},
+	"forgotPassword": {
+		"reset": "Réinitialiser",
+		"rememberPassword": "Se souvenir de votre mot de passe ?",
+		"forgotPassword": "Mot de passe oublié ?",
+		"sentEmail": "Un e-mail vous a été envoyé pour réinitialiser votre mot de passe !"
+	},
+	"labels": {
+		"emailLabel": "E-mail",
+		"password": "Mot de passe",
+		"username": "Nom d'utilisateur",
+		"confirmPassword": "Confirmer le mot de passe",
+		"imageLabel": "Image",
+		"brandLabel": "Marque",
+		"typeLabel": "Type",
+		"colorLabel": "Couleur(s)",
+		"nameLabel": "Nom",
+		"description": "Description",
+		"back": "Retour",
+		"cancel": "Annuler",
+		"save": "Sauvegarder",
+		"delete": "Supprimer",
+		"edit": "Modifier",
+		"add": "Ajouter",
+		"close": "Fermer",
+		"incorrectCredentials": "Identifiants incorrects !",
+		"profilePicture": "Photo de profil",
+		"banner": "Bannière",
+		"link": "Lien",
+		"optional": "Facultatif",
+		"searchPlaceholder": "Rechercher",
+		"search": "Rechercher des utilisateurs",
+		"outfitName": "Nom de la tenue"
+	},
+	"imageOf": "Image de",
+	"items": {
+		"null": "Il n'y a pas encore d'articles dans votre garde-robe !",
+		"addItems": "Ajouter des articles",
+		"searchPlaceholder": "Trouvez ce dont vous avez besoin ici",
+		"noItemsMatching": "Aucun article ne correspond à votre requête de recherche !"
+	},
+	"item": {
+		"modify": "Modifier cet article",
+		"delete": "Supprimer cet article",
+		"delete.confirm": "Êtes-vous sûr de vouloir supprimer cet article ? Cette action est irréversible !",
+		"update.saved": "Article mis à jour avec succès"
+	},
+	"logIn": {
+		"logIn": "Se connecter",
+		"noAccount": "Pas de compte ?",
+		"forgotPassword": "Mot de passe oublié ?",
+		"noAccountWithThisEmail": "Il n'y a aucun compte avec cette adresse e-mail",
+		"emailNotVerified": "Votre e-mail n'a pas encore été vérifié. Veuillez vérifier votre boîte de réception et cliquer sur le lien de vérification pour activer votre compte.",
+		"invalidCredentials": "Identifiants invalides !"
+	},
+	"signIn": {
+		"incorrectUsername": "Les noms d'utilisateur ne peuvent contenir que des lettres, des chiffres et des caractères spéciaux !",
+		"usernameTooShort": "Les noms d'utilisateur doivent comporter au moins 6 caractères !",
+		"incorrectPassword": "Le mot de passe doit comporter au moins 8 caractères !",
+		"create": "Créer",
+		"createAccount": "Créer un compte",
+		"alreadyHaveAccount": "Vous avez déjà un compte ?",
+		"invalidEmail": "Email invalide",
+		"usernameExists": "Ce nom d'utilisateur est déjà pris !",
+		"success": "Compte créé avec succès ! Vous pouvez maintenant vous connecter"
+	},
+	"resetPassword": {
+		"connect": "Se connecter ?",
+		"reset": "Réinitialiser",
+		"resetPassword": "Réinitialiser votre mot de passe",
+		"errors": {
+			"passwordsDontMatch": "Les mots de passe ne correspondent pas !",
+			"passwordTooShort": "Le mot de passe doit comporter au moins 8 caractères !"
+		},
+		"success": "Votre mot de passe a été réinitialisé avec succès !"
+	},
+	"planner": {
+		"the": "Le",
+		"you": "vous",
+		"willWear": "porterez",
+		"worn": "porté",
+		"noOutfitsThatDay": "Vous n'avez pas encore porté de tenues ce jour-là.",
+		"modifyOutfitFotThe": "Modifier une tenue pour le",
+		"change": "Changer",
+		"addOne": "En ajouter un",
+		"noOutfits": "Vous n'avez pas encore créé de tenues.",
+		"addOutfitForThe": "Ajouter une tenue pour le",
+		"outfits": "Tenues",
+		"items": "Articles"
+	},
+	"outfits": {
+		"noOutfitsCreated": "Vous n'avez pas encore créé de tenues",
+		"modifyOutfit": "Modifier cette tenue",
+		"deleteOutfit": "Supprimer cette tenue",
+		"deleteOutfit.confirm": "Êtes-vous sûr de vouloir supprimer cette tenue ? Cette action est irréversible !",
+		"createOutfit": "En créer une",
+		"share": {
+			"title": "Partager cette tenue",
+			"copy": "Copier le lien",
+			"public": "Partager cette tenue ?",
+			"error": "Vous n'êtes pas autorisé à voir cette tenue !",
+			"outfitBy": "par",
+			"shareKeyword": "Partager"
+		}
+	},
+	"settings": {
+		"emailChange.success": "Un e-mail de confirmation vous a été envoyé",
+		"emailChange.invalidEmail": "Email invalide",
+		"usernameChange.success": "Nom d'utilisateur modifié avec succès !",
+		"deleteAccount": "Supprimer le compte",
+		"deleteAccountConfirm": "Êtes-vous sûr de vouloir supprimer votre compte ? Cette action est irréversible !",
+		"error": "Une erreur est survenue",
+		"profilePictureChange": {
+			"success": "Photo de profil modifiée avec succès !",
+			"error": "Une erreur s'est produite lors de la modification de votre photo de profil ! Veuillez réessayer plus tard.",
+			"noImage": "Veuillez télécharger une image !"
+		},
+		"bannerChange": {
+			"success": "Bannière modifiée avec succès !",
+			"error": "Une erreur s'est produite lors de la modification de votre bannière ! Veuillez réessayer plus tard.",
+			"noImage": "Veuillez télécharger une image !"
+		}
+	},
+	"confirmEmailChange": {
+		"confirmNewEmail": "Confirmer le nouvel e-mail",
+		"invalidPassword": "Mot de passe invalide",
+		"invalidToken": "La demande de modification d'e-mail a expiré ou n'est pas valide",
+		"emailChanged": "Votre e-mail a été modifié avec succès !"
+	},
+	"following": {
+		"unfollow": "Ne plus suivre",
+		"unfollowConfirm": "Êtes-vous sûr de vouloir ne plus suivre {user} ?",
+		"noFollowing": "Vous ne suivez encore personne !"
+	}
+}

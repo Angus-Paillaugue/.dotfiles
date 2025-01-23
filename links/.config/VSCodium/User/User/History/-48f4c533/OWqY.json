@@ -1,0 +1,20 @@
+{
+  "name": "@repo/components",
+  "version": "0.0.0",
+  "type": "module",
+  "module": "index.js",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "svelte": "./index.js"
+    }
+  },
+  "devDependencies": {
+    "@repo/utils": "workspace:*",
+    "svelte": "^4.2.12"
+  },
+  "dependencies": {
+    "@iconify/svelte": "^4.0.2",
+    "lucide-svelte": "^0.446.0"
+  }
+}

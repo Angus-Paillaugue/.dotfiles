@@ -1,0 +1,12 @@
+Removed demo related content being in the docs
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch demo
+# Your branch is up to date with 'origin/demo'.
+#
+# Changes to be committed:
+#	deleted:    docs/Configuration/Homepage.md
+#	deleted:    docs/Configuration/Releases.md
+#	modified:   project.config.js
+#

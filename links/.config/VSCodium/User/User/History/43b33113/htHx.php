@@ -1,0 +1,83 @@
+<?php
+session_start();
+require_once '../controleur/ListerToutesLesRencontres.php';
+require_once '../../lib/components.php';
+require_once '../../lib/jwt.php';
+require_once '../../lib/cookies.php';
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+ob_start();
+
+$jwt = Cookies::getCookie('token');
+$payload = null;
+
+if ($jwt) {
+  $payload = JWT::validateJWT($jwt);
+  if (!$payload) {
+    header('Location: log-in.php', true, 303);
+  }
+} else {
+  header('Location: log-in.php', true, 303);
+}
+$title = 'Dashboard ' . $payload['username'];
+?>
+
+
+<div class="max-w-screen-xl w-full mx-auto p-4 rounded-xl border space-y-4 border-neutral-300/50">
+	<h2>Bienvenue <?php echo $payload['username']; ?></h2>
+  <?php
+  $rencontres = new ToutesLesRencontres();
+  $rencontres = $rencontres->execute();
+  echo "<div class='flex flex-row items-center gap-4 flex-wrap'>";
+  Components::Button([
+    'label' => 'Gérer les rencontre',
+    'variant' => 'primary',
+    'href' => 'rencontres.php'
+  ]);
+  Components::Button([
+    'label' => 'Gérer un joueur',
+    'variant' => 'primary'
+  ]);
+  echo "</div>";
+  if(count($rencontres['next']) > 0) {
+    echo "<h1>Rencontres à venir</h1>";
+    echo "<div class='grid grid-cols-1 lg:grid-cols-2 gap-4'>";
+    foreach ($rencontres['next'] as $rencontre) {
+      echo "
+      <div class='bg-white p-4 rounded-lg border border-neutral-300/50'>
+        <div class='flex flex-row justify-between items-center'>
+          <h3>".$rencontre->getEquipeAdverse()."</h3>
+          <time class='text-base text-neutral-600 font-base'>".$rencontre->getDateHeure()."</time>
+        </div>
+        <p class='text-neutral-600 text-lg font-semibold'>".$rencontre->getLieu()."</p>
+      </div>";
+    }
+    echo "</div>";
+  }
+
+
+  if(count($rencontres['previous']) > 0) {
+    echo "<h1>Rencontres passées</h1>";
+    echo "<div class='grid grid-cols-1 lg:grid-cols-2 gap-4'>";
+    foreach ($rencontres['previous'] as $rencontre) {
+      echo "
+      <div class='bg-white p-4 rounded-lg border border-neutral-300/50'>
+        <div class='flex flex-row justify-between items-center'>
+          <h3>".$rencontre->getEquipeAdverse()."</h3>
+          <time class='text-base text-neutral-600 font-base'>".$rencontre->getDateHeure()."</time>
+        </div>
+        <p class='text-neutral-600 text-lg font-semibold'>".$rencontre->getLieu()."</p>
+      </div>";
+    }
+    echo "</div>";
+  }
+  ?>
+</div>
+
+<?php
+$content = ob_get_clean();
+require_once './layout.php';
+
+
+?>

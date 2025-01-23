@@ -1,0 +1,16 @@
+CC=gcc
+
+proxy: proxy.o simpleSocketAPI.o
+	${CC} $^ -o $@
+proxy.o: proxy.c simpleSocketAPI.h
+	${CC} -c $^
+simpleSocketAPI.o: simpleSocketAPI.c
+	${CC} -c $^
+client: client.o
+	${CC} $^ -o $@
+client.o: client.c
+	${CC} -c $^
+server: server.o
+	${CC} $^ -o $@
+server.o: server.c
+	${CC} -c $^

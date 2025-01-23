@@ -1,0 +1,10 @@
+services:
+  frontend:
+    container_name: ownlogs_docs
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - '4173:3000'

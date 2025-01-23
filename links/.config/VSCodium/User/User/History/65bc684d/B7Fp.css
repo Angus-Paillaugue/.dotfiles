@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--tw-neutral-800: theme(colors.neutral.800);
+}
+
+@layer utilities {
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		/* IE and Edge */
+		scrollbar-width: none;
+		/* Firefox */
+	}
+}
+
+body {
+	@apply bg-neutral-900 text-neutral-200;
+}
+
+hr {
+	@apply mx-2 my-4 h-[2px] rounded-full border-none bg-neutral-700;
+}
+
+/* Others */
+kbd {
+	@apply rounded px-2 py-1 font-mono text-sm font-normal bg-neutral-800 border border-neutral-700 text-neutral-200;
+}
+
+input:focus {
+	@apply ring-0 outline-none;
+}

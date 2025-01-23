@@ -1,0 +1,265 @@
+{
+	"pageTitles": {
+		"error": "Error",
+		"outfits": "My Outfits",
+		"outfits.item.null": "There is no outfit with this id!",
+		"items": "Wardrobe",
+		"items.item.null": "There is no item with this id!",
+		"signIn": "Create an Account",
+		"logIn": "Log In",
+		"forgotPassword": "Forgot Password",
+		"resetPassword": "Reset Password",
+		"create": "Add",
+		"account": "My Account",
+		"settings": "Settings",
+		"planner": "Planner",
+		"resetEmail": "Reset Email",
+		"home": "Home",
+		"publicProfile": "Profile of",
+		"privacyPolicy": "Privacy policy",
+		"termsOfUse": "Terms of use",
+		"feed": "Feed",
+		"following": "Following"
+	},
+	"pageDescriptions": {
+		"error": "Oops! Something went wrong. Don't worry, we're on it.",
+		"outfits": "Organize your wardrobe effortlessly and create stylish outfits.",
+		"items": "Discover a wide range of items to elevate your wardrobe game.",
+		"signIn": "Sign in to access your wardrobe, outfits, and personalized fashion experience.",
+		"logIn": "Log in to your account and explore your personalized fashion vault.",
+		"forgotPassword": "Forgot your password? No worries! Reset it quickly and get back to styling.",
+		"resetPassword": "Reset your password securely and regain access to your account.",
+		"create": "Easily add new items or outfits to your wardrobe for endless styling options.",
+		"account": "Access your account dashboard for a personalized fashion experience.",
+		"settings": "Customize your settings for an optimized fashion vault experience.",
+		"planner": "Customize your outfit planner settings for a tailored fashion experience.",
+		"resetEmail": "Reset your email preferences easily. Stay updated with our latest fashion trends.",
+		"home": "Discover your style sanctuary at My Fashion Vault. Streamline your wardrobe, plan outfits effortlessly, and embrace endless fashion possibilities. Authenticate, organize, and elevate your style game with us. Join now for a seamless fashion experience!",
+		"privacyPolicy": "Learn how we protect your privacy at My Fashion Vault. Our Privacy Policy outlines how we collect, use, and safeguard your personal information. Your privacy matters to us. Read more.",
+		"termsOfUse": "Read the Terms of Use for My Fashion Vault. By accessing or using our website, you agree to these terms governing your use of our services. Learn more.",
+		"feed": "Explore a world of style and inspiration on My Fashion Vault's feed. Discover the latest trends, outfits, and fashion inspirations from our vibrant community. Join us today and be part of the fashion conversation.",
+		"following": "Stay connected with your fashion circle! Explore the latest styles and trends from the users you follow on My Fashion Vault. Discover new inspirations and share your fashion journey with like-minded individuals."
+	},
+	"home": {
+		"hero": {
+			"catchPhrase": "The wardrobe of the",
+			"future": "future",
+			"description": "Create your virtual wardrobe and plan your outfits for each day of the week!",
+			"getStarted": "Get started",
+			"learnMore": "Learn more",
+			"outfitBy": "Outfit by"
+		},
+		"pricing": {
+			"title": "Pricing",
+			"addClothes": "Ability to add all your clothes",
+			"createOutfits": "Creating outfits",
+			"planOutfits": "Planning your outfits",
+			"payOnce": "Pay once, own it forever",
+			"getAccess": "Get access",
+			"whatsIncluded": "What’s included",
+			"lifetimeMembership": "Lifetime membership"
+		},
+		"typewriterSentence": "Welcome to My Fashion Vault! Your ultimate wardrobe companion. Organize, plan, and create effortlessly with our intuitive platform. Add your clothes, and curate endless outfit possibilities. Simplify your daily styling routine and elevate your fashion game with us. Join now!",
+		"bentoGrid": {
+			"title": "About",
+			"item1": {
+				"title": "Add clothes",
+				"description": "Add your clothes with their name, color, category and more. You can view them, filter them and do so much more!"
+			},
+			"item2": {
+				"title": "Make outfits",
+				"description": "With the clothes you added, you can group them into outfits."
+			},
+			"item3": {
+				"title": "Share your creations",
+				"description": "Once you create an outfit you are proud of, you can share the link to it so peoples can get inspired by your creative mind."
+			},
+			"item4": {
+				"title": "Plan your outfits",
+				"description": "You can assign outfits to everyday of the week to plan your clothes rotation.",
+				"today": "Today",
+				"tomorrow": "Tomorrow"
+			}
+		}
+	},
+	"error": {
+		"back": "Back Home"
+	},
+	"navBar": {
+		"myAccount": "My Account",
+		"settings": "Settings",
+		"home": "Home",
+		"pricing": "Pricing",
+		"logIn": "Log-in",
+		"signIn": "Sign-up",
+		"about": "About"
+	},
+	"account": {
+		"welcome": "Welcome",
+		"settings": "Settings",
+		"logOut": "Log out",
+		"LogOutConfirm": "Are you sure you want to log out?"
+	},
+	"create": {
+		"whatDoYouWantToAdd": "What do you want to add?",
+		"create": "Create",
+		"continue": "Continue",
+		"item": {
+			"name": "Item",
+			"noName": "The item must have a name",
+			"noColor": "The item must have at least one color",
+			"noType": "The item must have a type",
+			"noBrand": "The item must have a brand",
+			"noImage": "The item must have an image",
+			"descriptionTooLong": "The description is too long",
+			"nameTooLong": "The name is too long",
+			"removeBackground": {
+				"yes": "Yes",
+				"no": "No",
+				"title": "Remove background",
+				"description": "Do you want to remove the background of the item's image ?"
+			}
+		},
+		"outfit": {
+			"name": "Outfit",
+			"selectItems": "Select items you want to add to the outfit",
+			"noItems": "You don't have any items in your wardrobe yet. Add some to create an outfit!",
+			"nameTooLong": "The outfit's name is too long",
+			"outfitName": "Outfit name",
+			"outfitNameDesc": "Add a name to your outfit"
+		}
+	},
+	"forgotPassword": {
+		"reset": "Reset",
+		"rememberPassword": "Remember your password?",
+		"forgotPassword": "Forgot password?",
+		"sentEmail": "An email has been sent to you to reset your password!"
+	},
+	"labels": {
+		"emailLabel": "Email",
+		"password": "Password",
+		"username": "Username",
+		"confirmPassword": "Confirm Password",
+		"imageLabel": "Image",
+		"brandLabel": "Brand",
+		"typeLabel": "Type",
+		"colorLabel": "Color(s)",
+		"nameLabel": "Name",
+		"description": "Description",
+		"back": "Back",
+		"cancel": "Cancel",
+		"save": "Save",
+		"delete": "Delete",
+		"edit": "Edit",
+		"add": "Add",
+		"close": "Close",
+		"incorrectCredentials": "Incorrect credentials!",
+		"profilePicture": "Profile picture",
+		"banner": "Banner",
+		"link": "Link",
+		"optional": "Optional",
+		"searchPlaceholder": "Search",
+		"search": "Search for users",
+		"outfitName": "Outfit name"
+	},
+	"imageOf": "Image of",
+	"items": {
+		"null": "There are no items in your wardrobe yet!",
+		"addItems": "Add items",
+		"searchPlaceholder": "Find what you need here",
+		"noItemsMatching": "No items matching your search query!"
+	},
+	"item": {
+		"modify": "Modify this item",
+		"delete": "Delete this item",
+		"delete.confirm": "Are you sure you want to delete this item? This action is irreversible!",
+		"update.saved": "Item updated successfully"
+	},
+	"logIn": {
+		"logIn": "Log In",
+		"noAccount": "Don't have an account?",
+		"forgotPassword": "Forgot password?",
+		"noAccountWithThisEmail": "There is no account with this email",
+		"emailNotVerified": "Your email has not yet been verified. Please check your inbox and click the verification link to activate your account.",
+		"invalidCredentials": "Invalid credentials"
+	},
+	"signIn": {
+		"incorrectUsername": "Usernames can only consist of letters, numbers, and special characters!",
+		"usernameTooShort": "Usernames must be at least 6 characters long!",
+		"incorrectPassword": "Password must be at least 8 characters long!",
+		"create": "Create",
+		"createAccount": "Create an Account",
+		"alreadyHaveAccount": "Already have an account?",
+		"invalidEmail": "Invalid email",
+		"usernameExists": "This username is already taken!",
+		"success": "Sign-up successful! You can now log in."
+	},
+	"resetPassword": {
+		"connect": "Log in?",
+		"reset": "Reset",
+		"resetPassword": "Reset your password",
+		"errors": {
+			"passwordsDontMatch": "The passwords don't match!",
+			"passwordTooShort": "The password must be at least 8 characters long!"
+		},
+		"success": "Your password has been reset successfully!"
+	},
+	"planner": {
+		"the": "The",
+		"you": "you",
+		"willWear": "will wear",
+		"worn": "wore",
+		"noOutfitsThatDay": "You haven't worn any outfits that day yet.",
+		"modifyOutfitFotThe": "Modify an outfit for the",
+		"change": "Change",
+		"addOne": "Add one",
+		"noOutfits": "You haven't created any outfits yet.",
+		"addOutfitForThe": "Add an outfit for the",
+		"outfits": "Outfits",
+		"items": "Items"
+	},
+	"outfits": {
+		"noOutfitsCreated": "You haven't created any outfits yet",
+		"modifyOutfit": "Modify this outfit",
+		"deleteOutfit": "Delete this outfit",
+		"deleteOutfit.confirm": "Are you sure you want to delete this outfit ? This action is irreversible!",
+		"createOutfit": "Create one",
+		"share": {
+			"title": "Share this outfit",
+			"copy": "Copy link",
+			"public": "Share this outfit ?",
+			"error": "You are not authorized to view this outfit!",
+			"outfitBy": "by",
+			"shareKeyword": "Share"
+		}
+	},
+	"settings": {
+		"emailChange.success": "A confirmation email has been sent to you",
+		"emailChange.invalidEmail": "Invalid email",
+		"usernameChange.success": "Username changed successfully!",
+		"deleteAccount": "Delete account",
+		"deleteAccountConfirm": "Are you sure you want to delete your account? This action is irreversible!",
+		"error": "An error occurred",
+		"profilePictureChange": {
+			"success": "Profile picture changed successfully!",
+			"error": "An error occurred while changing your profile picture! Please try again later.",
+			"noImage": "Please upload an image!"
+		},
+		"bannerChange": {
+			"success": "Banner changed successfully!",
+			"error": "An error occurred while changing your banner! Please try again later.",
+			"noImage": "Please upload an image!"
+		}
+	},
+	"confirmEmailChange": {
+		"confirmNewEmail": "Confirm new email",
+		"invalidPassword": "Invalid password",
+		"invalidToken": "Email change request has expired or is invalid",
+		"emailChanged": "Your email has been changed successfully!"
+	},
+	"following": {
+		"unfollow": "Unfollow",
+		"unfollowConfirm": "Are you sure you want to unfollow {user}?",
+		"noFollowing": "You are not following anyone yet!"
+	}
+}

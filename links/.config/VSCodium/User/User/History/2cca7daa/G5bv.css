@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --background: #171717;
+  --bg-card: #334155;
+  --border: #1e293b;
+  --foreground: #f1f5f9;
+}
+
+body {
+  @apply bg-background text-foreground;
+}

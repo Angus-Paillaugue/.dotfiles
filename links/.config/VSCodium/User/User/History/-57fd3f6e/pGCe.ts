@@ -1,0 +1,12 @@
+export type { And } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/utils/and";
+export type { DoesExtend, IsObject, IsArray } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/utils/extends";
+export type { If } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/utils/if";
+export type { IntersectUnion } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/utils/intersectUnion";
+export type { IsNever } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/utils/isNever";
+export type { DeepMergeUnsafe } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/utils/merge";
+export type { Not } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/utils/not";
+export type { Or } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/utils/or";
+export type { Prettify } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/utils/prettify";
+export type { Tail } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/utils/tail";
+export type { UnionLast } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/utils/unionLast";
+export type { UnionPop } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/utils/unionPop";

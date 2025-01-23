@@ -1,0 +1,33 @@
+name: Deploy SvelteKit Site
+
+on:
+  push:
+    branches:
+      - main  # Change this if you use a different branch for production
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to Server
+        env:
+          HOST: 192.168.1.3
+          USER: root
+          PORT: 22
+        run: |
+          ssh -o StrictHostKeyChecking=no $USER@$HOST -p $PORT << 'EOF'
+            cd /mnt/hdd/Skill-Forge
+            git pull origin main
+            pnpm install
+            pnpm build
+            pm2 restart 5
+          EOF

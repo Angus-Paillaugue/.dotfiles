@@ -1,0 +1,48 @@
+import fs from 'node:fs/promises';
+import chalk from 'chalk';
+
+const PARAMS = {
+	checkEmptyFields: true,
+	missingTranslations: true,
+	snakeCase: true,
+};
+
+const GREEN = chalk.green;
+const RED = chalk.red;
+
+async function checkTranslations() {
+	let hasErrors = []
+	const translationFiles = await fs.readdir('messages');
+	const filePaths = translationFiles.map((file) => `messages/${file}`);
+
+	const translations = await Promise.all(
+		filePaths.map(async (filePath) => {
+			const content = await fs.readFile(filePath, 'utf-8');
+			return JSON.parse(content);
+		})
+	);
+
+	const allKeys = new Set();
+	translations.forEach((translation) => {
+		Object.keys(translation).forEach((key) => allKeys.add(key));
+	});
+
+	if (PARAMS.missingTranslations) {
+		translations.forEach((translation, index) => {
+			const missingKeys = [...allKeys].filter((key) => !(key in translation))
+			if (missingKeys.length > 0) {
+				hasErrors.push(RED('✖') + ` Missing keys in ${translationFiles[index]}:`);
+				missingKeys.forEach((key) => console.log(` - ${key}`));
+			}
+		});
+	}
+
+	if (hasErrors.length === 0) {
+		console.log(GREEN('✓') + ' All translations are OK!');
+	} else {
+		hasErrors.forEach((error) => console.log(error));
+		console.log(RED('✖') + ' Some translations are missing!');
+	}
+}
+
+checkTranslations();

@@ -1,0 +1,16 @@
+{
+  "name": "@repo/utils",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./utils.js",
+  "type": "module",
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.0"
+  },
+  "exports": {
+    ".": {
+      "svelte": "./utils.js"
+    }
+  }
+}

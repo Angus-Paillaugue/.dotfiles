@@ -1,0 +1,321 @@
+package modele;
+
+import java.time.LocalDate;
+import java.util.Objects;
+
+public class Personne {
+<<<<<<< HEAD
+	private String nom;
+	private String prenom;
+	private int idLocataire;
+	private LocalDate dateNaissance;
+	private String lieuNaissance;
+	private SituationFamiliale situationFamiliale;
+	private String profession;
+	private String employeur;
+	private TypeDeContratDeTravail typeDeContratDeTravail;
+	private float remunerationMensuelleNette;
+	private float autresRevenus;
+	private String email;
+	private String telephone;
+	private Adresse adresse;
+
+	public Personne(
+			String nom,
+			String prenom,
+			int idLocataire,
+			LocalDate dateNaissance,
+			String lieuNaissance,
+			SituationFamiliale situationFamiliale,
+			String profession,
+			String employeur,
+			TypeDeContratDeTravail typeDeContratDeTravail,
+			float remunerationMensuelleNette,
+			float autresRevenus,
+			String email,
+			String telephone,
+			Adresse adresse) {
+		this.nom = nom;
+		this.prenom = prenom;
+		this.idLocataire = idLocataire;
+		this.dateNaissance = dateNaissance;
+		this.lieuNaissance = lieuNaissance;
+		this.situationFamiliale = situationFamiliale;
+		this.profession = profession;
+		this.employeur = employeur;
+		this.typeDeContratDeTravail = typeDeContratDeTravail;
+		this.remunerationMensuelleNette = remunerationMensuelleNette;
+		this.autresRevenus = autresRevenus;
+		this.email = email;
+		this.telephone = telephone;
+		this.adresse = adresse;
+	}
+=======
+  // private int id;
+  private String nom;
+  private String prenom;
+  private int idLocataire;
+  private LocalDate dateNaissance;
+  private String lieuNaissance;
+  private SituationFamiliale situationFamiliale;
+  private String profession;
+  private String employeur;
+  private TypeDeContratDeTravail typeDeContratDeTravail;
+  private float remunerationMensuelleNette;
+  private float autresRevenus;
+  private String email;
+  private String telephone;
+  private Adresse adresse;
+
+  public Personne(
+      String nom,
+      String prenom,
+      LocalDate dateNaissance,
+      String lieuNaissance,
+      SituationFamiliale situationFamiliale,
+      String profession,
+      String employeur,
+      TypeDeContratDeTravail typeDeContratDeTravail,
+      float remunerationMensuelleNette,
+      float autresRevenus,
+      String email,
+      String telephone,
+      Adresse adresse) {
+    this.nom = nom;
+    this.prenom = prenom;
+    this.dateNaissance = dateNaissance;
+    this.lieuNaissance = lieuNaissance;
+    this.situationFamiliale = situationFamiliale;
+    this.profession = profession;
+    this.employeur = employeur;
+    this.typeDeContratDeTravail = typeDeContratDeTravail;
+    this.remunerationMensuelleNette = remunerationMensuelleNette;
+    this.autresRevenus = autresRevenus;
+    this.email = email;
+    this.telephone = telephone;
+    this.adresse = adresse;
+  }
+
+  /* public Personne(
+      int id,
+      String nom,
+      String prenom,
+      int idLocataire,
+      LocalDate dateNaissance,
+      String lieuNaissance,
+      SituationFamiliale situationFamiliale,
+      String profession,
+      String employeur,
+      TypeDeContratDeTravail typeDeContratDeTravail,
+      float remunerationMensuelleNette,
+      float autresRevenus,
+      String email,
+      String telephone,
+      Adresse adresse) {
+    this.id = id;
+    this.nom = nom;
+    this.prenom = prenom;
+    this.idLocataire = idLocataire;
+    this.dateNaissance = dateNaissance;
+    this.lieuNaissance = lieuNaissance;
+    this.situationFamiliale = situationFamiliale;
+    this.profession = profession;
+    this.employeur = employeur;
+    this.typeDeContratDeTravail = typeDeContratDeTravail;
+    this.remunerationMensuelleNette = remunerationMensuelleNette;
+    this.autresRevenus = autresRevenus;
+    this.email = email;
+    this.telephone = telephone;
+    this.adresse = adresse;
+  }*/
+
+  /*public int getId() {
+    return this.id;
+  }*/
+
+  public void setIdLocataire(int id) {
+    this.idLocataire = id;
+  }
+>>>>>>> origin/DAO
+
+	public String getNom() {
+		return this.nom;
+	}
+
+	public String getPrenom() {
+		return this.prenom;
+	}
+
+	public int getIdLocataire() {
+		return this.idLocataire;
+	}
+
+	public LocalDate getDateNaissance() {
+		return this.dateNaissance;
+	}
+
+	public String getLieuNaissance() {
+		return this.lieuNaissance;
+	}
+
+	public SituationFamiliale getSituationFamiliale() {
+		return this.situationFamiliale;
+	}
+
+	public String getProfession() {
+		return this.profession;
+	}
+
+	public String getEmployeur() {
+		return this.employeur;
+	}
+
+	public TypeDeContratDeTravail getTypeDeContratDeTravail() {
+		return this.typeDeContratDeTravail;
+	}
+
+	public float getRemunerationMensuelleNette() {
+		return this.remunerationMensuelleNette;
+	}
+
+  public float getAutresRevenus() {
+    return this.autresRevenus;
+  }
+
+  public String getEmail() {
+    return this.email;
+  }
+
+<<<<<<< HEAD
+	public Adresse getAdresse() {
+		return this.adresse;
+	}
+
+	// retourne le motant des revenus totaux d'une personne.
+	public float totalRevenus() {
+		return this.getRemunerationMensuelleNette() + this.getAutresRevenus();
+	}
+
+	@Override
+	public String toString() {
+		return this.nom + " " + this.prenom;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(adresse, autresRevenus, dateNaissance, email, employeur, idLocataire, lieuNaissance, nom,
+				prenom, profession, remunerationMensuelleNette, situationFamiliale, telephone, typeDeContratDeTravail);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Personne other = (Personne) obj;
+		return Objects.equals(adresse, other.adresse)
+				&& Float.floatToIntBits(autresRevenus) == Float.floatToIntBits(other.autresRevenus)
+				&& Objects.equals(dateNaissance, other.dateNaissance) && Objects.equals(email, other.email)
+				&& Objects.equals(employeur, other.employeur) && idLocataire == other.idLocataire
+				&& Objects.equals(lieuNaissance, other.lieuNaissance) && Objects.equals(nom, other.nom)
+				&& Objects.equals(prenom, other.prenom) && Objects.equals(profession, other.profession)
+				&& Float.floatToIntBits(remunerationMensuelleNette) == Float
+						.floatToIntBits(other.remunerationMensuelleNette)
+				&& situationFamiliale == other.situationFamiliale && Objects.equals(telephone, other.telephone)
+				&& typeDeContratDeTravail == other.typeDeContratDeTravail;
+	}
+
+
+
+=======
+  public String getTelephone() {
+    return this.telephone;
+  }
+
+  public Adresse getAdresse() {
+    return this.adresse;
+  }
+
+  public void setId(int id) {
+    this.idLocataire = id;
+  }
+
+  public void setAdresse(Adresse adresse) {
+    this.adresse = adresse;
+  }
+
+  // retourne le motant des revenus totaux d'une personne.
+  public float totalRevenus() {
+    return this.getRemunerationMensuelleNette() + this.getAutresRevenus();
+  }
+
+  public String toString() {
+    return this.nom + " " + this.prenom;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(
+        adresse,
+        autresRevenus,
+        dateNaissance,
+        email,
+        employeur,
+        idLocataire,
+        lieuNaissance,
+        nom,
+        prenom,
+        profession,
+        remunerationMensuelleNette,
+        situationFamiliale,
+        telephone,
+        typeDeContratDeTravail);
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    Personne other = (Personne) obj;
+    System.out.println(Objects.equals(adresse, other.adresse));
+    System.out.println(
+        Float.floatToIntBits(autresRevenus) == Float.floatToIntBits(other.autresRevenus));
+    System.out.println(Objects.equals(dateNaissance, other.dateNaissance));
+    System.out.println(Objects.equals(email, other.email));
+    System.out.println(Objects.equals(employeur, other.employeur));
+    System.out.println(Objects.equals(idLocataire, other.idLocataire));
+    System.out.println(Objects.equals(lieuNaissance, other.lieuNaissance));
+    System.out.println(Objects.equals(nom, other.nom));
+    System.out.println(Objects.equals(prenom, other.prenom));
+    System.out.println(Objects.equals(profession, other.profession));
+    System.out.println(
+        Objects.equals(
+            Float.floatToIntBits(remunerationMensuelleNette),
+            Float.floatToIntBits(other.remunerationMensuelleNette)));
+    System.out.println(Objects.equals(situationFamiliale, other.situationFamiliale));
+    System.out.println(Objects.equals(telephone, other.telephone));
+    System.out.println(Objects.equals(typeDeContratDeTravail, other.typeDeContratDeTravail));
+
+    return Objects.equals(adresse, other.adresse)
+        && Float.floatToIntBits(autresRevenus) == Float.floatToIntBits(other.autresRevenus)
+        && Objects.equals(dateNaissance, other.dateNaissance)
+        && Objects.equals(email, other.email)
+        && Objects.equals(employeur, other.employeur)
+        && Objects.equals(idLocataire, other.idLocataire)
+        && Objects.equals(lieuNaissance, other.lieuNaissance)
+        && Objects.equals(nom, other.nom)
+        && Objects.equals(prenom, other.prenom)
+        && Objects.equals(profession, other.profession)
+        && Objects.equals(
+            Float.floatToIntBits(remunerationMensuelleNette),
+            Float.floatToIntBits(other.remunerationMensuelleNette))
+        && Objects.equals(situationFamiliale, other.situationFamiliale)
+        && Objects.equals(telephone, other.telephone)
+        && Objects.equals(typeDeContratDeTravail, other.typeDeContratDeTravail);
+  }
+>>>>>>> origin/DAO
+}

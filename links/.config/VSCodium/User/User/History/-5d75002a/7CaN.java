@@ -1,0 +1,72 @@
+package modele;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Location {
+
+	public Date dateContrat;
+	private Adresse lieuDeContrat;
+	private List<Personne> locataires;
+	private List<Personne> garants;
+	private float caution;
+
+	// Constructeur pour une seule personne
+	public Location(Personne locataire1, List<Personne> garants, Date dateContrat, Adresse lieuDeContrat, float caution) {
+
+		this.locataires = new ArrayList<Personne>();
+		this.locataires.add(locataire1);
+		this.garants = new ArrayList<Personne>();
+		this.dateContrat = dateContrat;
+		this.lieuDeContrat = lieuDeContrat;
+		this.caution = caution;
+	}
+
+	// Contructeur pour deux peronnes
+	public Location(Personne locataire1, Personne locataire2, List<Personne> garants, Date dateContrat,
+			Adresse lieuDeContrat, float caution) {
+		this.locataires = new ArrayList<Personne>();
+		this.locataires.add(locataire1);
+		this.locataires.add(locataire2);
+		this.garants = new ArrayList<Personne>();
+		this.dateContrat = dateContrat;
+		this.lieuDeContrat = lieuDeContrat;
+		this.caution = caution;
+
+	}
+
+	public Date getDateContrat() {
+		return this.dateContrat;
+	}
+
+	public Adresse getLieuDeContrat() {
+		return this.lieuDeContrat;
+	}
+
+	public List<Personne> getLocataires() {
+		return this.locataires;
+	}
+
+	public List<Personne> getGarants() {
+		return this.garants;
+	}
+
+	public float getCaution() {
+		return this.caution;
+	}
+
+	public void addGarant(Personne garant) {
+		this.garants.add(garant);
+	}
+
+	public float TotalRevenusLocataires() {
+		int total = 0;
+		for (Personne l : this.getGarants()) {
+			total += l.totalRevenus();
+		}
+		
+		return total;
+	}
+
+}

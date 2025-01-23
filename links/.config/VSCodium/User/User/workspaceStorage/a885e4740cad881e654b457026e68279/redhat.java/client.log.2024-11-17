@@ -1,0 +1,3596 @@
+{
+  message: "Use the JDK from 'PATH' as the initial default project JDK.",
+  level: 'info',
+  timestamp: '2024-11-17 18:34:08.871'
+}
+{
+  message: 'Starting Java server with: /home/angus/.vscode/extensions/redhat.java-1.36.0-linux-x64/jre/17.0.13-linux-x86_64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/angus/.vscode/extensions/redhat.java-1.36.0-linux-x64/lombok/lombok-1.18.35.jar -jar /home/angus/.vscode/extensions/redhat.java-1.36.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar -configuration /home/angus/.config/Code/User/globalStorage/redhat.java/1.36.0/config_ss_linux -data /home/angus/.config/Code/User/workspaceStorage/a885e4740cad881e654b457026e68279/redhat.java/ss_ws',
+  level: 'info',
+  timestamp: '2024-11-17 18:34:08.881'
+}
+{
+  message: 'Starting Java server with: /home/angus/.vscode/extensions/redhat.java-1.36.0-linux-x64/jre/17.0.13-linux-x86_64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/angus/.vscode/extensions/redhat.java-1.36.0-linux-x64/lombok/lombok-1.18.35.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/angus/.config/Code/User/workspaceStorage/a885e4740cad881e654b457026e68279/redhat.java -Daether.dependencyCollector.impl=bf -jar /home/angus/.vscode/extensions/redhat.java-1.36.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar -configuration /home/angus/.config/Code/User/globalStorage/redhat.java/1.36.0/config_linux -data /home/angus/.config/Code/User/workspaceStorage/a885e4740cad881e654b457026e68279/redhat.java/jdt_ws',
+  level: 'info',
+  timestamp: '2024-11-17 18:34:09.195'
+}
+{
+  message: 'Nov 17, 2024 6:34:09 PM org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.servlet.LogbackServletContainerInitializer of service jakarta.servlet.ServletContainerInitializer in bundle ch.qos.logback.classic\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:34:09.763'
+}
+{
+  message: 'Nov 17, 2024 6:34:09 PM org.apache.aries.spifly.BaseActivator log\n' +
+    'INFO: Registered provider ch.qos.logback.classic.spi.LogbackServiceProvider of service org.slf4j.spi.SLF4JServiceProvider in bundle ch.qos.logback.classic\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:34:09.765'
+}
+{
+  message: '[Error - 6:34:11 PM] Nov 17, 2024, 6:34:11 PM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:207)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getJUnit4LibraryEntry(BuildPathSupport.java:410)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:122)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3207)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3095)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3153)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2129)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:34:11.375'
+}
+{
+  message: '[Error - 6:34:11 PM] Nov 17, 2024, 6:34:11 PM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:220)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getJUnit4LibraryEntry(BuildPathSupport.java:410)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:122)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3207)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3095)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3153)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2129)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:34:11.376'
+}
+{
+  message: '[Error - 6:34:11 PM] Nov 17, 2024, 6:34:11 PM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:207)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getHamcrestLibraryEntry(BuildPathSupport.java:425)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:123)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3207)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3095)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3153)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2129)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:34:11.377'
+}
+{
+  message: '[Error - 6:34:11 PM] Nov 17, 2024, 6:34:11 PM Error\n' +
+    'org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    'java.io.FileNotFoundException: org.eclipse.equinox.simpleconfigurator/bundles.info (No such file or directory)\n' +
+    '\tat java.base/java.io.FileInputStream.open0(Native Method)\n' +
+    '\tat java.base/java.io.FileInputStream.open(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/java.io.FileInputStream.<init>(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.connect(Unknown Source)\n' +
+    '\tat java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(Unknown Source)\n' +
+    '\tat java.base/java.net.URL.openStream(Unknown Source)\n' +
+    '\tat org.eclipse.equinox.internal.simpleconfigurator.manipulator.SimpleConfiguratorManipulatorImpl.loadConfiguration(SimpleConfiguratorManipulatorImpl.java:364)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.P2Utils.findBundle(P2Utils.java:93)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:89)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getBundleLocation(BuildPathSupport.java:85)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport$JUnitPluginDescription.getLibraryEntry(BuildPathSupport.java:220)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.BuildPathSupport.getHamcrestLibraryEntry(BuildPathSupport.java:425)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.getNewContainer(JUnitContainerInitializer.java:123)\n' +
+    '\tat org.eclipse.jdt.internal.junit.buildpath.JUnitContainerInitializer.initialize(JUnitContainerInitializer.java:108)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3207)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:3095)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2457)\n' +
+    '\tat org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2482)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3153)\n' +
+    '\tat org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2129)\n' +
+    '\tat org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4752)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin$1.run(JavaLanguageServerPlugin.java:186)\n' +
+    '\tat org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:34:11.381'
+}
+{
+  message: 'Nov 17, 2024 6:34:16 PM com.microsoft.java.debug.plugin.internal.JavaDebuggerServerPlugin start\n' +
+    'INFO: Starting com.microsoft.java.debug.plugin\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:34:16.692'
+}
+{
+  message: 'Nov 17, 2024 6:34:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:34:16.817'
+}
+{
+  message: 'Nov 17, 2024 6:34:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 22\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:34:17.240'
+}
+{
+  message: 'Nov 17, 2024 6:35:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 223\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:12.894'
+}
+{
+  message: 'Nov 17, 2024 6:35:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    'java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getFullyCoveredNodes(QuickAssistProcessor.java:391)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:241)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:37.165'
+}
+{
+  message: '[Error - 6:35:37 PM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:37.168'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getFullyCoveredNodes(QuickAssistProcessor.java:391)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:241)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:37.168'
+}
+{
+  message: 'Nov 17, 2024 6:35:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    'java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getFullyCoveredNodes(QuickAssistProcessor.java:391)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:241)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:37.766'
+}
+{
+  message: '[Error - 6:35:37 PM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:37.767'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getFullyCoveredNodes(QuickAssistProcessor.java:391)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:241)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:37.767'
+}
+{
+  message: 'Nov 17, 2024 6:35:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    'java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getFullyCoveredNodes(QuickAssistProcessor.java:391)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:241)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:38.763'
+}
+{
+  message: '[Error - 6:35:38 PM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:38.765'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getFullyCoveredNodes(QuickAssistProcessor.java:391)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:241)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:38.765'
+}
+{
+  message: 'Nov 17, 2024 6:35:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    'java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getFullyCoveredNodes(QuickAssistProcessor.java:391)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:241)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:39.082'
+}
+{
+  message: '[Error - 6:35:39 PM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:39.083'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ASTNode.accept(org.eclipse.jdt.core.dom.ASTVisitor)" because "coveringNode" is null\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getFullyCoveredNodes(QuickAssistProcessor.java:391)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:241)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:39.084'
+}
+{
+  message: 'Nov 17, 2024 6:35:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 514\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:53.520'
+}
+{
+  message: 'Nov 17, 2024 6:35:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 521\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:35:53.815'
+}
+{
+  message: 'Nov 17, 2024 6:36:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 762\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:36:38.058'
+}
+{
+  message: '[Error - 6:37:05 PM] Nov 17, 2024, 6:37:05 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:37:05.847'
+}
+{
+  message: 'Nov 17, 2024 6:37:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 1052\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:37:07.262'
+}
+{
+  message: '[Error - 6:39:16 PM] Nov 17, 2024, 6:39:16 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:39:16.233'
+}
+{
+  message: '[Error - 6:39:19 PM] Nov 17, 2024, 6:39:19 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:39:19.799'
+}
+{
+  message: '[Error - 6:39:19 PM] Nov 17, 2024, 6:39:19 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:39:19.860'
+}
+{
+  message: '[Error - 6:39:21 PM] Nov 17, 2024, 6:39:21 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:39:21.244'
+}
+{
+  message: '[Error - 6:39:21 PM] Nov 17, 2024, 6:39:21 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:39:21.254'
+}
+{
+  message: '[Error - 6:39:38 PM] Nov 17, 2024, 6:39:38 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:39:38.414'
+}
+{
+  message: '[Error - 6:39:41 PM] Nov 17, 2024, 6:39:41 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:39:41.984'
+}
+{
+  message: '[Error - 6:39:45 PM] Nov 17, 2024, 6:39:45 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:39:45.494'
+}
+{
+  message: '[Error - 6:39:50 PM] Nov 17, 2024, 6:39:50 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:39:50.057'
+}
+{
+  message: '[Error - 6:39:59 PM] Nov 17, 2024, 6:39:59 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:39:59.420'
+}
+{
+  message: 'Nov 17, 2024 6:40:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 1828\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:40:00.821'
+}
+{
+  message: 'Nov 17, 2024 6:40:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 1897\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:40:06.054'
+}
+{
+  message: 'Nov 17, 2024 6:40:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 1945\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:40:09.885'
+}
+{
+  message: 'Nov 17, 2024 6:40:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 2027\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:40:54.635'
+}
+{
+  message: 'Nov 17, 2024 6:41:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 2113\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:41:23.963'
+}
+{
+  message: 'Nov 17, 2024 6:41:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 2126\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:41:24.900'
+}
+{
+  message: 'Nov 17, 2024 6:41:26 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 2149\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:41:26.564'
+}
+{
+  message: '[Error - 6:41:40 PM] Nov 17, 2024, 6:41:40 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:41:40.739'
+}
+{
+  message: '[Error - 6:42:01 PM] Nov 17, 2024, 6:42:01 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:42:01.109'
+}
+{
+  message: 'Nov 17, 2024 6:43:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 2728\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:43:57.526'
+}
+{
+  message: 'Nov 17, 2024 6:44:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 2815\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:44:14.597'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 2848, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 18:44:18.769'
+}
+{
+  message: 'Nov 17, 2024 6:44:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 2849\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:44:19.076'
+}
+{
+  message: 'Nov 17, 2024 6:44:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 2873\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:44:23.843'
+}
+{
+  message: 'Nov 17, 2024 6:44:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 2919\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:44:34.684'
+}
+{
+  message: 'Nov 17, 2024 6:44:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 2922\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:44:34.788'
+}
+{
+  message: '[Error - 6:44:55 PM] Nov 17, 2024, 6:44:55 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:44:55.964'
+}
+{
+  message: '[Error - 6:44:55 PM] Nov 17, 2024, 6:44:55 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:44:55.993'
+}
+{
+  message: '[Error - 6:44:56 PM] Nov 17, 2024, 6:44:56 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:44:56.227'
+}
+{
+  message: '[Error - 6:44:56 PM] Nov 17, 2024, 6:44:56 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:44:56.237'
+}
+{
+  message: 'Nov 17, 2024 6:45:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 3093\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:45:07.693'
+}
+{
+  message: '[Error - 6:45:29 PM] Nov 17, 2024, 6:45:29 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:45:29.717'
+}
+{
+  message: '[Error - 6:45:30 PM] Nov 17, 2024, 6:45:30 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:45:30.387'
+}
+{
+  message: '[Error - 6:48:18 PM] Nov 17, 2024, 6:48:18 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:48:18.997'
+}
+{
+  message: '[Error - 6:48:20 PM] Nov 17, 2024, 6:48:20 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:48:20.312'
+}
+{
+  message: 'Nov 17, 2024 6:48:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 3590\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:48:23.570'
+}
+{
+  message: 'Nov 17, 2024 6:48:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 3608\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:48:24.963'
+}
+{
+  message: 'Nov 17, 2024 6:48:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 3610\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:48:24.969'
+}
+{
+  message: 'Nov 17, 2024 6:48:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 3613\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:48:24.976'
+}
+{
+  message: 'Nov 17, 2024 6:48:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 3624\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:48:25.764'
+}
+{
+  message: '[Error - 6:51:00 PM] Nov 17, 2024, 6:51:00 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:51:00.086'
+}
+{
+  message: 'Nov 17, 2024 6:53:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4136\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:53:14.635'
+}
+{
+  message: 'Nov 17, 2024 6:53:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4138\n' +
+    'Nov 17, 2024 6:53:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4137\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:53:14.641'
+}
+{
+  message: 'Nov 17, 2024 6:53:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4203\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:53:21.590'
+}
+{
+  message: 'Nov 17, 2024 6:53:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4204\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:53:21.591'
+}
+{
+  message: 'Nov 17, 2024 6:55:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4862\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:55:44.947'
+}
+{
+  message: 'Nov 17, 2024 6:55:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 4935\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:55:54.033'
+}
+{
+  message: 'Nov 17, 2024 6:56:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5144\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:56:20.152'
+}
+{
+  message: 'Nov 17, 2024 6:56:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5158\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:56:20.809'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 5164, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 18:56:21.072'
+}
+{
+  message: 'Nov 17, 2024 6:56:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5424\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:56:51.428'
+}
+{
+  message: 'Nov 17, 2024 6:56:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5425\n' +
+    'Nov 17, 2024 6:56:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5426\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:56:51.892'
+}
+{
+  message: 'Nov 17, 2024 6:56:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5427\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:56:51.952'
+}
+{
+  message: 'Nov 17, 2024 6:56:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5428\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:56:51.953'
+}
+{
+  message: 'Nov 17, 2024 6:56:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5431\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:56:51.955'
+}
+{
+  message: 'Nov 17, 2024 6:56:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5432\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:56:51.997'
+}
+{
+  message: 'Nov 17, 2024 6:56:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5433\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:56:51.998'
+}
+{
+  message: 'Nov 17, 2024 6:56:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5435\n' +
+    'Nov 17, 2024 6:56:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5434\n' +
+    'Nov 17, 2024 6:56:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5437\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:56:52.000'
+}
+{
+  message: 'Nov 17, 2024 6:56:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5439\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:56:52.001'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 5484, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 18:56:57.711'
+}
+{
+  message: 'Nov 17, 2024 6:57:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 5578\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:57:08.258'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 5605, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 18:57:10.563'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 5795, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 18:57:40.737'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 6079, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 18:58:39.262'
+}
+{
+  message: '[Error - 6:58:40 PM] Nov 17, 2024, 6:58:40 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:58:40.292'
+}
+{
+  message: 'Nov 17, 2024 6:59:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6181\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:59:22.100'
+}
+{
+  message: 'Nov 17, 2024 6:59:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6182\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:59:22.158'
+}
+{
+  message: 'Nov 17, 2024 6:59:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6190\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:59:22.598'
+}
+{
+  message: 'Nov 17, 2024 6:59:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6191\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:59:22.600'
+}
+{
+  message: 'Nov 17, 2024 6:59:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6324\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:59:33.135'
+}
+{
+  message: 'Nov 17, 2024 6:59:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6327\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:59:33.349'
+}
+{
+  message: 'Nov 17, 2024 6:59:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6381\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:59:40.394'
+}
+{
+  message: 'Nov 17, 2024 6:59:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6457\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:59:45.415'
+}
+{
+  message: 'Nov 17, 2024 6:59:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6478\n',
+  level: 'info',
+  timestamp: '2024-11-17 18:59:46.501'
+}
+{
+  message: '[Error - 6:59:51 PM] Nov 17, 2024, 6:59:51 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 18:59:51.624'
+}
+{
+  message: 'Nov 17, 2024 7:00:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6569\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:00:00.430'
+}
+{
+  message: '[Error - 7:00:05 PM] Nov 17, 2024, 7:00:05 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:00:05.371'
+}
+{
+  message: 'Nov 17, 2024 7:00:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6638\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:00:09.079'
+}
+{
+  message: 'Nov 17, 2024 7:00:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6716\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:00:46.248'
+}
+{
+  message: 'Nov 17, 2024 7:01:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 6943\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:01:19.291'
+}
+{
+  message: 'Nov 17, 2024 7:01:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7070\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:01:47.045'
+}
+{
+  message: '[Error - 7:01:49 PM] Nov 17, 2024, 7:01:49 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:01:49.757'
+}
+{
+  message: 'Nov 17, 2024 7:02:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7179\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:02:27.844'
+}
+{
+  message: 'Nov 17, 2024 7:03:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7596\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:03:55.239'
+}
+{
+  message: 'Nov 17, 2024 7:04:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7656\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:04:20.532'
+}
+{
+  message: 'Nov 17, 2024 7:05:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 7849\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:05:03.175'
+}
+{
+  message: '[Error - 7:05:26 PM] Nov 17, 2024, 7:05:26 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:05:26.189'
+}
+{
+  message: 'Nov 17, 2024 7:06:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8019\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:06:09.511'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 8040, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 19:06:16.716'
+}
+{
+  message: 'Nov 17, 2024 7:06:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8122\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:06:35.965'
+}
+{
+  message: 'Nov 17, 2024 7:07:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8220\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:07:52.371'
+}
+{
+  message: '[Error - 7:08:01 PM] Nov 17, 2024, 7:08:01 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:08:01.268'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 8249, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 19:08:01.304'
+}
+{
+  message: '[Error - 7:08:01 PM] Nov 17, 2024, 7:08:01 PM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-17 19:08:01.484'
+}
+{
+  message: '[Error - 7:08:37 PM] Nov 17, 2024, 7:08:37 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:08:37.608'
+}
+{
+  message: '[Error - 7:08:37 PM] Nov 17, 2024, 7:08:37 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:08:37.618'
+}
+{
+  message: '[Error - 7:08:37 PM] Nov 17, 2024, 7:08:37 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:08:37.653'
+}
+{
+  message: 'Nov 17, 2024 7:09:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8517\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:09:15.047'
+}
+{
+  message: 'Nov 17, 2024 7:09:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8524\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:09:15.509'
+}
+{
+  message: 'Nov 17, 2024 7:10:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8628\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:10:38.393'
+}
+{
+  message: '[Error - 7:10:42 PM] Nov 17, 2024, 7:10:42 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:10:42.857'
+}
+{
+  message: 'Nov 17, 2024 7:11:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8799\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:11:20.770'
+}
+{
+  message: 'Nov 17, 2024 7:11:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 8800\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:11:20.812'
+}
+{
+  message: '[Error - 7:11:42 PM] Nov 17, 2024, 7:11:42 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:11:42.600'
+}
+{
+  message: '[Error - 7:11:43 PM] Nov 17, 2024, 7:11:43 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:11:43.499'
+}
+{
+  message: 'Nov 17, 2024 7:12:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 9104\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:12:16.342'
+}
+{
+  message: '[Error - 7:12:32 PM] Nov 17, 2024, 7:12:32 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:12:32.198'
+}
+{
+  message: 'Nov 17, 2024 7:12:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 9257\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:12:34.671'
+}
+{
+  message: '[Error - 7:12:35 PM] Nov 17, 2024, 7:12:35 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:12:35.047'
+}
+{
+  message: '[Error - 7:12:35 PM] Nov 17, 2024, 7:12:35 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:12:35.102'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 9282, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 19:12:37.531'
+}
+{
+  message: 'Nov 17, 2024 7:12:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 9297\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:12:39.682'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 9355, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 19:13:04.270'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 9409, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 19:13:25.808'
+}
+{
+  message: '[Error - 7:13:26 PM] Nov 17, 2024, 7:13:26 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:13:26.549'
+}
+{
+  message: 'Nov 17, 2024 7:14:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 9570\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:14:05.946'
+}
+{
+  message: '[Error - 7:16:05 PM] Nov 17, 2024, 7:16:05 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:16:05.709'
+}
+{
+  message: '[Error - 7:19:13 PM] Nov 17, 2024, 7:19:13 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:19:13.506'
+}
+{
+  message: '[Error - 7:19:13 PM] Nov 17, 2024, 7:19:13 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:19:13.512'
+}
+{
+  message: '[Error - 7:19:13 PM] Nov 17, 2024, 7:19:13 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:19:13.526'
+}
+{
+  message: '[Error - 7:19:13 PM] Nov 17, 2024, 7:19:13 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:19:13.626'
+}
+{
+  message: '[Error - 7:19:19 PM] Nov 17, 2024, 7:19:19 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:19:19.060'
+}
+{
+  message: '[Error - 7:19:19 PM] Nov 17, 2024, 7:19:19 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:19:19.169'
+}
+{
+  message: '[Error - 7:19:19 PM] Nov 17, 2024, 7:19:19 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:19:19.184'
+}
+{
+  message: '[Error - 7:19:19 PM] Nov 17, 2024, 7:19:19 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:19:19.190'
+}
+{
+  message: '[Error - 7:19:19 PM] Nov 17, 2024, 7:19:19 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:19:19.546'
+}
+{
+  message: '[Error - 7:19:24 PM] Nov 17, 2024, 7:19:24 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:19:24.096'
+}
+{
+  message: '[Error - 7:19:24 PM] Nov 17, 2024, 7:19:24 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:19:24.444'
+}
+{
+  message: '[Error - 7:19:24 PM] Nov 17, 2024, 7:19:24 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:19:24.647'
+}
+{
+  message: 'Nov 17, 2024 7:20:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 10012\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:20:46.348'
+}
+{
+  message: 'Nov 17, 2024 7:22:13 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 10277\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:22:13.883'
+}
+{
+  message: '[Error - 7:22:28 PM] Nov 17, 2024, 7:22:28 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:22:28.945'
+}
+{
+  message: '[Error - 7:22:29 PM] Nov 17, 2024, 7:22:29 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:22:29.001'
+}
+{
+  message: '[Error - 7:23:19 PM] Nov 17, 2024, 7:23:19 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:23:19.296'
+}
+{
+  message: '[Error - 7:24:42 PM] Nov 17, 2024, 7:24:42 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:24:42.523'
+}
+{
+  message: '[Error - 7:24:42 PM] Nov 17, 2024, 7:24:42 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:24:42.705'
+}
+{
+  message: '[Error - 7:25:02 PM] Nov 17, 2024, 7:25:02 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:25:02.556'
+}
+{
+  message: 'Nov 17, 2024 7:27:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 11199\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:27:03.839'
+}
+{
+  message: '[Error - 7:27:36 PM] Nov 17, 2024, 7:27:36 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:27:36.162'
+}
+{
+  message: '[Error - 7:27:42 PM] Nov 17, 2024, 7:27:42 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:27:42.792'
+}
+{
+  message: '[Error - 7:28:16 PM] Nov 17, 2024, 7:28:16 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:28:16.005'
+}
+{
+  message: '[Error - 7:28:16 PM] Nov 17, 2024, 7:28:16 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:28:16.199'
+}
+{
+  message: '[Error - 7:28:21 PM] Nov 17, 2024, 7:28:21 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:28:21.005'
+}
+{
+  message: 'Nov 17, 2024 7:30:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12135\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:30:28.286'
+}
+{
+  message: 'Nov 17, 2024 7:31:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12271\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:31:53.497'
+}
+{
+  message: 'Nov 17, 2024 7:31:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12273\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:31:53.563'
+}
+{
+  message: 'Nov 17, 2024 7:31:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12281\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:31:53.763'
+}
+{
+  message: '[Error - 7:33:06 PM] Nov 17, 2024, 7:33:06 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:33:06.470'
+}
+{
+  message: '[Error - 7:33:06 PM] Nov 17, 2024, 7:33:06 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:33:06.827'
+}
+{
+  message: 'Nov 17, 2024 7:33:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12501\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:33:36.912'
+}
+{
+  message: 'Nov 17, 2024 7:33:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12502\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:33:36.975'
+}
+{
+  message: 'Nov 17, 2024 7:33:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12505\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:33:37.000'
+}
+{
+  message: 'Nov 17, 2024 7:33:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12521\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:33:37.684'
+}
+{
+  message: 'Nov 17, 2024 7:33:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12561\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:33:39.967'
+}
+{
+  message: 'Nov 17, 2024 7:33:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12580\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:33:41.411'
+}
+{
+  message: '[Error - 7:33:43 PM] Nov 17, 2024, 7:33:43 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:33:43.104'
+}
+{
+  message: '[Error - 7:33:43 PM] Nov 17, 2024, 7:33:43 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:33:43.183'
+}
+{
+  message: 'Nov 17, 2024 7:34:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12711\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:34:17.578'
+}
+{
+  message: '[Error - 7:34:22 PM] Nov 17, 2024, 7:34:22 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:34:22.063'
+}
+{
+  message: '[Error - 7:35:34 PM] Nov 17, 2024, 7:35:34 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:35:34.281'
+}
+{
+  message: '[Error - 7:35:34 PM] Nov 17, 2024, 7:35:34 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:35:34.293'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 12852, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 19:35:37.845'
+}
+{
+  message: '[Error - 7:35:42 PM] Nov 17, 2024, 7:35:42 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:35:42.972'
+}
+{
+  message: '[Error - 7:36:12 PM] Nov 17, 2024, 7:36:12 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:36:12.727'
+}
+{
+  message: '[Error - 7:36:12 PM] Nov 17, 2024, 7:36:12 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:36:12.745'
+}
+{
+  message: '[Error - 7:36:12 PM] Nov 17, 2024, 7:36:12 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:36:12.775'
+}
+{
+  message: 'Nov 17, 2024 7:36:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 12998\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:36:12.803'
+}
+{
+  message: '[Error - 7:36:35 PM] Nov 17, 2024, 7:36:35 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:36:35.048'
+}
+{
+  message: '[Error - 7:36:35 PM] Nov 17, 2024, 7:36:35 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:36:35.073'
+}
+{
+  message: '[Error - 7:37:27 PM] Nov 17, 2024, 7:37:27 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:27.590'
+}
+{
+  message: '[Error - 7:37:29 PM] Nov 17, 2024, 7:37:29 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:29.842'
+}
+{
+  message: '[Error - 7:37:29 PM] Nov 17, 2024, 7:37:29 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:29.877'
+}
+{
+  message: '[Error - 7:37:29 PM] Nov 17, 2024, 7:37:29 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:29.987'
+}
+{
+  message: '[Error - 7:37:31 PM] Nov 17, 2024, 7:37:31 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:31.499'
+}
+{
+  message: '[Error - 7:37:34 PM] Nov 17, 2024, 7:37:34 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:34.376'
+}
+{
+  message: '[Error - 7:37:34 PM] Nov 17, 2024, 7:37:34 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:34.458'
+}
+{
+  message: '[Error - 7:37:34 PM] Nov 17, 2024, 7:37:34 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:34.482'
+}
+{
+  message: '[Error - 7:37:34 PM] Nov 17, 2024, 7:37:34 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:34.547'
+}
+{
+  message: '[Error - 7:37:35 PM] Nov 17, 2024, 7:37:35 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:35.649'
+}
+{
+  message: '[Error - 7:37:35 PM] Nov 17, 2024, 7:37:35 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:35.676'
+}
+{
+  message: 'Nov 17, 2024 7:37:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 13261\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:35.677'
+}
+{
+  message: '[Error - 7:37:35 PM] Nov 17, 2024, 7:37:35 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:35.690'
+}
+{
+  message: '[Error - 7:37:35 PM] Nov 17, 2024, 7:37:35 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:35.771'
+}
+{
+  message: '[Error - 7:37:36 PM] Nov 17, 2024, 7:37:36 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:36.891'
+}
+{
+  message: '[Error - 7:37:36 PM] Nov 17, 2024, 7:37:36 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:36.964'
+}
+{
+  message: '[Error - 7:37:37 PM] Nov 17, 2024, 7:37:37 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:37.092'
+}
+{
+  message: '[Error - 7:37:38 PM] Nov 17, 2024, 7:37:38 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:38.372'
+}
+{
+  message: '[Error - 7:37:38 PM] Nov 17, 2024, 7:37:38 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:38.433'
+}
+{
+  message: '[Error - 7:37:38 PM] Nov 17, 2024, 7:37:38 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:38.451'
+}
+{
+  message: '[Error - 7:37:38 PM] Nov 17, 2024, 7:37:38 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:38.508'
+}
+{
+  message: '[Error - 7:37:39 PM] Nov 17, 2024, 7:37:39 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:39.554'
+}
+{
+  message: '[Error - 7:37:39 PM] Nov 17, 2024, 7:37:39 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:39.680'
+}
+{
+  message: '[Error - 7:37:40 PM] Nov 17, 2024, 7:37:40 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:40.958'
+}
+{
+  message: 'Nov 17, 2024 7:37:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 13350\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:41.059'
+}
+{
+  message: '[Error - 7:37:52 PM] Nov 17, 2024, 7:37:52 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:37:52.272'
+}
+{
+  message: 'Nov 17, 2024 7:41:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 13648\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:41:10.488'
+}
+{
+  message: 'Nov 17, 2024 7:42:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 13964\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:42:37.522'
+}
+{
+  message: 'Nov 17, 2024 7:43:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 14292\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:20.556'
+}
+{
+  message: 'Nov 17, 2024 7:43:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 14293\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:20.693'
+}
+{
+  message: 'Nov 17, 2024 7:43:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 14317\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:22.087'
+}
+{
+  message: '[Error - 7:43:29 PM] Nov 17, 2024, 7:43:29 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:29.922'
+}
+{
+  message: '[Error - 7:43:30 PM] Nov 17, 2024, 7:43:29 PM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:30.000'
+}
+{
+  message: '[Error - 7:43:30 PM] Nov 17, 2024, 7:43:29 PM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:30.000'
+}
+{
+  message: '[Error - 7:43:30 PM] Nov 17, 2024, 7:43:29 PM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:30.001'
+}
+{
+  message: '[Error - 7:43:30 PM] Nov 17, 2024, 7:43:29 PM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:30.001'
+}
+{
+  message: '[Error - 7:43:30 PM] Nov 17, 2024, 7:43:29 PM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:30.001'
+}
+{
+  message: '[Error - 7:43:30 PM] Nov 17, 2024, 7:43:30 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:30.017'
+}
+{
+  message: '[Error - 7:43:31 PM] Nov 17, 2024, 7:43:31 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:31.332'
+}
+{
+  message: '[Error - 7:43:31 PM] Nov 17, 2024, 7:43:31 PM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:31.397'
+}
+{
+  message: '[Error - 7:43:31 PM] Nov 17, 2024, 7:43:31 PM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:31.397'
+}
+{
+  message: '[Error - 7:43:31 PM] Nov 17, 2024, 7:43:31 PM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:31.398'
+}
+{
+  message: '[Error - 7:43:31 PM] Nov 17, 2024, 7:43:31 PM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:31.398'
+}
+{
+  message: '[Error - 7:43:31 PM] Nov 17, 2024, 7:43:31 PM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-17 19:43:31.399'
+}
+{
+  message: 'Nov 17, 2024 7:47:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 15163\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:47:50.278'
+}
+{
+  message: 'Nov 17, 2024 7:48:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 15309\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:48:03.152'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 15361, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 19:48:13.590'
+}
+{
+  message: 'Nov 17, 2024 7:48:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 15383\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:48:18.105'
+}
+{
+  message: 'Nov 17, 2024 7:48:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 15479\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:48:31.230'
+}
+{
+  message: 'Nov 17, 2024 7:48:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 15548\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:48:46.049'
+}
+{
+  message: 'Nov 17, 2024 7:48:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 15639\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:48:56.119'
+}
+{
+  message: 'Nov 17, 2024 7:49:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 15810\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:49:17.049'
+}
+{
+  message: 'Nov 17, 2024 7:49:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 15906\n',
+  level: 'info',
+  timestamp: '2024-11-17 19:49:35.096'
+}
+{
+  message: '[Error - 9:47:41 PM] Nov 17, 2024, 9:47:41 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 21:47:41.404'
+}
+{
+  message: 'Nov 17, 2024 9:49:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 16852\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:49:18.694'
+}
+{
+  message: 'Nov 17, 2024 9:50:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17056\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:50:24.139'
+}
+{
+  message: 'Nov 17, 2024 9:51:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17157\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:51:20.972'
+}
+{
+  message: 'Nov 17, 2024 9:51:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17187\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:51:23.325'
+}
+{
+  message: 'Nov 17, 2024 9:51:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17235\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:51:27.081'
+}
+{
+  message: 'Nov 17, 2024 9:51:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17240\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:51:27.392'
+}
+{
+  message: 'Nov 17, 2024 9:52:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17416\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:52:18.739'
+}
+{
+  message: 'Nov 17, 2024 9:52:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17418\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:52:18.853'
+}
+{
+  message: 'Nov 17, 2024 9:52:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17417\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:52:18.907'
+}
+{
+  message: 'Nov 17, 2024 9:52:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17424\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:52:19.231'
+}
+{
+  message: 'Nov 17, 2024 9:52:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17454\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:52:22.000'
+}
+{
+  message: 'Nov 17, 2024 9:52:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17528\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:52:39.711'
+}
+{
+  message: 'Nov 17, 2024 9:52:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17529\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:52:40.206'
+}
+{
+  message: 'Nov 17, 2024 9:52:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17531\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:52:40.207'
+}
+{
+  message: 'Nov 17, 2024 9:52:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17532\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:52:40.267'
+}
+{
+  message: 'Nov 17, 2024 9:52:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17534\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:52:40.268'
+}
+{
+  message: 'Nov 17, 2024 9:52:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17536\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:52:40.270'
+}
+{
+  message: 'Nov 17, 2024 9:52:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17538\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:52:40.320'
+}
+{
+  message: 'Nov 17, 2024 9:52:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 17598\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:52:57.515'
+}
+{
+  message: '[Error - 9:53:06 PM] Nov 17, 2024, 9:53:06 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 21:53:06.316'
+}
+{
+  message: 'Nov 17, 2024 9:57:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 18208\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:57:52.241'
+}
+{
+  message: 'Nov 17, 2024 9:57:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 18210\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:57:52.293'
+}
+{
+  message: '[Error - 9:57:55 PM] Nov 17, 2024, 9:57:55 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 21:57:55.826'
+}
+{
+  message: 'Nov 17, 2024 9:59:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 18445\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:59:04.090'
+}
+{
+  message: 'Nov 17, 2024 9:59:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 18446\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:59:04.433'
+}
+{
+  message: 'Nov 17, 2024 9:59:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 18447\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:59:04.435'
+}
+{
+  message: 'Nov 17, 2024 9:59:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 18568\n',
+  level: 'info',
+  timestamp: '2024-11-17 21:59:17.179'
+}
+{
+  message: 'Nov 17, 2024 10:00:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 18863\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:00:23.539'
+}
+{
+  message: 'Nov 17, 2024 10:01:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 19257\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:01:54.209'
+}
+{
+  message: '[Error - 10:01:56 PM] Nov 17, 2024, 10:01:56 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:01:56.316'
+}
+{
+  message: 'Nov 17, 2024 10:02:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 19353\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:02:03.651'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 19393, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 22:02:07.273'
+}
+{
+  message: '[Error - 10:03:48 PM] Nov 17, 2024, 10:03:48 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:03:48.808'
+}
+{
+  message: '[Error - 10:03:50 PM] Nov 17, 2024, 10:03:50 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:03:50.982'
+}
+{
+  message: '[Error - 10:03:51 PM] Nov 17, 2024, 10:03:51 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:03:51.055'
+}
+{
+  message: '[Error - 10:03:51 PM] Nov 17, 2024, 10:03:51 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:03:51.234'
+}
+{
+  message: '[Error - 10:03:51 PM] Nov 17, 2024, 10:03:51 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:03:51.969'
+}
+{
+  message: 'Nov 17, 2024 10:04:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 19783\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:04:22.438'
+}
+{
+  message: 'Nov 17, 2024 10:04:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 19784\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:04:22.542'
+}
+{
+  message: 'Nov 17, 2024 10:04:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 19785\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:04:22.544'
+}
+{
+  message: 'Nov 17, 2024 10:04:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 19802\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:04:24.082'
+}
+{
+  message: 'Nov 17, 2024 10:04:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 19980\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:04:42.379'
+}
+{
+  message: '[Error - 10:12:24 PM] Nov 17, 2024, 10:12:24 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:12:24.216'
+}
+{
+  message: '[Error - 10:12:24 PM] Nov 17, 2024, 10:12:24 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:12:24.226'
+}
+{
+  message: '[Error - 10:12:24 PM] Nov 17, 2024, 10:12:24 PM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-17 22:12:24.515'
+}
+{
+  message: 'Nov 17, 2024 10:14:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 21015\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:14:55.605'
+}
+{
+  message: '[Error - 10:17:31 PM] Nov 17, 2024, 10:17:31 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:17:31.316'
+}
+{
+  message: 'Nov 17, 2024 10:17:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 21162\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:17:33.490'
+}
+{
+  message: 'Nov 17, 2024 10:18:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 21468\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:18:16.752'
+}
+{
+  message: 'Nov 17, 2024 10:18:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 21526\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:18:23.812'
+}
+{
+  message: 'Nov 17, 2024 10:18:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 21568\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:18:30.299'
+}
+{
+  message: 'Nov 17, 2024 10:18:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 21613\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:18:36.152'
+}
+{
+  message: '[Error - 10:18:39 PM] Nov 17, 2024, 10:18:39 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:18:39.956'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 21643, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 22:18:40.916'
+}
+{
+  message: '[Error - 10:19:02 PM] Nov 17, 2024, 10:19:02 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:19:02.993'
+}
+{
+  message: 'Nov 17, 2024 10:19:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 21836\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:19:03.001'
+}
+{
+  message: '[Error - 10:19:03 PM] Nov 17, 2024, 10:19:03 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:19:03.007'
+}
+{
+  message: 'Nov 17, 2024 10:19:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 21940\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:19:53.834'
+}
+{
+  message: '[Error - 10:20:22 PM] Nov 17, 2024, 10:20:22 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:20:22.946'
+}
+{
+  message: '[Error - 10:20:23 PM] Nov 17, 2024, 10:20:23 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:20:23.035'
+}
+{
+  message: 'Nov 17, 2024 10:21:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 22097\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:21:01.939'
+}
+{
+  message: '[Error - 10:21:29 PM] Nov 17, 2024, 10:21:29 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:21:29.952'
+}
+{
+  message: '[Error - 10:21:33 PM] Nov 17, 2024, 10:21:33 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:21:33.967'
+}
+{
+  message: '[Error - 10:22:08 PM] Nov 17, 2024, 10:22:08 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:22:08.575'
+}
+{
+  message: '[Error - 10:22:28 PM] Nov 17, 2024, 10:22:28 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:22:28.402'
+}
+{
+  message: '[Error - 10:22:28 PM] Nov 17, 2024, 10:22:28 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:22:28.462'
+}
+{
+  message: '[Error - 10:22:28 PM] Nov 17, 2024, 10:22:28 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:22:28.478'
+}
+{
+  message: 'Nov 17, 2024 10:22:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 22481\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:22:50.578'
+}
+{
+  message: 'Nov 17, 2024 10:22:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 22482\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:22:50.659'
+}
+{
+  message: 'Nov 17, 2024 10:22:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 22542\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:22:59.049'
+}
+{
+  message: 'Nov 17, 2024 10:23:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 22640\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:23:10.814'
+}
+{
+  message: 'Nov 17, 2024 10:23:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 22695\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:23:19.188'
+}
+{
+  message: '[Error - 10:23:42 PM] Nov 17, 2024, 10:23:42 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:23:42.741'
+}
+{
+  message: '[Error - 10:23:44 PM] Nov 17, 2024, 10:23:44 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:23:44.369'
+}
+{
+  message: 'Nov 17, 2024 10:23:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 22859\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:23:45.749'
+}
+{
+  message: 'Nov 17, 2024 10:23:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 22866\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:23:47.798'
+}
+{
+  message: 'Nov 17, 2024 10:24:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 22967\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:24:06.163'
+}
+{
+  message: 'Nov 17, 2024 10:24:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 22975\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:24:07.154'
+}
+{
+  message: 'Nov 17, 2024 10:24:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 23006\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:24:09.550'
+}
+{
+  message: 'Nov 17, 2024 10:24:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 23008\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:24:09.761'
+}
+{
+  message: 'Nov 17, 2024 10:24:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 23051\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:24:15.311'
+}
+{
+  message: 'Nov 17, 2024 10:24:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 23145\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:24:30.838'
+}
+{
+  message: '[Error - 10:24:37 PM] Nov 17, 2024, 10:24:37 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:24:37.024'
+}
+{
+  message: '[Error - 10:24:51 PM] Nov 17, 2024, 10:24:51 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:24:51.173'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 23536, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 22:26:19.076'
+}
+{
+  message: 'Nov 17, 2024 10:26:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 23570\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:26:31.482'
+}
+{
+  message: 'Nov 17, 2024 10:26:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 23577\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:26:31.855'
+}
+{
+  message: '[Error - 10:27:43 PM] Nov 17, 2024, 10:27:43 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:27:43.336'
+}
+{
+  message: '[Error - 10:27:58 PM] Nov 17, 2024, 10:27:58 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:27:58.121'
+}
+{
+  message: '[Error - 10:28:04 PM] Nov 17, 2024, 10:28:04 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:28:04.038'
+}
+{
+  message: '[Error - 10:28:07 PM] Nov 17, 2024, 10:28:07 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:28:07.783'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 23857, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 22:28:09.003'
+}
+{
+  message: '[Error - 10:28:12 PM] Nov 17, 2024, 10:28:12 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:28:12.694'
+}
+{
+  message: '[Error - 10:28:33 PM] Nov 17, 2024, 10:28:33 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:28:33.054'
+}
+{
+  message: 'Nov 17, 2024 10:28:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    'java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:241)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:28:56.844'
+}
+{
+  message: '[Error - 10:28:56 PM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-17 22:28:56.845'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:241)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:28:56.846'
+}
+{
+  message: 'Nov 17, 2024 10:29:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    'java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:241)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:29:02.562'
+}
+{
+  message: '[Error - 10:29:02 PM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-17 22:29:02.564'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:241)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:29:02.564'
+}
+{
+  message: 'Nov 17, 2024 10:29:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    'java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:241)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:29:02.898'
+}
+{
+  message: '[Error - 10:29:02 PM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-17 22:29:02.904'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.AddMissingMethodDeclarationFixCore$AddMissingMethodDeclarationProposalOperation.rewriteAST(AddMissingMethodDeclarationFixCore.java:241)\n' +
+    '\tat org.eclipse.jdt.internal.corext.fix.CompilationUnitRewriteOperationsFixCore.createChange(CompilationUnitRewriteOperationsFixCore.java:123)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAddMissingMethodDeclarationProposal(QuickAssistProcessor.java:1454)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.text.correction.QuickAssistProcessor.getAssists(QuickAssistProcessor.java:229)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:217)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:29:02.905'
+}
+{
+  message: 'Nov 17, 2024 10:29:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 24101\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:29:02.906'
+}
+{
+  message: '[Error - 10:29:20 PM] Nov 17, 2024, 10:29:20 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:29:20.223'
+}
+{
+  message: 'Nov 17, 2024 10:29:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 24217\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:29:35.136'
+}
+{
+  message: 'Nov 17, 2024 10:29:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 24219\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:29:35.244'
+}
+{
+  message: 'Nov 17, 2024 10:29:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 24220\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:29:35.250'
+}
+{
+  message: 'Nov 17, 2024 10:29:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 24221\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:29:35.255'
+}
+{
+  message: '[Error - 10:29:47 PM] Nov 17, 2024, 10:29:47 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:29:47.374'
+}
+{
+  message: '[Error - 10:30:07 PM] Nov 17, 2024, 10:30:07 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:30:07.861'
+}
+{
+  message: '[Error - 10:30:07 PM] Nov 17, 2024, 10:30:07 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:30:07.906'
+}
+{
+  message: 'Nov 17, 2024 10:30:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 24365\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:30:09.359'
+}
+{
+  message: 'Nov 17, 2024 10:30:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 24366\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:30:09.361'
+}
+{
+  message: 'Nov 17, 2024 10:30:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 24367\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:30:09.440'
+}
+{
+  message: 'Nov 17, 2024 10:30:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 24368\n' +
+    'Nov 17, 2024 10:30:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 24371\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:30:09.441'
+}
+{
+  message: 'Nov 17, 2024 10:30:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 24454\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:30:18.308'
+}
+{
+  message: '[Error - 10:30:45 PM] Nov 17, 2024, 10:30:45 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:30:45.121'
+}
+{
+  message: '[Error - 10:30:46 PM] Nov 17, 2024, 10:30:46 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:30:46.126'
+}
+{
+  message: 'Nov 17, 2024 10:30:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 24563\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:30:46.498'
+}
+{
+  message: 'Nov 17, 2024 10:30:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 24570\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:30:47.003'
+}
+{
+  message: '[Error - 10:33:37 PM] Nov 17, 2024, 10:33:37 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:33:37.388'
+}
+{
+  message: 'Nov 17, 2024 10:33:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25201\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:33:53.758'
+}
+{
+  message: 'Nov 17, 2024 10:34:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25331\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:34:18.423'
+}
+{
+  message: 'Nov 17, 2024 10:34:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25332\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:34:18.493'
+}
+{
+  message: 'Nov 17, 2024 10:34:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25417\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:34:33.274'
+}
+{
+  message: 'Nov 17, 2024 10:34:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25418\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:34:33.450'
+}
+{
+  message: 'Nov 17, 2024 10:34:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25419\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:34:33.452'
+}
+{
+  message: 'Nov 17, 2024 10:34:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25422\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:34:33.527'
+}
+{
+  message: 'Nov 17, 2024 10:34:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25424\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:34:33.760'
+}
+{
+  message: 'Nov 17, 2024 10:34:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25425\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:34:33.829'
+}
+{
+  message: 'Nov 17, 2024 10:34:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25500\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:34:39.764'
+}
+{
+  message: 'Nov 17, 2024 10:34:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25583\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:34:47.751'
+}
+{
+  message: 'Nov 17, 2024 10:34:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25584\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:34:47.809'
+}
+{
+  message: 'Nov 17, 2024 10:35:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25739\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:35:21.647'
+}
+{
+  message: 'Nov 17, 2024 10:35:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 25836\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:35:37.246'
+}
+{
+  message: '[Error - 10:35:52 PM] Nov 17, 2024, 10:35:52 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:35:52.228'
+}
+{
+  message: '[Error - 10:35:52 PM] Nov 17, 2024, 10:35:52 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:35:52.252'
+}
+{
+  message: '[Error - 10:35:55 PM] Nov 17, 2024, 10:35:55 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:35:55.554'
+}
+{
+  message: '[Error - 10:35:55 PM] Nov 17, 2024, 10:35:55 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:35:55.576'
+}
+{
+  message: '[Error - 10:35:55 PM] Nov 17, 2024, 10:35:55 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:35:55.683'
+}
+{
+  message: '[Error - 10:35:58 PM] Nov 17, 2024, 10:35:58 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:35:58.647'
+}
+{
+  message: '[Error - 10:35:58 PM] Nov 17, 2024, 10:35:58 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:35:58.660'
+}
+{
+  message: '[Error - 10:36:00 PM] Nov 17, 2024, 10:36:00 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:36:00.334'
+}
+{
+  message: '[Error - 10:36:28 PM] Nov 17, 2024, 10:36:28 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:36:28.105'
+}
+{
+  message: 'Nov 17, 2024 10:36:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError\n' +
+    'SEVERE: Internal error: java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 2\n' +
+    'java.util.concurrent.CompletionException: java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 2\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 2\n' +
+    '\tat java.base/jdk.internal.util.Preconditions.outOfBounds(Unknown Source)\n' +
+    '\tat java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Unknown Source)\n' +
+    '\tat java.base/jdk.internal.util.Preconditions.checkIndex(Unknown Source)\n' +
+    '\tat java.base/java.util.Objects.checkIndex(Unknown Source)\n' +
+    '\tat java.base/java.util.ArrayList.get(Unknown Source)\n' +
+    '\tat org.eclipse.jdt.core.dom.ASTNode$NodeList.get(ASTNode.java:1590)\n' +
+    '\tat org.eclipse.jdt.internal.corext.refactoring.code.SourceProvider.getParameterData(SourceProvider.java:351)\n' +
+    '\tat org.eclipse.jdt.internal.corext.refactoring.code.CallInliner.computeRealArguments(CallInliner.java:520)\n' +
+    '\tat org.eclipse.jdt.internal.corext.refactoring.code.CallInliner.initialize(CallInliner.java:265)\n' +
+    '\tat org.eclipse.jdt.internal.corext.refactoring.code.InlineMethodRefactoring.checkFinalConditions(InlineMethodRefactoring.java:309)\n' +
+    '\tat org.eclipse.ltk.core.refactoring.CheckConditionsOperation.run(CheckConditionsOperation.java:86)\n' +
+    '\tat org.eclipse.ltk.core.refactoring.CreateChangeOperation.run(CreateChangeOperation.java:116)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.corrections.RefactorProcessor.getInlineProposal(RefactorProcessor.java:388)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.corrections.RefactorProcessor.getProposals(RefactorProcessor.java:145)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:205)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n' +
+    '\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:36:30.852'
+}
+{
+  message: '[Error - 10:36:30 PM] Request textDocument/codeAction failed.',
+  level: 'info',
+  timestamp: '2024-11-17 22:36:30.856'
+}
+{
+  message: '  Message: Internal error.\n' +
+    '  Code: -32603 \n' +
+    'java.util.concurrent.CompletionException: java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 2\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.CompletableFuture$Completion.exec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)\n' +
+    '\tat java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)\n' +
+    'Caused by: java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 2\n' +
+    '\tat java.base/jdk.internal.util.Preconditions.outOfBounds(Unknown Source)\n' +
+    '\tat java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Unknown Source)\n' +
+    '\tat java.base/jdk.internal.util.Preconditions.checkIndex(Unknown Source)\n' +
+    '\tat java.base/java.util.Objects.checkIndex(Unknown Source)\n' +
+    '\tat java.base/java.util.ArrayList.get(Unknown Source)\n' +
+    '\tat org.eclipse.jdt.core.dom.ASTNode$NodeList.get(ASTNode.java:1590)\n' +
+    '\tat org.eclipse.jdt.internal.corext.refactoring.code.SourceProvider.getParameterData(SourceProvider.java:351)\n' +
+    '\tat org.eclipse.jdt.internal.corext.refactoring.code.CallInliner.computeRealArguments(CallInliner.java:520)\n' +
+    '\tat org.eclipse.jdt.internal.corext.refactoring.code.CallInliner.initialize(CallInliner.java:265)\n' +
+    '\tat org.eclipse.jdt.internal.corext.refactoring.code.InlineMethodRefactoring.checkFinalConditions(InlineMethodRefactoring.java:309)\n' +
+    '\tat org.eclipse.ltk.core.refactoring.CheckConditionsOperation.run(CheckConditionsOperation.java:86)\n' +
+    '\tat org.eclipse.ltk.core.refactoring.CreateChangeOperation.run(CreateChangeOperation.java:116)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.corrections.RefactorProcessor.getInlineProposal(RefactorProcessor.java:388)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.corrections.RefactorProcessor.getProposals(RefactorProcessor.java:145)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:205)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:758)\n' +
+    '\tat org.eclipse.jdt.ls.core.internal.BaseJDTLanguageServer.lambda$0(BaseJDTLanguageServer.java:87)\n' +
+    '\t... 7 more\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:36:30.856'
+}
+{
+  message: 'Nov 17, 2024 10:36:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 26170\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:36:40.870'
+}
+{
+  message: 'Nov 17, 2024 10:36:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 26187\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:36:42.790'
+}
+{
+  message: 'Nov 17, 2024 10:36:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 26188\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:36:42.817'
+}
+{
+  message: 'Nov 17, 2024 10:37:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 26239\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:37:01.920'
+}
+{
+  message: 'Nov 17, 2024 10:37:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 26267\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:37:04.543'
+}
+{
+  message: 'Nov 17, 2024 10:37:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 26304\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:37:10.468'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 26479, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 22:37:36.920'
+}
+{
+  message: 'Nov 17, 2024 10:37:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 26488\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:37:38.407'
+}
+{
+  message: '[Error - 10:38:21 PM] Nov 17, 2024, 10:38:21 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:38:21.134'
+}
+{
+  message: '[Error - 10:38:21 PM] Nov 17, 2024, 10:38:21 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:38:21.170'
+}
+{
+  message: '[Error - 10:38:21 PM] Nov 17, 2024, 10:38:21 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:38:21.252'
+}
+{
+  message: 'Nov 17, 2024 10:38:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 26621\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:38:36.587'
+}
+{
+  message: '[Error - 10:38:40 PM] Nov 17, 2024, 10:38:40 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:38:40.810'
+}
+{
+  message: '[Error - 10:38:40 PM] Nov 17, 2024, 10:38:40 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:38:40.954'
+}
+{
+  message: 'Nov 17, 2024 10:39:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 26728\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:39:01.021'
+}
+{
+  message: 'Nov 17, 2024 10:39:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 26860\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:39:24.478'
+}
+{
+  message: 'Nov 17, 2024 10:39:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 26868\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:39:24.544'
+}
+{
+  message: 'Nov 17, 2024 10:40:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 27060\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:40:42.206'
+}
+{
+  message: 'Nov 17, 2024 10:41:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 27174\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:41:55.924'
+}
+{
+  message: '[Error - 10:41:58 PM] Nov 17, 2024, 10:41:58 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:41:58.012'
+}
+{
+  message: '[Error - 10:41:58 PM] Nov 17, 2024, 10:41:58 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:41:58.030'
+}
+{
+  message: '[Error - 10:41:58 PM] Nov 17, 2024, 10:41:58 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:41:58.833'
+}
+{
+  message: 'Nov 17, 2024 10:41:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 27215\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:41:58.892'
+}
+{
+  message: '[Error - 10:42:26 PM] Nov 17, 2024, 10:42:26 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:42:26.800'
+}
+{
+  message: '[Error - 10:43:11 PM] Nov 17, 2024, 10:43:11 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:43:11.816'
+}
+{
+  message: '[Error - 10:43:11 PM] Nov 17, 2024, 10:43:11 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:43:11.832'
+}
+{
+  message: '[Error - 10:43:26 PM] Nov 17, 2024, 10:43:26 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:43:26.747'
+}
+{
+  message: '[Error - 10:44:13 PM] Nov 17, 2024, 10:44:13 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:44:13.881'
+}
+{
+  message: '[Error - 10:44:34 PM] Nov 17, 2024, 10:44:34 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:44:34.026'
+}
+{
+  message: '[Error - 10:44:34 PM] Nov 17, 2024, 10:44:34 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:44:34.038'
+}
+{
+  message: '[Error - 10:44:34 PM] Nov 17, 2024, 10:44:34 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:44:34.092'
+}
+{
+  message: 'Nov 17, 2024 10:44:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 27902\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:44:58.535'
+}
+{
+  message: '[Error - 10:45:29 PM] Nov 17, 2024, 10:45:29 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:45:29.675'
+}
+{
+  message: '[Error - 10:45:29 PM] Nov 17, 2024, 10:45:29 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:45:29.790'
+}
+{
+  message: '[Error - 10:45:38 PM] Nov 17, 2024, 10:45:38 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:45:38.110'
+}
+{
+  message: '[Error - 10:45:38 PM] Nov 17, 2024, 10:45:38 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:45:38.303'
+}
+{
+  message: 'Nov 17, 2024 10:46:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 28255\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:46:28.808'
+}
+{
+  message: '[Error - 10:46:39 PM] Nov 17, 2024, 10:46:39 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:46:39.968'
+}
+{
+  message: 'Nov 17, 2024 10:46:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 28373\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:46:51.445'
+}
+{
+  message: 'Nov 17, 2024 10:47:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 28570\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:47:37.279'
+}
+{
+  message: '[Error - 10:48:20 PM] Nov 17, 2024, 10:48:20 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:48:20.306'
+}
+{
+  message: 'Nov 17, 2024 10:48:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 28783\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:48:24.621'
+}
+{
+  message: '[Error - 10:48:27 PM] Nov 17, 2024, 10:48:27 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:48:27.835'
+}
+{
+  message: '[Error - 10:48:28 PM] Nov 17, 2024, 10:48:28 PM Unable to simplify switch on enum: 1 not found, available: {}',
+  level: 'info',
+  timestamp: '2024-11-17 22:48:28.184'
+}
+{
+  message: '[Error - 10:48:54 PM] Nov 17, 2024, 10:48:54 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:48:54.428'
+}
+{
+  message: 'Nov 17, 2024 10:49:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 29201\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:49:35.732'
+}
+{
+  message: 'Nov 17, 2024 10:50:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 29463\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:50:24.685'
+}
+{
+  message: 'Nov 17, 2024 10:50:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 29465\n' +
+    'Nov 17, 2024 10:50:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 29464\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:50:24.709'
+}
+{
+  message: '[Error - 10:50:29 PM] Nov 17, 2024, 10:50:29 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:50:29.031'
+}
+{
+  message: '[Error - 10:50:44 PM] Nov 17, 2024, 10:50:44 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:50:44.336'
+}
+{
+  message: '[Error - 10:50:44 PM] Nov 17, 2024, 10:50:44 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:50:44.352'
+}
+{
+  message: '[Error - 10:50:44 PM] Nov 17, 2024, 10:50:44 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:50:44.365'
+}
+{
+  message: '[Error - 10:50:51 PM] Nov 17, 2024, 10:50:51 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:50:51.408'
+}
+{
+  message: '[Error - 10:50:53 PM] Nov 17, 2024, 10:50:53 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:50:53.776'
+}
+{
+  message: '[Error - 10:50:56 PM] Nov 17, 2024, 10:50:56 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:50:56.610'
+}
+{
+  message: '[Error - 10:50:59 PM] Nov 17, 2024, 10:50:59 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:50:59.258'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 30037, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 22:53:39.958'
+}
+{
+  message: 'Nov 17, 2024 10:54:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 30131\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:54:15.878'
+}
+{
+  message: 'Nov 17, 2024 10:54:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 30266\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:54:35.164'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 30553, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 22:55:31.845'
+}
+{
+  message: 'Nov 17, 2024 10:55:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 30755\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:55:57.319'
+}
+{
+  message: 'Nov 17, 2024 10:55:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 30756\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:55:57.809'
+}
+{
+  message: 'Nov 17, 2024 10:55:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 30757\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:55:57.810'
+}
+{
+  message: 'Nov 17, 2024 10:56:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 30912\n',
+  level: 'info',
+  timestamp: '2024-11-17 22:56:36.426'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 31195, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 22:58:11.015'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 31198, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 22:58:12.547'
+}
+{
+  message: '[Error - 10:58:21 PM] Nov 17, 2024, 10:58:21 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:58:21.165'
+}
+{
+  message: '[Error - 10:58:45 PM] Nov 17, 2024, 10:58:45 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:58:45.614'
+}
+{
+  message: '[Error - 10:59:00 PM] Nov 17, 2024, 10:59:00 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:59:00.455'
+}
+{
+  message: '[Error - 10:59:00 PM] Nov 17, 2024, 10:59:00 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 22:59:00.731'
+}
+{
+  message: 'Nov 17, 2024 11:00:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 31378\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:00:04.595'
+}
+{
+  message: 'Nov 17, 2024 11:00:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 31433\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:00:08.799'
+}
+{
+  message: '[Error - 11:00:09 PM] Nov 17, 2024, 11:00:09 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:00:09.629'
+}
+{
+  message: 'Nov 17, 2024 11:00:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 31456\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:00:12.692'
+}
+{
+  message: '[Error - 11:01:28 PM] Nov 17, 2024, 11:01:28 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:01:28.288'
+}
+{
+  message: 'Nov 17, 2024 11:01:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 31695\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:01:43.379'
+}
+{
+  message: '[Error - 11:01:59 PM] Nov 17, 2024, 11:01:59 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:01:59.200'
+}
+{
+  message: '[Error - 11:01:59 PM] Nov 17, 2024, 11:01:59 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:01:59.259'
+}
+{
+  message: '[Error - 11:01:59 PM] Nov 17, 2024, 11:01:59 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:01:59.286'
+}
+{
+  message: '[Error - 11:02:00 PM] Nov 17, 2024, 11:02:00 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:02:00.003'
+}
+{
+  message: '[Error - 11:02:00 PM] Nov 17, 2024, 11:02:00 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:02:00.052'
+}
+{
+  message: '[Error - 11:02:00 PM] Nov 17, 2024, 11:02:00 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:02:00.107'
+}
+{
+  message: 'Nov 17, 2024 11:09:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 31986\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:09:02.784'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 32019, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 23:09:12.330'
+}
+{
+  message: 'Nov 17, 2024 11:09:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32063\n' +
+    'Nov 17, 2024 11:09:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32064\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:09:31.342'
+}
+{
+  message: 'Nov 17, 2024 11:09:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32089\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:09:35.199'
+}
+{
+  message: 'Nov 17, 2024 11:09:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32151\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:09:44.078'
+}
+{
+  message: 'Nov 17, 2024 11:09:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32150\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:09:44.120'
+}
+{
+  message: 'Nov 17, 2024 11:09:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32162\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:09:44.464'
+}
+{
+  message: 'Nov 17, 2024 11:09:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32256\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:09:52.536'
+}
+{
+  message: 'Nov 17, 2024 11:09:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32257\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:09:52.545'
+}
+{
+  message: 'Nov 17, 2024 11:09:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32258\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:09:52.548'
+}
+{
+  message: 'Nov 17, 2024 11:10:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32500\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:10:20.998'
+}
+{
+  message: 'Nov 17, 2024 11:10:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32502\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:10:21.002'
+}
+{
+  message: 'Nov 17, 2024 11:10:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32516\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:10:22.084'
+}
+{
+  message: '[Error - 11:11:06 PM] Nov 17, 2024, 11:11:06 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:11:06.608'
+}
+{
+  message: 'Nov 17, 2024 11:11:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32744\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:11:14.867'
+}
+{
+  message: 'Nov 17, 2024 11:11:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32965\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:11:43.179'
+}
+{
+  message: 'Nov 17, 2024 11:11:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 32966\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:11:43.180'
+}
+{
+  message: 'Nov 17, 2024 11:12:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 33112\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:12:09.877'
+}
+{
+  message: '[Error - 11:12:22 PM] Nov 17, 2024, 11:12:22 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:12:22.095'
+}
+{
+  message: '[Error - 11:13:10 PM] Nov 17, 2024, 11:13:10 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:13:10.199'
+}
+{
+  message: '[Error - 11:13:13 PM] Nov 17, 2024, 11:13:13 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:13:13.058'
+}
+{
+  message: '[Error - 11:13:26 PM] Nov 17, 2024, 11:13:26 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:13:26.377'
+}
+{
+  message: 'Nov 17, 2024 11:14:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 33840\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:14:05.569'
+}
+{
+  message: 'Nov 17, 2024 11:14:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 33871\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:14:09.762'
+}
+{
+  message: 'Nov 17, 2024 11:14:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 33920\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:14:16.387'
+}
+{
+  message: 'Nov 17, 2024 11:14:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 33921\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:14:16.411'
+}
+{
+  message: '[Error - 11:14:21 PM] Nov 17, 2024, 11:14:21 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:14:21.941'
+}
+{
+  message: '[Error - 11:14:21 PM] Nov 17, 2024, 11:14:21 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:14:21.959'
+}
+{
+  message: '[Error - 11:14:22 PM] Nov 17, 2024, 11:14:22 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:14:22.965'
+}
+{
+  message: '[Error - 11:14:23 PM] Nov 17, 2024, 11:14:23 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:14:23.138'
+}
+{
+  message: '[Error - 11:14:26 PM] Nov 17, 2024, 11:14:26 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:14:26.807'
+}
+{
+  message: '[Error - 11:14:27 PM] Nov 17, 2024, 11:14:27 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:14:27.308'
+}
+{
+  message: '[Error - 11:14:28 PM] Nov 17, 2024, 11:14:28 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:14:28.863'
+}
+{
+  message: '[Error - 11:14:28 PM] Nov 17, 2024, 11:14:28 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:14:28.976'
+}
+{
+  message: '[Error - 11:14:52 PM] Nov 17, 2024, 11:14:52 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:14:52.035'
+}
+{
+  message: '[Error - 11:14:52 PM] Nov 17, 2024, 11:14:52 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:14:52.116'
+}
+{
+  message: 'Nov 17, 2024 11:15:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 34264\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:15:07.498'
+}
+{
+  message: '[Error - 11:15:12 PM] Nov 17, 2024, 11:15:12 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:15:12.379'
+}
+{
+  message: '[Error - 11:15:24 PM] Nov 17, 2024, 11:15:24 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:15:24.613'
+}
+{
+  message: 'Nov 17, 2024 11:16:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 34479\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:16:11.325'
+}
+{
+  message: 'Nov 17, 2024 11:16:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 34753\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:16:47.264'
+}
+{
+  message: '[Error - 11:17:03 PM] Nov 17, 2024, 11:17:03 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:17:03.729'
+}
+{
+  message: '[Error - 11:17:04 PM] Nov 17, 2024, 11:17:04 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:17:04.929'
+}
+{
+  message: 'Nov 17, 2024 11:17:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 34894\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:17:06.534'
+}
+{
+  message: '[Error - 11:17:07 PM] Nov 17, 2024, 11:17:07 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:17:07.662'
+}
+{
+  message: 'Nov 17, 2024 11:17:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35064\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:17:48.815'
+}
+{
+  message: 'Nov 17, 2024 11:18:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35111\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:18:02.310'
+}
+{
+  message: 'Nov 17, 2024 11:18:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35112\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:18:02.781'
+}
+{
+  message: 'Nov 17, 2024 11:18:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35136\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:18:04.482'
+}
+{
+  message: 'Nov 17, 2024 11:18:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35205\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:18:14.410'
+}
+{
+  message: '[Error - 11:18:18 PM] Nov 17, 2024, 11:18:18 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:18:18.296'
+}
+{
+  message: 'Nov 17, 2024 11:18:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35293\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:18:30.770'
+}
+{
+  message: '[Error - 11:18:39 PM] Nov 17, 2024, 11:18:39 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:18:39.658'
+}
+{
+  message: 'Nov 17, 2024 11:18:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35363\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:18:40.121'
+}
+{
+  message: '[Error - 11:18:44 PM] Nov 17, 2024, 11:18:44 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:18:44.998'
+}
+{
+  message: '[Error - 11:18:48 PM] Nov 17, 2024, 11:18:48 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:18:48.844'
+}
+{
+  message: '[Error - 11:19:02 PM] Nov 17, 2024, 11:19:02 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:19:02.702'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 35615, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 23:19:24.972'
+}
+{
+  message: '[Error - 11:19:27 PM] Nov 17, 2024, 11:19:27 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:19:27.250'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 35679, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 23:19:40.760'
+}
+{
+  message: '[Error - 11:19:47 PM] Nov 17, 2024, 11:19:47 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:19:47.126'
+}
+{
+  message: '[Error - 11:19:47 PM] Nov 17, 2024, 11:19:47 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:19:47.138'
+}
+{
+  message: '[Error - 11:19:47 PM] Nov 17, 2024, 11:19:47 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:19:47.181'
+}
+{
+  message: '[Error - 11:19:47 PM] Nov 17, 2024, 11:19:47 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:19:47.207'
+}
+{
+  message: 'Nov 17, 2024 11:20:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35792\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:20:07.123'
+}
+{
+  message: 'Nov 17, 2024 11:20:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35790\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:20:07.171'
+}
+{
+  message: 'Nov 17, 2024 11:20:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35793\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:20:07.172'
+}
+{
+  message: 'Nov 17, 2024 11:20:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35797\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:20:07.503'
+}
+{
+  message: 'Nov 17, 2024 11:20:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35795\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:20:07.504'
+}
+{
+  message: 'Nov 17, 2024 11:20:13 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35855\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:20:13.649'
+}
+{
+  message: 'Nov 17, 2024 11:20:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35988\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:20:28.404'
+}
+{
+  message: 'Nov 17, 2024 11:20:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35992\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:20:30.339'
+}
+{
+  message: 'Nov 17, 2024 11:20:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 35997\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:20:31.298'
+}
+{
+  message: 'Nov 17, 2024 11:20:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 36033\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:20:39.035'
+}
+{
+  message: '[Error - 11:21:10 PM] Nov 17, 2024, 11:21:10 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:21:10.775'
+}
+{
+  message: 'Nov 17, 2024 11:21:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 36154\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:21:12.443'
+}
+{
+  message: 'Nov 17, 2024 11:21:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 36162\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:21:14.277'
+}
+{
+  message: 'Nov 17, 2024 11:21:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 36161\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:21:14.279'
+}
+{
+  message: 'Nov 17, 2024 11:21:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 36163\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:21:14.280'
+}
+{
+  message: '[Error - 11:21:21 PM] Nov 17, 2024, 11:21:21 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:21:21.733'
+}
+{
+  message: 'Nov 17, 2024 11:23:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 36523\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:23:02.654'
+}
+{
+  message: 'Nov 17, 2024 11:23:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 36526\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:23:02.791'
+}
+{
+  message: 'Nov 17, 2024 11:23:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 36706\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:23:45.537'
+}
+{
+  message: '[Error - 11:24:04 PM] Nov 17, 2024, 11:24:04 PM Unable to load IDecompiler class for jarFileContentProvider',
+  level: 'info',
+  timestamp: '2024-11-17 23:24:04.368'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 36996, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 23:29:23.265'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 37008, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 23:29:30.088'
+}
+{
+  message: 'Nov 17, 2024 11:29:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 37082\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:29:40.549'
+}
+{
+  message: 'Nov 17, 2024 11:30:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 37143\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:30:30.558'
+}
+{
+  message: 'Nov 17, 2024 11:30:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 37172\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:30:36.346'
+}
+{
+  message: "Failed to provide hover command Error: The request (id: 37280, method: 'java/findLinks') has been cancelled",
+  level: 'error',
+  timestamp: '2024-11-17 23:31:01.214'
+}
+{
+  message: 'Nov 17, 2024 11:31:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 37332\n' +
+    'Nov 17, 2024 11:31:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation\n' +
+    'WARNING: Unmatched cancel notification for request id 37330\n',
+  level: 'info',
+  timestamp: '2024-11-17 23:31:06.230'
+}

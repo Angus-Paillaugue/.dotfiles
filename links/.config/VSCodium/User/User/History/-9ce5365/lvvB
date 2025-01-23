@@ -1,0 +1,6 @@
+EMAIL=angus.paillaugue40@gmail.com
+EMAIL_PASSWORD=password
+PORT=25
+MAIL_NAME=paillaugue.com
+SMTP_DOMAIN=smtp.gmail.com
+SMTP_PORT=587

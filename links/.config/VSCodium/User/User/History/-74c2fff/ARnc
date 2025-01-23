@@ -1,0 +1,19 @@
+Update
+Fixed code block file name and added icon for file type
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   docs/Components/Images.md
+#	modified:   docs/Components/Math.md
+#	modified:   docs/Components/Tables.md
+#	modified:   docs/Pages/Code blocks.md
+#	modified:   src/code.css
+#	modified:   src/lib/codeHighlighter.js
+#	modified:   src/lib/components/markdown/h1.svelte
+#	modified:   src/lib/components/markdown/pre.svelte
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#

@@ -1,0 +1,27 @@
+CC=gcc
+DIST_DIR=dist
+
+proxy: $(DIST_DIR)/proxy.o $(DIST_DIR)/simpleSocketAPI.o
+	${CC} $(FLAG) $^ -o $@
+$(DIST_DIR)/proxy.o: proxy.c
+	${CC} $(FLAG) -c $^ -I.
+$(DIST_DIR)/simpleSocketAPI.o: $(DIST_DIR)/simpleSocketAPI.c
+	${CC} $(FLAG) -c $^
+$(DIST_DIR):
+	mkdir -p $(DIST_DIR)
+run: proxy
+	$(DIST_DIR)/proxy
+clean:
+	rm -r $(DIST_DIR)
+
+proxy: $(DIST_DIR)/proxy.o $(DIST_DIR)/simpleSocketAPI.o
+	${CC} $^ -o $(DIST_DIR)/$@
+
+$(DIST_DIR)/proxy.o: proxy.c simpleSocketAPI.h | $(DIST_DIR)
+	${CC} -c $< -o $@
+
+$(DIST_DIR)/simpleSocketAPI.o: ./simpleSocketAPI.c | $(DIST_DIR)
+	${CC} -c $< -o $@
+
+$(DIST_DIR):
+	mkdir -p $(DIST_DIR)

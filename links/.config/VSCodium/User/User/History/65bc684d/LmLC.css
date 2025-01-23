@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--tw-neutral-800: theme(colors.neutral.800);
+}
+
+body {
+	@apply bg-neutral-900 text-neutral-200;
+}
+
+hr {
+	@apply mx-2 my-4 h-[2px] rounded-full border-none bg-neutral-700;
+}
+
+/* Others */
+kbd {
+	@apply rounded px-2 py-1 font-mono text-sm font-normal bg-neutral-800 border border-neutral-700 text-neutral-200;
+}

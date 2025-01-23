@@ -1,0 +1,42 @@
+Release bump
+Change the 
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch demo
+# Your branch is up to date with 'origin/demo'.
+#
+# Changes to be committed:
+#	modified:   docs/Components/Collapsible.md
+#	modified:   docs/Components/Commands.md
+#	modified:   plugins.tailwind.js
+#	modified:   project.config.js
+#	modified:   scripts/backup.js
+#	modified:   scripts/generate-sitemap.js
+#	modified:   scripts/new-release.js
+#	modified:   src/app.css
+#	modified:   src/code.css
+#	new file:   src/lib/Demos/commands.svelte
+#	modified:   src/lib/Demos/dropdown.svelte
+#	modified:   src/lib/codeHighlighter.js
+#	modified:   src/lib/components/Commands.svelte
+#	modified:   src/lib/components/ComponentPreview.svelte
+#	modified:   src/lib/components/Demo.svelte
+#	modified:   src/lib/components/Tree.svelte
+#	modified:   src/lib/components/markdown/a.svelte
+#	modified:   src/lib/components/markdown/blueprint.svelte
+#	modified:   src/lib/components/markdown/img.svelte
+#	modified:   src/lib/components/markdown/pre.svelte
+#	modified:   src/lib/components/markdown/table.svelte
+#	modified:   src/routes/(home)/+layout.svelte
+#	modified:   src/routes/(home)/+page.svelte
+#	modified:   src/routes/(home)/Bento.svelte
+#	modified:   src/routes/(home)/Footer.svelte
+#	modified:   src/routes/(home)/releases/+page.svelte
+#	modified:   src/routes/(home)/releases/releases.json
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#	new file:   src/routes/docs/[...slug]/TocList.svelte
+#	deleted:    src/routes/docs/[...slug]/image-zoom-plugin.js
+#	modified:   vite.config.js
+#

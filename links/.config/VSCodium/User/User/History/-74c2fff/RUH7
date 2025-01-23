@@ -1,0 +1,15 @@
+Update
+Some fixes and improvements
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	modified:   src/routes/(home)/Bento.svelte
+#	modified:   src/routes/docs/[...slug]/+layout.svelte
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Pagination.svelte
+#	modified:   static/sitemap.xml
+#

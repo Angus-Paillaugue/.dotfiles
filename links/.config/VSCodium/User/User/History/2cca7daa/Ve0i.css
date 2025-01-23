@@ -1,0 +1,19 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --background: 214.29 25% 10.98%; /* #151b23 */
+  --card: 212 18.52% 15.88%; /* #212830 */
+  --border: 211.76 14.29% 23.33%; /* #333b44 */
+  --foreground: 223.64 31.43% 86.27%; /* #d1d7e7 */
+  --danger: 3.12 74.76% 59.61%; /* #e5534b */
+  --primary: 215.38 68.42% 55.29%; /* #3f7fdb */
+
+  --secondary: 216.67 17.65% 20%; /* #2a313c */
+  --secondary-light: 212 18.52% 22.16%; /* #2e3843 */
+}
+
+body {
+  @apply bg-background text-foreground;
+}

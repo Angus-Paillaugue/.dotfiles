@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/usr/src/app
+    networks:
+      - app-network
+
+  website:
+    build:
+      context: ./website
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./website:/usr/src/app
+    networks:
+      - app-network
+    depends_on:
+      - backend
+
+networks:
+  app-network:
+    driver: bridge

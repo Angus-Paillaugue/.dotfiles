@@ -1,0 +1,12 @@
+{
+  "style": "default",
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "src/app/globals.css"
+  },app
+  "typescript": false,
+  "aliases": {
+    "utils": "$lib/utils",
+    "components": "$lib/components"
+  }
+}

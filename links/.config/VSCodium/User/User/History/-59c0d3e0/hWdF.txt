@@ -1,0 +1,9 @@
+~/.zshrc
+~/.config/starship.toml
+~/.config/starship-nord.toml
+~/.config/neofetch/config.conf
+~/.config/YouTube Music/yt-music-nord.css
+~/.config/YouTube Music/config.json
+~/.config/fastfetch/config.jsonc
+~/.config/Code/User/settings.json
+~/.config/btop/btop.config

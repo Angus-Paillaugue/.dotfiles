@@ -1,0 +1,11 @@
+---
+title: SvelteShine
+---
+<script>
+  import Counter from "./Counter.svelte";
+</script>
+<p class="text-xl">With this amazing tool, you can effortlessly create documentation for your projects and include svelte components in it to demonstrate their use.</p>
+
+<p style="font-size: 24px; font-weight: 700;">Like so :</p>
+
+<Counter />

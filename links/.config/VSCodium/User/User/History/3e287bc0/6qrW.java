@@ -1,0 +1,138 @@
+package vues;
+
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import modele.TypeDeBatiment;
+import composants.Button;
+import controleurs.AjouterBatimentControleur;
+
+public class AjouterBatiment extends JFrame {
+  private static final long serialVersionUID = 1L;
+
+		public JPanel mainPanel;
+
+		public static void main(String[] args) {
+			AppTheme.setup();
+			EventQueue.invokeLater(
+					() -> {
+						try {
+							AjouterBatiment frame = new AjouterBatiment();
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					});
+		}
+
+		public AjouterBatiment() {
+    setTitle("Ajouter un bâtiment");
+    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    setSize(400, 400);
+		setLocationRelativeTo(null);
+
+		AjouterBatimentControleur controleur = new AjouterBatimentControleur(this);
+
+    mainPanel = new JPanel(new GridBagLayout());
+    mainPanel.setBorder(new EmptyBorder(20, 20, 20, 20));
+    mainPanel.setBackground(Color.WHITE);
+
+    GridBagConstraints gbc = new GridBagConstraints();
+    gbc.insets = new Insets(5, 5, 5, 5);
+    gbc.fill = GridBagConstraints.HORIZONTAL;
+    gbc.anchor = GridBagConstraints.NORTHWEST;
+
+    // Window title
+    JLabel titleLabel = new JLabel("Ajouter un logement");
+    titleLabel.setFont(Constants.HEADING_FONT);
+    gbc.gridx = 0;
+    gbc.gridy = 0;
+    gbc.gridwidth = 2;
+    mainPanel.add(titleLabel, gbc);
+    // Separator
+    JSeparator separator = new JSeparator();
+    gbc.gridy++;
+    gbc.fill = GridBagConstraints.HORIZONTAL;
+    mainPanel.add(separator, gbc);
+
+    JPanel formPanel = new JPanel(new GridBagLayout());
+    formPanel.setBackground(null);
+    formPanel.setBackground(Color.WHITE);
+
+    GridBagConstraints formGbc = new GridBagConstraints();
+    formGbc.insets = new Insets(5, 5, 5, 5);
+    formGbc.fill = GridBagConstraints.HORIZONTAL;
+    formGbc.weightx = 1.0;
+
+    // General informations fields
+    addLabelAndTextField(formPanel, gbc,"adresseNumero", "Numéro", 3);
+		addLabelAndTextField(formPanel, gbc,"adresseRue", "Rue", 4);
+		addLabelAndTextField(formPanel, gbc,"adresseVille", "Ville", 5);
+		addLabelAndTextField(formPanel, gbc,"adresseCP", "Code postal", 6);
+    addLabelAndComboBox(formPanel, gbc, "typeBatiment","Type de bâtiment", TypeDeBatiment.getValues(), 7);
+
+		// Add panels to main panel
+		gbc.gridx = 0;
+		gbc.gridy = 2;
+		gbc.gridwidth = 1;
+		gbc.gridheight = 2;
+		gbc.weightx = 0.5;
+		gbc.weighty = 1;
+		gbc.fill = GridBagConstraints.BOTH;
+		mainPanel.add(formPanel, gbc);
+
+		// Footer buttons
+		JPanel buttonPanel = new JPanel(new GridBagLayout());
+		buttonPanel.setBackground(null);
+		gbc.gridx = 0;
+		gbc.gridy = 6;
+		gbc.weightx = 0.1;
+		gbc.gridwidth = 2;
+		gbc.weighty = 0.1;
+		gbc.gridheight = 1;
+		gbc.anchor = GridBagConstraints.SOUTH;
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		mainPanel.add(buttonPanel, gbc);
+		// Cancel button
+		JButton cancelButton = new Button("Annuler").build();
+		cancelButton.addActionListener(controleur);
+		cancelButton.setName("cancel");
+		buttonPanel.add(cancelButton);
+		// Submit button
+		JButton submitButton = new Button("Ajouter").build();
+		submitButton.addActionListener(controleur);
+		buttonPanel.add(submitButton);
+
+		add(mainPanel);
+		setLocationRelativeTo(null);
+		setVisible(true);
+  }
+
+	private void addLabelAndTextField(
+			JPanel panel, GridBagConstraints gbc, String name, String labelText, int gridy) {
+		gbc.gridx = 0;
+		gbc.gridy = gridy;
+		gbc.gridwidth = 1;
+		panel.add(new JLabel(labelText), gbc);
+
+		JTextField textField = new JTextField();
+		textField.setName(name);
+		gbc.gridx = 1;
+		gbc.gridwidth = 2;
+		panel.add(textField, gbc);
+	}
+
+	private void addLabelAndComboBox(
+			JPanel panel, GridBagConstraints gbc, String name, String labelText, String[] items, int gridy) {
+		gbc.gridx = 0;
+		gbc.gridy = gridy;
+		gbc.gridwidth = 1;
+		panel.add(new JLabel(labelText), gbc);
+
+		JComboBox<String> comboBox = new JComboBox<>(items);
+		comboBox.setName(name);
+		gbc.gridx = 1;
+		gbc.gridwidth = 2;
+		panel.add(comboBox, gbc);
+	}
+}

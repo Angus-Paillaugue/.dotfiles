@@ -1,0 +1,57 @@
+UPDATE
+Made a logo. Added smooth scroll with Lenis. Made page urls slugs to not include spaces in them.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	renamed:    docs/Components/ComponentPreview.md -> docs/Components/Component preview.md
+#	modified:   package.json
+#	modified:   pnpm-lock.yaml
+#	modified:   project.config.js
+#	modified:   src/app.css
+#	modified:   src/app.html
+#	modified:   src/code.css
+#	modified:   src/lib/components/Button.svelte
+#	modified:   src/lib/components/Collapsible/Collapsible.svelte
+#	modified:   src/lib/components/Commands.svelte
+#	modified:   src/lib/components/ComponentPreview.svelte
+#	modified:   src/lib/components/Definition/Definition.svelte
+#	modified:   src/lib/components/Definition/Prop.svelte
+#	modified:   src/lib/components/Dropdown/Dropdown.svelte
+#	modified:   src/lib/components/Note.svelte
+#	modified:   src/lib/components/Tooltip.svelte
+#	modified:   src/lib/components/Tree.svelte
+#	modified:   src/lib/components/core/Navbar.svelte
+#	modified:   src/lib/components/core/Search.svelte
+#	modified:   src/lib/components/core/Sidebar/PageList.svelte
+#	modified:   src/lib/components/core/Sidebar/Sidebar.svelte
+#	modified:   src/lib/pages.js
+#	modified:   src/lib/transformer.js
+#	modified:   src/lib/utils.js
+#	modified:   src/routes/+layout.svelte
+#	modified:   src/routes/+page.svelte
+#	modified:   src/routes/docs/[...slug]/+page.js
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Pagination.svelte
+#	deleted:    static/favicon.png
+#	new file:   static/favicon/dark/android-chrome-192x192.png
+#	new file:   static/favicon/dark/android-chrome-512x512.png
+#	new file:   static/favicon/dark/apple-touch-icon.png
+#	new file:   static/favicon/dark/favicon-32x32.png
+#	new file:   static/favicon/dark/favicon.ico
+#	new file:   static/favicon/light/android-chrome-192x192.png
+#	new file:   static/favicon/light/android-chrome-512x512.png
+#	new file:   static/favicon/light/apple-touch-icon.png
+#	new file:   static/favicon/light/favicon-32x32.png
+#	new file:   static/favicon/light/favicon.ico
+#	new file:   static/logos/SvelteShine-dark-square.png
+#	new file:   static/logos/SvelteShine-dark.png
+#	new file:   static/logos/SvelteShine-dark.svg
+#	new file:   static/logos/SvelteShine-light-square.png
+#	new file:   static/logos/SvelteShine-light.png
+#	new file:   static/logos/SvelteShine-light.svg
+#	modified:   tailwind.config.js
+#

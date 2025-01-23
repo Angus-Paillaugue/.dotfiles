@@ -1,0 +1,6 @@
+/docker
+/.git
+/.env
+/.gitignore
+/node_modules
+/songs

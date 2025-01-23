@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
+
+* {
+  @apply scroll-smooth focus:outline-1 outline-offset-4 outline-primary-600;
+}
+
+html {
+  @apply font-sans scroll-pt-20 md:scroll-pt-28;
+}
+
+body {
+  @apply font-['Mulish'] bg-white dark:bg-neutral-900 text-neutral-950 dark:text-neutral-100;
+}
+
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-inherit;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-neutral-300 dark:bg-neutral-700;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-400 dark:bg-neutral-600;
+}
+
+::selection,
+::-moz-selection {
+  @apply bg-primary-300 text-primary-950;
+}
+
+/* Text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-['Poppins'] text-wrap-balance text-black dark:text-white;
+}
+
+h1 {
+  @apply font-medium md:font-semibold text-4xl leading-[3.5rem] md:leading-[4rem] mb-4 mt-4;
+}
+
+h2 {
+  @apply font-bold text-3xl leading-6 mb-3;
+}
+
+h3 {
+  @apply font-semibold text-2xl leading-5 mb-3;
+}
+
+h4 {
+  @apply font-semibold text-xl leading-4 mb-3;
+}
+
+h5 {
+  @apply font-semibold text-lg leading-5 mb-3;
+}
+
+h6 {
+  @apply font-semibold text-base leading-5 mb-3;
+}
+
+p,
+li {
+  @apply font-['Mulish'] text-base font-medium leading-6 mb-4 text-wrap-none text-neutral-600 dark:text-neutral-400;
+}
+
+p.balance {
+  @apply text-wrap-balance;
+}
+
+hr {
+  @apply border-none h-[2px] mx-4 rounded-full bg-neutral-300/50 dark:bg-neutral-800 my-8;
+}
+
+.link {
+  @apply border-b no-underline text-base text-inherit transition-colors border-primary-400/50 hover:border-primary-400/75 bg-primary-300/30 dark:bg-primary-500/10 dark:border-primary-500/40 dark:text-primary-500 relative;
+}
+.link[href^="http"] {
+  @apply pr-5 hover:-mr-1 hover:pr-6 transition-all;
+}
+.link[href^="http"]::after {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h6q.425 0 .713.288T12 4t-.288.713T11 5H5v14h14v-6q0-.425.288-.712T20 12t.713.288T21 13v6q0 .825-.587 1.413T19 21zM19 6.4L10.4 15q-.275.275-.7.275T9 15t-.275-.7t.275-.7L17.6 5H15q-.425 0-.712-.288T14 4t.288-.712T15 3h5q.425 0 .713.288T21 4v5q0 .425-.288.713T20 10t-.712-.288T19 9z'/%3E%3C/svg%3E");
+  @apply size-4 absolute top-0.5 right-0;
+}
+
+small {
+  @apply text-xs text-neutral-500 dark:text-neutral-400;
+}
+
+/* Tooltip */
+[data-tooltip] {
+  @apply cursor-pointer relative inline-block after:content-[attr(data-tooltip)] after:absolute after:shadow-lg after:opacity-0 after:transition-all after:ease-in-out after:pointer-events-none hover:after:opacity-100 after:z-30 focus:after:opacity-100 focus:after:z-30 after:p-3 after:rounded-md after:max-w-[300px] after:break-words after:h-auto after:bg-primary-950 dark:after:bg-primary-700 dark:after:text-white after:text-sm after:leading-4 after:-translate-x-1/2 after:bottom-full after:top-auto after:left-1/2 after:mb-2 after:translate-y-4 hover:after:-translate-y-0 focus:after:-translate-y-0 after:text-white after:font-medium;
+}
+
+.tooltip-small {
+  @apply after:p-2 after:rounded after:max-w-[200px] after:text-xs after:leading-3;
+}
+
+/* Bottom */
+.tooltip-bottom {
+  @apply after:top-full after:left-1/2 after:bottom-auto after:right-auto after:-translate-y-4 hover:after:translate-y-0 focus:after:translate-y-0 after:mb-0;
+}
+
+/* Left */
+.tooltip-left {
+  @apply after:-translate-y-1/2 after:-translate-x-full after:top-1/2 after:bottom-auto hover:after:-left-2 focus:after:-left-2 after:right-auto after:mb-0 hover:after:-translate-y-1/2 focus:after:-translate-y-1/2;
+}
+
+/* Right */
+.tooltip-right {
+  @apply after:-translate-y-1/2 after:translate-x-0 after:top-1/2 after:bottom-auto hover:after:left-auto focus:after:left-auto after:right-0 after:mb-0 hover:after:-translate-y-1/2 hover:after:translate-x-full focus:after:-translate-y-1/2 focus:after:translate-x-full;
+}
+
+/* Others */
+kbd {
+  @apply font-mono text-sm bg-neutral-300 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-200 rounded-md px-2 py-1;
+}
+
+ul:not(.splide__list) {
+  @apply list-disc list-inside;
+}
+
+mark {
+  @apply bg-primary-400 dark:bg-primary-700;
+}

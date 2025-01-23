@@ -1,0 +1,126 @@
+<script>
+  import { cn } from '@repo/utils';
+  import { pre as Pre } from '$lib/components/markdown';
+  import { createHighlighter } from 'shiki';
+  import { Spinner } from '@repo/components';
+  import { colors } from '$conf';
+
+  const { codeBlockThemes } = colors;
+  const highlighter = createHighlighter({
+    themes: Object.values(codeBlockThemes),
+    langs: ['svelte']
+  });
+
+  const {
+    definition
+  } = $props();
+</script>
+
+<div class="mt-8 rounded border border-main dark:border-main-dark">
+  <div
+    class="w-fit rounded-br-md rounded-tl-md border-2 border-primary-600 bg-primary-400/50 px-2 text-primary-950 dark:border-primary-400 dark:bg-primary-900/50 dark:text-primary-50"
+  >
+    <h1 class="m-0 border-none text-xl font-bold">{definition.name}</h1>
+  </div>
+  <p class="mx-4 mb-0 mt-5 leading-7">
+    {definition.description}
+  </p>
+  {#if definition?.example}
+    <div class="mx-4 mt-5">
+      <h2 class="text-lg font-bold mt-2">Example</h2>
+      <Pre>
+        {#await highlighter}
+          <div class="m-2">
+            <Spinner class="size-6" />
+          </div>
+        {:then highlighter}
+          {@html highlighter.codeToHtml(definition.example, {
+            themes: codeBlockThemes,
+            lang: 'svelte'
+          })}
+        {/await}
+      </Pre>
+    </div>
+  {/if}
+
+  {#if definition?.params}
+    <table class="w-full table-auto">
+      <thead>
+        <tr>
+          <td>Name</td>
+          {#if definition.params.some(param => param.values)}
+            <td>Values</td>
+          {/if}
+          <td>Description</td>
+          {#if definition.params.some(param => param.default)}
+            <td>Default</td>
+          {/if}
+          <td>Type</td>
+        </tr>
+      </thead>
+      <tbody>
+        {#each definition.params as params}
+          {@const hasDefaultCol = definition.params.some(param => param.default)}
+          {@const hasValuesCol = definition.params.some(param => param.values)}
+          <tr
+            class={cn(
+              'my-5 border-t border-main px-4 pt-5 dark:border-main-dark text-sm font-medium',
+            )}
+          >
+            <td class="border-none flex flex-col gap-2">
+              <div class="rounded border-neutral-700 bg-neutral-600/20 dark:bg-neutral-400/20 px-2 py-0.5 text-text-heading dark:text-text-heading-dark w-fit">
+                {params.name}
+              </div>
+              {#if params.required}
+                <div class="rounded bg-red-400/20 dark:bg-red-600/20 px-2 py-0.5 text-red-950 dark:text-red-50 w-fit">
+                  Required
+                </div>
+              {/if}
+            </td>
+            {#if hasValuesCol}
+              <td class="border-none flex flex-row flex-wrap gap-1">
+                {#if params?.acceptedValues}
+                  {#each params.acceptedValues as value}
+                    <div class="rounded border-neutral-700 bg-neutral-600/20 dark:bg-neutral-400/20 px-2 py-0.5 text-text-heading dark:text-text-heading-dark w-fit">
+                      {value}
+                    </div>
+                  {/each}
+                {/if}
+              </td>
+            {/if}
+            <td class="border-none">
+              {params.description}
+            </td>
+            {#if hasDefaultCol}
+              <td class="border-none">
+                {params?.default}
+              </td>
+            {/if}
+            <td class="border-none">
+              {params.type}
+            </td>
+          </tr>
+        {/each}
+      </tbody>
+    </table>
+  {/if}
+</div>
+
+<!-- <div
+  class={cn('mt-8 rounded border border-main dark:border-main-dark', className)}
+  id="definition-{name}"
+  {...restProps}
+>
+  <div
+    class="w-fit rounded-br-md rounded-tl-md border-2 border-primary-600 bg-primary-400/50 px-2 text-primary-950 dark:border-primary-400 dark:bg-primary-900/50 dark:text-primary-50"
+  >
+    <h1 class="m-0 border-none text-xl font-bold">{name}</h1>
+  </div>
+  {#if description}
+    <p class="mx-4 mb-0 mt-5 leading-7">
+      {description}
+    </p>
+  {/if}
+
+  {@render children()}
+</div> -->

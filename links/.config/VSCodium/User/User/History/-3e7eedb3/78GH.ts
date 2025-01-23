@@ -1,0 +1,18 @@
+import mysql from 'mysql2/promise';
+import { MYSQL_PASSWORD, MYSQL_USER, MYSQL_HOST, MYSQL_DATABASE, } from '$env/static/private';
+
+if (!MYSQL_PASSWORD) throw new Error('MYSQL_PASSWORD is not set');
+if (!MYSQL_USER) throw new Error('MYSQL_USER is not set');
+if (!MYSQL_HOST) throw new Error('MYSQL_HOST is not set');
+if (!MYSQL_DATABASE) throw new Error('MYSQL_DATABASE is not set');
+
+const db = await mysql.createPool({
+	host: MYSQL_HOST,
+	user: MYSQL_USER,
+	password: MYSQL_PASSWORD,
+	database: MYSQL_DATABASE,
+	connectionLimit: 10,
+	debug: true
+});
+
+export default db;

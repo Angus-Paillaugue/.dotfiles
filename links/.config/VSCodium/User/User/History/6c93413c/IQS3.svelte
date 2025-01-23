@@ -1,0 +1,18 @@
+<script lang="ts">
+    import { page } from '$app/stores';
+    import { Button } from "$lib/components/ui/button/index.js";
+</script>
+
+<h1>{$page.status}: {$page.error?.message}</h1>
+<div class="flex h-svh flex-col items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
+    <div class="w-full max-w-md text-center space-y-4">
+      <!-- <div class="mx-auto h-12 w-12 text-primary" /> -->
+      <h1 class="text-6xl font-bold tracking-tight text-foreground sm:text-7xl">404</h1>
+      <p class="text-lg text-muted-foreground">
+        Oops, it looks like the page you're looking for doesn't exist.
+      </p>
+      <Button href="/">
+        Go to Homepage
+        </Button>
+    </div>
+  </div>

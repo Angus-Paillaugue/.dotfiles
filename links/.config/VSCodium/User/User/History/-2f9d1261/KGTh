@@ -1,0 +1,2 @@
+AUTH_TOKEN_SECRET=test
+DB_PASSWORD=leetcode

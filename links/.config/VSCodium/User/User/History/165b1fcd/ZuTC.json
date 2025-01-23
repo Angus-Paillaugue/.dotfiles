@@ -1,0 +1,36 @@
+{
+  "models": [
+    {
+      "title": "Granite Code",
+      "provider": "openai",
+      "model": "granite-code:latest",
+      "useLegacyCompletionsEndpoint": false,
+      "apiBase": "https://chat-gpt.paillaugue.fr/ollama/v1",
+      "apiKey": "sk-b4fbad865d874bb4a2a8881ce40773fd"
+    }
+  ],
+  "customCommands": [
+    {
+      "name": "test",
+      "prompt": "{{{ input }}}\n\nWrite a comprehensive set of unit tests for the selected code. It should setup, run tests that check for correctness including important edge cases, and teardown. Ensure that the tests are complete and sophisticated. Give the tests just as chat output, don't edit any file.",
+      "description": "Write unit tests for highlighted code"
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "Granite Code",
+    "provider": "openai",
+    "model": "granite-code:latest",
+    "useLegacyCompletionsEndpoint": false,
+    "apiBase": "https://chat-gpt.paillaugue.fr/ollama/v1",
+    "apiKey": "sk-b4fbad865d874bb4a2a8881ce40773fd"
+  },
+  "allowAnonymousTelemetry": false,
+  "embeddingsProvider": {
+    "provider": "openai",
+    "apiBase": "https://chat-gpt.paillaugue.fr/ollama/v1",
+    "apiKey": "sk-b4fbad865d874bb4a2a8881ce40773fd",
+    "useLegacyCompletionsEndpoint": false,
+    
+    "model": "nomic-embed-text:latest"
+  }
+}

@@ -1,0 +1,54 @@
+package dao;
+
+import java.sql.SQLException;
+import java.util.Arrays;
+
+import dao.definitions.GarantDAODef;
+import jdbc.Connector;
+import modele.Adresse;
+import modele.Location;
+import modele.Personne;
+import utils.Logger;
+
+public class GarantDAO implements GarantDAODef {
+
+  @Override
+  public Location ajouterGarant(Personne garant, Location location) {
+    try {
+      Connector db = Connector.getInstance();
+      PersonneDAO personneDAO = new PersonneDAO();
+      AdresseDAO adresseDAO = new AdresseDAO();
+      Adresse adresse = garant.getAdresse();
+      adresse = adresseDAO.create(adresse);
+      garant.setAdresse(adresse);
+      personneDAO.create(garant, garant.getAdresse().getId());
+      String query = "INSERT INTO Garantir (idLocation, idGarant) VALUES (?, ?)";
+      db.executeUpdate(query, Arrays.asList(location.getId(), garant.getIdLocataire()));
+      location.addGarant(garant);
+      return location;
+    } catch (SQLException e) {
+      Logger.error(e);
+    }
+    return null;
+  }
+
+  @Override
+  public void supprimerGarant(Personne garant, Location location) {
+    try {
+      Connector db = Connector.getInstance();
+      PersonneDAO personneDAO = new PersonneDAO();
+      personneDAO.delete(garant);
+      String query = "DELETE FROM Garantir WHERE idLocation = ? AND idGarant = ?";
+      db.executeUpdate(query, Arrays.asList(location.getId(), garant.getIdLocataire()));
+    } catch (SQLException e) {
+      Logger.error(e);
+    }
+  }
+
+  @Override
+  public void supprimerTousLesGarants(Location location) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'supprimerTousLesGarants'");
+  }
+
+}

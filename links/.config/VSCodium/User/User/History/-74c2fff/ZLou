@@ -1,0 +1,23 @@
+Format
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is ahead of 'origin/dev' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   project.config.js
+#	modified:   scripts/generate-sitemap.js
+#	modified:   src/app.css
+#	modified:   src/app.html
+#	modified:   src/lib/components/Dropdown/Item.svelte
+#	modified:   src/lib/components/core/Navbar.svelte
+#	modified:   src/lib/components/core/Sidebar/Sidebar.svelte
+#	modified:   src/lib/components/core/Toasts.svelte
+#	modified:   src/routes/+error.svelte
+#	modified:   src/routes/+page.svelte
+#	modified:   src/routes/Hero.svelte
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#

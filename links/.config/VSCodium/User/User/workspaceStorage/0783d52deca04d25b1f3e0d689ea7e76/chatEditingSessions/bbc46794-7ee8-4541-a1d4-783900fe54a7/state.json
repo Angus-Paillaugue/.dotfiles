@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "sessionId": "bbc46794-7ee8-4541-a1d4-783900fe54a7",
+  "linearHistory": [],
+  "linearHistoryIndex": 0,
+  "initialFileContents": [],
+  "recentSnapshot": {
+    "workingSet": [
+      [
+        "file:///home/angus/Documents/work/S3/sae3a01/app/.gitignore",
+        {
+          "description": "Often edited with pom.xml (Suggested)",
+          "state": 6
+        }
+      ],
+      [
+        "file:///home/angus/Documents/work/S3/sae3a01/app/createDatabase.sql",
+        {
+          "description": "Often edited with pom.xml (Suggested)",
+          "state": 6
+        }
+      ]
+    ],
+    "entries": []
+  },
+  "filesToSkipCreating": []
+}

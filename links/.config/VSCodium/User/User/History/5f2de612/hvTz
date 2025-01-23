@@ -1,0 +1,59 @@
+UPDATE
+Added some components and upgraded others
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   .prettierrc
+#	modified:   README.md
+#	new file:   docs/Components/Api-reference.md
+#	modified:   docs/Components/Collapsible.md
+#	modified:   docs/Components/Commands.md
+#	modified:   docs/Components/Definition.md
+#	new file:   docs/Components/Images.md
+#	modified:   docs/Components/Note.md
+#	new file:   docs/Components/Tables.md
+#	modified:   docs/Components/Tooltip.md
+#	modified:   docs/Components/Tree.md
+#	deleted:    docs/Configuration/Colors.md
+#	modified:   docs/Counter.svelte
+#	deleted:    docs/Directories/Sort Directories.md
+#	modified:   mdsvex.config.js
+#	modified:   package.json
+#	modified:   pnpm-lock.yaml
+#	modified:   src/app.css
+#	modified:   src/code.css
+#	modified:   src/lib/components/Button.svelte
+#	renamed:    src/lib/components/Collapsible.svelte -> src/lib/components/Collapsible/Collapsible.svelte
+#	new file:   src/lib/components/Collapsible/Group.svelte
+#	new file:   src/lib/components/Collapsible/index.js
+#	modified:   src/lib/components/Commands.svelte
+#	deleted:    src/lib/components/ComponentDefinition.svelte
+#	new file:   src/lib/components/Definition/Definition.svelte
+#	new file:   src/lib/components/Definition/Note.svelte
+#	new file:   src/lib/components/Definition/Prop.svelte
+#	new file:   src/lib/components/Definition/index.js
+#	modified:   src/lib/components/Note.svelte
+#	modified:   src/lib/components/Tooltip.svelte
+#	modified:   src/lib/components/Tree.svelte
+#	modified:   src/lib/components/core/Navbar.svelte
+#	modified:   src/lib/components/core/Search.svelte
+#	modified:   src/lib/components/core/Sidebar/PageList.svelte
+#	modified:   src/lib/components/core/Sidebar/PageListCollapsible.svelte
+#	modified:   src/lib/components/core/Sidebar/Sidebar.svelte
+#	modified:   src/lib/components/core/Toasts.svelte
+#	modified:   src/lib/components/index.js
+#	modified:   src/lib/transformer.js
+#	modified:   src/routes/+error.svelte
+#	modified:   src/routes/+page.svelte
+#	modified:   src/routes/Counter.svelte
+#	modified:   src/routes/Footer.svelte
+#	modified:   src/routes/Hero.svelte
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Pagination.svelte
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#	modified:   user-config.js
+#

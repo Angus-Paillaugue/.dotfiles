@@ -1,0 +1,122 @@
+/* Text */
+#markdown-contents h1,
+#markdown-contents h2,
+#markdown-contents h3,
+#markdown-contents h4,
+#markdown-contents h5,
+#markdown-contents h6 {
+	@apply text-black;
+}
+
+#markdown-contents h1 {
+	@apply mb-2 mt-4 font-sans text-3xl font-semibold leading-8;
+}
+
+#markdown-contents h2 {
+	@apply mb-4 mt-12 text-2xl font-bold leading-6;
+}
+
+#markdown-contents h3 {
+	@apply mb-2 mt-9 text-xl font-semibold leading-6;
+}
+
+#markdown-contents h4 {
+	@apply mb-2 mt-4 text-xl font-semibold;
+}
+
+#markdown-contents h5 {
+	@apply mb-2 mt-4 text-lg font-semibold;
+}
+
+#markdown-contents h6 {
+	@apply mb-2 mt-4 text-base font-semibold;
+}
+
+#markdown-contents p,
+#markdown-contents li {
+	@apply mb-4 font-mono text-base font-medium leading-6 text-neutral-600;
+}
+
+#markdown-contents span,
+#markdown-contents small {
+	@apply text-neutral-600;
+}
+#markdown-contents small {
+	@apply text-xs;
+}
+
+/* Base styles for all code blocks thruout the app */
+code {
+	counter-reset: codeStep;
+	counter-increment: codeStep 0;
+	direction: ltr;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+	@apply hyphens-none whitespace-pre-wrap ligatures-normal;
+}
+
+/* Highlighted code blocks */
+.shiki {
+	@apply relative overflow-auto whitespace-pre rounded border border-neutral-300 !bg-white py-6 focus:-outline-offset-1;
+}
+
+.line-numbers .line::before {
+	content: counter(codeStep);
+	counter-increment: codeStep;
+	font-variant-numeric: tabular-nums;
+	@apply inline-block w-6 text-left;
+}
+
+/* For snippet */
+.snippet {
+	@apply relative my-4 flex w-full max-w-[500px] flex-row items-stretch overflow-hidden rounded border border-neutral-300;
+}
+
+.snippet .shiki {
+	@apply w-full rounded-none border-none p-4;
+}
+
+.snippet>pre>code .line::before,
+.commands>pre>code .line::before {
+	@apply mr-4 inline-block w-fit text-center content-['$'];
+}
+
+.snippet pre>code .line {
+	@apply whitespace-pre p-0 pr-10;
+}
+
+/* For regular code blocks */
+pre>code .line {
+	@apply relative inline-block w-full px-6;
+}
+
+pre>code {
+	@apply block w-full;
+}
+
+/* For highlighted lines */
+.diff.remove {
+	@apply bg-red-600/20 after:absolute after:left-2 after:top-1/2 after:-translate-y-1/2 after:text-red-600 after:content-['-'];
+}
+
+.diff.add {
+	@apply bg-green-600/20 after:absolute after:left-2 after:top-1/2 after:-translate-y-1/2 after:text-green-600 after:content-['+'];
+}
+
+.highlighted {
+	@apply bg-primary/20 after:absolute after:left-0 after:h-full after:w-[2px] after:bg-primary;
+}
+
+/* Inline code */
+code:not(pre code, .command) {
+	@apply rounded bg-primary/50 px-0.5 text-primary;
+}
+
+.commands>pre,
+.commandsCode pre {
+	@apply m-0 rounded-none border-none py-4;
+}
+.codeBlockName p {
+	@apply m-0;
+}

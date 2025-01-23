@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
+
+:root {
+  --border-main-color: 1 px solid rgba(theme(colors.neutral.300).5);
+  /* border-neutral-300/50 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --border-main-color: 1 px solid theme(colors.neutral.700/.5);
+    /* dark:border-neutral-700/50 */
+  }
+}
+
+* {
+  @apply scroll-smooth outline-offset-4 outline-primary-600 focus:outline-1 dark:outline-primary-600;
+}
+
+html {
+  @apply scroll-pt-20 font-sans md:scroll-pt-28;
+}
+
+body {
+  @apply bg-white font-['Mulish'] text-neutral-950 dark:bg-neutral-900 dark:text-neutral-100;
+}
+
+::-webkit-scrollbar {
+  @apply h-2 w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-inherit;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-neutral-300 dark:bg-neutral-700;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-400 dark:bg-neutral-600;
+}
+
+::selection,
+::-moz-selection {
+  @apply bg-primary-300 text-primary-950;
+}
+
+/* Text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-['Poppins'] text-black text-wrap-balance dark:text-white;
+}
+
+h1 {
+  @apply mb-2 mt-4 text-4xl font-medium leading-[3.5rem] md:font-semibold md:leading-[4rem];
+}
+
+h2 {
+  @apply mb-2 mt-4 text-3xl font-bold;
+}
+
+h3 {
+  @apply mb-2 mt-4 text-2xl font-semibold;
+}
+
+h4 {
+  @apply mb-2 mt-4 text-xl font-semibold;
+}
+
+h5 {
+  @apply mb-2 mt-4 text-lg font-semibold;
+}
+
+h6 {
+  @apply mb-2 mt-4 text-base font-semibold;
+}
+
+p,
+li {
+  @apply mb-4 font-['Mulish'] text-base font-medium leading-6 text-neutral-500 text-wrap-none dark:text-neutral-400;
+}
+span,
+small {
+  @apply text-neutral-500 dark:text-neutral-400;
+}
+p.balance {
+  @apply text-wrap-balance;
+}
+small {
+  @apply text-xs;
+}
+hr {
+  @apply mx-4 my-8 h-[2px] rounded-full border-none bg-neutral-300/50 dark:bg-neutral-800;
+}
+/* Page links */
+.link {
+  @apply relative border-b border-primary-400/50 bg-primary-300/30 text-inherit no-underline transition-colors hover:border-primary-400/75 dark:border-primary-500/40 dark:bg-primary-500/10 dark:text-primary-500;
+}
+/* For the external links icons */
+.link[href^='http'] > svg.newTabIcon {
+  @apply ml-1 inline-block;
+}
+
+/* Others */
+kbd {
+  @apply rounded-md bg-neutral-300 px-2 py-1 font-mono text-sm text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
+}
+
+ul:not(.splide__list) {
+  @apply list-inside list-disc;
+}
+
+mark {
+  @apply bg-transparent text-primary-400 dark:bg-transparent dark:text-primary-600;
+}

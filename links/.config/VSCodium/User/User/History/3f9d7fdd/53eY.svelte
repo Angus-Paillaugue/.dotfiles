@@ -1,0 +1,14 @@
+<script lang="ts">
+	import { Card } from '$lib/components';
+    import type { PageData } from './$types';
+
+    let { data }: { data: PageData } = $props();
+    const { user } = data;
+    console.log(user);
+</script>
+
+<div class="max-w-xl w-full mx-auto grow">
+  <Card class="w-full">
+    <Card.Heading>Log-in</Card.Heading>
+  </Card>
+</div>

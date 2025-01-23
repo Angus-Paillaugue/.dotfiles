@@ -1,0 +1,6 @@
+
+MYSQL_PASSWORD=logify
+MYSQL_USER=logify
+MYSQL_DATABASE=logify
+MYSQL_HOST=db
+JWT_SECRET=test

@@ -1,0 +1,37 @@
+package ihm;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+
+public class ButtonDanger extends Button {
+	private JButton button;
+
+	/**
+	 * @param text - Text displayed inside the button
+	 * @param callback - On button click, this callback is called with a MouseEvent type parameter
+	 */
+	public ButtonDanger(String text) {
+		super(text, null);
+		this.button = construct();
+
+		this.button.setBorder(BorderFactory.createEmptyBorder(2, 5, 2, 5));
+		this.button.setFont(Constants.BASE_FONT);
+		this.button.setForeground(Constants.WHITE_COLOR);
+		this.button.setBackground(Constants.ERROR_COLOR);
+	}
+
+	/**
+	 * @param text - Text displayed inside the button
+	 * @param iconPath - The button icon path relative to the project
+	 * @param callback - On button click, this callback is called with a MouseEvent type parameter
+	 */
+	public ButtonDanger(String text, String iconPath) {
+		super(text, iconPath);
+		this.button = construct();
+
+		this.button.setBorder(BorderFactory.createEmptyBorder(2, 5, 2, 5));
+		this.button.setFont(Constants.BASE_FONT);
+		this.button.setForeground(Constants.WHITE_COLOR);
+		this.button.setBackground(Constants.ERROR_COLOR);
+	}
+}

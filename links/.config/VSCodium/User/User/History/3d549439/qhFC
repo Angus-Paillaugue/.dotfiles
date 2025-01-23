@@ -1,0 +1,27 @@
+Update
+# Removed the new method and added a way to extract images and videos from exported .har file
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   .gitignore
+#	modified:   README.md
+#	new file:   cleanup.js
+#	new file:   compress.sh
+#	renamed:    oldMethod/download.js -> download.js
+#	deleted:    newMethod/cleanup.py
+#	deleted:    newMethod/coordinates.py
+#	deleted:    newMethod/download.py
+#	deleted:    newMethod/downloadImages.py
+#	deleted:    newMethod/downloadVideos.py
+#	deleted:    newMethod/getMousePos.py
+#	deleted:    newMethod/main.py
+#	deleted:    newMethod/pyvenv.cfg
+#	deleted:    oldMethod/main.py
+#	deleted:    oldMethod/package.json
+#	new file:   package.json
+#	renamed:    oldMethod/pnpm-lock.yaml -> pnpm-lock.yaml
+#

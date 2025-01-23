@@ -1,0 +1,324 @@
+import { sql } from "@vercel/postgres"
+import { format } from 'date-fns';
+
+export async function createDatabase() {
+
+  try {
+    await sql`
+      CREATE TABLE IF NOT EXISTS prices (
+        productId VARCHAR(255),
+        price DECIMAL(10, 2),
+        date TIMESTAMP
+      )
+    `;
+
+    await sql`
+      CREATE TABLE IF NOT EXISTS products (
+        productId VARCHAR(255),
+        url TEXT,
+        imageUrl TEXT,
+        title TEXT,
+        brand TEXT,
+        tracked BOOLEAN DEFAULT TRUE,
+        createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      )
+    `;
+  } catch (err) {
+    console.error(`Error creating database: ${err}`);
+  }
+}
+
+export async function addProductToDb(
+  productId,
+  productUrl,
+  imageUrl,
+  productTitle,
+  productBrand,
+) {
+  try {
+    await sql`
+      INSERT INTO products (productId, url, imageUrl, title, brand)
+      VALUES (${productId}, ${productUrl}, ${imageUrl}, ${productTitle}, ${productBrand})
+      ON CONFLICT (productId) DO NOTHING
+    `;
+    return true;
+  } catch (err) {
+    console.error(`Error tracking product: ${err}`);
+    return false;
+  }
+}
+
+export async function insertPriceToDb(productId, price) {
+  try {
+    await sql`
+      INSERT INTO prices (productId, price, date)
+      VALUES (${productId}, ${price}, ${format(new Date(), 'yyyy-MM-dd HH:mm:ss')})
+    `;
+    return true;
+  } catch (err) {
+    console.error(`Error tracking product: ${err}`);
+    return false;
+  }
+}
+
+export async function fetchStalePrices() {
+
+  try {
+    const { rows } = await sql
+      `
+      SELECT
+        p.productId,
+        pr.url,
+        p.price,
+        p.date
+      FROM prices p
+      JOIN products pr ON pr.productId = p.productId
+      WHERE (p.productId, p.date) IN (
+        SELECT productId, MAX(date) FROM prices GROUP BY productId
+      )
+      AND pr.tracked = TRUE
+      GROUP BY
+        p.productId,
+        pr.url,
+        p.price,
+        p.date
+      `;
+
+    return rows;
+  } catch (err) {
+    console.error(`Error fetching stale prices: ${err}`);
+    return [];
+  }
+}
+
+export async function getPriceHistory(productId, startDate) {
+
+  try {
+    const res = await sql
+      `
+      SELECT
+        DATE(prices.date) AS date,
+        MIN(prices.price) AS min_price
+      FROM prices
+      WHERE prices.productId = ${productId}
+      AND prices.date > ${startDate}
+      GROUP BY DATE(prices.date)
+      ORDER BY DATE(prices.date) DESC
+      `;
+
+    const rowsDict = res.rows.map((row) => ({
+      price: row.min_price,
+      date: new Date(row.date),
+    }));
+
+    return rowsDict;
+  } catch (err) {
+    console.error(`Error fetching price history: ${err}`);
+    return false;
+  }
+}
+
+export async function updateTrackingStatus(productId, tracked) {
+
+  try {
+    await sql
+      `
+      UPDATE products
+      SET tracked = ${tracked}
+      WHERE productId = ${productId}
+      `;
+    return true;
+  } catch (err) {
+    console.error(`Error updating tracking status: ${err}`);
+    return false;
+  }
+}
+
+export async function getProductFromUrl(url) {
+
+  try {
+    const { rows } = await sql
+      `
+      SELECT productId FROM products WHERE url = ${url}
+      `;
+    return rows.length ? rows[0].productId : null;
+  } catch (err) {
+    return null;
+  }
+}
+
+export async function productExistsInDb(productId) {
+
+  try {
+    const { rows } = await sql
+      `
+      SELECT productId FROM products WHERE productId = ${productId}
+      `;
+    return rows.length > 0;
+  } catch (err) {
+    return false;
+  }
+}
+
+export async function getLatestPrice(productId) {
+
+  try {
+    const { rows } = await sql
+      `
+      SELECT price FROM prices WHERE productId = ${productId} ORDER BY date DESC LIMIT 1
+      `;
+    return { price: rows[0].price };
+  } catch (err) {
+    return null;
+  }
+}
+
+export async function getProducts() {
+
+  try {
+    const { rows } = await sql
+      `
+      SELECT
+        products.imageUrl,
+        products.title,
+        products.brand,
+        products.tracked,
+        products.url,
+        products.productId,
+        (SELECT price FROM prices WHERE productId = products.productId ORDER BY date DESC LIMIT 1) AS lastPrice,
+        COALESCE(
+          (SELECT price FROM prices
+           WHERE productId = products.productId
+           AND price != (SELECT price FROM prices WHERE productId = products.productId ORDER BY date DESC LIMIT 1)
+           ORDER BY date DESC LIMIT 1),
+          (SELECT price FROM prices WHERE productId = products.productId ORDER BY date DESC LIMIT 1)
+        ) AS lastChangedPrice,
+        products.createdAt
+      FROM products
+      LEFT JOIN prices ON products.productId = prices.productId
+      GROUP BY
+        products.imageUrl,
+        products.title,
+        products.brand,
+        products.tracked,
+        products.url,
+        products.productId,
+        products.createdAt
+      ORDER BY products.createdAt DESC
+      `;
+
+    const productData = rows.map((row) => {
+      const { lastprice, lastchangedprice } = row;
+      const priceDiff =
+        lastprice !== null && lastchangedprice !== null
+          ? lastprice - lastchangedprice
+          : 0;
+      return { ...row, priceDiff };
+    });
+
+    return productData;
+  } catch (err) {
+    console.error(`Error fetching products: ${err}`);
+    return [];
+  }
+}
+
+export async function getProduct(id) {
+
+  try {
+    const { rows } = await sql
+      `
+      SELECT
+        products.productId,
+        products.url,
+        products.imageUrl,
+        products.title,
+        products.brand,
+        products.tracked,
+        (SELECT price FROM prices WHERE productId = products.productId ORDER BY date DESC LIMIT 1) AS price,
+        COALESCE(
+          (SELECT price FROM prices
+           WHERE productId = products.productId
+           AND price != (SELECT price FROM prices WHERE productId = products.productId ORDER BY date DESC LIMIT 1)
+           ORDER BY date DESC LIMIT 1),
+          (SELECT price FROM prices WHERE productId = products.productId ORDER BY date DESC LIMIT 1)
+        ) AS lastChangedPrice,
+        (SELECT MIN(price) as allTimeMinPrice FROM prices WHERE productId = products.productId) AS allTimeMinPrice,
+        (SELECT MAX(price) as allTimeMaxPrice FROM prices WHERE productId = products.productId) AS allTimeMaxPrice
+      FROM products
+      WHERE products.productId = ${id}
+      `;
+
+    return rows.length ? rows[0] : null;
+  } catch (err) {
+    console.error(`Error getting product: ${err}`);
+    return null;
+  }
+}
+
+export async function deleteProduct(id) {
+  try {
+    await sql
+      `
+      DELETE FROM products WHERE productId = ${id}
+      `;
+    await sql
+      `
+      DELETE FROM prices WHERE productId = ${id}
+      `;
+    return true;
+  } catch (err) {
+    console.error(`Error deleting product: ${err}`);
+    return false;
+  }
+}
+
+export async function getPriceChange(id) {
+
+  try {
+    const { rows } = await sql
+      `
+      SELECT
+        (SELECT price FROM prices WHERE productId = products.productId ORDER BY date DESC LIMIT 1) AS price,
+        COALESCE(
+          (SELECT price FROM prices
+           WHERE productId = products.productId
+           AND price != (SELECT price FROM prices WHERE productId = products.productId ORDER BY date DESC LIMIT 1)
+           ORDER BY date DESC LIMIT 1),
+          (SELECT price FROM prices WHERE productId = products.productId ORDER BY date DESC LIMIT 1)
+        ) AS lastChangedPrice
+      FROM prices, products
+      WHERE products.productId = ${id}
+      ORDER BY prices.date DESC
+      `;
+
+    return rows.length
+			? { price: rows[0].price, lastChangedPrice: rows[0].lastChangedPrice }
+			: null;
+  } catch (err) {
+    return null;
+  }
+}
+
+export async function cronHasPriceChange(id) {
+
+  try {
+    const { rows } = await sql
+      `
+      SELECT
+        prices.price
+      FROM prices
+      WHERE prices.productId = ${id}
+      ORDER BY prices.date DESC
+      LIMIT 2
+      ` ;
+
+    if (rows.length < 2 || rows[0].price === rows[1].price) {
+      return false;
+    }
+
+    return true;
+  } catch (err) {
+    return false;
+  }
+}

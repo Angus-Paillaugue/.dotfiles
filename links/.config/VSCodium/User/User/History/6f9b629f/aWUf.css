@@ -1,0 +1,43 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --background: 240, 10%, 4%;
+  --foreground: 240, 5%, 96%;
+
+  --muted: 240, 5%, 34%;
+
+  --primary: 0 0% 98%;
+  --primary-foreground: 240 5.9% 10%;
+
+  --secondary: 240, 4%, 16%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+
+  --ring: 240 4.9% 83.9%;
+  --border: 240 3.7% 15.9%;
+}
+
+* {
+  @apply scroll-smooth border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+@layer base {
+}
+
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

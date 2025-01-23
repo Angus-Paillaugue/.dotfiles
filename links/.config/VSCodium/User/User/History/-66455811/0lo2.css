@@ -1,0 +1,55 @@
+/* Text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-['Poppins'] text-black;
+}
+
+h1 {
+  @apply mb-2 mt-4 text-3xl font-medium leading-[3.5rem] md:font-semibold md:leading-[4rem];
+}
+
+h2 {
+  @apply mb-4 mt-12 text-2xl font-bold leading-6;
+}
+
+h3 {
+  @apply mb-2 mt-9 text-xl font-semibold leading-6;
+}
+
+h4 {
+  @apply mb-2 mt-4 text-xl font-semibold;
+}
+
+h5 {
+  @apply mb-2 mt-4 text-lg font-semibold;
+}
+
+h6 {
+  @apply mb-2 mt-4 text-base font-semibold;
+}
+
+p,
+li {
+  @apply mb-4 font-['Mulish'] text-base font-medium leading-6 text-neutral-600;
+}
+
+span,
+small {
+  @apply text-neutral-600;
+}
+small {
+  @apply text-xs;
+}
+
+/* Others */
+kbd {
+  @apply rounded bg-neutral-300 px-2 py-1 font-mono text-sm font-normal text-neutral-700;
+}
+
+mark {
+  @apply bg-transparent text-primary;
+}

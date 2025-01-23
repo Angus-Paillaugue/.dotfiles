@@ -1,0 +1,16 @@
+import { json } from '@sveltejs/kit';
+import { runTests } from '$lib/server/tests';
+import { createConnection } from '$lib/server/db';
+
+
+export async function POST({ request }) {
+	const { exercise_id, user_input } = await request.json();
+
+	const results = await runTests(exercise_id, user_input);
+
+	// Some tests failed
+	if(results.some(result => !result.passed))
+		return json({ error: 'Some tests failed' }, { status: 400 });
+
+	return json(results);
+}

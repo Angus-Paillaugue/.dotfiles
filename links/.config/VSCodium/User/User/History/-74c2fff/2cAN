@@ -1,0 +1,59 @@
+Update
+Random fixed here and there
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	new file:   .editorconfig
+#	modified:   .prettierrc
+#	modified:   docs/Configuration/Updating.md
+#	modified:   mdsvex.config.js
+#	modified:   package.json
+#	modified:   project.config.js
+#	modified:   scripts/backup.js
+#	modified:   scripts/generate-sitemap.js
+#	modified:   scripts/new-release.js
+#	modified:   scripts/setup.js
+#	modified:   scripts/update.js
+#	modified:   src/code.css
+#	modified:   src/lib/Demos/commands.svelte
+#	modified:   src/lib/codeHighlighter.js
+#	modified:   src/lib/components/Button.svelte
+#	modified:   src/lib/components/Collapsible/Group.svelte
+#	modified:   src/lib/components/ComponentPreview.svelte
+#	modified:   src/lib/components/Definition/Definition.svelte
+#	modified:   src/lib/components/Definition/Note.svelte
+#	modified:   src/lib/components/Definition/Prop.svelte
+#	modified:   src/lib/components/Demo.svelte
+#	modified:   src/lib/components/Dropdown/Divider.svelte
+#	modified:   src/lib/components/Dropdown/Dropdown.svelte
+#	modified:   src/lib/components/Note.svelte
+#	new file:   src/lib/components/Spinner.svelte
+#	modified:   src/lib/components/Tooltip.svelte
+#	modified:   src/lib/components/Tree.svelte
+#	modified:   src/lib/components/core/PageLoader.svelte
+#	modified:   src/lib/components/core/Search.svelte
+#	modified:   src/lib/components/core/Sidebar/PageList.svelte
+#	modified:   src/lib/components/core/Sidebar/Sidebar.svelte
+#	modified:   src/lib/components/index.js
+#	modified:   src/lib/components/markdown/h1.svelte
+#	modified:   src/lib/components/markdown/pre.svelte
+#	modified:   src/lib/components/markdown/table.svelte
+#	modified:   src/lib/pages.js
+#	modified:   src/lib/stores.js
+#	modified:   src/routes/(home)/+layout.svelte
+#	modified:   src/routes/(home)/Bento.svelte
+#	modified:   src/routes/(home)/Counter.svelte
+#	modified:   src/routes/(home)/Footer.svelte
+#	modified:   src/routes/(home)/Hero.svelte
+#	modified:   src/routes/(home)/releases/+page.svelte
+#	modified:   src/routes/+error.svelte
+#	modified:   src/routes/+layout.svelte
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Pagination.svelte
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#	modified:   tailwind.config.js
+#

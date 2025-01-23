@@ -1,0 +1,14 @@
+
+<footer class="rounded-2xl bg-primary text-primary-foreground px-8 py-24 grid grid-rows-2">
+  <div class="grid grid-cols-3 max-w-screen-xl mx-auto">
+    <div class="flex flex-col gap-10">
+      <div class="flex flex-row gap-2 items-center">
+        <img src="/logos/Dark.svg" class="size-6" alt="">
+        <h5 class="font-bold text-lg">Logify</h5>
+      </div>
+      <p class="text-muted/50 text-sm">
+        Logify is a platform that allows you to log your daily activities and keep track of your progress.
+      </p>
+    </div>
+  </div>
+</footer>

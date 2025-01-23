@@ -1,0 +1,1 @@
+{"ref":"e37d001c-ac42-420b-882c-3518cd5fc194","syncData":{"version":1,"machineId":"56a8e005-83e6-41b9-b09f-3b092e998d82","content":"{\"tasks\":\"{\\n  \\\"version\\\": \\\"2.0.0\\\",\\n  \\\"tasks\\\": [\\n    {\\n      \\\"label\\\": \\\"echo\\\",\\n      \\\"type\\\": \\\"shell\\\",\\n      \\\"command\\\": \\\"echo Hello\\\"\\n    }\\n  ]\\n}\\n\"}"}}

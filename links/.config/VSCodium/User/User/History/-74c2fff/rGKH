@@ -1,0 +1,39 @@
+UPDATE
+Updated config file name and format. Wrose some documentation for the new config file.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Changes to be committed:
+#	modified:   README.md
+#	modified:   docs/Components/Definition.md
+#	deleted:    docs/Components/RequestBuilder.md
+#	new file:   docs/Configuration/Colors.md
+#	new file:   docs/Configuration/Homepage.md
+#	new file:   docs/Configuration/Pages.md
+#	new file:   docs/Configuration/Project.md
+#	new file:   docs/Configuration/Sidebar.md
+#	new file:   project.config.js
+#	modified:   scripts/setup.js
+#	modified:   src/app.css
+#	modified:   src/code.css
+#	modified:   src/lib/codeHighlighter.js
+#	modified:   src/lib/components/Commands.svelte
+#	modified:   src/lib/components/Definition/Definition.svelte
+#	modified:   src/lib/components/Definition/Prop.svelte
+#	deleted:    src/lib/components/RequestBuilder/RequestBuilder.svelte
+#	deleted:    src/lib/components/RequestBuilder/index.js
+#	modified:   src/lib/components/core/Navbar.svelte
+#	modified:   src/lib/components/core/Sidebar/PageList.svelte
+#	modified:   src/lib/components/core/Sidebar/Sidebar.svelte
+#	modified:   src/lib/components/index.js
+#	modified:   src/routes/+layout.svelte
+#	modified:   src/routes/+page.svelte
+#	modified:   src/routes/Footer.svelte
+#	modified:   src/routes/Hero.svelte
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#	modified:   tailwind.config.js
+#	deleted:    user-config.js
+#	modified:   vite.config.js
+#

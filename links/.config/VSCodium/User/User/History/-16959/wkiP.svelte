@@ -1,0 +1,260 @@
+<script>
+	import {
+		Card,
+		CardContent,
+		CardDescription,
+		CardFooter,
+		CardHeader,
+		CardTitle
+	} from '$lib/components/ui/card';
+	import { Button } from '$lib/components/ui/button';
+	import { Progress } from '$lib/components/ui/progress';
+	import {
+		ArrowUpRight,
+		ArrowDownRight,
+		Wifi,
+		HardDrive,
+		Database,
+		RefreshCcw,
+	} from 'lucide-svelte';
+	import Status from './Status.svelte';
+	import { cn } from '$lib/utils';
+	import { toast } from "svelte-sonner";
+	import DatabaseInfo from './DatabaseInfo.svelte';
+	import RTMetrics from './RTMetrics.svelte';
+
+	const { data } = $props();
+	const { services, disks, databases, ip } = data;
+	let speedtest = $state(data.speedtest);
+	let isRefreshingSpeedtestData = $state(false);
+	let databaseModalOpen = $state(false);
+	let databaseModalDatabaseName = $state(null);
+
+	async function runSpeedtest() {
+		isRefreshingSpeedtestData = true;
+		const res = await fetch('/api/runSpeedtest', { method: 'POST' });
+		if (res.ok) {
+			const data = await res.json();
+			speedtest = data;
+			toast.success('Speedtest data fetched successfully');
+		} else {
+			console.error('Error fetching speedtest data');
+			toast.error('Error fetching speedtest data');
+		}
+		isRefreshingSpeedtestData = false;
+	}
+</script>
+
+
+<svelte:head>
+  <title>
+    Home server
+  </title>
+</svelte:head>
+
+
+<RTMetrics />
+
+
+<DatabaseInfo bind:open={databaseModalOpen} bind:databaseName={databaseModalDatabaseName} />
+
+<div class="flex flex-row items-center justify-between w-full mb-4 mt-10">
+	<h2 class="text-2xl font-semibold gap-4">Internet Speed</h2>
+	<Button
+		variant="outline"
+		size="icon"
+		on:click={runSpeedtest}
+		disabled={isRefreshingSpeedtestData}
+	>
+		<RefreshCcw class={cn('size-4', isRefreshingSpeedtestData && 'animate-spin')} />
+	</Button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+	<!-- Download speed -->
+	<a href="/internetSpeedHistory">
+		<Card>
+			<CardHeader class="flex flex-row items-center justify-between space-y-2 pb-4">
+				<CardTitle class="font-medium">Download Speed</CardTitle>
+				<ArrowUpRight class="size-4 text-muted-foreground" />
+			</CardHeader>
+			<CardContent>
+				<div class="flex flex-row gap-4 items-center">
+					<div class="text-2xl font-bold">{speedtest?.latest_download ?? 0} Mbps</div>
+					<div class="text-sm text-muted-foreground flex flex-row items-center gap-1">
+						<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"
+							><path
+								fill="currentColor"
+								d="M20 15c-1.777 0-3.231-.873-4.514-1.642C14.322 12.659 13.223 12 12 12c-1.398 0-2.449.863-3.293 1.707l-1.414-1.414C8.36 11.225 9.86 10 12 10c1.777 0 3.231.873 4.514 1.642C17.678 12.341 18.777 13 20 13c1.398 0 2.449-.863 3.293-1.707l1.414 1.414C23.64 13.775 22.14 15 20 15m0 7c-1.777 0-3.231-.873-4.514-1.642C14.322 19.659 13.223 19 12 19c-1.398 0-2.449.863-3.293 1.707l-1.414-1.414C8.36 18.225 9.86 17 12 17c1.777 0 3.231.873 4.514 1.642C17.678 19.341 18.777 20 20 20c1.398 0 2.449-.863 3.293-1.707l1.414 1.414C23.64 20.775 22.14 22 20 22"
+							/><path
+								fill="currentColor"
+								d="M16 30C8.28 30 2 23.72 2 16S8.28 2 16 2s14 6.28 14 14s-6.28 14-14 14m0-26C9.383 4 4 9.383 4 16s5.383 12 12 12s12-5.383 12-12S22.617 4 16 4"
+							/></svg
+						>
+						<span>{speedtest?.latest_download_latency} ms</span>
+					</div>
+				</div>
+				<p class="text-xs text-muted-foreground">
+					{speedtest.download_change_percentage >= 0
+						? '+' + speedtest.download_change_percentage
+						: speedtest.download_change_percentage}% from last time
+				</p>
+			</CardContent>
+		</Card>
+	</a>
+
+	<!-- Upload speed -->
+	<a href="/internetSpeedHistory">
+		<Card class="relative group">
+			<CardHeader class="flex flex-row items-center justify-between space-y-2 pb-4">
+				<CardTitle class="font-medium">Upload Speed</CardTitle>
+				<ArrowDownRight class="size-4 text-muted-foreground" />
+			</CardHeader>
+			<CardContent>
+				<div class="flex flex-row gap-4 items-center">
+					<div class="text-2xl font-bold">{speedtest.latest_upload} Mbps</div>
+					<div class="text-sm text-muted-foreground flex flex-row items-center gap-1">
+						<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"
+							><path
+								fill="currentColor"
+								d="M20 15c-1.777 0-3.231-.873-4.514-1.642C14.322 12.659 13.223 12 12 12c-1.398 0-2.449.863-3.293 1.707l-1.414-1.414C8.36 11.225 9.86 10 12 10c1.777 0 3.231.873 4.514 1.642C17.678 12.341 18.777 13 20 13c1.398 0 2.449-.863 3.293-1.707l1.414 1.414C23.64 13.775 22.14 15 20 15m0 7c-1.777 0-3.231-.873-4.514-1.642C14.322 19.659 13.223 19 12 19c-1.398 0-2.449.863-3.293 1.707l-1.414-1.414C8.36 18.225 9.86 17 12 17c1.777 0 3.231.873 4.514 1.642C17.678 19.341 18.777 20 20 20c1.398 0 2.449-.863 3.293-1.707l1.414 1.414C23.64 20.775 22.14 22 20 22"
+							/><path
+								fill="currentColor"
+								d="M16 30C8.28 30 2 23.72 2 16S8.28 2 16 2s14 6.28 14 14s-6.28 14-14 14m0-26C9.383 4 4 9.383 4 16s5.383 12 12 12s12-5.383 12-12S22.617 4 16 4"
+							/></svg
+						>
+						<span>{speedtest.latest_upload_latency} ms</span>
+					</div>
+				</div>
+				<div class="transition-all group-hover:inset-0 group-hover:bg-card group-hover:z-50">
+					<p class="text-xs text-muted-foreground">
+						{speedtest.upload_change_percentage >= 0
+							? '+' + speedtest.upload_change_percentage
+							: speedtest.upload_change_percentage}% from last time
+					</p>
+				</div>
+			</CardContent>
+		</Card>
+	</a>
+
+	<!-- Ping -->
+	<a href="/internetSpeedHistory">
+		<Card>
+			<CardHeader class="flex flex-row items-center justify-between space-y-2 pb-4">
+				<CardTitle class="font-medium">Ping</CardTitle>
+				<Wifi class="size-4 text-muted-foreground" />
+			</CardHeader>
+			<CardContent>
+				<div class="text-2xl font-bold">{speedtest.latest_ping} ms</div>
+				<p class="text-xs text-muted-foreground">
+					{speedtest.ping_change >= 0 ? '+' + speedtest.ping_change : speedtest.ping_change} ms from
+					last time
+				</p>
+			</CardContent>
+		</Card>
+	</a>
+</div>
+
+<h2 class="text-2xl font-semibold mb-4">Server statistics</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+	<!-- Disks usage -->
+	<Card>
+		<CardHeader>
+			<CardTitle>Disks usage</CardTitle>
+		</CardHeader>
+		<CardContent>
+			<div class="flex flex-col gap-6">
+				{#each disks as disk}
+					<div class="flex flex-col gap-4 w-full">
+						<div class="flex flex-row gap-4 items-center">
+							<HardDrive class="size-12" />
+							<p class="text-lg font-semibold">{disk.size}</p>
+							<p class="text-base w-2/6 ml-auto">{disk.mount}</p>
+						</div>
+						<Progress value={disk.usage.slice(0, -1)} max={100} class="w-full">
+							{disk.used}
+						</Progress>
+					</div>
+				{/each}
+			</div>
+		</CardContent>
+	</Card>
+
+	<!-- Databases -->
+	<Card>
+		<CardHeader class="flex flex-row items-center justify-between">
+			<CardTitle>Databases</CardTitle>
+			<Status status={databases.status} />
+		</CardHeader>
+		<CardContent>
+			{#if databases.status === 'error'}
+				<p class="text-lg text-center text-red-500">
+					{databases.message ?? 'Error fetching databases'}
+				</p>
+			{:else}
+				<div class="flex flex-col items-center">
+					{#each databases.list as database}
+						<button class="w-full flex flex-row gap-4 items-center p-4 border-b last:border-none transition-colors hover:bg-secondary rounded" data-name={database.name} onclick={(e) => {databaseModalDatabaseName = e.target.closest('button').dataset.name;databaseModalOpen = true}}>
+							<Database class="size-6" />
+							<p class="text-lg font-semibold">{database.name}</p>
+							<p class="ml-auto">
+								{database.size} Mb
+							</p>
+						</button>
+					{/each}
+				</div>
+			{/if}
+		</CardContent>
+	</Card>
+</div>
+
+<h2 class="text-2xl font-semibold mb-4">Running Services</h2>
+<!-- For each service within a category -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+	{#each services as card}
+		<Card>
+			<CardHeader>
+				<div class="flex flex-row items-center gap-4">
+					<img src={card.icon} alt="{card.name} icon" class="size-10 object-cover" />
+					<h3 class="text-lg leading-none tracking-tight font-medium">{card.name}</h3>
+					<Status status={card.status} class="ml-auto" />
+				</div>
+				<CardDescription>{card.description}</CardDescription>
+			</CardHeader>
+			<CardFooter>
+				<div class="flex flex-row gap-4">
+					<!-- If the card.url is an object where the key is the name (ec: Global, Local, ...) and the value is the url of the ressource -->
+					{#if card.url instanceof Object}
+						{#each Object.entries(card.url) as [name, url], linkIndex}
+							<Button
+								variant={linkIndex === 0 ? undefined : 'secondary'}
+								href={url}
+								aria-label="Open {name.toLowerCase()} url for the {card.name} interface"
+								target="_blank"
+								rel="noopener noreferrer">{name}</Button
+							>
+						{/each}
+						<!-- Else, it means that car.url is a simple string of the url of the ressource -->
+					{:else}
+						<Button
+							color="primary"
+							href={card.url}
+							target="_blank"
+							aria-label="Open global url for the {card.name} interface"
+							rel="noopener noreferrer">Global</Button
+						>
+					{/if}
+				</div>
+			</CardFooter>
+		</Card>
+	{/each}
+</div>
+
+<style>
+	@keyframes -global-ping {
+		75%,
+		100% {
+			transform: scale(2);
+			opacity: 0;
+		}
+	}
+</style>

@@ -1,0 +1,38 @@
+Update
+Added an animated collapsible element and used it in the sidebar. Updated home page
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   README.md
+#	new file:   docs/Components/Collapsible.md
+#	modified:   docs/Components/Note.md
+#	modified:   docs/Components/Tree.md
+#	modified:   docs/Home.md
+#	modified:   mdsvex.config.js
+#	modified:   src/code.css
+#	new file:   src/lib/components/Collapsible.svelte
+#	modified:   src/lib/components/Commands.svelte
+#	modified:   src/lib/components/core/PageList.svelte
+#	modified:   src/lib/components/index.js
+#	modified:   src/lib/transformer.js
+#	modified:   src/lib/utils.js
+#	modified:   src/routes/+error.svelte
+#	modified:   src/routes/+page.svelte
+#	modified:   src/routes/Footer.svelte
+#	modified:   src/routes/Hero.svelte
+#	modified:   src/routes/docs/[...slug]/+layout.svelte
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Pagination.svelte
+#	new file:   static/homepage/mockup/dark/homepagePreview_1920.webp
+#	new file:   static/homepage/mockup/dark/homepagePreview_480.webp
+#	new file:   static/homepage/mockup/dark/homepagePreview_960.webp
+#	new file:   static/homepage/mockup/light/homepagePreview_1920.webp
+#	new file:   static/homepage/mockup/light/homepagePreview_480.webp
+#	new file:   static/homepage/mockup/light/homepagePreview_960.webp
+#	modified:   tailwind.config.js
+#	modified:   user-config.js
+#

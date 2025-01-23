@@ -1,0 +1,63 @@
+import mysql from 'mysql2/promise';
+import { dbConfig } from '../config';
+
+class DB {
+  private static instance: DB;
+  private connection: mysql.Connection | null = null;
+  #config = dbConfig;
+
+  private constructor() {
+    // Create database
+    this.query(`
+      CREATE TABLE IF NOT EXISTS logs (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        level VARCHAR(50) NOT NULL,
+        message TEXT NOT NULL,
+        timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
+
+    console.log("Database created.");
+  }
+
+  public static getInstance(): DB {
+    if (!DB.instance) {
+      DB.instance = new DB();
+    }
+    return DB.instance;
+  }
+
+  public async connect() {
+    if (this.connection) return; // Avoid reconnecting
+    this.connection = await mysql.createPool(this.#config);
+    console.log("Connected to MySQL database.");
+  }
+
+  public async query<T>(sql: string, params: any[] = []): Promise<T[]> {
+    this.connect();
+    if(!this.connection) {
+      console.error("No connection to MySQL database.");
+      return [];
+    }
+    try {
+      const [results] = await this.connection.execute<T[]>(sql, params);
+      return results;
+    }catch (error) {
+      console.error("Error executing query:", error);
+      return [];
+    }finally {
+      await this.close();
+    }
+
+  }
+
+  public async close() {
+    if (this.connection) {
+      await this.connection.end();
+      console.log("MySQL connection closed.");
+    }
+    this.connection = null;
+  }
+}
+
+export default DB;

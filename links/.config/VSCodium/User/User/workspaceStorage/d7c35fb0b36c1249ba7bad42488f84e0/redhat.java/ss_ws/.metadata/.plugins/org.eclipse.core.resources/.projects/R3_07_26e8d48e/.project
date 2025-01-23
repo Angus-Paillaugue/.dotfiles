@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>R3_07_26e8d48e</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.settings</name>
+			<type>2</type>
+			<location>/home/angus/eclipse-workspace/s3/R3_07/.settings/</location>
+		</link>
+		<link>
+			<name>_</name>
+			<type>2</type>
+			<location>/home/angus/eclipse-workspace/s3/R3_07/</location>
+		</link>
+	</linkedResources>
+</projectDescription>

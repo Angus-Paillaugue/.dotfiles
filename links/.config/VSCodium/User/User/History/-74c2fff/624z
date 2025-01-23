@@ -1,0 +1,28 @@
+Update
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   README.md
+#	deleted:    docs/Components/Component preview.md
+#	modified:   docs/Pages/Code blocks.md
+#	new file:   docs/Pages/Demos.md
+#	modified:   package.json
+#	modified:   project.config.js
+#	new file:   scripts/createDemoRegistry.js
+#	new file:   src/lib/Demos/index.js
+#	modified:   src/lib/codeHighlighter.js
+#	modified:   src/lib/components/Commands.svelte
+#	deleted:    src/lib/components/ComponentPreview.svelte
+#	modified:   src/lib/components/Demo.svelte
+#	modified:   src/lib/components/core/Search.svelte
+#	modified:   src/lib/components/index.js
+#	modified:   src/lib/components/markdown/pre.svelte
+#	deleted:    src/lib/transformer.js
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#	modified:   static/sitemap.xml
+#

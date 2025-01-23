@@ -1,0 +1,40 @@
+package ihm;
+
+import javax.swing.JButton;
+
+public class ButtonNeutral extends Button {
+	private JButton button;
+
+	/**
+	 * @param text - Text displayed inside the button
+	 * @param callback - On button click, this callback is called with a MouseEvent type parameter
+	 */
+	public ButtonNeutral(String text) {
+		super(text, null);
+		this.button = construct();
+
+		// this.button.setBorder(BorderFactory.createCompoundBorder(
+		// Constants.BORDER,
+		// BorderFactory.createEmptyBorder(2, 5, 2, 5)));
+		// this.button.setFont(Constants.BASE_FONT);
+		// this.button.setForeground(Constants.HEADING_COLOR);
+		// this.button.setBackground(Constants.WHITE_COLOR);
+	}
+
+	/**
+	 * @param text - Text displayed inside the button
+	 * @param iconPath - The button icon path relative to the project
+	 * @param callback - On button click, this callback is called with a MouseEvent type parameter
+	 */
+	public ButtonNeutral(String text, String iconPath) {
+		super(text, iconPath);
+		this.button = construct();
+
+		// this.button.setBorder(BorderFactory.createCompoundBorder(
+		// Constants.BORDER,
+		// BorderFactory.createEmptyBorder(2, 5, 2, 5)));
+		// this.button.setFont(Constants.BASE_FONT);
+		// this.button.setForeground(Constants.HEADING_COLOR);
+		// this.button.setBackground(Constants.WHITE_COLOR);
+	}
+}

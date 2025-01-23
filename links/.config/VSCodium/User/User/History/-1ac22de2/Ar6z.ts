@@ -1,0 +1,36 @@
+import db from './index';
+import { eq, and } from 'drizzle-orm';
+import { submissions } from './schema';
+import * as m from '$msgs';
+
+export async function submitSolution(userId: number, exercise_id:number, user_input:string, results) {
+	const solutionExists = await db
+		.select({
+			id: submissions.id
+		})
+		.from(submissions)
+		.where(
+			and(
+				eq(submissions.user_id, userId),
+				eq(submissions.exercise_id, exercise_id),
+				eq(submissions.submission, user_input)
+			)
+		);
+
+	if (solutionExists.length > 0) {
+		throw new Error(m.error_messages_db_submissions_already_submitted_solution());
+	}
+
+	const insertedRow = await db
+		.insert(submissions)
+		.values({
+			user_id: userId,
+			exercise_id: exercise_id,
+			submission: user_input,
+			ram_usage: results.averageRamUsage,
+			completed_at: new Date()
+		})
+		.$returningId();
+
+	return insertedRow[0].id;
+}

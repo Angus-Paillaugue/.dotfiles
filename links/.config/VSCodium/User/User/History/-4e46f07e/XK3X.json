@@ -1,0 +1,10 @@
+{
+  "i18n-ally.localesPaths": [
+    "Code-Chronicles/src/routes/languages",
+    "Nothing-Notes/src/lib/i18n",
+    "Nothing-Notes/src/lib/locales",
+    "my-fashion-vault/src/lib/i18n",
+    "my-fashion-vault/src/lib/locales"
+  ],
+  "python.analysis.typeCheckingMode": "basic"
+}

@@ -1,0 +1,79 @@
+package controleurs;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.time.LocalDate;
+
+import javax.swing.JComponent;
+
+import dao.ChargesDAO;
+import modele.BienLouable;
+import modele.Charges;
+import utils.VuesUtils;
+import vues.HistoriqueDesCharges;
+import vues.RegularisationDesCharges;
+import vues.composants.ModalSuccess;
+
+public class RegularisationDesChargesControleur implements ActionListener {
+
+  private RegularisationDesCharges vue;
+
+  public RegularisationDesChargesControleur(RegularisationDesCharges vue) {
+    this.vue = vue;
+  }
+
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    BienLouable b = this.vue.getBienLouable();
+    JComponent target = (JComponent) e.getSource();
+    switch (target.getName()) {
+      case "annuler": {
+        this.vue.dispose();
+        new HistoriqueDesCharges(b);
+        break;
+      }
+      case "editer":
+        break;
+
+      case "reviser": {
+        ChargesDAO chargesDAO = new ChargesDAO();
+        Charges ancienneCharges = b.getCharges();
+        float prixDuMetreCubeDEau =
+            VuesUtils.toFloat(VuesUtils.getInputValue(this.vue.mainPanel, "prixEauMetreCube"));
+        int indexEau = VuesUtils.toInt(VuesUtils.getInputValue(this.vue.mainPanel, "indexEau"));
+        float prixEau = prixDuMetreCubeDEau * indexEau;
+        Charges nouvelleCharge =
+            new Charges(
+                ancienneCharges.getOrduresMenageres(),
+                ancienneCharges.getEntretienPartiesCommunes(),
+                ancienneCharges.getEclairagePartiesCommunes(),
+                ancienneCharges.getEauPartieFixe(),
+                ancienneCharges.getProvisionSurCharge(),
+                indexEau,
+                prixEau,
+                LocalDate.now());
+        nouvelleCharge = chargesDAO.update(nouvelleCharge, b.getId());
+
+        new ModalSuccess("Succès", "Charges régularisés avec succès", true);
+        break;
+      }
+      case "calculer": {
+        float prixDuMetreCubeDEau =
+            VuesUtils.toFloat(VuesUtils.getInputValue(this.vue.mainPanel, "prixEauMetreCube"));
+        int indexEau = VuesUtils.toInt(VuesUtils.getInputValue(this.vue.mainPanel, "indexEau"));
+        this.vue.resSousTotalEau.setText(String.valueOf(prixDuMetreCubeDEau * indexEau));
+        this.vue.resTotalCharges.setText(
+            String.valueOf(
+                VuesUtils.toFloat(this.vue.resSousTotalEau.getText())
+                    + VuesUtils.toFloat(this.vue.sousTotalFixe.getText())));
+        this.vue.totalRestantDu.setText(
+            String.valueOf(
+                VuesUtils.toFloat(this.vue.resTotalCharges.getText())
+                    - VuesUtils.toFloat(this.vue.provisionsAnnuelles.getText())));
+                    
+
+        break;
+      }
+    }
+  }
+}

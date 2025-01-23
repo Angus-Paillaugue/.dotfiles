@@ -1,0 +1,13 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	modified:   docs/Components/Images.md
+#	modified:   src/lib/transformer.js
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#	new file:   src/routes/docs/[...slug]/image-zoom-plugin.js
+#

@@ -1,0 +1,17 @@
+Update
+Updated the whole process and splitted code in multiple files. Created a venv
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	new file:   .gitignore
+#	new file:   coordinates.py
+#	new file:   download.py
+#	modified:   downloadImages.py
+#	modified:   downloadVideos.py
+#	modified:   main.py
+#	new file:   pyvenv.cfg
+#

@@ -1,0 +1,27 @@
+Formatting
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	modified:   src/app.css
+#	modified:   src/code.css
+#	modified:   src/lib/components/Button.svelte
+#	modified:   src/lib/components/Collapsible/Collapsible.svelte
+#	modified:   src/lib/components/Commands.svelte
+#	modified:   src/lib/components/ComponentPreview.svelte
+#	modified:   src/lib/components/Definition/Note.svelte
+#	modified:   src/lib/components/Steps/Step.svelte
+#	modified:   src/lib/components/Steps/Steps.svelte
+#	modified:   src/lib/components/core/Navbar.svelte
+#	modified:   src/lib/components/core/PageLoader.svelte
+#	modified:   src/lib/components/core/Search.svelte
+#	modified:   src/lib/components/core/Sidebar/Sidebar.svelte
+#	modified:   src/lib/utils.js
+#	modified:   src/routes/+layout.svelte
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#	modified:   src/routes/docs/[...slug]/image-zoom-plugin.js
+#

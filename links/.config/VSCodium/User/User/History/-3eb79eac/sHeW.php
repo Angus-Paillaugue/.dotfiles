@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components</title>
+  <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+
+
+  <div class="grid grid-grid-cols-1 lg:grid-cols-2 gap-8 max-w-screen-xl mx-auto p-8">
+    <?php
+      include_once '../school/lib/components.php';
+
+      $buttons = array([
+        "label" => "Primary",
+        "variant" => "primary"
+      ], [
+        "label" => "Secondary",
+        "variant" => "secondary"
+      ], [
+        "label" => "Ghost",
+        "variant" => "ghost"
+      ], [
+        "label" => "Danger",
+        "variant" => "danger"
+      ], [
+        "label" => "Warning",
+        "variant" => "warning"
+      ], [
+        "label" => "Info",
+        "variant" => "info"
+      ], [
+        "label" => "Success",
+        "variant" => "success"
+      ], [
+        "label" => "Light",
+        "variant" => "light"
+      ], [
+        "label" => "X",
+        "variant" => "square primary"
+      ], [
+        "label" => "Disabled",
+        "variant" => "primary",
+        "disabled" => true
+      ], [
+        "label" => "No animation",
+        "variant" => "secondary",
+        "class" => "no-scale"
+      ]);
+
+      $inputs = array([
+        "placeholder" => "Placeholder"
+      ], [
+        "label" => "Label",
+        "placeholder" => "Placeholder"
+      ]);
+
+      $alerts = array([
+        "text" => "<b>Danger</b> Alert",
+        "variant" => "danger"
+      ], [
+        "text" => "<b>Warning</b> Alert",
+        "variant" => "warning"
+      ], [
+        "text" => "<b>Success</b> Alert",
+        "variant" => "success"
+      ], [
+        "text" => "<b>Info</b> Alert",
+        "variant" => "info"
+      ]);
+
+      echo "<div class='border p-4 rounded-xl'>";
+      echo "<h1 class='text-2xl font-medium mb-4 underline'>Button</h1>";
+      echo "<div class='flex flex-row gap-4 flex-wrap'>";
+      foreach ($buttons as $component) {
+        $button = new Button(['label' => $component['label'], 'variant' => $component['variant'], 'disabled' => $component['disabled'], 'class' => $component['class']]);
+        echo $button->construct();
+      }
+      echo "</div>";
+      echo "</div>";
+      echo "<div class='border p-4 rounded-xl'>";
+      echo "<h1 class='text-2xl font-medium mb-4 underline'>Inputs</h1>";
+      echo "<div class='flex flex-row gap-4 flex-wrap'>";
+      foreach ($inputs as $component) {
+        $input = new Input(['label' => $component['label'], 'placeholder' => $component['placeholder']]);
+        echo $input->construct();
+      }
+      echo "</div>";
+      echo "</div>";
+
+      echo "<div class='border p-4 rounded-xl'>";
+      echo "<h1 class='text-2xl font-medium mb-4 underline'>Alerts</h1>";
+      echo "<div class='flex flex-row gap-4 flex-wrap'>";
+      foreach ($alerts as $component) {
+        $alert = new Alert(['text' => $component['text'], 'variant' => $component['variant']]);
+        echo $alert->construct();
+      }
+      echo "</div>";
+      echo "</div>";
+    ?>
+  </div>
+
+</body>
+</html>

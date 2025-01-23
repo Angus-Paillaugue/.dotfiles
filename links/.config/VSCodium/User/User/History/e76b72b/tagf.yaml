@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: logify_backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: production
+      MYSQL_HOST: db
+      MYSQL_USER: logify
+      MYSQL_PASSWORD: logify
+      MYSQL_DATABASE: logify
+      PORT: 3001 #
+    ports:
+      # You can change the exposed port of the backend but you HAVE to change the
+      # BACKEND_PORT environment variable in the frontend service AND the port in the
+      # backend service
+      - "3001:3000"
+    depends_on:
+      - db
+
+  frontend:
+    container_name: logify_frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    environment:
+      PORT: 4173
+      BACKEND_PORT: 3001
+      BACKEND_HOST: localhost
+    ports:
+      # Change the first port to the port you want to use for your frontend
+      # Do not change the second port unless you change the port in the environment
+      # but it's should't be necessary because it's exposed as an internal port
+      - "4173:4173"
+    depends_on:
+      - backend
+
+  db:
+    image: mysql
+    restart: always
+    container_name: logify_db
+    environment:
+      MYSQL_DATABASE: logify
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./backend/database.sql:/docker-entrypoint-initdb.d/database.sql
+
+volumes:
+  db_data:

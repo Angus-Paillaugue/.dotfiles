@@ -1,0 +1,8 @@
+{
+  "i18n-ally.localesPaths": [
+    "venv/lib/python3.12/site-packages/jedi/third_party/django-stubs/django-stubs/conf/locale",
+    "venv/lib/python3.12/site-packages/jedi/third_party/django-stubs/django-stubs/contrib/messages",
+    "venv/lib64/python3.12/site-packages/jedi/third_party/django-stubs/django-stubs/conf/locale",
+    "venv/lib64/python3.12/site-packages/jedi/third_party/django-stubs/django-stubs/contrib/messages"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "old-method",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cleanup.js",
+  "type": "module",
+  "scripts": {
+    "cleanup": "node cleanup.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

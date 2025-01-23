@@ -1,0 +1,8 @@
+{
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "cSpell.words": [
+    "Batiment",
+    "proprietaire"
+  ],
+  "java.debug.settings.onBuildFailureProceed": true
+}

@@ -1,0 +1,36 @@
+<script>
+  import { House, Shirt, UserRound, Plus, Undo2 } from 'lucide-svelte';
+  import { page } from '$app/stores';
+  import { Button } from '$lib/components';
+
+  /** @type {import('./$types').LayoutData} */
+  const { children } = $props();
+
+  let isNested = $derived($page.url.pathname.slice(4).split('/').length > 2);
+</script>
+
+<div class="grow max-w-screen-md mx-auto flex flex-col w-full p-2">
+  {#if isNested}
+  <header class="flex flex-row gap-4 items-center border border-border bg-card p-4 rounded-xl mb-4">
+    <Button variant="backButton" onclick={() => (window.history.back())}>
+      <Undo2 class="size-5" />
+    </Button>
+  </header>
+  {/if}
+  <main class="flex flex-col grow">
+    {@render children?.()}
+  </main>
+  <div class="h-24 shrink-0"></div>
+  <div class="fixed z-20 bottom-2 left-1/2 -translate-x-2"></div>
+  <nav class="flex flex-row items-center justify-evenly bg-card border border-border rounded-xl mb-4 mt-6 w-full">
+    <a href="/app/items" class="p-2 rounded-full">
+      <House class="size-6" />
+    </a>
+    <a href="/app" class="p-3 rounded-full -mt-8 bg-card border border-border">
+      <Plus class="size-8" />
+    </a>
+    <a href="/app" class="p-2 rounded-full">
+      <UserRound class="size-6" />
+    </a>
+  </nav>
+</div>

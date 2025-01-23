@@ -1,0 +1,8 @@
+/docker
+/.git
+/.env
+/.gitignore
+/node_modules
+/songs
+/.dockerignore
+/pnpm-lock.yaml

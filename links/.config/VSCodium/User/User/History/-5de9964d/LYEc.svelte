@@ -1,0 +1,19 @@
+<script lang="ts">
+	import Track from '$lib/songs/Track.svelte';
+	import type{ Song } from '$lib/types';
+  import { currentlyPlayingSong } from '$lib/stores';
+
+  let { data } = $props();
+
+  let songs = $state<Song[]>(data.songs);
+</script>
+
+
+<div class="w-full flex flex-row">
+
+</div>
+<div class="flex flex-col max-w-screen-lg mx-auto p-2">
+  {#each songs as song}
+    <Track {song} isPlaying={$currentlyPlayingSong?.path === song.path} play={(s: Song) => ($currentlyPlayingSong = s)} />
+  {/each}
+</div>

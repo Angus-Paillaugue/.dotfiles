@@ -1,0 +1,18 @@
+Update
+Fixed tree component. Updated README and Quickstart
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	modified:   README.md
+#	modified:   docs/Quickstart.md
+#	modified:   src/code.css
+#	modified:   src/lib/components/Tree.svelte
+#	modified:   src/lib/components/core/Navbar.svelte
+#	modified:   src/lib/components/core/Sidebar/PageList.svelte
+#	modified:   src/lib/components/core/Sidebar/Sidebar.svelte
+#	modified:   src/routes/docs/[...slug]/+page.js
+#

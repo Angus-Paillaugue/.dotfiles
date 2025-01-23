@@ -1,0 +1,212 @@
+package modele;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+public abstract class BienLouable {
+  @Override
+  public int hashCode() {
+    return Objects.hash(
+        adresse,
+        assurance,
+        bati,
+        charges,
+        colocation,
+        id,
+        location,
+        loyer,
+        numeroFiscal,
+        refCadastrale,
+        taxeFonciere,
+        travaux);
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null) return false;
+    if (getClass() != obj.getClass()) return false;
+    BienLouable other = (BienLouable) obj;
+    return Objects.equals(adresse, other.adresse)
+        && Objects.equals(assurance, other.assurance)
+        && bati == other.bati
+        && Objects.equals(charges, other.charges)
+        && Objects.equals(colocation, other.colocation)
+        && id == other.id
+        && Objects.equals(location, other.location)
+        && Objects.equals(loyer, other.loyer)
+        && Objects.equals(numeroFiscal, other.numeroFiscal)
+        && Objects.equals(refCadastrale, other.refCadastrale)
+        && Float.floatToIntBits(taxeFonciere) == Float.floatToIntBits(other.taxeFonciere)
+        && Objects.equals(travaux, other.travaux);
+  }
+
+  private int id;
+  private Adresse adresse;
+  private List<Travaux> travaux;
+  private List<Assurance> assurance;
+  private Charges charges;
+  private String refCadastrale;
+  private boolean bati;
+  private String numeroFiscal;
+  private float taxeFonciere;
+  private Location location;
+  private Colocation colocation;
+  private Loyer loyer;
+<<<<<<< HEAD
+  // private boolean bColocation;
+=======
+>>>>>>> origin/DAO
+
+  public BienLouable(
+      Adresse adresse,
+      String refCadastrale,
+      boolean bati,
+      String numeroFiscal,
+      float taxeFonciere,
+      Loyer loyer,
+      Charges charges) {
+    this.adresse = adresse;
+    this.refCadastrale = refCadastrale;
+    this.bati = bati;
+    this.numeroFiscal = numeroFiscal;
+    this.taxeFonciere = taxeFonciere;
+    this.loyer = loyer;
+    this.travaux = new ArrayList<Travaux>();
+    this.assurance = new ArrayList<Assurance>();
+    this.charges = charges;
+  }
+
+  public BienLouable(
+      int id,
+      Adresse adresse,
+      String refCadastrale,
+      boolean bati,
+      String numeroFiscal,
+      float taxeFonciere,
+      Loyer loyer,
+      Charges charges) {
+    this.id = id;
+    this.adresse = adresse;
+    this.refCadastrale = refCadastrale;
+    this.bati = bati;
+    this.numeroFiscal = numeroFiscal;
+    this.taxeFonciere = taxeFonciere;
+    this.loyer = loyer;
+    this.travaux = new ArrayList<Travaux>();
+    this.assurance = new ArrayList<Assurance>();
+    this.charges = charges;
+  }
+
+  public int getId() {
+    return this.id;
+  }
+
+  // peut seulement être une location ou une colocation, pas les deux en même temps
+  public void addLocation(Location location) {
+    if (this.isColocation()) {
+      throw new IllegalArgumentException(
+          "Un bien ne peut pas être à la fois une location et une colocation");
+    }
+    if (this.isLocation()) {
+      throw new IllegalArgumentException("Ce bien est déjà une location");
+    }
+    this.location = location;
+<<<<<<< HEAD
+    this.colocation = null;
+    // this.bColocation = false;
+=======
+>>>>>>> origin/DAO
+  }
+
+  public void addColocation(Colocation colocation) {
+    if (this.isLocation()) {
+      throw new IllegalArgumentException(
+          "Un bien ne peut pas être à la fois une location et une colocation");
+    }
+    if (this.isColocation()) {
+      throw new IllegalArgumentException("Ce bien est déjà une colocation");
+    }
+    this.colocation = colocation;
+<<<<<<< HEAD
+    this.location = null;
+    // this.bColocation = true;
+=======
+>>>>>>> origin/DAO
+  }
+
+  public Adresse getAdresse() {
+    return this.adresse;
+  }
+
+  public String getRefCadastrale() {
+    return this.refCadastrale;
+  }
+
+  public boolean isBati() {
+    return this.bati;
+  }
+
+  public String getNumeroFiscal() {
+    return this.numeroFiscal;
+  }
+
+  public float getTaxeFonciere() {
+    return this.taxeFonciere;
+  }
+
+  public Boolean isColocation() {
+    return this.colocation != null && this.location == null;
+  }
+
+  public Boolean isLocation() {
+    return this.location != null && this.colocation == null;
+  }
+
+  public Boolean isVide() {
+	    return this.location == null && this.colocation == null;
+	  }
+
+  public Location getLocation() {
+    return this.location;
+  }
+
+  public Colocation getColocation() {
+    return this.colocation;
+  }
+
+  public Loyer getLoyer() {
+    return this.loyer;
+  }
+
+  public List<Travaux> getTravaux() {
+    return this.travaux;
+  }
+
+  public List<Assurance> getAssurance() {
+    return this.assurance;
+  }
+
+  public Charges getCharges() {
+    return this.charges;
+  }
+
+  public void setAdresse(Adresse adresse) {
+    this.adresse = adresse;
+  }
+
+  public abstract float surfaceTotale();
+
+  public float totalCoutAssurance() {
+    float total = 0F;
+    for (Assurance a : this.getAssurance()) {
+      total += a.cout();
+    }
+    return total;
+  }
+  
+  public float loyerCC() {
+    return (this.getLoyer().getMontantHorsCharge() + this.getCharges().getProvisionSurCharge());
+  }
+}

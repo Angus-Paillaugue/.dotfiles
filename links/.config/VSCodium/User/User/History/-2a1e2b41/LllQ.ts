@@ -1,0 +1,13 @@
+import type { AnyType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/any";
+import type { ArrayType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/array";
+import type { ConstType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/const";
+import type { EnumType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/enum";
+import type { Never, NeverType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/never";
+import type { ObjectType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/object";
+import type { PrimitiveType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/primitive";
+import type { TupleType } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/tuple";
+import type { Type } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/type";
+import type { $Union, UnionType, UnionValues } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/union";
+import type { $Intersect } from ".pnpm/ts-algebra@2.0.0/node_modules/ts-algebra/lib/meta-types/intersection";
+export declare type IntersectUnion<META_UNION extends UnionType, META_TYPE> = META_TYPE extends Type ? META_TYPE extends NeverType ? META_TYPE : META_TYPE extends AnyType ? META_UNION : META_TYPE extends ConstType ? DistributeIntersection<META_UNION, META_TYPE> : META_TYPE extends EnumType ? DistributeIntersection<META_UNION, META_TYPE> : META_TYPE extends PrimitiveType ? DistributeIntersection<META_UNION, META_TYPE> : META_TYPE extends ArrayType ? DistributeIntersection<META_UNION, META_TYPE> : META_TYPE extends TupleType ? DistributeIntersection<META_UNION, META_TYPE> : META_TYPE extends ObjectType ? DistributeIntersection<META_UNION, META_TYPE> : META_TYPE extends UnionType ? DistributeIntersection<META_UNION, META_TYPE> : Never : Never;
+export declare type DistributeIntersection<META_UNION extends UnionType, META_TYPE> = $Union<UnionValues<META_UNION> extends infer UNION_VALUE ? $Intersect<UNION_VALUE, META_TYPE> : never>;

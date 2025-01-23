@@ -1,0 +1,14 @@
+{
+  "environment": {
+    "executable": "/home/angus/Documents/perso/ownlogs/ownlogs/ai/venv/bin/python",
+    "prefix": "/home/angus/Documents/perso/ownlogs/ownlogs/ai/venv",
+    "version": "3.12.3.final.0",
+    "is64Bit": true,
+    "symlinks": [
+      "/home/angus/Documents/perso/ownlogs/ownlogs/ai/venv/bin/python",
+      "/home/angus/Documents/perso/ownlogs/ownlogs/ai/venv/bin/python3",
+      "/home/angus/Documents/perso/ownlogs/ownlogs/ai/venv/bin/python3.12"
+    ]
+  },
+  "symlinks": []
+}

@@ -1,0 +1,5 @@
+services:
+  frontend:
+    image: ownlogs/docs:latest
+    ports:
+      - '4173:3000'

@@ -1,0 +1,121 @@
+package vues.mesDocuments;
+
+import java.awt.GridLayout;
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+
+import jdbc.SharedState;
+import modele.BienLouable;
+import modele.Personne;
+import modele.Proprietaire;
+
+public class ContractDeLocation extends JFrame {
+  private static final long serialVersionUID = 1L;
+
+  public ContractDeLocation(Logement logement, Personne personne) {
+    if (logement.isLocation() && !logement.isColocation()) {
+      // personne est nulle, on gère une location
+      editContratDeLocation(logement);
+    } else if (!logement.isLocation() && logement.isColocation() && personne != null) {
+      // personne est non nulle, on gère une colocation et un contrat unique pour une
+      // personne
+      editContratDeColocation(logement, personne);
+    }
+  }
+
+  public void editContratDeLocation(Logement Logement) {
+    StringBuilder infosContrat = new StringBuilder("");
+    Proprietaire proprietaire = SharedState.getInstance().getProprietaire();
+
+    setTitle("Contract de location");
+    setSize(600, 500);
+    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    setLocationRelativeTo(null);
+    setLayout(new GridLayout(1, 1));
+
+    infosContrat.append("Bailleur : \n");
+    infosContrat.append(
+        "Nom / Prénom du bailleur : "
+            + proprietaire.getNom()
+            + " "
+            + proprietaire.getPrenom()
+            + "\n");
+    infosContrat.append("Domicile ou siège social : " + proprietaire.getAdresse() + "\n");
+    infosContrat.append("Qualité du bailleur : personne physique \n");
+    infosContrat.append("Adresse email (facultatif) : " + proprietaire.getMail() + "\n");
+    infosContrat.append("Téléphone (facultatif) : " + proprietaire.getTelephone() + "\n");
+
+    infosContrat.append("\n");
+    infosContrat.append("Locataire : \n");
+    infosContrat.append("Nom / Prénom du/des locataire(s) : \n");
+    for (Personne p : Logement.getLocation().getLocataires()) {
+      infosContrat.append(p.getNom() + " " + p.getPrenom());
+      infosContrat.append("\n");
+      infosContrat.append(
+          "Adresse email (facultatif) : "
+              + Logement.getLocation().getLocataires().get(0).getEmail()
+              + "\n");
+      infosContrat.append(
+          "Téléphone (facultatif) : "
+              + Logement.getLocation().getLocataires().get(0).getTelephone()
+              + "\n");
+    }
+    infosContrat.append("\n");
+    infosContrat.append("Localisation du logement : " + Logement.getAdresse() + "\n");
+    if(Logement.getLoyer() != null) infosContrat.append("Montant du loyer : " + Logement.getLoyer().getMontantHorsCharge() + "€\n");
+    if (Logement.getCharges() != null) infosContrat.append(
+        "Provision sur charges : " + Logement.getCharges().getProvisionSurCharge() + "\n");
+
+    JTextArea textArea = new JTextArea(infosContrat.toString());
+    textArea.setEditable(false);
+    textArea.setLineWrap(true);
+    textArea.setWrapStyleWord(true);
+    add(textArea);
+  }
+
+  // A implementer
+  public void editContratDeColocation(BienLouable bien, Personne colocataire) {
+    StringBuilder infosContrat = new StringBuilder("");
+    Proprietaire proprietaire = SharedState.getInstance().getProprietaire();
+
+    setTitle("Contrat de colocation");
+    setSize(600, 500);
+    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    setLocationRelativeTo(null);
+    setLayout(new GridLayout(1, 1));
+
+    infosContrat.append("Bailleur : \n");
+    infosContrat.append(
+        "Nom / Prénom du bailleur : "
+            + proprietaire.getNom()
+            + " "
+            + proprietaire.getPrenom()
+            + "\n");
+    infosContrat.append("Domicile ou siège social : " + proprietaire.getAdresse() + "\n");
+    infosContrat.append("Qualité du bailleur : personne physique \n");
+    infosContrat.append("Adresse email (facultatif) : " + proprietaire.getMail() + "\n");
+    infosContrat.append("Téléphone (facultatif) : " + proprietaire.getTelephone() + "\n");
+
+    infosContrat.append("\n");
+    infosContrat.append("Colocataire : \n");
+    infosContrat.append("Nom / Prénom du/des locataire(s) : ");
+    infosContrat.append(colocataire.getNom() + " " + colocataire.getPrenom());
+    infosContrat.append(" ");
+    infosContrat.append("\n");
+    infosContrat.append("Adresse email (facultatif) : " + colocataire.getEmail() + "\n");
+    infosContrat.append("Téléphone (facultatif) : " + colocataire.getTelephone() + "\n");
+    infosContrat.append("Localisation du logement : " + bien.getAdresse() + "\n");
+    infosContrat.append("Montant du loyer : " + bien.getLoyer().getMontantHorsCharge() + "€\n");
+    infosContrat.append(
+        "Provision sur charges : "
+            + bien.getCharges().getProvisionSurCharge()
+                / bien.getColocation().getColocataires().size()
+            + "\n");
+
+    JTextArea textArea = new JTextArea(infosContrat.toString());
+    textArea.setEditable(false);
+    textArea.setLineWrap(true);
+    textArea.setWrapStyleWord(true);
+    add(textArea);
+  }
+}

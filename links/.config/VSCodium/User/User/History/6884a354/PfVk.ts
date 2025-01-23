@@ -1,0 +1,26 @@
+export declare const intrinsic: {
+    emptyStructure: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").StructureNode;
+    jsonPrimitive: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    jsonObject: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    jsonArray: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    jsonData: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    json: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    integer: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    lengthBoundable: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    key: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    nonNegativeIntegerString: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    string: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    number: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    bigint: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    boolean: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    symbol: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    undefined: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    object: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    null: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    Array: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    Date: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    unknown: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    false: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    never: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+    true: import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").BaseRoot<import(".pnpm/@ark+schema@0.26.0/node_modules/@ark/schema").InternalRootDeclaration>;
+};

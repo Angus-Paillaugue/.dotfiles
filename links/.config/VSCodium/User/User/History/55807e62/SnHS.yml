@@ -1,0 +1,24 @@
+name: Deploy Server Dashboard
+
+on:
+  push:
+    branches:
+      - main # deploy to main branch on pushes
+
+jobs:
+  deploy:
+    runs-on: debian-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Re-build server dashboard
+        run: |
+          git clone https://github.com/Angus-Paillaugue/repo.git # replace with your repository URL
+          cd repo
+          npm install && npm run build # assume you're using npm and a script named 'build'
+
+      - name: Serve re-built website
+        run: |
+          cd repo/dist # assuming the built files are in dist/
+          npm start # use your favorite server, e.g., `http-server` or `express`

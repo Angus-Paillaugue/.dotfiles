@@ -1,0 +1,23 @@
+Update
+Added the Steps component and added the syncKey to the Commands component.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	modified:   docs/Components/Commands.md
+#	new file:   docs/Components/Steps.md
+#	modified:   package.json
+#	modified:   pnpm-lock.yaml
+#	modified:   project.config.js
+#	modified:   src/code.css
+#	modified:   src/lib/codeHighlighter.js
+#	modified:   src/lib/components/Commands.svelte
+#	new file:   src/lib/components/Steps/Step.svelte
+#	new file:   src/lib/components/Steps/Steps.svelte
+#	new file:   src/lib/components/Steps/index.js
+#	modified:   src/lib/components/index.js
+#	modified:   src/lib/stores.js
+#

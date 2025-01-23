@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest",
+  "manifest_version": 3,
+  "name": "Redirector",
+  "version": "1.0",
+  "description": "Redirects you from google websites to open-source alternatives",
+  "action": {
+    "default_popup": "src/popup/index.html"
+  },
+  "permissions": [
+    "storage"
+  ]
+}

@@ -1,0 +1,23 @@
+Update
+Finished homepage content. Made a reusable reveal directive.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	modified:   package.json
+#	modified:   pnpm-lock.yaml
+#	modified:   src/lib/components/Tree.svelte
+#	modified:   src/lib/components/core/Sidebar/PageList.svelte
+#	modified:   src/lib/components/core/Sidebar/Sidebar.svelte
+#	modified:   src/lib/utils.js
+#	modified:   src/routes/+page.svelte
+#	new file:   src/routes/Bento.svelte
+#	modified:   src/routes/Hero.svelte
+#	modified:   src/routes/docs/[...slug]/+page.js
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#	new file:   static/homepage/editConfiguration_480.webp
+#	new file:   static/homepage/editConfiguration_720.webp
+#

@@ -1,0 +1,14 @@
+Bug fix
+Fixed bug where if pages included the same string, either one of them would be rendered instead of the actual page.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	modified:   docs/Home.md
+#	modified:   src/lib/pages.js
+#	modified:   src/routes/docs/[...slug]/+page.js
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#

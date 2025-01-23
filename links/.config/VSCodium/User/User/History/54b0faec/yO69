@@ -1,0 +1,18 @@
+Initial commit
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   config/webpack.config.js
+#	modified:   package.json
+#	modified:   public/manifest.json
+#	deleted:    public/popup.html
+#	new file:   size-plugin.json
+#	deleted:    src/background.js
+#	modified:   src/contentScript.js
+#	deleted:    src/popup.css
+#	deleted:    src/popup.js
+#

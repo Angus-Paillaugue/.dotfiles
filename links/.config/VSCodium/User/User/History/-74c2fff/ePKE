@@ -1,0 +1,25 @@
+Update
+Added animation to the TOC indicator and Commands component indicator
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	new file:   .vscode/settings.json
+#	modified:   docs/Quickstart.md
+#	modified:   package.json
+#	modified:   pnpm-lock.yaml
+#	modified:   src/code.css
+#	modified:   src/lib/components/Commands.svelte
+#	new file:   src/lib/components/core/PageLoader.svelte
+#	modified:   src/lib/components/core/Sidebar/PageList.svelte
+#	modified:   src/lib/components/core/Sidebar/Sidebar.svelte
+#	modified:   src/routes/+layout.svelte
+#	modified:   src/routes/+page.svelte
+#	modified:   src/routes/Hero.svelte
+#	modified:   src/routes/docs/[...slug]/+page.svelte
+#	modified:   src/routes/docs/[...slug]/Toc.svelte
+#	modified:   tailwind.config.js
+#

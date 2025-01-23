@@ -1,0 +1,27 @@
+Simple auth
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Changes to be committed:
+#	modified:   .gitignore
+#	modified:   app/controleur/CreerUnJoueur.php
+#	modified:   app/controleur/CreerUnUtilisateur.php
+#	new file:   app/controleur/ListerToutesLesRencontres.php
+#	modified:   app/controleur/SupprimerUnJoueur.php
+#	modified:   app/controleur/SupprimerUnUtilisateur.php
+#	new file:   app/controleur/UtilisateurExiste.php
+#	modified:   app/modele/FeuillMatchDAO.php
+#	modified:   app/modele/FeuilleMatch.php
+#	modified:   app/modele/JoueurDAO.php
+#	modified:   app/modele/RencontreDAO.php
+#	modified:   app/modele/User.php
+#	modified:   app/modele/UserDAO.php
+#	modified:   app/vue/dashboard.php
+#	modified:   app/vue/index.php
+#	modified:   app/vue/layout.php
+#	modified:   app/vue/log-in.php
+#	modified:   app/vue/sign-up.php
+#	modified:   migrate.sql
+#	modified:   output.css
+#

@@ -1,0 +1,8 @@
+# Dockerfile for Java code execution
+FROM openjdk:17-slim
+
+# Set working directory
+WORKDIR /app
+
+# Expose any required ports (not needed for isolated Java execution)
+EXPOSE 8080
